@@ -1956,6 +1956,188 @@
       ],
       "created_at": "2026-04-09T21:07:30.767700",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 63,
+      "question_text": "Which in-flight advisory would contain information on severe icing not associated with thunderstorms?",
+      "answer_text": "SIGMET.",
+      "choices": [
+        "A. Convective SIGMET.",
+        "B. SIGMET.",
+        "C. AIRMET."
+      ],
+      "correct_letter": "B",
+      "category": "M",
+      "category_name": "気象データ",
+      "unit": "気象データ・情報",
+      "oral_related": false,
+      "explanation": {
+        "why": "SIGMETは「Significant Meteorological Information」の略で、雷雲に関連しない**重大な気象現象**（激しい着氷など）を全パイロットに通知する公式アドバイザリーです。Flight WatchやAIRMETではカバーしない高度な危険情報を提供します。\n\n##",
+        "memory_tip": "**SIGMET = SIGnificant + MET** → 「重大な気象情報」と直訳し、「雷以外の激しい現象を報告する公式情報」と記憶します。\n\n##",
+        "confusion_points": "AIRMET（中程度の気象現象）と混同しやすいですが、SIGMETは**激しい着氷・乱気流・砂嵐など重大**、AIRMETは**中程度**の現象が対象です。\n\n##",
+        "connections": "教科書のFlight Watch（122.0MHz、パイロット報告が基礎）は実況情報で、SIGMETはより公式で予報的な重大危険情報という上位概念の関係です。\n\n##",
+        "common_mistakes": "Flight Watchは「en route advisory」ですがあくまで情報交換目的で、SIGMETのような強制通知ではありません。",
+        "textbook_ref": {
+          "category": "M",
+          "category_name": "気象データ",
+          "excerpt": "M. WEATHER DATA\n\nWeather Briefing\nGetting Weather Data by calling a Flight service station FSS\nStandard Briefing (all information, almost)\nAbbreviate Briefing (to update, supplement, and limited)\nOutlook briefing (for a flight 6 or more hours later)\nwhen requesting by a phone, tell\nyourself as a pilot (N-Number or Your name if no N-Number yet)\ntype of aircraft\ntype of flight (VFR or IFR)\ndeparting airport\nintended route (and altitude)\ndestination\ntime of proposed departure and en route\nIn flight"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T23:13:47.400355",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-09T23:13:47.400355",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 64,
+      "question_text": "One of the most easily recognized discontinuities across a front is",
+      "answer_text": "change in temperature.",
+      "choices": [
+        "A. a change in temperature.",
+        "B. an increase in cloud coverage.",
+        "C. an increase in relative humidity."
+      ],
+      "correct_letter": "A",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "前線と気象現象",
+      "oral_related": false,
+      "explanation": {
+        "why": "前線とは異なる気団の境界であり、気団は温度が大きく異なります。不均等な熱交換（Unequal heat exchange）により気団間に気温差が生じ、この温度の急激な変化が最も顕著な不連続現象となるのです。\n\n##",
+        "memory_tip": "「前線=気団の『温度』の境目」と単純に理解しましょう。気団を定義する最重要要素は温度ですから、前線では必ず気温が急激に変わります。\n\n##",
+        "confusion_points": "風向や湿度の変化も前線で起こりますが、これらは気団による二次的な変化です。温度変化ほど顕著で普遍的ではありません。\n\n##",
+        "connections": "教科書の「Unequal heat exchange」が気団を生み出し、その気団の温度差が前線を形成します。気象現象の根本原因が気温差にあるわけです。\n\n##",
+        "common_mistakes": "「前線＝雨が降る」と連想しやすいですが、不連続性そのものは気温変化です。降雨は気温差による上昇気流の結果に過ぎません。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T23:13:54.520362",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-09T23:13:54.520362",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 65,
+      "question_text": "What is a characteristic of stable air?",
+      "answer_text": "Stratiform clouds.",
+      "choices": [
+        "A. Stratiform clouds.",
+        "B. Unlimited visibility.",
+        "C. Cumulus clouds."
+      ],
+      "correct_letter": "A",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "大気の安定性",
+      "oral_related": false,
+      "explanation": {
+        "why": "安定した空気は上昇流を抑制するため、水平方向に広がるような層状の雲（ストラティフォーム雲）が形成されます。一方、不安定な空気では上昇気流が強く、鉛直方向に発達する積乱雲が形成されます。\n\n##",
+        "memory_tip": "**Stable = Strat**形と覚えます。安定＝層状、不安定＝発達型と対比させることで記憶しやすくなります。\n\n##",
+        "confusion_points": "不安定な空気は**Cumulus**（積雲）や**Cumulonimbus**（積乱雲）などの鉛直発達型を形成します。ストラティフォーム雲と混同しないよう注意が必要です。\n\n##",
+        "connections": "教科書の「不均等な熱交換」により気団の安定性が変わり、相対湿度と露点が雲形成を決定します。これが気象現象全体の基礎となります。\n\n##",
+        "common_mistakes": "「安定した空気＝良い天気」と勘違いしやすいですが、正確には「雲の形状が層状である」という物理的特性を答える問題です。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T23:14:01.197346",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-09T23:14:01.197346",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 66,
+      "question_text": "During the life cycle of a thunderstorm, which stage is characterized predominately by downdrafts?",
+      "answer_text": "Dissipating.",
+      "choices": [
+        "A. Cumulus.",
+        "B. Dissipating.",
+        "C. Mature."
+      ],
+      "correct_letter": "B",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "雷雲の発達段階",
+      "oral_related": false,
+      "explanation": {
+        "why": "積乱雲は3段階のライフサイクルで発展します。消滅期（Dissipating stage）では、上昇気流が弱まり、冷たく重い空気の塊が急速に下降する下降流が優位になります。\n\n##",
+        "memory_tip": "**「消滅=下降」**と覚えましょう。雲が消えていく時は、空気が下に落ちていくイメージです。\n\n##",
+        "confusion_points": "発達期（Mature stage）では上昇流と下降流の両方が存在しますが、消滅期には下降流が**主要**な特徴となります。初期段階（Cumulus stage）は上昇流のみです。\n\n##",
+        "connections": "不均等な熱交換（Unequal Heat Exchange）が天気現象全てを作ります。消滅期の下降流も、温度差が減少することで生じる熱交換の結果です。\n\n##",
+        "common_mistakes": "Mature stageでも下降流は存在しますが、問題では「predominately（主に）」という単語が重要。消滅期は下降流が圧倒的に優位な段階です。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T23:14:09.272984",
+          "result": "unsure"
+        }
+      ],
+      "created_at": "2026-04-09T23:14:09.272984",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 67,
+      "question_text": "**\nA pilot can expect a wind-shear zone in a temperature inversion whenever the windspeed at 2,000 to 4,000 feet above the surface is at least\n\n**",
+      "answer_text": "25 knots.",
+      "choices": [
+        "**",
+        "A. 10 knots.",
+        "B. 15 knots.",
+        "C. 25 knots.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n温度逆転とウインドシア\n\n**",
+      "oral_related": false,
+      "explanation": {
+        "why": "気温逆転層では、地表付近と上空の風速差が大きくなります。高度2,000～4,000フィートで風速が25ノット以上あると、この層での風の急激な変化がウインドシェアゾーンを形成し、航空機の性能低下や失速リスクが増加します。\n\n##",
+        "memory_tip": "「逆転層で2,000～4,000フィート、25ノット以上＝ウインドシェア危険ゾーン」と暗記します。特に朝方や夜間に発生しやすい現象です。\n\n##",
+        "confusion_points": "ウインドシェアと乱気流（Turbulence）は異なります。乱気流は空気の不規則な動き、ウインドシェアは風速・風向の急激な変化です。\n\n##",
+        "connections": "Stability（大気の安定性）と Temperature Inversion（気温逆転）は密接に関連します。気温逆転は極めて安定した大気を作り出し、その中での風速差がウインドシェアを生じさせます。\n\n##",
+        "common_mistakes": "15ノットや20ノットと迷いやすいですが、FAA基準では明確に25ノット以上がウインドシェアの危険閾値です。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T23:14:16.834468",
+          "result": "unsure"
+        }
+      ],
+      "created_at": "2026-04-09T23:14:16.834468",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

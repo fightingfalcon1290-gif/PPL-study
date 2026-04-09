@@ -1884,6 +1884,42 @@
       ],
       "created_at": "2026-04-03T23:18:22.831050",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 61,
+      "question_text": "Possible mountain wave turbulence could be anticipated when winds of 40 knots or greater blow",
+      "answer_text": "across a mountain ridge, and the air is stable.",
+      "choices": [
+        "A. across a mountain ridge, and the air is stable.",
+        "B. down a mountain valley, and the air is unstable.",
+        "C. parallel to a mountain peak, and the air is stable."
+      ],
+      "correct_letter": "A",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "山岳波乱気流",
+      "oral_related": false,
+      "explanation": {
+        "why": "山脈に向かって40ノット以上の風が吹くと、空気が山を越えようとします。このとき空気が安定していると（不安定ではなく）、上昇した空気が下降側で圧縮され、波状の乱流パターンが発生します。これが**山岳波乱流（Mountain Wave Turbulence）**で、大型航空機も影響を受ける危険な現象です。\n\n##",
+        "memory_tip": "**「40ノット＋安定層＝波乱流」**と暗記しましょう。\n- 40ノット = 風速の閾値（これ以上で現象が顕著）\n- 安定 = 空気が本来の高度に戻ろうとする性質（波を作る）\n- 山脈を横切る（across）= 重要な条件\n\n##",
+        "confusion_points": "❌ **よくある誤り** → 「不安定な空気」が原因だと思う  \n✅ **正解** → **安定した空気**が波を作ります。不安定な空気は乱気流・対流を起こしますが、それは山岳波ではありません。\n\n##",
+        "connections": "教科書の**「不等な熱交換→気圧差→風」**と連動します。山岳波は風（40ノット以上）という強い圧力勾配が、安定層を通じて波動運動に変わる現象です。コリオリ力は関係なく、純粋に地形と安定度の相互作用です。\n\n##",
+        "common_mistakes": "- 「高い山ほど危険」と思いがち → 実は**風速と安定度**が決定的\n- 「雲があれば見えるから安全」と思う → 山岳波は雲がない領域でも発生\n- 「高度が高いほど影響大」と思う → **山頂付近で最大**、山脈の下風側で数マイル続く\n\n---\n\n**試験対策：山岳波の3条件を覚える**  \n✓ 山脈が存在  \n✓ 40ノット以上の横風  \n✓ 安定した気層",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T21:01:40.650382",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-09T21:01:40.650382",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

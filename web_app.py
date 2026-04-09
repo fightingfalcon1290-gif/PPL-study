@@ -1075,17 +1075,48 @@ def accuracy_color_filter(rate):
         return '#f9e2af'
     return '#a6e3a1'
 
+def sync_from_github():
+    """GitHubから最新のデータファイルを取得する"""
+    import requests
+    REPO = "fightingfalcon1290-gif/PPL-study"
+    BRANCH = "main"
+    FILES = [
+        ("data/quizlet.csv",   _dat("data/quizlet.csv")),
+        ("oral_questions.tsv", _dat("oral_questions.tsv")),
+    ]
+    base_url = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
+    updated = []
+    for remote_path, local_path in FILES:
+        try:
+            r = requests.get(f"{base_url}/{remote_path}", timeout=10)
+            if r.status_code == 200:
+                os.makedirs(os.path.dirname(local_path), exist_ok=True)
+                with open(local_path, "wb") as f:
+                    f.write(r.content)
+                updated.append(remote_path)
+        except Exception as e:
+            print(f"  [sync] {remote_path} の取得失敗: {e}")
+    if updated:
+        print(f"  [sync] 更新: {', '.join(updated)}")
+    else:
+        print("  [sync] 更新なし（またはオフライン）")
+
+
 if __name__ == '__main__':
     import threading, webbrowser
+
+    print("=" * 50)
+    print("PPL学習ツール 起動中...")
+    print("GitHubから最新データを取得中...")
+    sync_from_github()
+    print("ブラウザで http://localhost:8080 を開いてください")
+    print("終了するには このウィンドウを閉じてください")
+    print("=" * 50)
+
     def _open_browser():
         time.sleep(1.5)
         webbrowser.open('http://localhost:8080')
     threading.Thread(target=_open_browser, daemon=True).start()
 
     is_frozen = getattr(sys, 'frozen', False)
-    print("=" * 50)
-    print("PPL学習ツール 起動中...")
-    print("ブラウザで http://localhost:8080 を開いてください")
-    print("終了するには このウィンドウを閉じてください")
-    print("=" * 50)
     app.run(debug=not is_frozen, host='0.0.0.0', port=8080, use_reloader=False)

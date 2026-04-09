@@ -2138,6 +2138,79 @@
       ],
       "created_at": "2026-04-09T23:14:16.834468",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 68,
+      "question_text": "The amount of water vapor which air can hold depends on the\n\n##",
+      "answer_text": "air temperature.\n\n##",
+      "choices": [
+        "A. dewpoint.",
+        "B. air temperature.",
+        "C. stability of the air.",
+        "##"
+      ],
+      "correct_letter": "B",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "湿度と露点\n\n##",
+      "oral_related": false,
+      "explanation": {
+        "why": "暖かい空気ほど分子運動が活発になり、より多くの水蒸気分子を保持できます。逆に冷たい空気は水蒸気を保持する能力が低下するため、相対湿度が上昇して凝結が起こります。\n\n##",
+        "memory_tip": "**「温度が高い=容器が大きい」**と考えましょう。温い日は湿度が低く感じ、冷える夜間に露結が生じるという日常経験で記憶できます。\n\n##",
+        "confusion_points": "「露点温度」と混同しないこと。露点は飽和状態に達する温度であり、最大保持量そのものではなく、飽和状態になる条件です。\n\n##",
+        "connections": "この原理が相対湿度（実際の水蒸気量÷最大保持量）の定義につながり、さらに雲形成や気象現象の根本となる「不均等な熱交換」と結びつきます。\n\n##",
+        "common_mistakes": "気圧や標高を答えてしまう受験者が多いですが、これらは水蒸気量の最大保持量には直接影響しません。純粋に温度のみが決定要因です。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T23:27:44.684111",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-09T23:27:44.684111",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 69,
+      "question_text": "When there is a temperature inversion, you would expect to experience?",
+      "answer_text": "An increase in temperature as altitude is increased.",
+      "choices": [
+        "A. Clouds with extensive vertical development above an inversion aloft.",
+        "B. Good visibility in the lower levels of the atmosphere and poor visibility above an inversion aloft.",
+        "C. An increase in temperature as altitude is increased."
+      ],
+      "correct_letter": "C",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "気象現象・温度逆転層",
+      "oral_related": false,
+      "explanation": {
+        "why": "通常、高度が上がると気温は低下しますが、気温逆転層では地表付近の冷たい空気が上層の暖かい空気に覆われるため、高度とともに気温が上昇します。これは不均等な熱交換により大気の安定性が極端に高まった状態です。\n\n##",
+        "memory_tip": "「**逆転=上昇につれて暖かくなる**」と直結させます。通常の大気を逆にしたイメージで、Normal→Inversionと対比記憶すると効果的です。\n\n##",
+        "confusion_points": "気温逆転層と「気温減率」を混同しないこと。減率は通常時の気温低下を示していますが、逆転層はその反対現象です。\n\n##",
+        "connections": "気温逆転は**不均等な熱交換**（教科書の根本原因）から発生し、大気の安定性を強めるため雲形成や天候変化を抑制します。視程悪化にも関連します。\n\n##",
+        "common_mistakes": "「高度上昇＝気温低下」という基本概念に引きずられ、逆転層で気温が上昇することに違和感を覚えやすいです。問題文の「inversion」キーワードを見落とさないよう注意しましょう。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T23:27:52.481620",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-09T23:27:52.481620",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

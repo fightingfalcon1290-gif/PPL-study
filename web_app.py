@@ -1122,14 +1122,39 @@ def sync_from_github():
             print(f"  [sync] {remote_path} の取得失敗: {e}")
 
     # learning_records.json: 問題数が多い方を採用
-    local_path = _dat("data/learning_records.json")
-    local_count = 0
-    if os.path.exists(local_path):
-        try:
-            with open(local_path, encoding='utf-8') as f:
-                local_count = len(json.load(f).get('questions', []))
-        except Exception:
-            pass
+    # 候補パス: data/以下、親フォルダ、さらに上の階層も確認
+    canonical_path = _dat("data/learning_records.json")
+    candidate_paths = [
+        canonical_path,
+        os.path.join(os.path.dirname(_dat()), "learning_records.json"),
+        os.path.join(os.path.dirname(os.path.dirname(_dat())), "learning_records.json"),
+    ]
+    best_data  = None
+    best_count = 0
+    for p in candidate_paths:
+        if os.path.exists(p):
+            try:
+                with open(p, encoding='utf-8') as f:
+                    d = json.load(f)
+                cnt = len(d.get('questions', []))
+                if cnt > best_count:
+                    best_count = cnt
+                    best_data  = d
+                    print(f"  [sync] ローカル候補: {p} ({cnt}問)")
+            except Exception:
+                pass
+
+    # 最大問題数ファイルを正規パスにコピー
+    if best_data is not None and best_count > 0:
+        if not os.path.exists(canonical_path) or \
+           best_count > len(json.load(open(canonical_path, encoding='utf-8')).get('questions', [])):
+            os.makedirs(os.path.dirname(canonical_path), exist_ok=True)
+            with open(canonical_path, 'w', encoding='utf-8') as f:
+                json.dump(best_data, f, ensure_ascii=False, indent=2)
+            print(f"  [sync] 最大問題数ファイルをdata/にコピー: {best_count}問")
+
+    local_path  = canonical_path
+    local_count = best_count
 
     try:
         r = _github_raw("data/learning_records.json")

@@ -1,146 +1,6 @@
 {
   "questions": [
     {
-      "id": 1,
-      "question_text": "クラスB空域のVFR無線要件",
-      "answer_text": "テスト正解",
-      "category": "H",
-      "category_name": "空域",
-      "unit": "クラスB空域のVFR無線要件",
-      "explanation": {
-        "why": "正解は **B：Two-way radio communications equipment, a 4096-code transponder, and an encoding altimeter（双方向無線通信装置、4096コードトランスポンダー、エンコーディング高度計）** です。\n\nクラスB空域は、大規模な空港（例：LAX、JFKなど）の周囲に設定される最も管制が厳しい空域の一つです。VFR（有視界飛行方式）でこの空域に進入するためには、以下の3つの無線機器が最低限必要です：\n\n1. **双方向無線通信装置** — ATC（航空交通管制）との交信に必須\n2. **4096コードトランスポンダー** — レーダーで識別されるためのコード発信装置\n3. **エンコーディング高度計（Mode C）** — 自機の気圧高度を自動的にATCへ送信する装置\n\n**試験での注意点：**\n- 選択肢Aはエンコーディング高度計が含まれていないため不正解です。クラスB空域ではMode Cトランスポンダー（高度情報付き）が必須であることを忘れないでください。\n- 選択肢CにあるVOR/TACAN受信機はクラスB空域の「必須装備」ではありません。あくまで航法上有用ですが、規定上の最低要件には含まれません。\n- 14 CFR §91.131および§91.215が根拠規定です。",
-        "memory_tip": "### 「Bはビッグで、ビジー（混雑）」\n\nクラスB空域は「Big and Busy」の頭文字Bです。\n\n### 3つの要件は「3R」で覚える\n\n| 頭文字 | 要件 | 説明 |\n|-------|------|------|\n| **R**adio | 双方向無線通信 | ATC管制官と交信OK状態 |\n| **R**adar(Transponder) | トランスポンダーMode-C | 高度自動送信機能付き |\n| **R**equirement clearance | ATC承認＋認定資格 | 「cleared to enter...」がマスト |\n\n### 語呂合わせ\n\n**「ビーはね、ラジオ・レーダー・レクイアード（要求）」**\n\n---\n\n##",
-        "connections": "### 1. **クラスA空域との比較**\n\n```\nクラスA（FL180以上）\n├─ IFR専用（VFR飛行不可）\n└─ パイロット技術レベルが高い\n\nクラスB（地表～FL600内の指定区域）\n├─ IFR/VFR混在\n└─ 「VFRでも厳しい要件」= B空域の本質\n```\n\n### 2. **VFR最低気象要件との関係**\n\nクラスB空域では、単に**天候最低基準をクリア**するだけでなく、管制官に直接許可をもらう必要があります。\n\n```\n天候OK ＋ トランスポンダーOK ＋ 無線OK \n  ↓\n  ATC承認「Cleared to enter Class B」\n  ↓\n  初めてクラスB進入可能\n```\n\n### 3. **30NM距離制限との連動**\n\n教科書の「30NM以内ルール」は以下を意味します：\n\n- **30NM以内** → Mode-C必須（クラスB保護空域扱い）\n- **30NM外** → Mode-C不要の場合もある\n\nつまり、クラスB空域は「中核」と「保護区域（カルマン）」で構成されており、拡張保護空域での管制強化を反映しています。\n\n---\n\n##",
-        "common_mistakes": "### ❌ 間違い① 「双方向無線だけで十分では？」\n\n**→ 正解：NO** トランスポンダーとA",
-        "confusion_points": "### クラスB vs クラスC vs クラスD の比較表\n\n| 要素 | **クラスB** | **クラスC** | **クラスD** |\n|------|-----------|-----------|-----------|\n| 典型的な空港 | LAX, JFK, ORD（主要空港） | 中規模空港（管制塔あり） | 小規模塔台空港 |\n| 双方向無線 | ✅ **必須** | ✅ 必須 | ✅ 必須 |\n| トランスポンダー | ✅ **Mode-C必須** | ✅ Mode-C必須 | ❌ 不要 |\n| **ATC承認** | ✅ **「Cleared to enter」必須** | ❌ 不要 | ❌ 不要 |\n| 私操士資格 | ✅ **必須（または教官の推薦状）** | ❌ 不要 | ❌ 不要 |\n| 30NM以内条件 | ✅ あり（Mode-C必須） | ❌ なし | ❌ なし |\n\n**❌よくある誤解**\n- 「クラスCもクラスBと同じ要件では？」\n  → クラスCは**ATC承認不要**です。許可（clearance）ではなく「確認」で足ります\n\n---\n\n##"
-      },
-      "oral_related": false,
-      "result_history": [
-        {
-          "date": "2026-03-24T22:23:38",
-          "result": "incorrect"
-        },
-        {
-          "date": "2026-03-26T23:22:28.106143",
-          "result": "incorrect"
-        },
-        {
-          "date": "2026-03-26T23:59:38.740616",
-          "result": "correct"
-        },
-        {
-          "date": "2026-03-27T00:51:49.217877",
-          "result": "correct"
-        }
-      ],
-      "accuracy_rate": 50.0,
-      "created_at": "2026-03-24T22:23:38"
-    },
-    {
-      "id": 2,
-      "question_text": "パートタイムタワー空港の空域分類",
-      "answer_text": "B「when the associated control tower is in operation.（管制塔が運用中のとき）」",
-      "category": "H",
-      "category_name": "空域",
-      "unit": "パートタイムタワー空港の空域分類",
-      "explanation": {
-        "why": "正解は **B「when the associated control tower is in operation.（管制塔が運用中のとき）」** です。\n\nパートタイム管制塔（part-time control tower）を持つ空港の空域分類は、管制塔の運用状況によって変化します。\n\n- **管制塔が運用中（稼働中）の場合** → **Class D airspace** として分類されます。Class Dは管制塔が設置され、ATCとの双方向無線通信が必要な空域です。\n\n- **管制塔が閉鎖されている場合** → Class Dの指定は解除され、通常は **Class E airspace** または **Class G airspace** に変更されます。具体的にどのクラスになるかはChart Supplement（旧A/FD）で確認する必要があります。\n\n**試験での注意点：**\n- 選択肢Aの「天候がVFR最低気象条件以下のとき」は空域分類の変更とは無関係です。天候条件は空域のクラスを変えません。\n- 選択肢Cの「FSS（Flight Service Station）が運用中のとき」も誤りです。FSSは空域分類に影響しません。\n- Class Dの存在は**管制塔の運用と直結**しているという点が最重要ポイントです。パートタイムタワーの空港に飛行する際は、事前にNOTAMやChart Supplementで管制塔の運用時間を確認しましょう。",
-        "memory_tip": "### パターン化記憶法\n\n**「タワーがあれば D、いなくなれば E」**\n\n| 状態 | 空域クラス | 覚え方 |\n|------|----------|--------|\n| 管制塔 ON | **Class D** | **D**ay time = 塔がある時間帯 |\n| 管制塔 OFF | **Class E** | **E**vening = 塔が閉まった時間帯 |\n\n### イメージ記憶\n\n🏗️ **管制塔のON/OFF スイッチ**\n\n```\n【管制塔 ON】\n   ↓\n Class D（管制あり）\n   ↓\n 二者間通信・許可が必要\n\n【管制塔 OFF】\n   ↓\n Class E（管制なし）\n   ↓\n VFR天気最低基準のみ\n```\n\n### 数字との組み合わせ\n\n- **D = Daytime** の時間帯に Class D\n- パートタイムは通常 **07:00～22:00** など（空港ごとに異なる）\n- 夜間は Class E に降格\n\n---\n\n## ⚠️混同注意ポイント\n\n### よく混同される3つのケース\n\n#### ❌ 間違い1：「パートタイムタワー空港 = 常にClass D」\n\n❌ **誤解の原因**\n- 「タワーのある空港＝Class D」と暗記してしまう\n\n✅ **正解**\n- **「タワーの運用中だけ Class D」**\n- 夜間など閉局時は Class E に自動降格\n\n---\n\n#### ❌ 間違い2：「フルタイム（24時間）タワー空港との違いの理解不足」\n\n| 空港タイプ | 運用中 | 閉局時 |\n|-----------|------|-------|\n| **フルタイムタワー** | Class D | Class D（常に同じ） |\n| **パートタイムタワー** | Class D | Class E（変わる！） |\n| **タワーなし空港** | Class E | Class E（常に同じ） |\n\n**重要な違い：** パートタイムタワーは**時間帯で空域が変わる**ことが特徴\n\n---\n\n#### ❌ 間distintingu3：「Class E自体の誤解」\n\n❌ **よくある誤り**\n- 「Class E = 管制なし」と思い込む\n- 「Class E = VFRのみ許可」と思い込む\n\n✅ **正解**\n- Class E は **Controlled Airspace**（管制空域）\n- IFR飛行も許可される\n- ただし「ATC service」の内容が異なる\n\n---\n\n## 【他の概念とのつながり】\n\n### 1️⃣ Class D Airspace との関連\n\n**Class D の一般的な特性：**\n```\n✓ 全米のすべてのタワー空港\n✓ 地上～2,500 ft AGL\n✓ 通常は約5 NM（ただし範囲は可変）\n✓ Takeoff/Landing/Taxi Clearance必須\n✓ Two-way Radio Communication必須\n```\n\n**パートタイムタワー空港の場合：**\n- この Class D 要件は「**運用中だけ**」適用される\n- **重要：** FAR 91.129 にパートタイムタワー空港の特則が記載\n\n---\n\n### 2️⃣ Special VFR との関連性\n\nパートタイムタワー閉局後に **Class E** に降格すると：\n\n- **天気が VFR最低基準以下**の場合\n- Special VFR で飛行可能\n  - ただし管制塔が運用中なら許可が必要\n  - 閉局時は状況に応じて判断\n\n---\n\n###",
-        "connections": "### 1️⃣ Class D Airspace との関連\n\n**Class D の一般的な特性：**\n```\n✓ 全米のすべてのタワー空港\n✓ 地上～2,500 ft AGL\n✓ 通常は約5 NM（ただし範囲は可変）\n✓ Takeoff/Landing/Taxi Clearance必須\n✓ Two-way Radio Communication必須\n```\n\n**パートタイムタワー空港の場合：**\n- この Class D 要件は「**運用中だけ**」適用される\n- **重要：** FAR 91.129 にパートタイムタワー空港の特則が記載\n\n---\n\n### 2️⃣ Special VFR との関連性\n\nパートタイムタワー閉局後に **Class E** に降格すると：\n\n- **天気が VFR最低基準以下**の場合\n- Special VFR で飛行可能\n  - ただし管制塔が運用中なら許可が必要\n  - 閉局時は状況に応じて判断\n\n---\n\n###",
-        "common_mistakes": "",
-        "confusion_points": ""
-      },
-      "oral_related": false,
-      "result_history": [
-        {
-          "date": "2026-03-24T22:47:51",
-          "result": "correct"
-        },
-        {
-          "date": "2026-03-27T00:00:10.798441",
-          "result": "correct"
-        }
-      ],
-      "accuracy_rate": 100.0,
-      "created_at": "2026-03-24T22:47:51"
-    },
-    {
-      "id": 3,
-      "question_text": "R-2305の追加情報の参照先",
-      "answer_text": "C「On the Sectional Chart in the Special Use Airspace area.」",
-      "category": "H",
-      "category_name": "空域",
-      "unit": "R-2305の追加情報の参照先",
-      "explanation": {
-        "why": "正解は **C「On the Sectional Chart in the Special Use Airspace area.」**（セクショナルチャートのSpecial Use Airspace欄に記載されている）です。\n\nR-2305の「R」はRestricted Area（制限空域）を意味します。制限空域はSpecial Use Airspace（特別使用空域）の一種です。\n\nセクショナルチャート（VFR航空図）には、チャートの余白部分に**Special Use Airspace（SUA）の一覧表**が掲載されています。この表には、各制限空域やMOA（Military Operations Area）などの名称、高度範囲、運用時間、管轄機関の連絡先といった追加情報がまとめられています。プリフライトプランニングで制限空域を通過するコースを引いた場合、まずこの表を確認して、その空域の運用状況を把握することが重要です。\n\n**試験での注意点：**\n- 選択肢AのAIM（Aeronautical Information Manual）にはSUAの一般的な説明はありますが、個別の空域の具体的情報（運用時間等）は記載されていません。\n- 選択肢BのChart Supplements U.S.（旧A/FD）には空港施設情報が中心で、SUAの詳細表はセクショナルチャート上に記載されている点を区別しましょう。\n- 「R-○○○○」と見たら制限空域→SUA→セクショナルチャートのSUA欄、と結びつけることがポイントです。",
-        "memory_tip": "**「特別な情報は、特別な場所に」**\n\n特別用途空域（**Special**）の追加情報は、パイロットが最もよく見る**Sectional Chart**に書かれている、という対応を覚えましょう。\n\n**語呂合わせ：\"S\"で始まる2つのS**\n- **S**pecial Use Airspace → **S**ectional Chart\n- 特別用途空域の情報は、セクショナルチャートという「特別な」チャートに載っている\n\n**覚える順序：**\n1. 「R-2305」などの記号を見た → セクショナルチャートを確認する\n2. セクショナルチャートに詳細情報が記載されている\n3. その情報には高度、時間、活動内容などが含まれている\n\n---\n\n##",
-        "connections": "### 1️⃣ **特別用途空域の分類との連関**\n\n```\n特別用途空域の種類：\n├─ Prohibited Area（禁止区域）→ 絶対進入禁止\n├─ Restricted Area（制限区域）→ 活動時間に注意\n├─ Warning Area（警告区域）→ 危険注意\n├─ Military Operation Area（軍事訓練区域）→ 軍事活動中は避ける\n└─ Alert Area（警告区域）→ 通常業務で活用\n\n全てセクショナルチャートに色分けして表示される\n```\n\n### 2️⃣ **飛行計画との関連**\n\n- **VFR飛行計画作成時** → セクショナルチャートで特別用途空域を確認\n- **ルート選定** → 禁止区域を避ける\n- **高度設定** → 制限区域の高度制限を参照\n- **時間確認** → 活動時間外の通過判断\n\n### 3️⃣ **チャート読取スキルとの統合**\n\n```\nセクショナルチャート上の表記：\n┌─────────────────────────────┐\n│ 特別用途空域の枠線または色  │\n│ ↓                           │\n│ R-2305などの参照記号         │\n│ ↓                           │\n│ チャート周辺の凡例欄で      │\n│ 詳細情報を確認する           │\n└─────────────────────────────┘\n```\n\n### 4️⃣ **ATC通信との関係**\n\n- Class B/C/D空域の特別用途区域 → ATC指示を受ける\n- Class E空域の",
-        "common_mistakes": "",
-        "confusion_points": "### ❌ よく間違える選択肢との比較\n\n| 間違った答え | なぜ間違いか | 正しい理由 |\n|-----------|----------|---------|\n| **A：On an Airport Diagram** | 空港図は個別空港の詳細情報用。特別用途空域は広範囲なため不適切 | セクショナルチャートは広域をカバー |\n| **B：In the Airport/Facility Directory** | 施設ディレクトリは空港設備情報が主。特別用途空域の詳細は含まれない | チャート上にリアルタイム確認可能である必要がある |\n| **D：On a Sectional Chart Inset** | インセット（拡大図）は特定地域の詳細表示。本体チャートに記載される | チャート本体に記載されるため、インセット限定ではない |\n\n**重要な違い：**\n- **Sectional Chart 本体** = 航空図全体で一貫した情報表示\n- **Airport Diagram** = 特定空港内のみ\n- **Airport/Facility Directory** = 施設設備情報\n\n---\n\n##"
-      },
-      "oral_related": false,
-      "result_history": [
-        {
-          "date": "2026-03-24T23:19:10",
-          "result": "incorrect"
-        },
-        {
-          "date": "2026-03-26T23:22:18.490209",
-          "result": "incorrect"
-        },
-        {
-          "date": "2026-03-26T23:59:47.450002",
-          "result": "correct"
-        },
-        {
-          "date": "2026-03-26T23:59:50.139576",
-          "result": "correct"
-        },
-        {
-          "date": "2026-03-26T23:59:58.795562",
-          "result": "correct"
-        },
-        {
-          "date": "2026-03-27T00:00:15.898432",
-          "result": "correct"
-        },
-        {
-          "date": "2026-03-27T00:00:17.555453",
-          "result": "correct"
-        },
-        {
-          "date": "2026-03-27T00:52:00.007055",
-          "result": "correct"
-        }
-      ],
-      "accuracy_rate": 75.0,
-      "created_at": "2026-03-24T23:19:10"
-    },
-    {
-      "id": 4,
-      "question_text": "Class C空域内の衛星空港での運航条件",
-      "answer_text": "C「The pilot must contact ATC as soon as practicable after takeoff.」",
-      "category": "H",
-      "category_name": "空域",
-      "unit": "Class C空域内の衛星空港での運航条件",
-      "explanation": {
-        "why": "正解は **C「The pilot must contact ATC as soon as practicable after takeoff.」** です。\n\nClass C空域には主要空港（primary airport）と衛星空港（satellite airport）が存在します。主要空港を利用する場合は、進入前に必ず双方向無線通信を確立しATC（航空交通管制）の許可を得る必要があります。\n\n一方、衛星空港から出発する場合は、離陸前にATCと通信を確立する義務はありません。ただし、**離陸後できるだけ速やかに（as soon as practicable）ATCにコンタクトする**ことが求められています。これはFAR 91.130に規定されています。\n\n**試験で間違えやすいポイント：**\n- 選択肢Aの「フライトプランの提出」はClass C空域の要件ではありません。フライトプランが義務付けられるのはIFR飛行時です。\n- 選択肢Bの「ATCをモニターする」だけでは不十分です。モニターではなく、双方向通信（two-way radio communication）の確立が必要です。\n- Class C空域とClass B空域の違いも重要です。Class Bでは衛星空港であっても明確なATC許可（clearance）が必要ですが、Class Cでは「通信の確立」が要件であり、許可そのものは不要です。\n\n衛星空港には管制塔がない場合もあるため、離陸後の速やかなコンタクトという運用が定められています。",
-        "memory_tip": "### 記憶のコツ「**衛星は母港に報告する**」\n\n```\n衛星空港（小さい空港）\n    ↓\n母港（Class C主空港）に\n    ↓\nテイクオフ直後、報告する\n```\n\n### 数字・タイミングで覚える\n\n| Class | 衛星空港対応 | 主要な違い |\n|-------|-----------|---------|\n| **Class B** | 事前clearance必須 | **テイクオフ前**に許可を得ている |\n| **Class C（衛星）** | テイクオフ後に連絡 | **テイクオフ直後**に報告 |\n| **Class D** | Two-way Radio | 局所的対応のみ |\n\n### 語呂合わせ「**C衛星＝『後出し報告型』**」\n- Class Cの衛星空港＝テイクオフ後に報告\n- 対比：Class Bの衛星空港＝テイクオフ前に許可\n\n---\n\n##",
-        "connections": "### 1. **ATC Service体系全体における位置付け**\n\n```\nIFR vs VFR\n    ↓\nControlled vs Uncontrolled\n    ↓\nClass A → B → C →",
-        "common_mistakes": "",
-        "confusion_points": "### Class B vs Class C衛星空港での違い\n\n```\n┌─────────────────────────────────────────────────┐\n│         Class B衛星空港          │  Class C衛星空港  │\n├──────────────────────────────┼─────────────────┤\n│ 必須条件：                     │ 必須条件：        │\n│ ✓ ATC Clearance（事前）       │ ✓ Two-way Radio │\n│ ✓ Two-way Radio              │ ✓ Transponder   │\n│ ✓ Transponder Mode-C         │ ✓ 報告のみ       │\n│                              │                 │\n│ タイミング：テイクオフ前      │ タイミング：      │\n│ ATC clearance必須             │ テイクオフ後報告  │\n│ （clearance得てから動く）     │                 │\n└──────────────────────────────┴─────────────────┘\n```\n\n### よくある誤解\n\n**❌ 誤り**：「Class C衛星空港でもテイクオフ前にATCから許可を得なければならない」\n\n**✅ 正解**：「Class C衛星空港はテイクオフ後、実行可能な限り早急に報告すればよい」\n\n### Class D と Class C の混同注意\n\n| 項目 | Class D | Class C |\n|-----|---------|---------|\n| 範囲 | タワー空港付近のみ | より広い空域（衛星空港も包含） |\n| 主空港の有無 | 単独タワー機能 | 主空港+衛星空港 |\n| 衛星空港対応 | 存在しない | **存在する** ← ここが重要 |\n| タイミング | 局所的管制 | テイクオフ後に中心ATCへ報告 |\n\n---\n\n##"
-      },
-      "oral_related": false,
-      "result_history": [
-        {
-          "date": "2026-03-24T23:24:32",
-          "result": "correct"
-        }
-      ],
-      "accuracy_rate": 100.0,
-      "created_at": "2026-03-24T23:24:32"
-    },
-    {
       "id": 5,
       "question_text": "Under what condition, if any, may pilots fly through a restricted area?",
       "answer_text": "B: With the controlling agency's authorization.",
@@ -215,6 +75,10 @@
         {
           "date": "2026-03-26T23:37:16.957915",
           "result": "correct"
+        },
+        {
+          "date": "2026-04-02T00:13:28.442492",
+          "result": "correct"
         }
       ],
       "created_at": "2026-03-26T23:37:16.957915",
@@ -238,6 +102,10 @@
       "result_history": [
         {
           "date": "2026-03-26T23:37:23.240902",
+          "result": "correct"
+        },
+        {
+          "date": "2026-04-02T00:15:49.417988",
           "result": "correct"
         }
       ],
@@ -263,6 +131,10 @@
         {
           "date": "2026-03-26T23:37:29.722901",
           "result": "correct"
+        },
+        {
+          "date": "2026-04-02T00:16:25.317430",
+          "result": "correct"
         }
       ],
       "created_at": "2026-03-26T23:37:29.722901",
@@ -286,6 +158,10 @@
       "result_history": [
         {
           "date": "2026-03-26T23:37:58.970393",
+          "result": "incorrect"
+        },
+        {
+          "date": "2026-04-02T00:20:18.487633",
           "result": "incorrect"
         }
       ],
@@ -311,6 +187,10 @@
         {
           "date": "2026-03-26T23:38:06.254561",
           "result": "correct"
+        },
+        {
+          "date": "2026-04-02T00:21:50.621352",
+          "result": "correct"
         }
       ],
       "created_at": "2026-03-26T23:38:06.254561",
@@ -335,10 +215,14 @@
         {
           "date": "2026-03-26T23:38:12.601893",
           "result": "correct"
+        },
+        {
+          "date": "2026-04-02T00:23:34.812700",
+          "result": "incorrect"
         }
       ],
       "created_at": "2026-03-26T23:38:12.601893",
-      "accuracy_rate": 100.0
+      "accuracy_rate": 50.0
     },
     {
       "id": 12,
@@ -359,6 +243,10 @@
         {
           "date": "2026-03-26T23:38:40.414870",
           "result": "incorrect"
+        },
+        {
+          "date": "2026-04-02T00:27:20.305255",
+          "result": "unsure"
         }
       ],
       "created_at": "2026-03-26T23:38:40.414870",
@@ -382,6 +270,10 @@
       "result_history": [
         {
           "date": "2026-03-26T23:38:47.017874",
+          "result": "correct"
+        },
+        {
+          "date": "2026-04-02T00:28:53.433584",
           "result": "correct"
         }
       ],
@@ -407,6 +299,10 @@
         {
           "date": "2026-03-26T23:38:52.831565",
           "result": "correct"
+        },
+        {
+          "date": "2026-04-02T00:29:09.449611",
+          "result": "correct"
         }
       ],
       "created_at": "2026-03-26T23:38:52.831565",
@@ -430,6 +326,10 @@
       "result_history": [
         {
           "date": "2026-03-27T00:50:15.367112",
+          "result": "correct"
+        },
+        {
+          "date": "2026-04-02T00:29:49.551325",
           "result": "correct"
         }
       ],
@@ -1034,6 +934,955 @@
         }
       ],
       "created_at": "2026-03-31T23:30:50.038065",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 35,
+      "question_text": "**\nWhen taxiing with strong quartering tailwinds, which aileron positions should be used?\n\n**",
+      "answer_text": "Aileron down on the side from which the wind is blowing.",
+      "choices": [
+        "**",
+        "A. Aileron down on the downwind side.",
+        "B. Ailerons neutral.",
+        "C. Aileron down on the side from which the wind is blowing.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n地上操作（タキシング）\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "強い横後方風では、主翼の上流側（風が当たる側）が浮き上がる傾向があります。この浮き上がりを防ぐため、風が吹いてくる側の補助翼をダウンさせることで、その翼に負の揚力を加えて押さえ込みます。同時に舵で機首を風側に向けることで、安定したタクシングが可能になります。\n\n##",
+        "memory_tip": "**「風の側に翼を下げる」** と覚えましょう。風が右前方から吹いている→右翼の補助翼をダウン、という単純な対応です。「風に抵抗する」という感覚で、風側の翼を下げて地面に押さえつけるイメージです。\n\n##",
+        "confusion_points": "**間違えやすい方向：** 風の反対側に補助翼を下げてはいけません。そうすると風側の翼がさらに浮き上がり、飛行機が横転する危険性が高まります。操舵輪を「風から離す」のではなく「風に向かう」方向に操作することを徹底してください。\n\n##",
+        "connections": "この原理は着陸時の横風対策（Crabmethod/Slipmethod）にも通じています。PPLでは地上操作の安全が基本であり、将来的には空中での横風対処法へと発展していきます。タクシングで確実にマスターすることが重要です。\n\n##",
+        "common_mistakes": "- 「舵の方向」と「補助翼の方向」を混同する学生が多くいます。舵は機首を風側に向けますが、補助翼も同じく風側をダウンさせるため、結果的に同じ側への操作となります\n- 「後方風」という文言に惑わされ、後部から来る風と考えてしまうケースがあります。ここは「横方向で、かつ若干後ろから」という意味の「quartering tailwind」です\n\n---\n\n**実務応用：** この操作は特に軽量機でタクシー中に顕著です。試験では「wind from」の方向を正確に読み取ることが合格のカギになります。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T00:24:19.373059",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T00:24:19.373059",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 36,
+      "question_text": "What is the antidote when a pilot has a hazardous attitude, such as \"Macho\"?",
+      "answer_text": "Taking chances is foolish.",
+      "choices": [
+        "A. I can do it.",
+        "B. Taking chances is foolish.",
+        "C. Nothing will happen."
+      ],
+      "correct_letter": "B",
+      "category": "N",
+      "category_name": "生理学",
+      "unit": "危険な態度と対処",
+      "oral_related": true,
+      "explanation": {
+        "why": "マッホ（Macho）な態度とは、無謀さや虚栄心から危険を冒す行動パターンです。このような態度を修正するには、冷静な論理的思考で「リスク行動は結果的に自分の能力や生命を危険にさらす愚かな行為である」という認識を植え付ける必要があります。\n\n##",
+        "memory_tip": "**「M = Macho → 危険行動 → 愚かな結果」**のシンプルな因果関係で覚えましょう。マッホな人は自分の能力を過信しているので、「その行動は実は愚かだ」というロジカルな指摘が最も効果的です。\n\n##",
+        "confusion_points": "❌ **混同しやすい対処法**\n- 「怖がることはない」→ 根拠なき鼓舞は危険態度を強化\n- 「もっと練習しろ」→ 能力向上より態度改善が優先\n- 「規則を守れ」→ 理由を理解させることが重要\n\n✅ **正しい対処法**\n危険行動の**論理的な悪影響**を認識させることが唯一の対処法です。\n\n##",
+        "connections": "この概念はFlight Physiologyと一見関係ないように見えますが、実は**パイロット自身の意思決定の安全性**に直結しています。低酸素症（Hypoxia）や一酸化炭素中毒のような生理的危機の対処も、冷静な判断力（=マッホでない態度）があってこそ実行できるのです。\n\n##",
+        "common_mistakes": "❌ **誤った理解**\n- 「マッホなパイロットには厳しく叱る」→ 反発を招くだけ\n- 「自信を持たせる」→ さらに危険が増す\n\n✅ **正しい理解**\nパイロットに「危険行動＝愚かな選択である」という**客観的事実**を理解させることで、自発的に態度を改めさせることが最も効果的です。FAA試験ではこの**認知的アプローチ**を重視しています。",
+        "textbook_ref": {
+          "category": "N",
+          "category_name": "生理学",
+          "excerpt": "N. FLIGHT PHYSIOLOGY\n\nHypoxia\nIt is a state of oxygen deficiency in the blood stream\nSymptom: Headache., Dizziness, Restless, Sleepiness Euphoria (a happy feeling), Lowers Vision\nTreatment: Use Aviation Oxygen and Descend ASAP\nHyperventilation\nChemical imbalance of blood.\nExcessive amount of air is breathed out too much Carbon Dioxide from blood, and\nToo much oxygen is in the body.\ncaused by excessive breathing\ntoo much emotional stress, fear.\nSymptoms: Dizziness, hot or cold sensations, lips or"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T00:24:30.068363",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T00:24:30.068363",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 37,
+      "question_text": "**\nWhat is the purpose of the runway/runway hold position sign\n\n**",
+      "answer_text": "Denotes intersecting runways.",
+      "choices": [
+        "**",
+        "A. Denotes entrance to runway from a taxiway.",
+        "B. Denotes area protected for an aircraft approaching or departing a runway.",
+        "C. Denotes intersecting runways.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n空港標識・マーキング\n\n**",
+      "oral_related": false,
+      "explanation": {
+        "why": "滑走路保持位置標識（Runway/Runway Hold Position Sign）は、パイロットが別の滑走路と交差する位置にいることを明確に示すための標識です。この標識がある場所で停止することで、他の滑走路を使用している航空機との衝突を防ぐため、ATC指示を待つ必要があります。\n\n---\n\n##",
+        "memory_tip": "**「Hold = 待つ」と覚えましょう。** この標識を見たら「ここで待機して、別の滑走路の交差点だ」と認識します。黄色と黒のチェックパターンの標識で、視覚的にも目立つように設計されています。\n\n---\n\n##",
+        "confusion_points": "❌ **間違えやすい選択肢：**\n- \"Denotes runway end\" → これは滑走路終端を示す\n- \"Indicates taxiway intersection\" → これはタキシウェイ交差点用\n- \"Shows runway threshold\" → これは滑走路の開始地点を示す\n\n**滑走路保持位置標識は「交差する滑走路」専用です。**\n\n---\n\n##",
+        "connections": "Class D Airspace（管制塔のある空港）での運用と直結しています。教科書の「established two-way radio communication」「Takeoff, Landing and Taxi Clearances」と関連し、タキシ中にATC指示を守る重要な標識です。安全な空港運用を支える視覚的なナビゲーション標識です。\n\n---\n\n##",
+        "common_mistakes": "⚠️ 日本語で「保持位置」と言われると「停止する場所全般」と誤解しやすいですが、**この標識は「交差する滑走路がある」という限定的な意味**です。単なる一般的なタキシウェイの停止位置ではなく、滑走路同士が交差する特定の危険地点であることが重要なポイントです。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T00:24:39.586082",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T00:24:39.586082",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 38,
+      "question_text": "Should it become necessary to handprop an airplane engine, it is extremely important that a competent pilot",
+      "answer_text": "be at the controls in the cockpit.",
+      "choices": [
+        "A. call \"contact\" before touching the propeller.",
+        "B. be at the controls in the cockpit.",
+        "C. be in the cockpit and call out all commands."
+      ],
+      "correct_letter": "B",
+      "category": "I",
+      "category_name": "飛行",
+      "unit": "エンジンスタート手順・操作",
+      "oral_related": false,
+      "explanation": {
+        "why": "ハンドプロップ（手でプロペラを回してエンジンを始動させる方法）は非常に危険な操作です。エンジンが突然に始動してしまう可能性があるため、**操縦席に有能な操縦士がいて即座に対応できる状態**である必要があります。無操縦状態では、エンジン始動後の飛行機の暴走や衝突事故を防げません。\n\n---\n\n##",
+        "memory_tip": "**「手でプロペラ回す → エンジン突然始動 → 操縦席に誰かいなきゃ危ない！」**\n\n重要なキーワード：**competent pilot（有能な操縦士）** + **at the controls（操縦席にいる）** = 安全\n\n---\n\n##",
+        "confusion_points": "❌ 「グラウンドクルーがしっかりしていれば大丈夫」→ **不十分です**  \n❌ 「誰でも操縦席に座っていれば良い」→ **「有能な（competent）」が必須**  \n✅ 「有能な操縦士が操縦席にいて、操縦桿を掌握している状態」→ **正解**\n\n---\n\n##",
+        "connections": "このテーマは教科書のⅠ.FLYING AN AIRPLANEセクションの **「Walk Around Inspection」** と関連しています。飛行前の安全チェックと同様に、エンジン始動時も**最大の安全予防措置（最も有能な人間が操縦の準備をしている）** が求められるのです。\n\n---\n\n##",
+        "common_mistakes": "- **\"should be\"（～であるべき）の仮定法** を見落とすと、「もし～する場合」という条件を理解できません\n- 選択肢に「a ground crew member」や「any available person」があると誤選択しやすいです\n- **\"competent\"と\"at the controls\"の両方が必須条件** であることに注意してください",
+        "textbook_ref": {
+          "category": "I",
+          "category_name": "飛行",
+          "excerpt": "I. FLYING AN AIRPLANE\n\nYou have to do WALK AROUND INSPECTION before each flight.\nCheck Aircraft's condition (no damage, missing parts, nor blockages, etc)\nCheck Required Inspections\nCheck Required Documents and Certificate\nTaxi techniques\nPosition of Aileron and Elevator\nDifference in Tricycle type and Tailwheel Type\nWake Turbulence Avoidance\nWingtip Vortex is created when lift is created.\nVortex created around wingtip.\nIt is most dangerous when the airplane is HEAVY ,SLOW and CLEAN.\nIt tend to "
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T00:24:49.818443",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T00:24:49.818443",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 39,
+      "question_text": "The 'yellow demarcation bar' marking indicates",
+      "answer_text": "runway with a displaced threshold that precedes the runway.",
+      "choices": [
+        "A. runway with a displaced threshold that precedes the runway.",
+        "B. a hold line from a taxiway to a runway.",
+        "C. the beginning of available runway for landing on the approach side."
+      ],
+      "correct_letter": "A",
+      "category": "G",
+      "category_name": "空港",
+      "unit": "空港マーキング・標識",
+      "oral_related": false,
+      "explanation": {
+        "why": "滑走路の一部が着陸に使用できない場合、黄色い横縞（シェブロン）でその領域を明確に表示します。Displaced threshold（閾値変位）より前の領域は、着陸には使えませんが、タキシーやテイクオフには使用可能な区域です。パイロットが安全に着陸開始位置を識別するため、視覚的に強調する必要があります。\n\n##",
+        "memory_tip": "**「Yellow = Warning（注意）」「Chevron = 立ち入り禁止ゾーン」**\n黄色い斜線のシェブロンマーキングは、「ここから先は着陸禁止エリア」という警告です。黄色信号のイメージで覚えると記憶しやすいでしょう。\n\n##",
+        "confusion_points": "- **Xマーク**：滑走路全体が閉鎖（進入禁止）\n- **黄色シェブロン**：滑走路の一部が着陸禁止（ただし手前のエリアは使用可）\n- **白線**：通常の滑走路端を示すだけ\n\n##",
+        "connections": "Displaced thresholdがある場合、実際の着陸開始点が後ろにずれます。その前の領域に黄色シェブロンを引くことで、「ここまでは着陸禁止」を明示し、パイロットに正確な着陸開始位置を教えます。\n\n##",
+        "common_mistakes": "黄色シェブロン領域は「完全に使用禁止」ではなく、テイクオフやタキシーには使えることを見落としがちです。あくまで「着陸」のみ禁止という限定的な制限である点が試験では頻出です。",
+        "textbook_ref": {
+          "category": "G",
+          "category_name": "空港",
+          "excerpt": "G. AIRPORT Runway marking & lighting\n\nRunway marking\nRunway number = Magnetic course\nDisplaced threshold\nChevron: Never be used (nor enter) Emergency only.\nHold Bar\nneeds a instruction (permission) to cross from a controller (from Solid Line)\nAt uncontrolled airport,stop, check, then cross.\nX-mark: Runway closed (or tells it is a taxiway, but not landing runway)\nAiport Signs\nMandatory Instruction Signs\nLocation Signs\nDirection Signs\nDestination Signs\nInformation Signs\nRunway Distance Remaining S"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T00:24:59.546957",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T00:24:59.546957",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 40,
+      "question_text": "Most midair collision accidents occur during\n\n##",
+      "answer_text": "clear days.\n\n##",
+      "choices": [
+        "A. hazy days.",
+        "B. clear days.",
+        "C. cloudy nights.",
+        "##"
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "衝突回避・飛行安全\n\n##",
+      "oral_related": false,
+      "explanation": {
+        "why": "晴天時は視程が良好なため、パイロットが他航空機を発見しやすいと過信してしまいます。その結果、スキャン（周囲の確認）を怠りやすくなり、実際には発見漏れが増加するのです。悪天候時は逆に慎重に飛行するため、より注意深くスキャンを実施します。\n\n##",
+        "memory_tip": "**「晴れた日は油断が敵」** — 見える＝安全だと誤解してしまう人間の心理が問題です。FAAはこの危険な過信を強調しており、天気が良いほど警戒が必要という逆説的な学習です。\n\n##",
+        "confusion_points": "❌ 「悪い天候の方が事故が多そう」という直感的誤解\n- 実際にはパイロットの主観的な安全認識の問題であり、天候そのものではありません。\n\n##",
+        "connections": "**FAR Part 91「General Operating and Flight Rules」** の「Preflight Action（出発前点検）」や「Right-of-Way Rules（優先権ルール）」と密接に関連します。Good Aeronautical Decision Making（意思決定）の重要性を教えています。\n\n##",
+        "common_mistakes": "- 「Hazy days（かすみの日）」「Night time（夜間）」を選ぶ間違い\n- 視程の悪さ≠事故原因という理解が必要です。むしろ悪条件が安全意識を高めるという点が試験の狙いです。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T00:25:10.146176",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T00:25:10.146176",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 41,
+      "question_text": "(Refer to Figure 52.) Which type radar service is provided to VFR aircraft at Lincoln Municipal?",
+      "answer_text": "Sequencing to the primary Class C airport, traffic advisories, conflict resolution, and safety alerts.",
+      "choices": [
+        "A. Sequencing to the primary Class C airport and standard separation.",
+        "B. Sequencing to the primary Class C airport and conflict resolution so that radar targets do not touch, or 1,000 feet vertical separation.",
+        "C. Sequencing to the primary Class C airport, traffic advisories, conflict resolution, and safety alerts."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "空港レーダーサービス",
+      "oral_related": true,
+      "explanation": {
+        "why": "Class C空港では、ATC（航空管制）がVFR機に対して一定の義務的サービスを提供する必要があります。これは航空の安全性向上と効率化を目的とした規制です。具体的には、主要空港への進入機の順序付け、他機との関係位置情報、そして潜在的な危険状況の警告が含まれます。\n\n##",
+        "memory_tip": "**「Sequencing, Traffic, Conflict, Safety」の4つ**と覚えましょう。\n- **S**equencing = 進入順序の指定\n- **T**raffic advisories = 交通情報提供\n- **C**onflict resolution = 衝突回避支援\n- **S**afety alerts = 安全警報\n\nこの4つがClass Cでの標準レーダーサービスです。\n\n##",
+        "confusion_points": "❌ **Class B（ターミナルレーダー管制区域）** = さらに厳格な管制（IFR機優先、離着陸許可必須）\n❌ **Class D（管制塔のみ）** = レーダーサービスなし\n❌ **非管制空港** = ATC関与なし\n\nClass Cはその中間的な位置づけです。\n\n##",
+        "connections": "- **Part 91（運航規則）** → ATC指示への従従が義務\n- **Part 61（パイロット認定）** → PPLでもClass C進入時にはATC許可が必要\n- **ATC Clearance（教科書項目）** → Class C内では常に通信確立が必須条件\n\n##",
+        "common_mistakes": "⚠️ **「Separation」を含めない** …Class CではSeparationは提供されません（IFR機と分離するだけ）\n⚠️ **「Radar handoff」と混同** …これはATCセクター間の管制権移譲で別概念\n⚠️ **VFRの完全な分離を期待しない** …VFR同士の分離責任は各パイロットにあります\n\n---\n\n**試験対策ポイント：** Class C空港での4つのサービスを確実に暗記し、Class B/D/非管制空港との違いを明確に区別することが重要です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T22:50:53.699679",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T22:50:53.699679",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 42,
+      "question_text": "What is the effect of ground effect during a low go-around?",
+      "answer_text": "Reduces induced drag, giving false performance.",
+      "choices": [
+        "A. Reduces induced drag, giving false performance.",
+        "B. Increases drag.",
+        "C. Increases lift excessively."
+      ],
+      "correct_letter": "A",
+      "category": "B",
+      "category_name": "空気力学",
+      "unit": "地面効果・低高度飛行",
+      "oral_related": false,
+      "explanation": {
+        "why": "地面効果（Ground Effect）とは、地表面の近くで翼が飛行する際に誘導抗力が減少する現象です。地面が下向き気流を遮るため、翼端渦が弱まり、**誘導抗力が最大30%減少**します。その結果、見かけ上の性能が向上したように感じますが、実際の揚力能力は変わっていません。\n\n##",
+        "memory_tip": "「地面効果＝**インチキな性能向上**」と覚えましょう。\n- Ground Effect = **誘導抗力↓** = 燃料効率UP（見かけ）\n- でも揚力は増えていない = **危険な錯覚**\n- ゴーアラウンド時は地面効果を失う瞬間に注意\n\n##",
+        "confusion_points": "❌ **誤り**：地面効果で揚力が増える → 上昇性能が良くなる  \n✅ **正解**：地面効果で誘導抗力のみ減少 → 上昇力は保証されない\n\n地面効果は「奪われるもの」（抗力減少）であり、「得られるもの」（揚力増加）ではないことが重要です。\n\n##",
+        "connections": "- **全抵抗 = 寄生抵抗 + 誘導抵抗**\n- 低速時は**誘導抵抗が支配的**で、地面効果の影響が大きい\n- ゴーアラウンドで高度が上がる → 地面効果消失 → 抵抗急増 → 上昇能力喪失の危険\n\n##",
+        "common_mistakes": "⚠️ **パイロットが地面効果に頼ってゴーアラウンドを開始してしまう**ケースが事故につながります。\n- 滑走路端での低い高度では性能が「良く見える」\n- しかし離陸継続に必要な上昇率を確保できない\n- **POH（Pilot's Operating Handbook）の手順を厳守し、正規の上昇率を確認する**ことが不可欠です\n\n---\n\n**試験対策：** Ground Effectは「見かけの性能改善 = 実は危険」という認識で、常に保守的に判断しましょう。",
+        "textbook_ref": {
+          "category": "B",
+          "category_name": "空気力学",
+          "excerpt": "B. AERODYNAMICS\n\n4 Aerodynamic Forces\nLift\nWeight\nThrust\nDrag\n4 forces in straight and level flight\nLift=Weight\nThrust=Drag\nLift is usually 5 to 8 time more than Thrust (depends on design and engine)\nDrag\nParasite Drag (increases as speed increases, as frictions)\nInduced Drag (increases as speed decreases, or pitch increases)\nTotal Drag = Parasite Drag + Induced Drag\nAngle of attack (AOA)\nThe angle between chord line and relative wind\nLift and Drag is created proportional to this AOA, not attitu"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T22:51:04.147738",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T22:51:04.147738",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 43,
+      "question_text": "**\nWhen you adjust the fuel/air ratio with the mixture control for a change of altitude, the ratio you are changing is the\n\n**",
+      "answer_text": "weight of fuel to the weight of air.",
+      "choices": [
+        "**",
+        "A. volume of fuel to the volume of air.",
+        "B. weight of fuel to the weight of air.",
+        "C. weight of fuel to the volume of air.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n燃料混合比制御\n\n**",
+      "oral_related": false,
+      "explanation": {
+        "why": "高度が上がると空気密度が低下するため、エンジンに吸入される空気の**重量**が減少します。エンジンの最適燃焼を保つためには、減少した空気の重量に合わせて燃料の重量も減らす必要があります。つまり、重量ベースの燃料・空気比を一定に保つことが重要です。\n\n---\n\n##",
+        "memory_tip": "**「高度が上がる → 空気が薄い → 燃料も減らす」**という流れで、常に**重量の比率**を考えることが基本です。ミクスチャーコントロールは物理的な「重さのバランス」を調整するツールと理解しましょう。\n\n---\n\n##",
+        "confusion_points": "❌ 「体積の比率」ではありません：同じ体積の空気でも、高度によって含まれる酸素分子の個数（重量）が変わります。\n\n❌ 「酸素の濃度」ではありません：空気の成分比（窒素79%、酸素21%）は高度に関わらず一定です。\n\n---\n\n##",
+        "connections": "この知識は「**エンジン・パフォーマンス**」セクションの燃焼効率や、**高高度飛行**での出力低下の理由を理解する基礎となります。また、実際の操縦では「EGT（排気ガス温度）計」を使用して正確なミクスチャー調整を行います。\n\n---\n\n##",
+        "common_mistakes": "試験では「比率」という表現に注目してください。単に「燃料を減らす」のではなく、「**燃料と空気の相対的な重量関係**」を調整していることが正答のポイントです。体積や濃度という別の概念と混同しやすいため注意が必要です。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T22:51:15.553988",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T22:51:15.553988",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 44,
+      "question_text": "What type of hydroplaning causes steam to build up under the tire?",
+      "answer_text": "Reverted.",
+      "choices": [
+        "A. Reverted.",
+        "B. Dynamic.",
+        "C. Viscous."
+      ],
+      "correct_letter": "A",
+      "category": "I",
+      "category_name": "飛行",
+      "unit": "着陸性能・滑走路状況",
+      "oral_related": false,
+      "explanation": {
+        "why": "Reverted hydroplaning（復帰型ハイドロプレーニング）では、タイヤが水膜上で回転停止に近い状態になります。このときタイヤと滑走路の摩擦熱が急激に上昇し、タイヤの下の水が蒸気化してスチーム状態が発生するのです。\n\n##",
+        "memory_tip": "「Reverted = 戻る」と覚えます。タイヤが「回転が戻ってしまう状態」＝スリップして停止近くになり、その結果として**スチーム（蒸気）が発生**する、と連想します。\n\n##",
+        "confusion_points": "- **Dynamic hydroplaning**：水膜が厚すぎてタイヤが浮く現象（蒸気なし）\n- **Viscous hydroplaning**：粘着性の水膜で徐々に浮く現象（蒸気なし）\n- **Reverted**：タイヤロック＋摩擦熱＝**スチーム発生**が特徴\n\n##",
+        "connections": "ハイドロプレーニングの危険性は「**HEAVY、SLOW、CLEAN**な飛行機は危険」という教科書の下降気流対策と同じく、濡れた滑走路での飛行安全が重要なテーマです。\n\n##",
+        "common_mistakes": "「スチーム＝水が蒸発」という物理現象に直結するため、Reverted hydroplaningと蒸気の関係を物理的に理解することが合格のカギです。",
+        "textbook_ref": {
+          "category": "I",
+          "category_name": "飛行",
+          "excerpt": "I. FLYING AN AIRPLANE\n\nYou have to do WALK AROUND INSPECTION before each flight.\nCheck Aircraft's condition (no damage, missing parts, nor blockages, etc)\nCheck Required Inspections\nCheck Required Documents and Certificate\nTaxi techniques\nPosition of Aileron and Elevator\nDifference in Tricycle type and Tailwheel Type\nWake Turbulence Avoidance\nWingtip Vortex is created when lift is created.\nVortex created around wingtip.\nIt is most dangerous when the airplane is HEAVY ,SLOW and CLEAN.\nIt tend to "
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T22:51:23.407669",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T22:51:23.407669",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 45,
+      "question_text": "In the aeronautical decision making (ADM) process, what is the first step in neutralizing a hazardous attitude?",
+      "answer_text": "Recognizing hazardous thoughts.",
+      "choices": [
+        "A. Making a rational judgment.",
+        "B. Recognizing hazardous thoughts.",
+        "C. Recognizing the invulnerability of the situation."
+      ],
+      "correct_letter": "B",
+      "category": "N",
+      "category_name": "生理学",
+      "unit": "航空意思決定（ADM）",
+      "oral_related": true,
+      "explanation": {
+        "why": "危険な態度を改善するには、まず自分がそれを持っていることに気付く必要があります。問題を認識できなければ、対処のしようがないため、認識が第一歩となるのです。これは医学における診断と同じ原理です。\n\n##",
+        "memory_tip": "**「認識→対処」という順序を覚えましょう。** \n治療の第一段階は診断、パイロットの安全管理の第一段階は自己認識です。\"You can't fix what you don't recognize\"(認識できないものは直せない)と覚えると効果的です。\n\n##",
+        "confusion_points": "「危険な態度を排除すること」が正解だと思わないこと。排除する前に、まず認識（自覚）が必要です。また「訓練を受けること」も重要ですが、それは第一ステップではなく、後続のステップです。\n\n##",
+        "connections": "教科書の「Hypoxia」「Hyperventilation」「Carbon Monoxide Poisoning」の対応と同じロジックです。低酸素症でも過呼吸でも、まず症状に気付く(認識)→治療に移るという流れが基本パターンです。\n\n##",
+        "common_mistakes": "「危険な態度を排除する」「態度を矯正する」「訓練を受ける」などの選択肢と混同しやすい点です。ADMプロセスでは必ず「認識」が最初のステップであることをしっかり押さえましょう。",
+        "textbook_ref": {
+          "category": "N",
+          "category_name": "生理学",
+          "excerpt": "N. FLIGHT PHYSIOLOGY\n\nHypoxia\nIt is a state of oxygen deficiency in the blood stream\nSymptom: Headache., Dizziness, Restless, Sleepiness Euphoria (a happy feeling), Lowers Vision\nTreatment: Use Aviation Oxygen and Descend ASAP\nHyperventilation\nChemical imbalance of blood.\nExcessive amount of air is breathed out too much Carbon Dioxide from blood, and\nToo much oxygen is in the body.\ncaused by excessive breathing\ntoo much emotional stress, fear.\nSymptoms: Dizziness, hot or cold sensations, lips or"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T23:42:13.121624",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T23:42:13.121624",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 46,
+      "question_text": "**\n(Refer to Figure 65.) The red symbol at sign D would most likely be found\n\n**",
+      "answer_text": "at an intersection where a roadway may be mistaken as a taxiway.",
+      "choices": [
+        "**",
+        "A. upon exiting all runways prior to calling ground control.",
+        "B. near the approach end of ILS runways.",
+        "C. at an intersection where a roadway may be mistaken as a taxiway.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n空港標識・マーキング\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "赤い標識は**危険警告標識**であり、パイロットに注意を促すためのものです。道路が滑走路やタクシーウェイに見えやすい場所では、誤進入による事故を防ぐため、この標識で「ここは着陸エリアではない」と警告する必要があります。\n\n##",
+        "memory_tip": "**「赤=危険、止まれ」** という一般的な色彩心理を思い出してください。道路が滑走路と間違えられやすい交差点に赤い標識を置くことで、パイロットは即座に「ここは飛行経路ではない」と判断できます。赤色は最も視認性が高い警告色です。\n\n##",
+        "confusion_points": "- **黄色の標識**：注意喚起（cautionary）で、進入可能だが注意が必要\n- **白色の標識**：指示標識で、従うべき指示を示す\n- **赤色の標識**：禁止警告で、進入してはいけない場所を示す\n\n赤と黄を混同しないようにしましょう。\n\n##",
+        "connections": "クラスD空圏での地上走行時に、パイロットはタクシーウェイ図を参照しながら移動します。この時、地形上の道路との区別を明確にするため、交差部分に赤い警告標識が必要になるのです。安全な地上操作はATC指示と標識の理解が基本です。\n\n##",
+        "common_mistakes": "実際の試験では「道路とタクシーウェイの交差点」という具体的なシナリオが出題されます。単に「赤い標識はどこにある？」という問題ではなく、**パイロットが誤認しやすい状況**がキーとなることを意識してください。図を見て、周囲の地形や施設との関係を判断することが重要です。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": "46.png",
+      "result_history": [
+        {
+          "date": "2026-04-01T23:42:24.557280",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T23:42:24.557280",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 47,
+      "question_text": "If you are on approach and picking up ½ in. of rime ice on the leading edge of your wings, you should consider:",
+      "answer_text": "faster than normal approach and landing speed.",
+      "choices": [
+        "A. A faster than normal approach and landing speed.",
+        "B. Approaching and landing at your normal speed since the ice is not thick enough to have any noticeable effect.",
+        "C. Flying your approach slower than normal to lessen the \"wind chill\" effect and break up the ice."
+      ],
+      "correct_letter": "A",
+      "category": "B",
+      "category_name": "空気力学",
+      "unit": "着氷の影響と対策",
+      "oral_related": true,
+      "explanation": {
+        "why": "氷結は翼の表面を粗くし、層流を乱すことで**寄生抗力（Parasite Drag）を大幅に増加**させます。また、氷結により翼の形状が変わるため、**臨界迎え角（Critical AOA）が低下**し、同じ速度でも失速しやすくなります。速度を上げることで、これらの悪影響に対抗し、十分な揚力を確保できます。\n\n---\n\n##",
+        "memory_tip": "「**氷は重く、粗く、危険** → 速く飛べ」という簡潔なロジック。\n- 重さ増加 → より多くの揚力が必要 → 速度UP\n- 表面粗化 → 抗力増加 → より速い速度で安定性確保\n- 失速リスク上昇 → マージン確保 → 速度UP\n\n---\n\n##",
+        "confusion_points": "❌ **誤解**：「氷は重いから、遅く飛んで抗力を減らすべき」\n\n正しくは、氷結時は遅く飛ぶと**失速に近づきやすくなる**ため、むしろ速度を上げる必要があります。\n\n---\n\n##",
+        "connections": "教科書の「Angle of Attack」「Stall」概念と直結：\n- 氷結で臨界AOAが低下 → より低いAOAで失速発生\n- 速度UP = より低いAOAで飛行可能 → 失速回避\n- これは教科書の「Stall is created by critical angle of attack」に基づいています\n\n---\n\n##",
+        "common_mistakes": "✓ **頻出の誤選択肢**：\n- 「遅く飛べ」（❌ 危険）\n- 「着陸を中止して上昇しろ」（❌ 実務的でない）\n- 「フラップを全開にしろ」（❌ さらに失速リスク上昇）\n\n✓ **実務知識**：実際にはicing conditions下での飛行は禁止されている場合が多いですが、試験では「やむを得ず氷を取りながら着陸する場合」の対応を問うています。",
+        "textbook_ref": {
+          "category": "B",
+          "category_name": "空気力学",
+          "excerpt": "B. AERODYNAMICS\n\n4 Aerodynamic Forces\nLift\nWeight\nThrust\nDrag\n4 forces in straight and level flight\nLift=Weight\nThrust=Drag\nLift is usually 5 to 8 time more than Thrust (depends on design and engine)\nDrag\nParasite Drag (increases as speed increases, as frictions)\nInduced Drag (increases as speed decreases, or pitch increases)\nTotal Drag = Parasite Drag + Induced Drag\nAngle of attack (AOA)\nThe angle between chord line and relative wind\nLift and Drag is created proportional to this AOA, not attitu"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T23:42:36.587435",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T23:42:36.587435",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 48,
+      "question_text": "When using forward slip for landing, flaps are usually",
+      "answer_text": "Retracted.",
+      "choices": [
+        "A. Fully extended.",
+        "B. Partially extended.",
+        "C. Retracted."
+      ],
+      "correct_letter": "C",
+      "category": "B",
+      "category_name": "空気力学",
+      "unit": "前進スリップと フラップの関係",
+      "oral_related": false,
+      "explanation": {
+        "why": "フォワードスリップは機体を横向きにして抵抗を増やし、高度を失わずに速度を落とす操縦技法です。この状態でフラップを出すと、片側の翼に過度な負荷がかかり、失速や制御困難になるリスクが高まるため、フラップは格納（Retracted）にしておく必要があります。\n\n###",
+        "memory_tip": "**「スリップ中はシンプルに」** — フォワードスリップは既に複雑な操縦なので、フラップという追加の変数は入れない。安全第一で、フラップなし（格納状態）で実施します。\n\n###",
+        "confusion_points": "通常の着陸では**フラップを出す**ことが多いですが、フォワードスリップの特殊な局面では**フラップは格納したまま**です。「着陸＝フラップ全開」という固定観念に注意してください。\n\n###",
+        "connections": "フォワードスリップの目的は緊急時に高度を迅速に失うことなので、フラップなしで機体の固有の抵抗だけを利用します。POH（パイロット操縦マニュアル）に従い、安定した制御が可能になってから段階的にフラップを出すのが正しい手順です。\n\n###",
+        "common_mistakes": "「着陸準備＝フラップを下げる」という連想から、スリップ中もフラップを出したくなりますが、これは**操縦性悪化と失速リスク**を招きます。スリップは非常時の限定的な技法であることを念頭に置きましょう。",
+        "textbook_ref": {
+          "category": "B",
+          "category_name": "空気力学",
+          "excerpt": "B. AERODYNAMICS\n\n4 Aerodynamic Forces\nLift\nWeight\nThrust\nDrag\n4 forces in straight and level flight\nLift=Weight\nThrust=Drag\nLift is usually 5 to 8 time more than Thrust (depends on design and engine)\nDrag\nParasite Drag (increases as speed increases, as frictions)\nInduced Drag (increases as speed decreases, or pitch increases)\nTotal Drag = Parasite Drag + Induced Drag\nAngle of attack (AOA)\nThe angle between chord line and relative wind\nLift and Drag is created proportional to this AOA, not attitu"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T23:42:45.341882",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T23:42:45.341882",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 49,
+      "question_text": "When should pilots state their position on the airport when calling the tower for takeoff?",
+      "answer_text": "When departing from a runway intersection.",
+      "choices": [
+        "A. When visibility is less than 1 mile.",
+        "B. When parallel runways are in use.",
+        "C. When departing from a runway intersection."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "無線通信手順",
+      "oral_related": false,
+      "explanation": {
+        "why": "滑走路の交差点から離陸する場合、パイロットは正確な位置をタワーに伝える必要があります。これは航空管制官が他機との間隔を正確に把握し、安全な運用を確保するためです。メインの滑走路末端からではなく、交差点からの離陸は特に位置情報の正確さが重要になります。\n\n##",
+        "memory_tip": "**「交差点 = 位置特定が必須」** と覚えましょう。交差点からの離陸はメイン滑走路末端からの標準的な離陸と異なる特殊な状況のため、タワーに対して明確な位置報告が必須になります。\n\n##",
+        "confusion_points": "メイン滑走路末端からの離陸では、位置の詳細な報告は不要です。ただし滑走路交差点や側道からの離陸は「非標準的な位置」のため、積極的な位置通知が求められます。\n\n##",
+        "connections": "これはFAR Part 91（一般運航規則）の**Preflight Action**や**Right-of-Way Rules**と関連し、安全な航空交通の流れを維持するための基本原則です。また**ATC Clearance**の適切な理解にも直結します。\n\n##",
+        "common_mistakes": "「タワーへの全ての通話で位置を言う必要がある」と誤解しやすいですが、実際は「標準的でない位置（交差点など）からの離陸時に特に重要」という限定的な要件です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T23:42:53.426146",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T23:42:53.426146",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 50,
+      "question_text": "Applying carburetor heat will",
+      "answer_text": "enrich the fuel/air mixture.",
+      "choices": [
+        "A. result in more air going through the carburetor.",
+        "B. enrich the fuel/air mixture.",
+        "C. not affect the fuel/air mixture."
+      ],
+      "correct_letter": "B",
+      "category": "F",
+      "category_name": "エンジン",
+      "unit": "キャブレター・エンジン管理",
+      "oral_related": false,
+      "explanation": {
+        "why": "キャブレターヒートを使用すると、吸入空気が温められます。温かい空気は密度が低くなり、実質的に「薄い空気」と同じ状態になります。結果として相対的に燃料の比率が高くなり、混合気がリッチ（濃くなる）します。\n\n---\n\n##",
+        "memory_tip": "**「Heat = Rich」** と暗記しましょう。キャブレターに熱を加える→空気が薄くなる→燃料が相対的に多くなる→リッチ化。逆に冷たい空気は密度が高いのでリーンになります。\n\n---\n\n##",
+        "confusion_points": "「高度が上がる=空気が薄い=リッチにする」と「キャブレターヒート=空気を温める=リッチにする」の両者は別の概念です。高度上昇時はミクスチャーコントロールを引いてリッチにしますが、キャブレターヒートは**温度変化による密度低下**でリッチ化します。\n\n---\n\n##",
+        "connections": "教科書の「Mixture Control & Altitude」セクションと関連します。高度が上がると空気が薄くなるため混合気がリーンになり、これを補正するために燃料を足す必要があります。キャブレターヒートも同じリッチ化の効果をもたらします。\n\n---\n\n##",
+        "common_mistakes": "多くの受験者が「ヒート=暖かくなる=パワーアップ=リーンになるはず」と直感的に考えてしまいます。しかし実際には空気の密度低下がメカニズムです。また「ヒートを加える=燃焼が活発になる」という誤解も要注意です。",
+        "textbook_ref": {
+          "category": "F",
+          "category_name": "エンジン",
+          "excerpt": "F. AIRPLANE ENGINE and SUBSYSTEM\n\nEngine\nproduce power to turn propellers\npulls airplane forward\nPrinciple of Operations\n4-strokes & 5-events\nStroke: Intake, compression, combustion, exhaust\nEvent: Intake, compression, Ignition, power, exhaust\nDual Ignition System\nbetter performance\nsafety\nMixture Control & Altitude\nneeds of mixture control:\nthinner air at high altitude = enriches\nneeds of precautions in descending flight: get too lean\nHeat -problems in any engine-\nsystem prevent over heating\nen"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-01T23:43:02.545889",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-01T23:43:02.545889",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 51,
+      "question_text": "**\n(Refer to Figure 52.) What is the recommended communications procedure for landing at Lincoln Municipal during the hours when the tower is not in operation?\n\n**",
+      "answer_text": "Monitor airport traffic and announce your position and intentions on 118.5 MHz.",
+      "choices": [
+        "A. Monitor airport traffic and announce your position and intentions on 118.5 MHz.",
+        "B. Contact UNICOM on 122.95 MHz for traffic advisories.",
+        "C. Monitor ATIS for airport conditions, then announce your position on 122.95 MHz."
+      ],
+      "correct_letter": "A",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n非管制空港での通信手順\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "タワー非運用時、タワー周波数は自動的にCTAF（共通交通助言周波数）に転換されます。パイロットはこの周波数でエアポート内の全航空機に対して自分の位置と意図を放送し、相互に衝突回避情報を共有するというFAA規則があります。これにより、タワー管制がない時間帯でも安全な運航環境が保たれます。\n\n##",
+        "memory_tip": "**「タワーが寝ている間は、タワー周波数が喋る場所に変わる」**というイメージで覚えてください。118.5はLincoln Municipalのタワー周波数であり、非運用時にはそのままCTAFとして機能します。周波数が変わるのではなく、その役割が変わることがポイントです。\n\n##",
+        "confusion_points": "**122.95（UNICOM）と118.5（タワー/CTAF）を絶対に混同しないでください。** UNICOMは飛行場管理、燃料補給、駐機スペース確保などの地上サービス情報を提供するだけで、航空機の位置情報や意図の放送には使用しません。タワー周波数がCTAFになることと、UNICOMは全く別の概念です。\n\n##",
+        "connections": "この問題は、「空港の通信体系」全体の理解につながります。タワー運用時＝タワーが指示、非運用時＝パイロット同士が情報共有という段階的な安全対策システムを理解することで、PiREP報告やアルタメート飛行場選定などの他の試験問題にも応用できます。\n\n##",
+        "common_mistakes": "選択肢にUNICOM周波数が含まれていると、「地上施設に連絡すればいい」という曖昧な思考に陥りやすいです。しかし、重要なのは「他の航空機への告知」であり、これはCTAFという開放周波数でのパイロット間通信でのみ実現します。また、図52を確認せずに周波数を推測するのも危険です。必ず図表で確認する習慣をつけてください。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-02T00:00:34.732012",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-02T00:00:34.732012",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 52,
+      "question_text": "**\nThe demonstrated crosswind is based on\n\n**",
+      "answer_text": "0.2 Vso.",
+      "choices": [
+        "**",
+        "A. 0.3 Vso.",
+        "B. Vfe.",
+        "C. 0.2 Vso.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n性能・クロスウインド\n\n**",
+      "oral_related": false,
+      "explanation": {
+        "why": "航空機メーカーは各機体の公式な飛行特性を試験飛行で実証します。クロスウインド性能も同様に、失速速度（Vso）の20%という具体的な数値で実証されており、これが法的に認められた基準となっています。この値は、航空機が安全に操縦可能な最大クロスウインド成分を示しています。\n\n##",
+        "memory_tip": "**「0.2 Vso = 20% の失速速度」** と覚えましょう。Vsoは着陸時の失速速度（Stall speed in landing configuration）で、例えば失速速度が50ノットなら、実証済みクロスウインドは**10ノット**です。パイロット・オペレーティング・ハンドブック(POH)にも明記されています。\n\n##",
+        "confusion_points": "0.2 Vso**ではなく**、単なる「メーカー推奨値」や「乗員の判断」ではありません。また、巡航速度(Vクルーズ)やベストグライド速度(Vbg)との混同は避けてください。公式には**Vso（着陸配置での失速速度）**が基準です。\n\n##",
+        "connections": "この知識は「Class B/C/Dエリア進入時の無線通信要件」などと同じく、**安全基準の体系**の一部です。機体性能の制限を理解することで、各空域での飛行制限（例：Class Aではコンプライアンスが必須）の背景がわかります。\n\n##",
+        "common_mistakes": "試験では「実証済み（demonstrated）」という言葉が重要です。「理論的には可能」ではなく「**実際に試験飛行で確認済み**」という意味です。クロスウインド関連の問題では常にこのキーワードを意識しましょう。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-02T00:00:45.764859",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-02T00:00:45.764859",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 53,
+      "question_text": "The weathervaning tendency during after-landing roll is due to",
+      "answer_text": "Greater side area behind main gear.",
+      "choices": [
+        "A. Greater side area behind main gear.",
+        "B. Brakes.",
+        "C. Ailerons."
+      ],
+      "correct_letter": "A",
+      "category": "B",
+      "category_name": "空気力学",
+      "unit": "着陸時のウェザーベーニング現象",
+      "oral_related": false,
+      "explanation": {
+        "why": "着陸後、機体の速度が低下する際、メインギア後方の側面積（主に垂直尾翼）が風の影響を強く受けます。この大きな側面積が風を受けると、機体を風に向かせようとする力（ウェザーベーニング）が発生し、機体が勝手に風向きに向こうとするのです。風見鶏（weathervane）が風に向く原理と同じです。\n\n##",
+        "memory_tip": "「**後ろが大きい物は風に向く**」と覚えましょう。矢のように、機体の後部（垂直尾翼）が大きいほど、風の影響を受けやすくなります。着陸時の低速では、この後方の側面積の影響が相対的に大きくなります。\n\n##",
+        "confusion_points": "❌ **間違い例：**\n- 「フロントギアの位置が原因」→ むしろ前輪は小さく影響は少ない\n- 「エンジン出力が原因」→ 着陸後は通常エンジンオフ、これは風の問題\n- 「CG位置が原因」→ これはトリム・安定性に関する別の要素\n\n##",
+        "connections": "このウェザーベーニング現象は、**舵の有効性が速度に比例する**という空力の原則と関連しています。速度が低いほど舵が効きづらくなるため、パイロットは**十分な前輪操舵コントロール**で対抗する必要があります。また、機体設計（垂直尾翼のサイズ）も重要な要素です。\n\n##",
+        "common_mistakes": "「ウェザーベーニング＝悪い現象で完全に避けるべき」と思う学生が多いですが、実際には**適度なウェザーベーニングは安定性を助ける**という側面もあります。ただし過度だと操舵困難になるため、正しい着陸テクニック（前輪操舵＋対向ラダー）で管理する必要があります。",
+        "textbook_ref": {
+          "category": "B",
+          "category_name": "空気力学",
+          "excerpt": "B. AERODYNAMICS\n\n4 Aerodynamic Forces\nLift\nWeight\nThrust\nDrag\n4 forces in straight and level flight\nLift=Weight\nThrust=Drag\nLift is usually 5 to 8 time more than Thrust (depends on design and engine)\nDrag\nParasite Drag (increases as speed increases, as frictions)\nInduced Drag (increases as speed decreases, or pitch increases)\nTotal Drag = Parasite Drag + Induced Drag\nAngle of attack (AOA)\nThe angle between chord line and relative wind\nLift and Drag is created proportional to this AOA, not attitu"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-02T00:07:07.960106",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-02T00:07:07.960106",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 54,
+      "question_text": "It is the responsibility of the pilot and crew to report a near midair collision as a result of proximity of at least",
+      "answer_text": "500 feet or less to another aircraft.",
+      "choices": [
+        "A. 50 feet or less to another aircraft.",
+        "B. 500 feet or less to another aircraft.",
+        "C. 1,000 feet or less to another aircraft."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "NTSB報告義務",
+      "oral_related": true,
+      "explanation": {
+        "why": "FARパート91では、航空安全を維持するため、危険な接近状況をFAAに報告することが義務づけられています。500フィート以下の距離は、衝突の危険性が高い重大な状況と判断されるため、この距離が報告基準として設定されています。\n\n---\n\n##",
+        "memory_tip": "**「500フィート = 5階建てビルの高さ」**と覚えましょう。その距離内で他機が接近してきたら即座に報告が必要です。「500フィート以下 = 緊急報告レベル」という危険度をイメージするのが効果的です。\n\n---\n\n##",
+        "confusion_points": "- **1000フィート**：訓練飛行時の分散飛行の最小垂直間隔（これとの混同が多い）\n- **100フィート**：編隊飛行の標準間隔（Part 91.111で規定）\n- これらと500フィートを区別することが重要です。\n\n---\n\n##",
+        "connections": "この近接遭遇報告義務は、**Part 91の一般運航規則**に基づいており、パイロットの責任・権限（PICの責任）に関連しています。報告データはFAAの安全統計に利用されます。\n\n---\n\n##",
+        "common_mistakes": "- 「接触があった場合のみ報告」と誤解する（実際は接触なしでも500フィート以下なら報告義務）\n- 報告先を間違える（ATC、またはFAA事故調査部門への報告が必要）\n- 「飛行後できるだけ早く」の報告期限を守らないケースが見られます",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-02T22:17:08.672908",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-02T22:17:08.672908",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 55,
+      "question_text": "This sign confirms your position on [runway 22の画像]",
+      "answer_text": "runway 22.",
+      "choices": [
+        "A. runway 22.",
+        "B. routing to runway 22.",
+        "C. taxiway 22."
+      ],
+      "correct_letter": "A",
+      "category": "G",
+      "category_name": "空港",
+      "unit": "空港標識・マーキング",
+      "oral_related": false,
+      "explanation": {
+        "why": "滑走路に表示される数字は磁方位を示しており、Runway 22は磁方位220°方向を意味します。この標識は「あなたが現在Runway 22上のどこかにいることを確認する」ための位置標識（Location Sign）として機能しています。パイロットが現在地を正確に認識することは、タッチダウンゾーン設定やエマージェンシー対応に必須です。\n\n##",
+        "memory_tip": "**「滑走路の数字＝磁方位÷10」** と暗記してください。Runway 22 = 220°（磁方位）。標識に書かれた数字をそのまま読めば、あなたがその番号の滑走路上にいることが即座にわかります。つまり「22の標識を見た＝Runway 22上にいる」という直結的理解です。\n\n##",
+        "confusion_points": "「Runway 22」と「Runway 4」は逆方向の同じ滑走路を指しており、混同しやすい点です。220° ÷ 10 = 22、その逆は220° - 180° = 40° ÷ 10 = 4 という計算になります。標識の数字を見て、反対方向ではないかを確認することが重要です。\n\n##",
+        "connections": "Location Signは他の5種類の空港標識（Mandatory Instruction、Direction、Destination、Information、Distance Remaining）の一つであり、パイロットが滑走路上での現在位置を確認するための基本的な情報源です。これにより、Holding Point前での待機判断やRwyの間違い防止が可能になります。\n\n##",
+        "common_mistakes": "試験では「この標識は何を示しているか」という曖昧な表現で出題されることがあります。Runway 22の**画像**が示されている場合、その数字がそのまま「あなたの現在地＝Runway 22」を意味することを見落とさないでください。標識の色や形状ではなく、記載されている**数字そのもの**が答えです。",
+        "textbook_ref": {
+          "category": "G",
+          "category_name": "空港",
+          "excerpt": "G. AIRPORT Runway marking & lighting\n\nRunway marking\nRunway number = Magnetic course\nDisplaced threshold\nChevron: Never be used (nor enter) Emergency only.\nHold Bar\nneeds a instruction (permission) to cross from a controller (from Solid Line)\nAt uncontrolled airport,stop, check, then cross.\nX-mark: Runway closed (or tells it is a taxiway, but not landing runway)\nAiport Signs\nMandatory Instruction Signs\nLocation Signs\nDirection Signs\nDestination Signs\nInformation Signs\nRunway Distance Remaining S"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-02T22:17:19.281250",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-02T22:17:19.281250",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 56,
+      "question_text": "In a short-field landing, touchdown should occur at what airspeed?\n\n##",
+      "answer_text": "Minimum controllable airspeed.\n\n##",
+      "choices": [
+        "A. Best glide speed.",
+        "B. Normal approach speed.",
+        "C. Minimum controllable airspeed.",
+        "##"
+      ],
+      "correct_letter": "C",
+      "category": "C",
+      "category_name": "性能",
+      "unit": "短距離着陸性能\n\n##",
+      "oral_related": true,
+      "explanation": {
+        "why": "短距離着陸では、限られた滑走路距離内に着陸する必要があるため、接地時の速度を最小限にすることが重要です。最小操縦可能速度（Minimum Controllable Airspeed: MCA）で接地することで、着陸後の地上滑走距離を最小化し、安全マージンを確保できます。\n\n##",
+        "memory_tip": "**「短い＝遅く」**と考えましょう。短距離着陸では「できるだけ遅い速度で接地する」が基本です。MCAは機体が操縦可能な最も遅い速度であり、これ以上遅くできない限界点です。\n\n##",
+        "confusion_points": "「最小失速速度（Vs）」と混同しやすいですが、Vsは静止状態での失速速度で、実際の着陸時にはより高い速度が必要です。MCAは操縦性を保ちながら最小限の速度であり、安全性が確保されています。\n\n##",
+        "connections": "教科書の「性能と密度高度」の概念とつながります。密度高度が高い（空気密度が低い）ほど、同じ指示速度でも実速度が高くなるため、短距離着陸の難易度が上がります。そのため正確な速度管理が重要になるのです。\n\n##",
+        "common_mistakes": "短距離着陸で「最小失速速度（Vs）」「アプローチ速度」「着陸距離計算値」を選ぶミスが多いです。本問は「接地時の速度」であり、「操縦可能な最小速度」を求めているため、**MCAが唯一の正解**です。",
+        "textbook_ref": {
+          "category": "C",
+          "category_name": "性能",
+          "excerpt": "C. PERFORMANCE\n\nPerformance and density\nAirplanes' performance determined by air density.\nMore Air Density = More Lift & More Power\nThe density of air is decreased by following condition\nHigh altitude\nHigh temperature\nHigh humidity\nHigh Altitude or Low pressure\nLow density = Low performance\nDensity altitude\nAircraft performance in Standard Atmosphere expressed in altitude to have better idea.\nto know aircraft performance\nStandard atmospheric condition.\nAt sea level = 15 degrees C, 29.92 in Hg.\nT"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-02T22:17:28.363047",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-02T22:17:28.363047",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 57,
+      "question_text": "Pilots and/or flight crewmembers involved in NMAC occurrences are urged to report each incident immediately:",
+      "answer_text": "By radio or telephone to the nearest FAA ATC Facility or FSS.",
+      "choices": [
+        "A. By cell phone to the nearest Flight Standards District Office (FSDO) as this is an emergency.",
+        "B. To local law enforcement.",
+        "C. By radio or telephone to the nearest FAA ATC Facility or FSS."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空法規・報告義務",
+      "oral_related": true,
+      "explanation": {
+        "why": "NMACは航空安全に関わる重大なインシデントであり、迅速な報告によってFAA（連邦航空局）は飛行パターン、管制手順、航空路の改善が可能になります。また、他の航空機や管制官にも危険情報が共有され、同様の事故防止に役立つためです。\n\n---\n\n##",
+        "memory_tip": "**「NMAC＝即報」**と覚えましょう。報告先は「近い方（最寄り）に素早く」です。ATC（管制塔）またはFSS（Flight Service Station＝飛行情報サービス）という**公式な情報機関**に報告することがポイントです。\n\n---\n\n##",
+        "confusion_points": "❌ **航空会社や自社に最初に報告する**→これは後でもOKですが、FAA施設への報告が優先です\n\n❌ **着陸後に書類で報告する**→「直ちに」報告が求められるため、無線・電話の**リアルタイム報告**が必須です\n\n❌ **パイロット仲間に連絡する**→公式機関への報告ではありません\n\n---\n\n##",
+        "connections": "本問題はFAR **Part 61（操縦士認定）**および**Part 91（運航規則）**における「操縦士の責任」と直結しています。操縦士は単に安全に飛行するだけでなく、**安全情報を共有する義務**があり、これが航空システム全体の安全文化を支えています。\n\n---\n\n##",
+        "common_mistakes": "- 「報告義務がある」ことは知っていても、**報告先をATC/FSSに限定**することを忘れやすい\n- 「後で報告すればいい」という誤解（重大性から「直ちに」が重要）\n- FSSの役割を過小評価する受験者が多く、ATC施設だけと思い込むケースがあります\n\n---\n\n**学習ポイント**：FARを学ぶ際は、「何をする」だけでなく「誰に報告するのか」「いつ報告するのか」という要素をセットで記憶することが得点向上の鍵です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-02T22:17:40.246420",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-02T22:17:40.246420",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 58,
+      "question_text": "Which wind condition would be most critical when taxiing a nosewheel equipped high-wing airplane?\n\n##",
+      "answer_text": "Quartering tailwind.\n\n##",
+      "choices": [
+        "A. Quartering tailwind.",
+        "B. Direct crosswind.",
+        "C. Quartering headwind.",
+        "##"
+      ],
+      "correct_letter": "A",
+      "category": "I",
+      "category_name": "飛行",
+      "unit": "前輪式着陸装置の操作\n\n##",
+      "oral_related": false,
+      "explanation": {
+        "why": "ノーズホイール装備の高翼機では、斜め後ろからの風が最も危険です。この風向により、垂直尾翼が胴体の後ろにあるため、風の影響を大きく受けて機体がスピン状態に陥りやすくなります。さらに後部主脚が風に押され、機体が風上方向に回転する傾向が強まるためです。\n\n##",
+        "memory_tip": "「高翼機 + ノーズホイール = 後ろからの風が怖い」と覚えましょう。高翼機の重心は低く、垂直尾翼が後方にあるため、斜め後ろからの風（Quartering tailwind）で機体が不安定になります。「後ろからの斜め風 = 最悪」と暗記します。\n\n##",
+        "confusion_points": "低翼機（Low-wing aircraft）の場合は、正面からの強風（Strong headwind）がより危険になります。また、テールホイール機（Tailwheel type）では異なる危険性があるため、必ず「ノーズホイール高翼機」という条件を確認しましょう。\n\n##",
+        "connections": "このテーマは「ウォークアラウンド検査」や「タキシー技術」といった飛行前準備の一部です。風条件の理解は、衝突回避と同じく安全な飛行操作の基本であり、パイロットの判断力が問われます。\n\n##",
+        "common_mistakes": "「後ろからの風」と聞くと「テールウインド全体」と考えがちですが、最も危険なのは「斜め後ろ（Quartering）」です。完全な横風（Crosswind）や正面風よりもこの角度が最悪である点を区別してください。",
+        "textbook_ref": {
+          "category": "I",
+          "category_name": "飛行",
+          "excerpt": "I. FLYING AN AIRPLANE\n\nYou have to do WALK AROUND INSPECTION before each flight.\nCheck Aircraft's condition (no damage, missing parts, nor blockages, etc)\nCheck Required Inspections\nCheck Required Documents and Certificate\nTaxi techniques\nPosition of Aileron and Elevator\nDifference in Tricycle type and Tailwheel Type\nWake Turbulence Avoidance\nWingtip Vortex is created when lift is created.\nVortex created around wingtip.\nIt is most dangerous when the airplane is HEAVY ,SLOW and CLEAN.\nIt tend to "
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-02T22:17:50.181900",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-02T22:17:50.181900",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 59,
+      "question_text": "During which phase of flight is a pilot at increased odds of experiencing a somatogravic illusion?",
+      "answer_text": "Takeoff.",
+      "choices": [
+        "A. Landing.",
+        "B. Takeoff.",
+        "C. Steep turns."
+      ],
+      "correct_letter": "B",
+      "category": "N",
+      "category_name": "生理学",
+      "unit": "錯覚・生理学的影響",
+      "oral_related": false,
+      "explanation": {
+        "why": "Somatogravic illusionは、加速度による前庭器官（内耳）の刺激で起こる空間識失失の一種です。離陸時の急加速により、パイロットは機首が上昇していると錯覚し、実際には水平飛行や下降していても上昇していると感じてしまいます。\n\n---\n\n##",
+        "memory_tip": "**「加速 = 上昇」の勘違い**\n\n離陸時のGフォース（加速度）→ 前庭器官が反応 → 脳が「上がってる」と誤認識。スポーツカーで急加速するときに体が後ろに押さえつけられる感覚が、飛行機では「上昇している」と脳が解釈してしまうイメージです。\n\n---\n\n##",
+        "confusion_points": "- **Vertigo（真性めまい）**：内耳疾患による本当のめまい\n- **Disorientation（空間識失失）**：視界不良時の方向感覚喪失\n- **Hyperventilation**：過呼吸による化学的不均衡（教科書に記載）\n\nSomatogravic illusionは**加速度が直接原因**という点で区別します。\n\n---\n\n##",
+        "connections": "教科書の「Flight Physiology」セクションは、酸素不足や過呼吸など**化学的・酸素関連の障害**を扱いますが、Somatogravic illusionは**前庭機能の錯誤**という生理的な知覚異常です。離陸時の高G環境が引き金になるため、パフォーマンス低下は深刻です。\n\n---\n\n##",
+        "common_mistakes": "❌ **Landing（着陸時）**と答えてしまう → 着陸時は減速なので、むしろ下降錯覚（somatogravic illusion）が起きにくい\n\n❌ **Cruise（巡航時）**と答えてしまう → 定速飛行では加速度がないため、この錯覚は起こらない\n\n✅ **Takeoff（離陸時）**が正解 → **最大加速度がかかる唯一の段階**だからです。\n\n---\n\n**対策：** 離陸時は計器飛行を信頼し、感覚に頼らない。特に夜間や悪天候での離陸では要注意です。",
+        "textbook_ref": {
+          "category": "N",
+          "category_name": "生理学",
+          "excerpt": "N. FLIGHT PHYSIOLOGY\n\nHypoxia\nIt is a state of oxygen deficiency in the blood stream\nSymptom: Headache., Dizziness, Restless, Sleepiness Euphoria (a happy feeling), Lowers Vision\nTreatment: Use Aviation Oxygen and Descend ASAP\nHyperventilation\nChemical imbalance of blood.\nExcessive amount of air is breathed out too much Carbon Dioxide from blood, and\nToo much oxygen is in the body.\ncaused by excessive breathing\ntoo much emotional stress, fear.\nSymptoms: Dizziness, hot or cold sensations, lips or"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-02T22:18:00.377520",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-02T22:18:00.377520",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 60,
+      "question_text": "What change occurs in the fuel/air mixture when carburetor heat is applied?",
+      "answer_text": "The fuel/air mixture becomes richer.",
+      "choices": [
+        "A. A decrease in RPM results from the lean mixture.",
+        "B. The fuel/air mixture becomes richer.",
+        "C. The fuel/air mixture becomes leaner."
+      ],
+      "correct_letter": "B",
+      "category": "F",
+      "category_name": "エンジン",
+      "unit": "キャブレター・燃料空気混合比",
+      "oral_related": false,
+      "explanation": {
+        "why": "キャブレター熱によって空気が温められると、空気の密度が低下します。密度の低い空気は体積あたりの酸素分子数が減り、同じ量の燃料に対して酸素が相対的に少なくなるため、混合比がリッチ（濃い）になるのです。\n\n---\n\n##",
+        "memory_tip": "**「熱＝空気が膨張・希薄化＝相対的に燃料が濃くなる」**\n\n熱を加えると空気は膨張して薄くなり、結果的に燃料の比率が高くなると考えると覚えやすいです。\n\n---\n\n##",
+        "confusion_points": "❌ 間違い：「熱を加えるから混合比がリーン（薄く）になる」\n✅ 正解：熱は空気を薄くするため、相対的に混合比はリッチになる\n\nパイロットがキャブレター熱を加える目的は**エンジン着火不良を防ぐ**ことですが、その副作用として混合比がリッチになります。\n\n---\n\n##",
+        "connections": "教科書の「Mixture Control & Altitude」セクションと関連します。高高度では空気が薄いため混合比をリーン（調整）する必要がありますが、キャブレター熱はその逆の作用をします。降下時に自動的にリッチになるため、さらに調整が必要になる場合があります。\n\n---\n\n##",
+        "common_mistakes": "**「温度が上がる＝エンジンに良い＝リーンになる」という誤った連想をしがち**\n\n実際には温度上昇によって空気密度が低下し、機械的に混合比がリッチになります。これはエンジンの燃焼温度が上がることとは別の現象です。高温環境下でキャブレター熱を使用する場合は、かえってオーバーリッチになるリスクがあるため注意が必要です。",
+        "textbook_ref": {
+          "category": "F",
+          "category_name": "エンジン",
+          "excerpt": "F. AIRPLANE ENGINE and SUBSYSTEM\n\nEngine\nproduce power to turn propellers\npulls airplane forward\nPrinciple of Operations\n4-strokes & 5-events\nStroke: Intake, compression, combustion, exhaust\nEvent: Intake, compression, Ignition, power, exhaust\nDual Ignition System\nbetter performance\nsafety\nMixture Control & Altitude\nneeds of mixture control:\nthinner air at high altitude = enriches\nneeds of precautions in descending flight: get too lean\nHeat -problems in any engine-\nsystem prevent over heating\nen"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-03T23:18:22.831050",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-03T23:18:22.831050",
       "accuracy_rate": 0.0
     }
   ],

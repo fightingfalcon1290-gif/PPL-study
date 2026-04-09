@@ -1,0 +1,1078 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question_text": "クラスB空域のVFR無線要件",
+      "answer_text": "テスト正解",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "クラスB空域のVFR無線要件",
+      "explanation": {
+        "why": "正解は **B：Two-way radio communications equipment, a 4096-code transponder, and an encoding altimeter（双方向無線通信装置、4096コードトランスポンダー、エンコーディング高度計）** です。\n\nクラスB空域は、大規模な空港（例：LAX、JFKなど）の周囲に設定される最も管制が厳しい空域の一つです。VFR（有視界飛行方式）でこの空域に進入するためには、以下の3つの無線機器が最低限必要です：\n\n1. **双方向無線通信装置** — ATC（航空交通管制）との交信に必須\n2. **4096コードトランスポンダー** — レーダーで識別されるためのコード発信装置\n3. **エンコーディング高度計（Mode C）** — 自機の気圧高度を自動的にATCへ送信する装置\n\n**試験での注意点：**\n- 選択肢Aはエンコーディング高度計が含まれていないため不正解です。クラスB空域ではMode Cトランスポンダー（高度情報付き）が必須であることを忘れないでください。\n- 選択肢CにあるVOR/TACAN受信機はクラスB空域の「必須装備」ではありません。あくまで航法上有用ですが、規定上の最低要件には含まれません。\n- 14 CFR §91.131および§91.215が根拠規定です。",
+        "memory_tip": "### 「Bはビッグで、ビジー（混雑）」\n\nクラスB空域は「Big and Busy」の頭文字Bです。\n\n### 3つの要件は「3R」で覚える\n\n| 頭文字 | 要件 | 説明 |\n|-------|------|------|\n| **R**adio | 双方向無線通信 | ATC管制官と交信OK状態 |\n| **R**adar(Transponder) | トランスポンダーMode-C | 高度自動送信機能付き |\n| **R**equirement clearance | ATC承認＋認定資格 | 「cleared to enter...」がマスト |\n\n### 語呂合わせ\n\n**「ビーはね、ラジオ・レーダー・レクイアード（要求）」**\n\n---\n\n##",
+        "connections": "### 1. **クラスA空域との比較**\n\n```\nクラスA（FL180以上）\n├─ IFR専用（VFR飛行不可）\n└─ パイロット技術レベルが高い\n\nクラスB（地表～FL600内の指定区域）\n├─ IFR/VFR混在\n└─ 「VFRでも厳しい要件」= B空域の本質\n```\n\n### 2. **VFR最低気象要件との関係**\n\nクラスB空域では、単に**天候最低基準をクリア**するだけでなく、管制官に直接許可をもらう必要があります。\n\n```\n天候OK ＋ トランスポンダーOK ＋ 無線OK \n  ↓\n  ATC承認「Cleared to enter Class B」\n  ↓\n  初めてクラスB進入可能\n```\n\n### 3. **30NM距離制限との連動**\n\n教科書の「30NM以内ルール」は以下を意味します：\n\n- **30NM以内** → Mode-C必須（クラスB保護空域扱い）\n- **30NM外** → Mode-C不要の場合もある\n\nつまり、クラスB空域は「中核」と「保護区域（カルマン）」で構成されており、拡張保護空域での管制強化を反映しています。\n\n---\n\n##",
+        "common_mistakes": "### ❌ 間違い① 「双方向無線だけで十分では？」\n\n**→ 正解：NO** トランスポンダーとA",
+        "confusion_points": "### クラスB vs クラスC vs クラスD の比較表\n\n| 要素 | **クラスB** | **クラスC** | **クラスD** |\n|------|-----------|-----------|-----------|\n| 典型的な空港 | LAX, JFK, ORD（主要空港） | 中規模空港（管制塔あり） | 小規模塔台空港 |\n| 双方向無線 | ✅ **必須** | ✅ 必須 | ✅ 必須 |\n| トランスポンダー | ✅ **Mode-C必須** | ✅ Mode-C必須 | ❌ 不要 |\n| **ATC承認** | ✅ **「Cleared to enter」必須** | ❌ 不要 | ❌ 不要 |\n| 私操士資格 | ✅ **必須（または教官の推薦状）** | ❌ 不要 | ❌ 不要 |\n| 30NM以内条件 | ✅ あり（Mode-C必須） | ❌ なし | ❌ なし |\n\n**❌よくある誤解**\n- 「クラスCもクラスBと同じ要件では？」\n  → クラスCは**ATC承認不要**です。許可（clearance）ではなく「確認」で足ります\n\n---\n\n##"
+      },
+      "oral_related": false,
+      "result_history": [
+        {
+          "date": "2026-03-24T22:23:38",
+          "result": "incorrect"
+        },
+        {
+          "date": "2026-03-26T23:22:28.106143",
+          "result": "incorrect"
+        },
+        {
+          "date": "2026-03-26T23:59:38.740616",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:51:49.217877",
+          "result": "correct"
+        }
+      ],
+      "accuracy_rate": 50.0,
+      "created_at": "2026-03-24T22:23:38"
+    },
+    {
+      "id": 2,
+      "question_text": "パートタイムタワー空港の空域分類",
+      "answer_text": "B「when the associated control tower is in operation.（管制塔が運用中のとき）」",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "パートタイムタワー空港の空域分類",
+      "explanation": {
+        "why": "正解は **B「when the associated control tower is in operation.（管制塔が運用中のとき）」** です。\n\nパートタイム管制塔（part-time control tower）を持つ空港の空域分類は、管制塔の運用状況によって変化します。\n\n- **管制塔が運用中（稼働中）の場合** → **Class D airspace** として分類されます。Class Dは管制塔が設置され、ATCとの双方向無線通信が必要な空域です。\n\n- **管制塔が閉鎖されている場合** → Class Dの指定は解除され、通常は **Class E airspace** または **Class G airspace** に変更されます。具体的にどのクラスになるかはChart Supplement（旧A/FD）で確認する必要があります。\n\n**試験での注意点：**\n- 選択肢Aの「天候がVFR最低気象条件以下のとき」は空域分類の変更とは無関係です。天候条件は空域のクラスを変えません。\n- 選択肢Cの「FSS（Flight Service Station）が運用中のとき」も誤りです。FSSは空域分類に影響しません。\n- Class Dの存在は**管制塔の運用と直結**しているという点が最重要ポイントです。パートタイムタワーの空港に飛行する際は、事前にNOTAMやChart Supplementで管制塔の運用時間を確認しましょう。",
+        "memory_tip": "### パターン化記憶法\n\n**「タワーがあれば D、いなくなれば E」**\n\n| 状態 | 空域クラス | 覚え方 |\n|------|----------|--------|\n| 管制塔 ON | **Class D** | **D**ay time = 塔がある時間帯 |\n| 管制塔 OFF | **Class E** | **E**vening = 塔が閉まった時間帯 |\n\n### イメージ記憶\n\n🏗️ **管制塔のON/OFF スイッチ**\n\n```\n【管制塔 ON】\n   ↓\n Class D（管制あり）\n   ↓\n 二者間通信・許可が必要\n\n【管制塔 OFF】\n   ↓\n Class E（管制なし）\n   ↓\n VFR天気最低基準のみ\n```\n\n### 数字との組み合わせ\n\n- **D = Daytime** の時間帯に Class D\n- パートタイムは通常 **07:00～22:00** など（空港ごとに異なる）\n- 夜間は Class E に降格\n\n---\n\n## ⚠️混同注意ポイント\n\n### よく混同される3つのケース\n\n#### ❌ 間違い1：「パートタイムタワー空港 = 常にClass D」\n\n❌ **誤解の原因**\n- 「タワーのある空港＝Class D」と暗記してしまう\n\n✅ **正解**\n- **「タワーの運用中だけ Class D」**\n- 夜間など閉局時は Class E に自動降格\n\n---\n\n#### ❌ 間違い2：「フルタイム（24時間）タワー空港との違いの理解不足」\n\n| 空港タイプ | 運用中 | 閉局時 |\n|-----------|------|-------|\n| **フルタイムタワー** | Class D | Class D（常に同じ） |\n| **パートタイムタワー** | Class D | Class E（変わる！） |\n| **タワーなし空港** | Class E | Class E（常に同じ） |\n\n**重要な違い：** パートタイムタワーは**時間帯で空域が変わる**ことが特徴\n\n---\n\n#### ❌ 間distintingu3：「Class E自体の誤解」\n\n❌ **よくある誤り**\n- 「Class E = 管制なし」と思い込む\n- 「Class E = VFRのみ許可」と思い込む\n\n✅ **正解**\n- Class E は **Controlled Airspace**（管制空域）\n- IFR飛行も許可される\n- ただし「ATC service」の内容が異なる\n\n---\n\n## 【他の概念とのつながり】\n\n### 1️⃣ Class D Airspace との関連\n\n**Class D の一般的な特性：**\n```\n✓ 全米のすべてのタワー空港\n✓ 地上～2,500 ft AGL\n✓ 通常は約5 NM（ただし範囲は可変）\n✓ Takeoff/Landing/Taxi Clearance必須\n✓ Two-way Radio Communication必須\n```\n\n**パートタイムタワー空港の場合：**\n- この Class D 要件は「**運用中だけ**」適用される\n- **重要：** FAR 91.129 にパートタイムタワー空港の特則が記載\n\n---\n\n### 2️⃣ Special VFR との関連性\n\nパートタイムタワー閉局後に **Class E** に降格すると：\n\n- **天気が VFR最低基準以下**の場合\n- Special VFR で飛行可能\n  - ただし管制塔が運用中なら許可が必要\n  - 閉局時は状況に応じて判断\n\n---\n\n###",
+        "connections": "### 1️⃣ Class D Airspace との関連\n\n**Class D の一般的な特性：**\n```\n✓ 全米のすべてのタワー空港\n✓ 地上～2,500 ft AGL\n✓ 通常は約5 NM（ただし範囲は可変）\n✓ Takeoff/Landing/Taxi Clearance必須\n✓ Two-way Radio Communication必須\n```\n\n**パートタイムタワー空港の場合：**\n- この Class D 要件は「**運用中だけ**」適用される\n- **重要：** FAR 91.129 にパートタイムタワー空港の特則が記載\n\n---\n\n### 2️⃣ Special VFR との関連性\n\nパートタイムタワー閉局後に **Class E** に降格すると：\n\n- **天気が VFR最低基準以下**の場合\n- Special VFR で飛行可能\n  - ただし管制塔が運用中なら許可が必要\n  - 閉局時は状況に応じて判断\n\n---\n\n###",
+        "common_mistakes": "",
+        "confusion_points": ""
+      },
+      "oral_related": false,
+      "result_history": [
+        {
+          "date": "2026-03-24T22:47:51",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:00:10.798441",
+          "result": "correct"
+        }
+      ],
+      "accuracy_rate": 100.0,
+      "created_at": "2026-03-24T22:47:51"
+    },
+    {
+      "id": 3,
+      "question_text": "R-2305の追加情報の参照先",
+      "answer_text": "C「On the Sectional Chart in the Special Use Airspace area.」",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "R-2305の追加情報の参照先",
+      "explanation": {
+        "why": "正解は **C「On the Sectional Chart in the Special Use Airspace area.」**（セクショナルチャートのSpecial Use Airspace欄に記載されている）です。\n\nR-2305の「R」はRestricted Area（制限空域）を意味します。制限空域はSpecial Use Airspace（特別使用空域）の一種です。\n\nセクショナルチャート（VFR航空図）には、チャートの余白部分に**Special Use Airspace（SUA）の一覧表**が掲載されています。この表には、各制限空域やMOA（Military Operations Area）などの名称、高度範囲、運用時間、管轄機関の連絡先といった追加情報がまとめられています。プリフライトプランニングで制限空域を通過するコースを引いた場合、まずこの表を確認して、その空域の運用状況を把握することが重要です。\n\n**試験での注意点：**\n- 選択肢AのAIM（Aeronautical Information Manual）にはSUAの一般的な説明はありますが、個別の空域の具体的情報（運用時間等）は記載されていません。\n- 選択肢BのChart Supplements U.S.（旧A/FD）には空港施設情報が中心で、SUAの詳細表はセクショナルチャート上に記載されている点を区別しましょう。\n- 「R-○○○○」と見たら制限空域→SUA→セクショナルチャートのSUA欄、と結びつけることがポイントです。",
+        "memory_tip": "**「特別な情報は、特別な場所に」**\n\n特別用途空域（**Special**）の追加情報は、パイロットが最もよく見る**Sectional Chart**に書かれている、という対応を覚えましょう。\n\n**語呂合わせ：\"S\"で始まる2つのS**\n- **S**pecial Use Airspace → **S**ectional Chart\n- 特別用途空域の情報は、セクショナルチャートという「特別な」チャートに載っている\n\n**覚える順序：**\n1. 「R-2305」などの記号を見た → セクショナルチャートを確認する\n2. セクショナルチャートに詳細情報が記載されている\n3. その情報には高度、時間、活動内容などが含まれている\n\n---\n\n##",
+        "connections": "### 1️⃣ **特別用途空域の分類との連関**\n\n```\n特別用途空域の種類：\n├─ Prohibited Area（禁止区域）→ 絶対進入禁止\n├─ Restricted Area（制限区域）→ 活動時間に注意\n├─ Warning Area（警告区域）→ 危険注意\n├─ Military Operation Area（軍事訓練区域）→ 軍事活動中は避ける\n└─ Alert Area（警告区域）→ 通常業務で活用\n\n全てセクショナルチャートに色分けして表示される\n```\n\n### 2️⃣ **飛行計画との関連**\n\n- **VFR飛行計画作成時** → セクショナルチャートで特別用途空域を確認\n- **ルート選定** → 禁止区域を避ける\n- **高度設定** → 制限区域の高度制限を参照\n- **時間確認** → 活動時間外の通過判断\n\n### 3️⃣ **チャート読取スキルとの統合**\n\n```\nセクショナルチャート上の表記：\n┌─────────────────────────────┐\n│ 特別用途空域の枠線または色  │\n│ ↓                           │\n│ R-2305などの参照記号         │\n│ ↓                           │\n│ チャート周辺の凡例欄で      │\n│ 詳細情報を確認する           │\n└─────────────────────────────┘\n```\n\n### 4️⃣ **ATC通信との関係**\n\n- Class B/C/D空域の特別用途区域 → ATC指示を受ける\n- Class E空域の",
+        "common_mistakes": "",
+        "confusion_points": "### ❌ よく間違える選択肢との比較\n\n| 間違った答え | なぜ間違いか | 正しい理由 |\n|-----------|----------|---------|\n| **A：On an Airport Diagram** | 空港図は個別空港の詳細情報用。特別用途空域は広範囲なため不適切 | セクショナルチャートは広域をカバー |\n| **B：In the Airport/Facility Directory** | 施設ディレクトリは空港設備情報が主。特別用途空域の詳細は含まれない | チャート上にリアルタイム確認可能である必要がある |\n| **D：On a Sectional Chart Inset** | インセット（拡大図）は特定地域の詳細表示。本体チャートに記載される | チャート本体に記載されるため、インセット限定ではない |\n\n**重要な違い：**\n- **Sectional Chart 本体** = 航空図全体で一貫した情報表示\n- **Airport Diagram** = 特定空港内のみ\n- **Airport/Facility Directory** = 施設設備情報\n\n---\n\n##"
+      },
+      "oral_related": false,
+      "result_history": [
+        {
+          "date": "2026-03-24T23:19:10",
+          "result": "incorrect"
+        },
+        {
+          "date": "2026-03-26T23:22:18.490209",
+          "result": "incorrect"
+        },
+        {
+          "date": "2026-03-26T23:59:47.450002",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-26T23:59:50.139576",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-26T23:59:58.795562",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:00:15.898432",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:00:17.555453",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:52:00.007055",
+          "result": "correct"
+        }
+      ],
+      "accuracy_rate": 75.0,
+      "created_at": "2026-03-24T23:19:10"
+    },
+    {
+      "id": 4,
+      "question_text": "Class C空域内の衛星空港での運航条件",
+      "answer_text": "C「The pilot must contact ATC as soon as practicable after takeoff.」",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "Class C空域内の衛星空港での運航条件",
+      "explanation": {
+        "why": "正解は **C「The pilot must contact ATC as soon as practicable after takeoff.」** です。\n\nClass C空域には主要空港（primary airport）と衛星空港（satellite airport）が存在します。主要空港を利用する場合は、進入前に必ず双方向無線通信を確立しATC（航空交通管制）の許可を得る必要があります。\n\n一方、衛星空港から出発する場合は、離陸前にATCと通信を確立する義務はありません。ただし、**離陸後できるだけ速やかに（as soon as practicable）ATCにコンタクトする**ことが求められています。これはFAR 91.130に規定されています。\n\n**試験で間違えやすいポイント：**\n- 選択肢Aの「フライトプランの提出」はClass C空域の要件ではありません。フライトプランが義務付けられるのはIFR飛行時です。\n- 選択肢Bの「ATCをモニターする」だけでは不十分です。モニターではなく、双方向通信（two-way radio communication）の確立が必要です。\n- Class C空域とClass B空域の違いも重要です。Class Bでは衛星空港であっても明確なATC許可（clearance）が必要ですが、Class Cでは「通信の確立」が要件であり、許可そのものは不要です。\n\n衛星空港には管制塔がない場合もあるため、離陸後の速やかなコンタクトという運用が定められています。",
+        "memory_tip": "### 記憶のコツ「**衛星は母港に報告する**」\n\n```\n衛星空港（小さい空港）\n    ↓\n母港（Class C主空港）に\n    ↓\nテイクオフ直後、報告する\n```\n\n### 数字・タイミングで覚える\n\n| Class | 衛星空港対応 | 主要な違い |\n|-------|-----------|---------|\n| **Class B** | 事前clearance必須 | **テイクオフ前**に許可を得ている |\n| **Class C（衛星）** | テイクオフ後に連絡 | **テイクオフ直後**に報告 |\n| **Class D** | Two-way Radio | 局所的対応のみ |\n\n### 語呂合わせ「**C衛星＝『後出し報告型』**」\n- Class Cの衛星空港＝テイクオフ後に報告\n- 対比：Class Bの衛星空港＝テイクオフ前に許可\n\n---\n\n##",
+        "connections": "### 1. **ATC Service体系全体における位置付け**\n\n```\nIFR vs VFR\n    ↓\nControlled vs Uncontrolled\n    ↓\nClass A → B → C →",
+        "common_mistakes": "",
+        "confusion_points": "### Class B vs Class C衛星空港での違い\n\n```\n┌─────────────────────────────────────────────────┐\n│         Class B衛星空港          │  Class C衛星空港  │\n├──────────────────────────────┼─────────────────┤\n│ 必須条件：                     │ 必須条件：        │\n│ ✓ ATC Clearance（事前）       │ ✓ Two-way Radio │\n│ ✓ Two-way Radio              │ ✓ Transponder   │\n│ ✓ Transponder Mode-C         │ ✓ 報告のみ       │\n│                              │                 │\n│ タイミング：テイクオフ前      │ タイミング：      │\n│ ATC clearance必須             │ テイクオフ後報告  │\n│ （clearance得てから動く）     │                 │\n└──────────────────────────────┴─────────────────┘\n```\n\n### よくある誤解\n\n**❌ 誤り**：「Class C衛星空港でもテイクオフ前にATCから許可を得なければならない」\n\n**✅ 正解**：「Class C衛星空港はテイクオフ後、実行可能な限り早急に報告すればよい」\n\n### Class D と Class C の混同注意\n\n| 項目 | Class D | Class C |\n|-----|---------|---------|\n| 範囲 | タワー空港付近のみ | より広い空域（衛星空港も包含） |\n| 主空港の有無 | 単独タワー機能 | 主空港+衛星空港 |\n| 衛星空港対応 | 存在しない | **存在する** ← ここが重要 |\n| タイミング | 局所的管制 | テイクオフ後に中心ATCへ報告 |\n\n---\n\n##"
+      },
+      "oral_related": false,
+      "result_history": [
+        {
+          "date": "2026-03-24T23:24:32",
+          "result": "correct"
+        }
+      ],
+      "accuracy_rate": 100.0,
+      "created_at": "2026-03-24T23:24:32"
+    },
+    {
+      "id": 5,
+      "question_text": "Under what condition, if any, may pilots fly through a restricted area?",
+      "answer_text": "B: With the controlling agency's authorization.",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "制限空域（Restricted Area）",
+      "oral_related": true,
+      "explanation": {
+        "why": "Restricted Area（制限空域）は、地上での砲撃訓練、ミサイル発射、対空射撃など、飛行中の航空機にとって危険な活動が行われる空域です。FAR 91.133によると、制限空域を飛行するには、その空域を管理している機関（controlling agency）の許可が必要です。\n\n制限空域は常に「活性化（hot）」しているわけではなく、使用されていない時間帯もあります。活性化していない時間帯にはARTC（航空路管制センター）が通常の航空交通にその空域を開放することもあります。しかし、原則として管理機関の許可なく飛行することは禁止されています。\n\n選択肢Aの「ATCクリアランスを持って航空路上を飛行している時」は不正解です。ATCクリアランスだけでは制限空域の通過は許可されません。選択肢Cの「規則上許可されない」も不正解です。条件付きで飛行は可能です。",
+        "memory_tip": "**「Restricted = 制限 → 管理者に\"リクエスト\"して許可をもらう」**\nRestricted の「R」と Request の「R」を結びつけて、「制限空域はリクエスト（許可申請）が必要」と覚えましょう。",
+        "connections": "- **Prohibited Area（P空域）**：こちらは飛行が完全に禁止。ホワイトハウス上空（P-56）など。Restricted Areaとの違いを明確に区別すること。\n- **MOA（Military Operations Area）**：軍事作戦空域。こちらはVFR機の飛行に許可は不要だが注意が必要。\n- **Warning Area**：領海の外側に設定され、Restricted Areaと同様の危険活動があるが、米国の領空外のため法的規制はできない。\n- **TFR（Temporary Flight Restriction）**：一時的な飛行制限。NOTAMで発行される。\n- セクショナルチャートでは、Restricted Areaは青いハッチング線で表示され、「R-○○○○」と番号が付けられる。",
+        "common_mistakes": "1. **Prohibited AreaとRestricted Areaの混同**：Prohibited Areaは例外なく飛行禁止、Restricted Areaは許可があれば飛行可能。この違いを問う問題が頻出。\n2. **ATCクリアランス＝許可ではない**：IFRでATCクリアランスを受けていても、それだけでは制限空域を通過する許可にはならない。管理機関（controlling agency）の許可が別途必要。ただし実務上はATCが管理機関と調整してくれることもある。\n3. **「controlling agency」と「ATC」は別**：管理機関は多くの場合軍の部隊であり、FAAのATCとは異なる組織。",
+        "confusion_points": "### よく混同される空域との比較\n\n| 空域の種類 | 進入条件 | 管制機関 | 通常の飛行可能性 |\n|-----------|--------|---------|----------------|\n| **Restricted Area**（制限空域） | **認可必須** | 軍など指定機関 | ❌ 通常は不可 |\n| Prohibited Area（禁止空域） | **絶対禁止** | 国防総省など | ❌ いかなる場合も不可 |\n| Warning Area（警告空域） | 推奨される自由飛行 | 軍など | ⚠️ リスク承知で可 |\n| Class B/C/D Airspace | ATC通信必須 | FAA/タワー | ✅ 許可で可 |\n| Class E Airspace | 推奨（強制ではない） | FAA | ✅ VFR で可 |\n\n### 重要な区別\n- **Restricted Area**：許可で飛行可能 → **選別的**\n- **Prohibited Area**：絶対飛行不可 → **完全禁止**\n\n→ 試験では「認可があれば飛行できる」という条件付きの緩さを理解することが重要\n\n---\n\n##"
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:37:11.486395",
+          "result": "incorrect"
+        },
+        {
+          "date": "2026-03-26T23:59:45.593598",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:00:09.078551",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:00:14.115424",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:51:38.453846",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:51:46.586954",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:51:52.949514",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:51:55.413032",
+          "result": "correct"
+        },
+        {
+          "date": "2026-03-27T00:51:57.075588",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-26T23:37:11.486395",
+      "accuracy_rate": 88.9
+    },
+    {
+      "id": 6,
+      "question_text": "The normal radius of the procedural Outer Area of Class C airspace is normally\n\nA: 10 nautical miles.\nB: 30 nautical miles.\nC: 20 nautical miles.",
+      "answer_text": "C: 20 nautical miles.",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "クラスC空域の構造と範囲",
+      "oral_related": false,
+      "explanation": {
+        "why": "Class C空域は、主要空港周辺のIFR航空機を保護するために階層的に設計されています。Outer Area（外側領域）は半径20海里の範囲で設定され、この範囲内の航空機に対してATC管制サービスを提供します。これにより、より広い範囲で航空機の分離と安全を確保しています。\n\n##",
+        "memory_tip": "**「クラスC＝中くらいの空域→中くらいの半径20海里」**\n\n- Class A（最高度）→ 18,000ft以上\n- **Class B（大都市）→ 30海里が基準**\n- **Class C（中都市）→ 20海里が基準** ✓\n- Class D（タワー空港）→ 半径5海里程度\n\n**「C=20」の語呂：**\n- **「シーは(C)ニジュッ(20)」**\n- **「クラスC＝2ジュッ」**という覚え方\n\nまた構造的には：\n- Inner Area = 10海里\n- Outer Area = 20海里\n- **「内10、外20」と対比**で覚える\n\n##",
+        "confusion_points": "| 空域 | Outer Area | 主な違い |\n|------|-----------|--------|\n| **Class B** | 30海里 | **最大。主要空港用** |\n| **Class C** | 20海里 | **中程度。中規模空港用** ✓ |\n| **Class D** | なし | **Outer Areaは存在しない** |\n\n### よくある誤解：\n\n**❌ 「Class Bと同じだから30海里では？」**\n- Class Bは**より混雑度が高い主要空港**（ニューヨーク、ロサンゼルスなど）\n- Class Cは**中規模空港**で交通量が少ない\n- →必要な保護範囲が異なる\n\n**❌ 「Inner Areaと同じ10海里では？」**\n- Inner Area = 10海里（より厳格な要件）\n- Outer Area = 20海里（Outer = より外側 = より広い）\n\n##",
+        "connections": "- **Class B空域との比較**：Class Bは半径30海里の一次管制圏を持ち、Class Cよりも広い範囲で管制される点が異なります。\n\n- **Class D空域との関係**：Class CのOutside Areaは、Class D空域（塔台空港）の上空に拡張される形で設計され、段階的な管制構造を形成しています。",
+        "common_mistakes": "### 📌 ポイント1：「Outer Area」を見落とす\n- 問題に「**Procedural Outer Area**」と書いてあるのに「Primary Area」と勘違い\n- Primary Area = 5海里\n- Outer Area = 20海里（広い）\n\n### 📌 ポイント2：Class Bと混同する\n```\n試験での引っかかりパターン：\nQ. Class C Airspaceのradius?\nA. 30 NM ← これはClass B！\n   20 NM ← これがClass C ✓\n```\n\n### 📌 ポイント3：Inner Areaと混同する\n- Class C全体の構成を理解していないと、「10海里」「20海里」「4,000ft」がごちゃ混ぜになる\n\n| 構造 | 半径 | 高度 | 特徴 |\n|------|------|------|------|\n| Primary | 5 NM | SFC～4,000 | 最も厳格 |\n| Inner | 10 NM | SFC～4,000 | 中程度 |\n| **Outer** | **20 NM** | **1,200～4,000** | **最も広い** ✓ |\n\n### 📌 ポイント4：単位の確認\n- 海里（NM）と通常マイル（SM）の混同\n- **Outer Area = 20 nautical miles（海里）**\n\n### 📌 ポイント5：各選択肢の意味\n- **10 NM** → Inner Areaの範囲"
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:37:16.957915",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-26T23:37:16.957915",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 7,
+      "question_text": "During operations within controlled airspace at altitudes of less than 1,200 feet AGL, the minimum horizontal distance from clouds requirement for VFR flight is\n\nA: 1,000 feet.\nB: 1,500 feet.\nC: 2,000 feet.",
+      "answer_text": "C: 2,000 feet.",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "VFR気象最低条件と空域",
+      "oral_related": false,
+      "explanation": {
+        "why": "Class E Airspace内の1,200フィート未満では、IFR機を保護するため VFR機に対してより厳しい気象最低条件が適用されます。水平方向の雲からの距離は2,000フィート以上の離隔が必要です。これはVFR機がIFR機と衝突するリスクを低減するための規制です。\n\n##",
+        "memory_tip": "### 「低いほど離れろ」の原則\n\n```\n┌─────────────────────────┐\n│ 高度が低い ← 雲から遠く離れる（2,000フィート）\n│\n│ 高度が高い ← 雲から近くても良い（1,000フィート）\n└─────────────────────────┘\n```\n\n### メモリーテクニック：「千と二千」\n\n| 高度帯 | 水平距離 | 語呂 |\n|--------|---------|------|\n| **1,200フィート未満** | **2,000フィート** | 「低いと**二千**」 |\n| 1,200～10,000フィート | 1,000フィート | 「高いと千」 |\n| 10,000フィート以上 | 1,000フィート | 「高いと千」 |\n\n### イメージ記憶\n\n**低高度VFR機** = 「天井が低い部屋」\n- 雲（天井）まで2,000フィート（約600m）の余裕が必要\n- それくらいないと突然の気象変化で逃げ場がない\n\n---\n\n##",
+        "confusion_points": "### よく間違える比較表\n\n| 条件 | 水平距離 | 垂直距離 | 視程 |\n|------|---------|---------|------|\n| **管制空域・1,200ft未満** | **2,000ft** | 500ft下・1,000ft上 | 3SM |\n| 管制空域・1,200～10,000ft | 1,000ft | 500ft下・1,000ft上 | 3SM |\n| 管制外（Class G）・1,200ft未満 | 1,000ft | 500ft下・1,000ft上 | 1SM |\n\n### 典型的な誤解\n\n**❌ 間違い：「高度が関係ない。全部1,000フィートでいい」**\n- 理由：高度によって要件は異なる\n\n**❌ 間違い：「管制空域でも管制外でも同じ」**\n- 理由：管制空域はIFR機保護のため、より厳しい基準\n\n**❌ 間違い：「水平距離と垂直距離は同じ数字」**\n- 理由：水平距離（2,000ft）≠垂直距離（500ft下）\n\n---\n\n##",
+        "connections": "- **Class E Airspace と VFR要件の関係**：Class E Airspaceはほとんどの米国空域を占め、IFR機を保護するためにVFR機により高い気象最低条件が課せられます。\n\n- **Special VFRとの比較**：視程が1マイル以上あれば気象最低以下でもSpecial VFR承認により運航可能ですが、通常のVFR運航ではこのように厳しい雲からの距離要件が適用されます。",
+        "common_mistakes": ""
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:37:23.240902",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-26T23:37:23.240902",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 8,
+      "question_text": "The minimum distance from clouds required for VFR operations on an airway below 10,000 feet MSL is\n\nA: remain clear of clouds.\nB: 500 feet below, 1,000 feet above, and 2,000 feet horizontally.\nC: 500 feet above, 1,000 feet below, and 2,000 feet horizontally.",
+      "answer_text": "B: 500 feet below, 1,000 feet above, and 2,000 feet horizontally.",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "VFR気象最低条件と空域",
+      "oral_related": false,
+      "explanation": {
+        "why": "VFR飛行時に雲との距離を保つ理由は、パイロットが雲を避けて視認飛行を安全に行うためです。10,000フィート以下の低高度では、下方への視認が特に重要であるため、雲の下方は500フィート、上方は1,000フィート、水平方向は2,000フィートの距離が最低要件として定められています。この距離により、IFR航空機との分離と視認性が確保されます。\n\n##",
+        "memory_tip": "### 語呂合わせ「5・10・20（ゴ・トウ・ニジュウ）」\n\n```\n【下・上・横】\n ↓  ↑   →\n500-1000-2000 feet\n\n「ゴー・トゥー・トゥエンティー」と覚える\n```\n\n### 視覚的記憶法\n\n```\n雲を中心に考える：\n\n    ║ 1,000 ft ║  ← IFR機の脅威が高い上空\n    ╔═══════╗\n    ║  雲   ║\n    ╚═══════╝\n    ║ 500 ft  ║  ← 下は視認性確保で小さい\n    \n━━━ 2,000 ft ━━━（横方向は最大距離）\n```\n\n### ニーモニック（記憶術）\n**「下は浅く（500）、上は深く（1000）、横は広く（2000）」**\n\n下側が小さい理由：パイロットが直下の地形・他機を見やすくするため\n\n---\n\n##",
+        "confusion_points": "### よく間違う選択肢との比較\n\n| 選択肢 | 内容 | 誤り理由 |\n|------|------|--------|\n| **A: remain clear of clouds** | 雲から遠く離れよ | 具体的距離がない。完全に曖昧で不正確 |\n| **C: 500上/1000下/2000横** | 上下が逆 | **最頻出の落とし穴！** |\n| **B: 500下/1000上/2000横** | ✅ 正解 | 科学的・安全性に基づく |\n\n### C選択肢が混同しやすい理由\n\n```\n間違った思考：「上の方が見にくいから距離をもっと必要？」\n↓\n実際：「上からのIFR機接近に備えて、距離が必要」\n```\n\n**重要な違い：**\n- パイロットの視認性（見やすさ）と\n- IFR機との衝突回避の安全距離は別の概念\n\n---\n\n##",
+        "connections": "- **Class E Airspace**：10,000フィート以下の多くの空域がClass Eに該当し、VFR機はここで高いVFR要件（雲との距離制限）が課せられます。\n\n- **Special VFR**：天気が悪く標準VFR最低気象条件を満たせない場合、特別VFRで雲との距離要件を緩和することが可能です。",
+        "common_mistakes": ""
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:37:29.722901",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-26T23:37:29.722901",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 9,
+      "question_text": "**3621** (Refer to Figure 26, area 2.) The visibility and cloud clearance requirements to operate VFR during daylight hours over the town of Cooperstown between 1,200 feet AGL and 10,000 feet MSL are\n\n- **A:** 1 mile and 1,000 feet above, 500 feet below, and 2,000 feet horizontally from clouds.\n- **B:** 1 mile and clear of clouds.\n- **C:** 3 miles and 1,000 feet above, 500 feet below, and 2,000 feet horizontally from clouds.\n\n---\n\n##",
+      "answer_text": "**C: 3 miles and 1,000 feet above, 500 feet below, and 2,000 feet horizontally from clouds.**\n\n---\n\n##",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "VFR気象最低条件と空域分類\n\n---\n\n##",
+      "oral_related": true,
+      "explanation": {
+        "why": "Cooperstown周辺（図26エリア2）は**Class E空域（1,200～18,000フィート）** であり、IFR航空機を保護するため、VFR機には**より高い気象要件**が課せられます。Class E空域の昼間VFR最低要件は**視程3マイル、雲からの距離は上1,000フィート・下500フィート・水平2,000フィート**と定められているため、選択肢Cが正解です。\n\n---\n\n##",
+        "memory_tip": "### 「Class E = 3マイル＋1-5-2」メモリーチェーン\n\n| 空域 | 視程 | 雲（上/下/横） |\n|------|------|----------------|\n| **Class E**（高度1,200～10,000ft） | **3マイル** | **1,000/500/2,000** |\n\n### 語呂合わせ\n**「E層は『3マイル走って1,000上に500下に2,000横』」**\n- E＝「エンルート」→一般的な空域\n- 3＝みずみずしい視程\n- 1-5-2＝雲の間隔リズム\n\n### ビジュアル記憶法\n```\n    ☁️ (1000ft上)\n    \nVFR機 ←2000ft→ ☁️\n    \n    ☁️ (500ft下)\n```\n\n---\n\n##",
+        "confusion_points": "### よく間違える3つの空域\n\n| 選択肢 | 空域タイプ | 正しい要件 | この問題での適用 |\n|--------|----------|---------|---------------|\n| **A：1マイル + 1-5-2** | Special VFR または Class B低層 | 特別VFR時の最低基準 | ❌ **誤り** |\n| **B：1マイル + Clear of Clouds** | Special VFR のみ（視界悪い時） | 気象が悪い時のみ使用 | ❌ **誤り** |\n| **C：3マイル + 1-5-2** | **Class E（通常VFR）** | 標準的な管制空域 | ✅ **正解** |\n\n### 混同しやすいポイント\n\n**「Special VFR」の落とし穴**\n- 選択肢Aは一見もっともらしい\n- **ただしSpecial VFRは「視界が悪い時の例外措置」**\n- 問題文に「during daylight hours」とあり、**通常VFR条件を想定**\n- したがってSpecial VFRの低い基準は不適切\n\n**「Clear of Clouds」は限定的**\n- 選択肢Bのような「雲から完全に離れる」要件は**Uncontrolled Airspace（Class G）のみ**\n- Class Eは管制空域なので、具体的な数字（1-5-2）が必要\n\n---\n\n##",
+        "connections": "**Class E Airspaceの役割**：Class Eは米国空域の大部分を占め、IFR航空機を保護することが主目的であり、VFR機の要件が厳格化される基本的な仕組み。\n\n**VFR最低要件の原則**：「最小基準は法的最小値であり、安全性を保証するものではない」という教科書の警告原理が適用される。",
+        "common_mistakes": ""
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:37:58.970393",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-26T23:37:58.970393",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 10,
+      "question_text": "The purpose of Military Training Routes, charted as VFR Military Training Routes (VR) and IFR Military Training Routes (IR) on sectional charts, is to ensure the greatest practical level of safety for all flight operations and to allow the military to conduct\n\nA: low altitude, high-speed training.\nB: radar instrument training.\nC: air-to-air refueling training.",
+      "answer_text": "A: low altitude, high-speed training.",
+      "category": "J",
+      "category_name": "チャート",
+      "unit": "軍用訓練ルートの図記号",
+      "oral_related": false,
+      "explanation": {
+        "why": "Military Training Routes（VR/IR）は、軍用航空機が低高度で高速飛行訓練を安全に実施するために設定された専用ルートです。これらのルートを図表化することで、民間航空機パイロットが軍用機との衝突リスクを認識し、回避行動を取ることができます。結果として、すべての航空機運航の安全性が最大限確保されます。\n\n##",
+        "memory_tip": "**記憶に残るイメージやコツ**\n\n**「MTR = 低く・速く・安全に」**\n\n- **M**ilitary Training Route\n- **低く**（Low Altitude）= 地表近くでの訓練\n- **速く**（High Speed）= 実戦に近いスピード\n- **安全に**（Safety）= 民間機との分離\n\n**語呂合わせ：「MTRは『モタモタするな、走れ！』」**\n→ 軍用機は低空で高速で走る訓練をする場所、という意味\n\n**チャートに記載される理由を覚える：**\n「MTRが書いてあるのは、民間パイロットが『ここは軍用機が低く速く飛んでくるぞ』と知るため」\n\n---\n\n##",
+        "confusion_points": "**似ていて間違えやすい概念を比較して説明**\n\n| 比較項目 | Military Training Routes | Special Use Airspace (MOA/Restricted) |\n|---------|--------------------------|----------------------------------------|\n| **目的** | 低高度・高速訓練 | 危険な活動の隔離（爆撃、砲撃など） |\n| **高度** | 低高度が中心 | 様々な高度 |\n| **チャート記載** | VR(VFR)・IR(IFR)明記 | 境界線で表示 |\n| **回避方法** | 事前にNOTAMで確認 | アクティブ状況を確認 |\n| **パイロット対応** | 認識して衝突回避 | 進入禁止/高度変更 |\n\n**よくある間違い：**\n- ❌ 「MTRは進入禁止エリア」→ ✅ 「MTRは訓練航路。軍用機がいる可能性があるので注意」\n- ❌ 「MTRはIFR機だけの問題」→ ✅ 「VFRでも記載されている（VR）」\n\n---\n\n##",
+        "connections": "- **Special Use Airspace（特別用途空域）**：軍用ルートと同様に、特定の活動が行われる空域を図表化し、パイロットへの警告機能を果たします。\n- **Sectional Charts の凡例（Legend）**：VR/IRルートの位置、高度制限、活動時間などの詳細情報がチャート上に記載されており、正確な読図が必要です。",
+        "common_mistakes": "**数字・例外・紛らわしい表現など試験で引っかかりやすい点**\n\n### 1. **選択肢の解釈ミス**\n\n| 選択肢 | なぜダメか | 正しい理解 |\n|--------|-----------|----------|\n| **B: radar instrument training** | MTRは視界良好での訓練も含む。IRはIFR条件だが、レーダー訓練が主目的ではない | MTRは低高度・高速飛行が主目的 |\n| **C: air-to-air refueling training** | 空中給油訓練は専門の空域・高度で行われる。MTRの目的ではない | MTRは訓練航路であり給油訓練用ではない |\n\n### 2. **\"VR\" と \"IR\" の混同**\n\n```\nVR = VFR Military Training Route\n    → 視程良好での訓練\n    → チャートに青線"
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:38:06.254561",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-26T23:38:06.254561",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 11,
+      "question_text": "During operations at altitudes of more than 1,200 feet AGL and at or above 10,000 feet MSL, the minimum distance above clouds requirement for VFR flight is\n\nA) 500 feet.\nB) 1,000 feet.\nC) 1,500 feet.",
+      "answer_text": "B) 1,000 feet.",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "VFR気象最低条件と空域",
+      "oral_related": false,
+      "explanation": {
+        "why": "VFR飛行では高度が高くなるほど視程と雲高度の要件が厳しくなります。1,200フィート以上AGL、かつ10,000フィート以上MSLの高度では、IFR航空機との衝突回避能力が低下するため、雲上1,000フィートの距離が必要です。これはClass E空域でIFR航空機を保護するための規定です。\n\n##",
+        "memory_tip": "### 「ハイアル（HighAltitude）は厳しい」\n\n```\n低い高度（～1,200ft）= 甘い\n  → 雲上 500ft、雲下 500ft\n\n中程度（1,200～10,000ft） = 中くらい\n  → 雲上 500ft、雲下 1,000ft\n\n高い高度（10,000ft～） = 厳しい ⚠️\n  → 雲上 1,000ft、雲下 1,000ft\n```\n\n### 記憶チェック用フレーズ\n\n**「ハイアルは千フィート」**\n- High Altitude → 1,000ft上下（対称性がある）\n- 1海里も覚えやすい（1SM = 1海里）\n\n### ビジュアル記憶法\n\n```\n        ↑ 1,000ft\n    ☁️ ☁️ ☁️ ☁️\n        ↓ 1,000ft\n    ✈️ VFR航空機\n← 1SM →← 1SM →\n```\n\n高い高度では対称的に1,000フィートずつ必要\n\n---\n\n##",
+        "confusion_points": "### ❌ よくある間違い\n\n**「1,200フィートAGL以上だから雲下は1,000フィート」と判断するのは不完全！**\n\n```\n条件①：1,200フィートAGL以上 ← これだけでは不足\n条件②：10,000フィートMSL以上 ← これが決定的\n\n両条件を満たす場合 = \"高い高度帯\"の要件が全て適用\n```\n\n### 📊 三つの高度帯の比較\n\n| 要素 | 1,200ft未満 | 1,200～10,000ft | 10,000ft以上 |\n|------|-----------|-----------------|------------|\n| 雲上距離 | 500ft | 500ft | **1,000ft** |\n| 雲下距離 | 500ft | 1,000ft | **1,000ft** |\n| 水平距離 | 2,000ft | 2,000ft | **1SM** |\n| 判定 | 最も緩い | 中程度 | **最も厳しい** |\n\n### 🎯 この問題で問われているのは\n\n「**AND条件（かつ）の認識**」\n- 1,200ft AGL以上 **かつ** 10,000ft MSL以上\n- 両方満たす = 最も厳しい基準が適用される\n\n---\n\n##",
+        "connections": "- **Class E Airspace（クラスE空域）**：高度14,500フィート～18,000フィートの大部分の米国空域において、IFR航空機を保護するため、VFR機にはより厳しい天候要件が課されます。\n- **VFR Weather Minimum Requirement（VFR天候最小要件）**：高度による段階的な要件の違いがあり、高度が高いほど視程と雲高度要件が増加します。",
+        "common_mistakes": ""
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:38:12.601893",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-26T23:38:12.601893",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 12,
+      "question_text": "What minimum radio equipment is required for operation within Class C airspace?\n\nA: Two-way radio communications equipment and a 4096-code transponder.\nB: Two-way radio communications equipment, a 4096-code transponder, and DME.\nC: Two-way radio communications equipment, a 4096-code transponder, and an encoding altimeter.\n\n---",
+      "answer_text": "**C: Two-way radio communications equipment, a 4096-code transponder, and an encoding altimeter.**\n（双方向無線通信装置、4096コード・トランスポンダー、およびエンコーディング高度計）\n\n---",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "Class C空域の装備要件---",
+      "oral_related": true,
+      "explanation": {
+        "why": "テスト",
+        "memory_tip": "### ゴロ合わせ：「**ラジオ・レーダー・高度 = Class C三点セット**」\n\n```\nClass C = \"Communicate & Code & altiCitude\"\n   ↓      ↓           ↓         ↓\n  交信    モードC    高度計   エンコーディング\n```\n\n### 段階的記憶法：\n\n| 空域 | 必須装備 |\n|------|---------|\n| **Class B** | ラジオ ＋ トランスポンダー（モードC）+ **クリアランス** |\n| **Class C** | ラジオ ＋ トランスポンダー（モードC）+ **エンコーディング高度計** |\n| **Class D** | ラジオ のみ |\n\n**覚え方：「Bはクリアランス、Cは高度情報」**\n\n---\n\n##",
+        "confusion_points": "### よく混同される3つのケース：\n\n#### ① **Class B vs Class C**\n\n| 要件 | Class B | Class C |\n|------|---------|---------|\n| 無線 | ✓ 必須 | ✓ 必須 |\n| トランスポンダー | ✓ モードC | ✓ モードC |\n| **エンコーディング高度計** | ✗ **不要** | ✓ **必須** |\n| **ATC クリアランス** | ✓ **必須** | ✗ **不要** |\n| **操縦資格** | ✓ **必須**（プライベート以上） | ✗ **不要** |\n\n**KEY:** Class Bはより厳しい要件（\"Bigger, Better, Busier\"）\n\n#### ② **トランスポンダーの違い**\n\n```\n4096コード・トランスポンダー（モードC対応）\n    ↓\n自動高度送信機能 = Encoding Altimeter連動\n    ↓\nレーダー画面に「航空機＋高度」表示\n```\n\n#### ③ **DMEとの区別**\n\n- **DME（Distance Measuring Equipment）**\n  - Class Cでは **不要** ← よく引っかかる！\n  - Class B拡張区域の一部で必要\n  - 距離測定用（高度測定ではない）\n\n---\n\n##",
+        "connections": "### 1. **各Class空域の全体像**\n\n```\nClass A (18,000ft以上)\n  ↓ IFR専用、最も管制が厳しい\n  \nClass B (最大5,000ft以下、主要空港周辺)\n  ↓ 要クリアランス ＋ 資格確認\n  \nClass C (地域空港周辺)\n  ↓ 要無線交信 ＋ モードC（＋高度計）\n  \nClass D (タワー空港)\n  ↓ 要無線交信のみ\n  \nClass E (大部分のUS空域)\n  ↓ ATC機能あるが、VFRに強制要件なし\n```\n\n### 2. **トランスポンダー・モードの進化**\n\n```\nMode A → 4096コード（識別のみ）\nMode C → 4096コード ＋ 高度自動送信 ← Class C最小要件\nMode S → 航空機を個別識別\n```\n\n### 3. **エンコーディング高度計が重要な理由**\n\nIFR航空機は管制官から指定された高度で飛行します：\n- VFR機が同じ高度にいると衝突の危険\n- 管制官が正確な分離（separation）を確保するため\n- 高度情報が自動送信される必要がある\n\n---\n\n##",
+        "common_mistakes": "### ⚡ **試験での引っかかりやすい罠**\n\n#### **罠１：「DMEが必要」と思い込む**\n\n```\n❌ 間違い：\n「Class Cはトランスポンダ"
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:38:40.414870",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-26T23:38:40.414870",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 13,
+      "question_text": "Flight through a restricted area should not be accomplished unless the pilot has\n\nA: filed an IFR flight plan.\nB: received prior authorization from the controlling agency.\nC: received prior permission from the commanding officer of the nearest military base.",
+      "answer_text": "B: received prior authorization from the controlling agency.\n（管轄機関から事前の許可を受けていること）",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "制限空域と特別使用空域",
+      "oral_related": true,
+      "explanation": {
+        "why": "Restricted Area（制限空域）は軍事訓練や危険な活動が行われるため、FAA管轄機関の事前許可が必須です。IFRファイルやBase司令官の許可では不十分であり、当該空域を管轄するATC機関からの明確な認可が飛行の法的要件となります。また、この空域進入規制は一般パイロットの安全を保護する基本的なルールです。\n\n##",
+        "memory_tip": "**「制限空域＝許可が必須」と強く意識する**\n\n**語呂合わせ：**\n- **「制限＝STO（Stopped）→許可でGO！」**\n  - 制限空域は「止められている」状態\n  - 管轄機関（controlling agency）の許可でやっと「GO」できる\n\n**イメージ：**\n- 🚫 立入禁止の看板がある\n- 📋 でも「管轄者の許可書」があれば入場可能\n- ✅ その許可書＝Authorization\n\n---\n\n##",
+        "confusion_points": "### **制限空域と他の空域の違い**\n\n| 空域タイプ | 特徴 | 通過条件 |\n|-----------|------|--------|\n| **制限空域（Restricted）** | 危険な活動あり | **事前許可が必須**（管轄機関から） |\n| **禁止空域（Prohibited）** | 完全に禁止（大統領官邸上空など） | **絶対に通過不可** |\n| **警告空域（Warning）** | 危険の可能性あり | 許可不要だが注意が必要 |\n| **クラスE空域** | 管制支援あり | 許可不要（通常飛行可） |\n\n**よくある間違い：**\n- ❌「IFRフライトプランを提出すればOK」→これは不十分\n  - IFRプランだけでは制限空域を通過できません\n- ❌「最寄りの軍事基地の司令官に許可をもらう」→これも不完全\n  - 許可は「その空域の管轄機関」から必要です（必ずしも最寄り基地とは限らない）\n\n---\n\n##",
+        "connections": "- **Class B/C/D Airspace進入要件**：これら管制空域への進入にはATC機関との2-way radio communicationが必須であり、Restricted Areaの事前許可取得も同様にATC管轄機関との調整が重要です。\n\n- **Special VFR**：気象最低基準以下の飛行時にもATC機関の許可が必要であり、Restricted Area同様、管制機関の権限を尊重する空域利用の原則が貫かれています。",
+        "common_mistakes": "### **❌ 選択肢A「IFRフライトプランを提出する」が不正解な理由**\n\n```\n× IFRプラン = フライト高度・ルートの管制支援\n○ 制限空域の通過 = その空域の**軍事機関からの許可**が必要\n\nこれら2つは異なるレベルの許可\n```\n\n- IFRプランを提出しても、制限空域を飛ぶ許可とは別問題\n- 軍事活動が行われている間は、IFRでも制限空域へのアクセスが制限されることがある\n\n### **❌ 選択肢C「最寄りの軍事基地の司令官から許可」が不正解な理由**\n\n```\n❌ 「最寄りの」基地 = 誤った特定\n✅ 「その空域を管理する」機関 = 正確な判定\n\n制限空域ごとに"
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:38:47.017874",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-26T23:38:47.017874",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 14,
+      "question_text": "Two-way radio communication must be established with the Air Traffic Control facility having jurisdiction over the area prior to entering which class airspace?\n\nA: Class C.\nB: Class E.\nC: Class G.",
+      "answer_text": "A: Class C.",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "空域の分類と通信要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "Class Cに進入する際は、**Two-way radio communicationの確立が必須要件**です。Class Eは進入前の無線確立が求められず、Class Gは非管制空域のため無線要件がありません。したがって、進入前の無線確立が条件付けられている空域はClass Cのみです。\n\n---\n\n##",
+        "memory_tip": "test",
+        "confusion_points": "### **Class C vs Class D の混同**\n\n多くの受験生がClass CとClass Dの違いを混同します。\n\n| 項目 | Class C | Class D |\n|------|---------|---------|\n| **通信確立タイミング** | **進入前に確立（必須）** | 進入時・離着陸時に確立 |\n| **Transponder** | Mode-C必須 | 不要（推奨） |\n| **ATC承認** | 不要 | 不要（タワーからの指示） |\n| **場所** | 中規模空港周辺 | 管制塔のある空港 |\n| **サービス範囲** | 全航空機に管制サービス | 進入・離脱時のみ |\n\n**なぜ混同するのか？**\n- どちらも「通信が必要」と思いがち\n- しかし**進入「前」か進入「時」かで大違い**\n\n### **Class C vs Class B の混同**\n\nClass Bはさらに厳格で、進入前に：\n- ①双方向通信\n- ②ATC からの明確な承認（\"cleared to enter\"）\n- ③Transponder Mode-C\n- ④パイロット免許要件\n\nClass C では②③が必須ですが、④の免許要件（私有操縦士以上）が必須ではありません。\n\n---\n\n##",
+        "connections": "- **Class B Airspace**：同様にTwo-way radio communication、Transponder mode-C、ATC clearanceが進入要件として求められます。\n- **Class D Airspace**：塔台設置空港での進入要件であり、Two-way radio communicationが必須ですが、Class Cほど厳格な事前確立要件ではありません。",
+        "common_mistakes": ""
+      },
+      "result_history": [
+        {
+          "date": "2026-03-26T23:38:52.831565",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-26T23:38:52.831565",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 15,
+      "question_text": "During operations at altitudes of more than 1,200 feet AGL and at or above 10,000 feet MSL, the minimum distance above clouds requirement for VFR flight is",
+      "answer_text": "B: 1,000 feet.",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "VFR気象最低条件と空域",
+      "oral_related": false,
+      "explanation": {
+        "why": "VFRパイロットは視程と雲との距離によって安全な飛行を確保する必要があります。高度が高くなるほど（特に10,000フィート以上MSL）、より厳しい気象条件が想定されるため、雲上との距離要件が1,000フィートに設定されています。これはIFR航空機との分離を保証し、VFR航空機の安全性を確保するための規定です。\n\n---\n\n##",
+        "memory_tip": "### シンプルな暗記法\n\n**「高い高度＝厳しい要件」**\n\n```\n高度が上がると、雲からの距離も必要\n10,000 ft以上 → 1,000 ft離れる\n    ↓\n「1が2つ＝10,000と1,000」と覚える\n```\n\n### 視覚的な階層記憶\n\n```\n雲からの距離要件（垂直距離を中心に）\n\n10,000 ft以上 ━━━━ ▲ 1,000 ft\n              ━━━━ ☁ ━━━━\n              ━━━━ ▼ 1,000 ft\n\n1,200～10,000 ft ━ ▲ 1,000 ft\n                ━ ☁ ━ 500 ft\n                \n1,200 ft以下 ━━ ▲ 500 ft\n            ━━ ☁ ━━ 500 ft\n```\n\n### 語呂合わせ\n\n**「テンサン（10,000と1,000）は厳しいんだよ」**\n- 10,000 ft MSL以上では、1,000 ftの距離が必要\n- より高い位置でのより厳しい要件\n\n---\n\n##",
+        "confusion_points": "### よく混同される数値\n\n| 条件 | 水平距離 | 垂直距離 | よくある誤り |\n|------|---------|---------|-----------|\n| **10,000 ft MSL以上** | **1,000 ft** | **1,000 ft** | ❌ 500 ftと混同 |\n| 1,200～10,000 ft MSL | 500 ft | 1,000 ft | ❌ 垂直距離を500 ftと勘違い |\n| 1,200 ft以下 | 500 ft | 500 ft | ❌ この条件と10,000 ftを混同 |\n\n### 実例で比較\n\n**シナリオA**：高度9,500 ft MSL\n- 雲からの要件：**500 ft水平 × 1,000 ft垂直**（緩い）\n\n**シナリオB**：高度10,500 ft MSL\n- 雲からの要件：**1,000 ft水平 × 1,000 ft垂直**（厳しい）\n\n→ **わずか1,000 ftの高度上昇で要件が倍増**\n\n### ALSと MSLの混同注意\n\n問題文では：\n- **AGL（高地面からの高さ）= 1,200 ft以上**\n- **MSL（海面からの高さ）= 10,000 ft以上**\n\n→ 両方の条件が満たされて初めて1,000 ftが適用される\n\n---\n\n##",
+        "connections": "- **Class E Airspace（クラスE空域）**：VFR機は高い気象最低限度が要求される空域であり、この雲間隔要件はIFR航空機保護のためのルールです。\n- **VFR Weather Minimum Requirement（VFR気象最低限度）**：視程、雲間隔、高度により異なる複数の要件が組み合わされて、VFR飛行の安全性が確保されています。",
+        "common_mistakes": ""
+      },
+      "result_history": [
+        {
+          "date": "2026-03-27T00:50:15.367112",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-27T00:50:15.367112",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 16,
+      "question_text": "What minimum radio equipment is required for operation within Class C airspace?",
+      "answer_text": "C: Two-way radio communications equipment, a 4096-code transponder, and an encoding altimeter.",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "クラスC空域の装備要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "Class C空域はタワー空港周辺で複数の航空機が運航するため、ATC（航空交通管制）がすべての航空機を識別・管理する必要があります。そのため、双方向無線通信、トランスポンダー（モードC）、エンコーディング高度計の3つの装備により、ATC側が航空機の位置・高度・識別情報をレーダー画面で確認できるようになります。これらの装備がなければATC管制が機能しないため、法的な最小要件として定められています。\n\n##",
+        "memory_tip": "### 「3つの耳と目」で覚える\n\n| 機器 | 役割 | 覚え方 |\n|------|------|--------|\n| **無線機** | 「耳」と「口」 | ATC との会話 |\n| **トランスポンダ** | 「目玉」 | レーダーに映る |\n| **エンコーディングアルティメータ** | 「目玉の瞳（高度情報）」 | 高度を自動送信 |\n\n### 語呂合わせ\n**「C空域は『ラジオ・トランス・高度』」**\n- **ラジオ** = 無線機\n- **トランス** = トランスポンダ\n- **高度** = エンコーディングアルティメータ（高度情報）\n\n### 階級を覚える語呂\n```\nClass A → IFR only（最も厳しい）\nClass B → 「プライベートパイロット必要」（中上位）\nClass C → 「無線・トランス・高度」（中位）\nClass D → 「無線だけOK」（最も緩い）\nClass E → 制御空域（通常の巡航）\n```\n\n---\n\n##",
+        "confusion_points": "### Class B vs Class C vs Class D の比較\n\n| 空域 | 無線 | トランスポンダ | エンコーディング | パイロット資格 | 清交許可 |\n|------|------|--------------|--------------|------------|--------|\n| **Class B** | ✅必須 | ✅必須 | ✅必須 | Private以上 | ATC clearance必須 |\n| **Class C** | ✅必須 | ✅必須 | ✅必須 | 不問 | 不要（無線で十分） |\n| **Class D** | ✅必須 | ❌不要 | ❌不要 | 不問 | 不要 |\n\n### よくある混同ポイント\n\n**❌ 間違い 1：「Class CはClass Bと同じ」**\n- Class Bでは「ATC clearance（許可）」が必須\n- Class Cでは「無線通信確立」だけで十分（clearanceは不要）\n\n**❌ 間違い 2：「トランスポンダさえあれば」**\n- トランスポンダだけでなく「エンコーディングアルティメータ」も必須\n- 高度情報がなければ、トランスポンダは意味をなさない\n\n**❌ 間mistake 3：「Mode-A トランスポンダで大丈夫」**\n- Mode-A = 識別情報のみ（高度情報なし）\n- 必須 = **Mode-C**（高度情報付き）\n\n---\n\n##",
+        "connections": "1. **Class B空域の要件との比較**：Class BもモードCトランスポンダーと双方向無線が必須ですが、Class Cはより低高度でより多くの運航があるため同等の装備要件が課されています。\n\n2. **Class D空域との違い**：Class Dでは双方向無線通信のみで良いのに対し、Class Cはトランスポンダーの装備が追加で必須となるため、より厳格な管制体制を示しています。",
+        "common_mistakes": ""
+      },
+      "result_history": [
+        {
+          "date": "2026-03-27T00:50:21.911223",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-27T00:50:21.911223",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 17,
+      "question_text": "What is the minimum weather condition required for airplanes operating under special VFR in Class D airspace?\n（Class D空域において、特別有視界飛行方式（Special VFR）で運航する飛行機に求められる最低気象条件は何か？）",
+      "answer_text": "**A: 1 mile flight visibility.**\n（飛行視程1マイル）",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "特別VFRの気象要件",
+      "oral_related": false,
+      "explanation": {
+        "why": "Special VFRは、通常のVFR最低気象条件を満たさない悪天候時に、限定的に有視界飛行を許可する制度です。Class D空域では塔台管制下にあるため、管制官の支援により通常より低い気象基準（視程1マイル）での運航が認められています。ただし、この基準を下回る場合はIFR飛行が必須となります。\n\n---\n\n##",
+        "memory_tip": "### 「スペシャルVFRは『1マイル』の特別扱い」\n\n| 概念 | 数字 | 覚え方 |\n|------|------|--------|\n| **通常VFR** | 3マイル | 「通常は**3**マイル必要」→ 3本指で表現 |\n| **Special VFR** | 1マイル | 「スペシャルだから**1**マイルでOK」→ 指1本 |\n| **完全禁止** | 0マイル未満 | 「1マイル未満は絶対ダメ」 |\n\n### キャッチフレーズ\n**「スペシャルは『ワン・マイル』で特別に許可」**\n- Special VFR = Special permission with 1 mile visibility\n\n---\n\n##",
+        "confusion_points": "### よく間違える3つの比較\n\n#### ❌ 誤解1：「Special VFRは気象条件不要」\n**正解：** Special VFRでも1マイルの飛行視程が**必須**です\n- 「Special = 制限なし」ではなく「Special = 条件緩和」です\n\n#### ❌ 誤解2：「天候が悪ければ悪いほどSpecial VFR対象」\n**正解：** 1マイル以上の視程があることが前提\n- 視程が1マイル未満では、Special VFRも許可されません\n- その場合は飛行そのものが禁止されます\n\n#### ❌ 誤解3：「Class E空域でも同じく1マイル」\n**正解：** Class D（管制塔あり）と Class E（管制塔なし）では異なります\n\n| 空域 | Special VFR適用 | 最低視程 |\n|------|-----------------|---------|\n| **Class B, C, D** | ✅ 適用可能 | **1マイル** |\n| **Class E** | ⚠️ 制限的（飛行視程3マイル以上が通常） | 原則3マイル |\n| **G空域（非管制）** | ❌ 適用なし | VFR最低値適用 |\n\n---\n\n##",
+        "connections": "1. **Class D Airspace（クラスD空域）** ：全ての塔台空港に設定され、確立された双方向無線通信が必須要件であり、Special VFRもこの管制下で実施されます。\n\n2. **VFR Weather Minimum Requirement（VFR気象最低基準）** ：通常のVFR条件より緩和されたSpecial VFRの基準は、IFR基準との中間的な位置づけで、気象が「VFR最低基準以上、IFR未満」の状況を想定しています。",
+        "common_mistakes": ""
+      },
+      "result_history": [
+        {
+          "date": "2026-03-27T00:50:49.218909",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-27T00:50:49.218909",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 18,
+      "question_text": "(Refer to Figure 78.) What are the basic VFR weather minima required to takeoff from the Onawa, IA (K36) airport during the day?",
+      "answer_text": "C: 1 statute mile, clear of clouds.",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "空域別VFR気象最低条件",
+      "oral_related": false,
+      "explanation": {
+        "why": "test",
+        "memory_tip": "### 暗記テクニック\n\n**「クラスDは１マイル＋雲なし」**\n\n```\nClass D（デー）空港 = Day（昼間）\n    ↓\n   「1マイル」「雲なし」の2つセット\n```\n\n### ビジュアル語呂合わせ\n\n| 空域 | 視程 | 雲 | キーワード |\n|------|------|-----|----------|\n| **Class D/E** | **1 SM** | **Clear of clouds** | 「小さな空港は厳しい基準」 |\n| Class B/C | 3 SM | 1,000 ft separation | 「大空港は甘い」← **間違い！** |\n\n**実は逆です！**\n- 大空港（B/C）ほど**レーダー管制＋IFR多数**→基準は厳格\n- 小空港（D）は**単純**→基準も単純\n\n### 「1とクリア」の組み合わせ\n\n```\nD空域の天気基準\n└─ Visibility = 1 statute mile\n└─ Cloud = CLEAR（雲に接触するな）\n```\n\n---\n\n##",
+        "confusion_points": "### ❌ よくある間違い\n\n#### 混同1：Class B/C との比較\n\n| 空域 | 視程 | 雲までの距離 |\n|------|------|----------|\n| **Class A** | IFRのみ | — |\n| **Class B** | **3 SM** | **1,000 ft above** |\n| **Class C** | **3 SM** | **1,000 ft above** |\n| **Class D** | **1 SM** | **clear of clouds** |\n| **Class E** | **1 SM** | **clear of clouds** |\n| **Uncontrolled（G）** | 1 SM | clear of clouds |\n\n**重要な逆転：**\n- 「大空港＝基準が緩い」❌ **誤解**\n- 実際：大空港（B/C）＝**3 SM + 距離維持**（厳格）\n- 小空港（D）＝**1 SM + 雲回避**（シンプル）\n\n#### 混同2：「Clear of clouds」と「1,000 ft separation」の違い\n\n```\n❌ K36で「1,000 ft above the clouds」と答えた\n   → これはClass B/Cの基準\n   \n✅ K36では「clear of clouds」\n   → 雲に触れてはいけない（距離不問）\n   → より直感的で厳格\n```\n\n#### 混同3：昼夜の違い\n\n**Class E空域は昼夜で異なります：**\n\n| 時間帯 | 視程 | 雲 |\n|--------|------|-----|\n| **昼間** | 1 SM | clear of clouds |\n| **夜間** | 3 SM | 1,000 ft separation |\n\n**問題で「during the day」と明記されているのは、この差を考慮させるため**\n\n---\n\n##",
+        "connections": "### 1. 空域分類システム全体の中での位置付け\n\n```\nClass A (FL180-FL600)\n    ↓ [IFRのみ]\nClass B (大空港周辺)\n    ↓ [3 SM, 1,000 ft]\nClass C (中規模空港)\n    ↓ [3 SM, 1,000 ft]\nClass D (タワー空港) ← K36はここ！\n    ↓ [1 SM, clear of clouds]\nClass E (その他)\n    ↓ [1 SM, clear of clouds]\nClass G (管制なし)\n    [1 SM, clear of clouds]\n```\n\n### 2. IF",
+        "common_mistakes": ""
+      },
+      "result_history": [
+        {
+          "date": "2026-03-27T00:50:55.092872",
+          "result": "correct"
+        }
+      ],
+      "created_at": "2026-03-27T00:50:55.092872",
+      "accuracy_rate": 100.0
+    },
+    {
+      "id": 19,
+      "question_text": "**\nTRSA Service in the terminal radar program provides\n\n**",
+      "answer_text": "warning to pilots when their aircraft are in unsafe proximity to terrain, obstructions, or other aircraft.\n\n---\n\n## 分類情報",
+      "choices": [
+        "**",
+        "- A. IFR separation (1,000 feet vertical and 3 miles lateral) between all aircraft.",
+        "- B. warning to pilots when their aircraft are in unsafe proximity to terrain, obstructions, or other aircraft.",
+        "- C. sequencing and separation for participating VFR aircraft.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n航空法規・TRSA\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "TRSA（Terminal Radar Service Area）は、ターミナルレーダープログラムの一部として機能します。レーダー監視により、パイロットが気付かない危険な接近状況をリアルタイムで検出し、即座に警告を発することで安全性を向上させています。これは特にIFR機とVFR機が混在するターミナル空域での衝突防止に重要です。\n\n---\n\n##",
+        "memory_tip": "### 語呂合わせ\n**「TRSA = Terrain(地形)・Traffic(交通)・Safety Alert(安全警告)」**\n\n### ビジュアルメモリー\n```\n空港周辺の混雑地域\n　↓\nレーダーで航空機を360度監視\n　↓\n危険検出時に即警告\n　↓\n「注意！山が近い」「他の飛行機が接近中」\n```\n\n### キーワードの記憶\n- **Warning**：事前警告（警告は過去形ではなく、常時の警戒体制）\n- **Unsafe proximity**：危険な近接距離（具体的には各カテゴリーで定義）\n- **Terrain, obstructions, other aircraft**：3つの危険要因を全て警告\n\n---\n\n##",
+        "confusion_points": "### よく混同される概念との比較\n\n| 概念 | TRSA Service | Class B/C Airspace ATC Service | GPWS (航空機搭載) |\n|------|-------------|------|------|\n| **提供者** | 地上レーダー施設 | ATC管制官 | 航空機の自動システム |\n| **機能** | 警告（Warning） | 分離管制（Separation） | 警告・回避指令 |\n| **対象** | 地形・他機との接近 | IFR機の分離 | 地形への衝突回避 |\n| **必須か** | 利用可能サービス | 進入時に必須 | 大型機のみ装備 |\n| **義務性** | 受けることを推奨 | 強制 | 装備義務あり |\n\n### なぜ混同するのか\n教科書では「ATC service are provided for all aircraft（Class C）」と記載されており、「ATC＝管制」と思いがちですが、**TRSAは管制官による直接的な分離管制ではなく、レーダーベースの警告システム**です。\n\n---\n\n##",
+        "connections": "- **Class B・C空域における ATC管制サービス**：TRSA警告はATC管制の一部として、IFR機とVFR機の分離保証に寄与します。\n- **VFR Weather Minimum要件**：VFR機がTRSA内で適切な見張りを行うための基盤となります。",
+        "common_mistakes": "### ❌ よくある誤解と正解\n\n| 誤解 | 正解 | なぜ間違うのか |\n|-----|------|---------|\n| TRSAは「分離」を提供する | TRSAは「警告」を提供する | ATC管制官の"
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-28T03:22:48.922355",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-28T03:22:48.922355",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 20,
+      "question_text": "TRSA Service in the terminal radar program provides",
+      "answer_text": "sequencing and separation for participating VFR aircraft.",
+      "choices": [
+        "A. IFR separation (1,000 feet vertical and 3 miles lateral) between all aircraft.",
+        "B. warning to pilots when their aircraft are in unsafe proximity to terrain, obstructions, or other aircraft.",
+        "C. sequencing and separation for participating VFR aircraft."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空法規・TRSAサービス",
+      "oral_related": true,
+      "explanation": {
+        "why": "TRSAはTerminal Radar Service Area の略で、主要空港周辺のレーダー管制区域です。ATC（航空交通管制）がレーダーを使用してVFR航空機の位置を追跡し、相互間の衝突回避のための**分離(separation)**と、着陸順序の効率的な配分である**シーケンシング(sequencing)**を提供します。VFR機の安全性と空港の運用効率を向上させます。\n\n##",
+        "memory_tip": "### 覚え方のコツ\n\n**「ターミナル・レーダー・サービスは、『順番と距離』を守らせるもの」**\n\n| 要素 | 覚え方 |\n|------|--------|\n| **Sequencing** | 「Sequence」=順序。着陸する順番を決める |\n| **Separation** | 「Separate」=離す。飛行機同士を離す（間隔維持） |\n\n### シンプルな語呂合わせ\n**「トリプルエス：Sequencing × Separation × Safety」**\n- 順序付け × 分離 = 安全飛行\n\n---\n\n##",
+        "confusion_points": "### よく間違える概念との比較\n\n| 概念 | TRSA | Class B | Class C | Class D |\n|------|------|---------|---------|---------|\n| **サービス内容** | Sequencing & Separation | ATC Clearance必須 | Sequencing & Separation | Sequencing & Separation |\n| **対象機** | VFR **参加機** | IFR/VFR全て | IFR/VFR全て | IFR/VFR全て |\n| **Clearance** | 不要 | **必須** | 推奨（VFR) | 推奨（VFR) |\n| **Services** | Basic Radar Service | Full ATC Service | Approach Service | Tower Service |\n| **Mixed IFR/VFR** | ✓ Yes | ✓ Yes | ✓ Yes | Limited |\n\n### 混同しやすいポイント\n\n**❌ 誤解：「TRSAはClass Cと同じ」**\n- Class C：IFR/VFR全ての航空機にATC clearanceが**必須**\n- TRSA：VFR機に対して**任意参加**。Clearanceは不要\n\n**❌ 誤解：「TRSAはClass Bと同じ」**\n- Class B：**2段階clearance**（Ground → Departure → Approach）が必須\n- TRSA：**Sequencing指示のみ**\n\n**✓ 正解：「TRSAはClass Cに類似した機能」**\n- 両者とも Sequencing と Separation を提供\n- ただしTRSAはVFR機の「参加選択制」\n\n---\n\n##",
+        "connections": "**Class C Airspace**：TRSAが設定されている多くの空港がClass C領域に指定されており、同様のATC管制を受けます。\n\n**ATC Clearance and Instructions**：TRSA内では、パイロットはATC指示に従う義務があり、指示された高度・方向・速度を維持する必要があります。",
+        "common_mistakes": ""
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-28T03:23:59.607252",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-28T03:23:59.607252",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 21,
+      "question_text": "The best method to use when looking for other traffic at night is to\n\n##",
+      "answer_text": "look to the side of the object and scan slowly.\n\n##",
+      "choices": [
+        "A. look to the side of the object and scan slowly.",
+        "B. scan the visual field very rapidly.",
+        "C. look to the side of the object and scan rapidly.",
+        "##"
+      ],
+      "correct_letter": "A",
+      "category": "N",
+      "category_name": "生理学",
+      "unit": "夜間飛行と視覚\n\n##",
+      "oral_related": true,
+      "explanation": {
+        "why": "夜間の視認性が低い環境では、人間の目の生理学的特性が大きく関わります。\n\n**目の中心視野（中心窩）と周辺視野の違い：**\n- **中心視野**：明るい場所では鮮明に見えるが、低照度環境では機能が低下\n- **周辺視野**：暗い環境に強い「ロッド細胞」が多く分布\n\n教科書の「Off center viewing（周辺視野を使う）」という記述がこれを説明しています。\n\n**なぜ「横から見て」「ゆっくりスキャン」するのか：**\n\n1. 目標物を直視（中心視野に入れる）→ 暗さで見えない\n2. 目標物の側面（周辺視野に入れる）→ ロッド細胞が反応して検出可能\n3. ゆっくり動かす→ 急速な動きでは網膜の感度が低下\n\n特に夜間飛行では「最低30分の暗順応が必要」とあるように、目の適応時間が極めて重要です。\n\n---\n\n##",
+        "memory_tip": "**「夜は『横目（よこめ）』で『ゆっくり』スキャン」**\n\n🌙 **夜間 = 中心が使えない**\n👀 **横から = 周辺視野を活用**\n🔄 **ゆっくり = 急いでは見えない**\n\n**具体的イメージ：**\n- 懐中電灯で夜間に星を探すとき、直視するより「ちょっと横で見たら見えた」経験\n- 映画館で暗い中、正面より周辺の人の動きが先に見える現象\n\n**口頭試験対策の鍵言葉：**\n- \"Off-center viewing\"\n- \"Slow scan pattern\"  \n- \"30 minutes dark adaptation\"\n\n---\n\n##",
+        "confusion_points": "| 視認方法 | 使用場面 | 理由 | 昼間への適用 |\n|---------|---------|------|------------|\n| **直視（中心視野）** | 昼間・晴天 | 中心窩の高解像度が有効 | ✅ 適切 |\n| **周辺視野＆ゆっくりスキャン** | **夜間** | ロッド細胞の活躍 | ❌ 不要で効率悪い |\n| **急速スキャン** | 限られた状況 | 広い範囲を素早く検索 | 昼間のみ有効 |\n\n**よくある間違い：**\n- ❌ 「夜間も昼間と同じ方法で見る」\n- ❌ 「周辺視野だけずっと見続ける」\n- ❌ 「速くスキャンすれば見えやすい」\n\n教科書の **「continuously scan all instruments but never stare only one instrument」** と同じ原理です。1秒以上同じ場所を見ると、その部分への血流が集中して逆に見えにくくなります。\n\n---\n\n##",
+        "connections": "### 1. **Spatial Disorientation（空間的方向感覚喪失）との関連**\n- 夜間飛行で他航空機が見えない → 衝突リスク増加\n- 特に曇夜間は自機の姿勢不明確 → 空間的方向感覚喪失に発展\n- **対策**：視認と計器飛行の両立が必須\n\n### 2. **Night Flying（夜間飛行）セクション全体との連動**\n```\n暗順応（30分必要）\n    ↓\n周辺視野を使った視認技術\n    ↓\n5,000ft以上で酸素補給検討\n```\n\n### 3. **Hypoxia（低酸素症）との重複リスク**\n- 夜間：視認能力↓ \n- 高度：酸素不足で認知機能↓\n- **W重複危険**：夜間高高度飛行は危険性が指数関数的に上昇\n\n### 4. **Aeronautical Decision Making（ADM）との関連**\n- 夜間視認の限界を認識\n- 衝突リスク最小化のための判断\n- 不確実性下での意思決定\n\n---\n\n##",
+        "common_mistakes": "### 📌 **数字の誤解**\n\n| 誤り | 正解 | 根拠 |\n|-----|-----|------|\n| 「15分で暗順応完了」 | **最低30分が必要** | 教科書明記 |\n| 「5秒くらい1ヶ所見ても大丈夫」 | **1秒以内に移動** | 計器飛行の原則と同じ |\n\n### 🚨 **表現の紛らわしさ**\n\n**問題文が「look to the side of the object"
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-30T22:44:53.247007",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-30T22:44:53.247007",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 22,
+      "question_text": "The possibility of carburetor icing exists even when the ambient air temperature is as",
+      "answer_text": "high as 70 °F and the relative humidity is high.",
+      "choices": [
+        "A. high as 70 °F and the relative humidity is high.",
+        "B. high as 95 °F and there is visible moisture.",
+        "C. low as 0 °F and the relative humidity is high."
+      ],
+      "correct_letter": "A",
+      "category": "F",
+      "category_name": "エンジン",
+      "unit": "キャブレタアイシング",
+      "oral_related": false,
+      "explanation": {
+        "why": "キャブレターのベンチュリ喉部での**急速な気圧低下により空気が膨張し、温度が低下**します。外気温が70°F(約21°C)でも、この冷却効果で**0°C以下に達する可能性**があります。さらに**湿度が高いと水分が凝結**し、氷結が発生します。\n\n##",
+        "memory_tip": "**「70度でも油断するな、カブの氷」**\n\n- **70度**：問題文の「高さ70°F」を強調\n- **油断するな**：パイロットが「高温だから安全」と誤判断しやすい\n- **カブの氷**：キャブレターアイシング(Carburetor Icing)\n\n**ビジュアル記憶法：**\n\n```\n外気温：70°F（暖かい！）→ 「大丈夫だ」と思う\n    ↓\nキャブレター内部：-10°C（凍ってる！）→ 実は危険！\n    ↓\n「温度計の表示」と「実際の危険」が一致しない！\n```\n\n**数字のセット覚え：**\n- **20～70°F** + **高湿度** = キャブレターアイシングの危険ゾーン\n- この温度幅全体で注意が必要（「ちょうどこの気温」が最も危険）\n\n---\n\n##",
+        "confusion_points": "### ❌よくある間違い\n\n**間違い1：「気温が低い時だけ危険」という誤解**\n```\n× 正しい判断：「気温が0°C以下の時だけ危険」\n○ 正しい判断：「20～70°F（高湿度時）なら危険」\n```\n\n**間違い2：「相対湿度」と「絶対湿度」の混同**\n```\n× 低気温＋低湿度 → キャブアイシング危険（間違い）\n○ 中程度気温＋高湿度 → キャブアイシング危険（正解）\n```\n\n**間違い3：「エンジンオーバーヒート」との混同**\n\n| 項目 | キャブアイシング | オーバーヒート |\n|------|-----------------|-------------|\n| 原因 | キャブレター内の氷結 | エンジン本体の過熱 |\n| 気温条件 | 20～70°F+高湿度 | 高外気温/急上昇/貧弱混合気 |\n| 症状 | 徐々に出力低下 | 急激な出力低下/油温上昇 |\n| 対処法 | キャブヒーター使用 | 降下/パワー低減/混合気リッチ化 |\n\n---\n\n##",
+        "connections": "1. **キャブヒート操作**\n   - 排気マフラーからの温風を導入して氷を融かし、予防する対策\n\n2. **エンジンの異常燃焼**\n   - キャブアイシングによる「出力低下」は、異常燃焼の症状と区別が重要\n\n---\n\n**ポイント**: 外気温が高くても、湿度と気圧変化の組み合わせでアイシングは起こるため、常に警戒が必要です。",
+        "common_mistakes": ""
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-30T22:44:59.988112",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-30T22:44:59.988112",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 23,
+      "question_text": "Your nose wheel has a tire pressure of 35 PSI. If you were to land on a runway with standing water, what speed do you expect dynamic hydroplaning could occur?",
+      "answer_text": "51 knots.",
+      "choices": [
+        "A. 51 knots.",
+        "B. 30 knots.",
+        "C. 17 knots."
+      ],
+      "correct_letter": "A",
+      "category": "C",
+      "category_name": "性能",
+      "unit": "着陸性能・水上着陸",
+      "oral_related": false,
+      "explanation": {
+        "why": "**基本原理：タイヤ気圧と水上飛行速度の関係**\n\n動的水上飛行（Dynamic Hydroplaning）とは、タイヤが積水した滑走路上で浮き上がり、地面との接触を失う現象です。\n\n**計算式（重要）：**\n```\nハイドロプレーニング速度 = √(タイヤ気圧 PSI × 9)\n```\n\nこの問題では：\n```\n速度 = √(35 PSI × 9)\n     = √315\n     ≈ 17.7 × 3（ノット単位の補正係数）\n     = 51 ノット\n```\n\n**物理的メカニズム：**\n\n1. **低速時**：タイヤが水を押しのけて、路面に接触できる\n2. **臨界速度到達時**：水の粘性抵抗がタイヤの重量を支える力に勝る\n3. **水上飛行開始**：タイヤが完全に水の膜の上に浮く\n4. **結果**：ブレーキが効かず、ステアリング制御不可→スキッド発生\n\n---\n\n##",
+        "memory_tip": "### 🎯 記憶術：「PSI×9の魔法」\n\n**「タイヤ気圧にキューク（9倍）して√を取れ」**\n\n```\n流れ：PSI数字 → ×9 → √ → 速度（ノット）\n\n35 PSI の場合：\n3-5 → 3×5=15 → ×9=135... ではなく\n35 × 9 = 315 → √315 ≈ 17.7 × 3 ≈ 51ノット\n```\n\n### 語呂合わせの工夫：\n- **「サン・キュー・ゴー」** = 3.5気圧（350 hPa）→ 35 PSI\n- **「ゴー・イチ・ニー」** = 51ノット（覚える答え）\n\n---\n\n##",
+        "confusion_points": "### 似ていて間違えやすい3つの現象\n\n| 概念 | 発生条件 | 特徴 | 予防方法 |\n|------|---------|------|---------|\n| **動的水上飛行** | 高速+積水 | タイヤ浮き上がり、ブレーキ/ステアリング喪失 | 速度低下、タイヤ気圧確認 |\n| **静的水上飛行** | 静止状態で深い水 | タイヤが完全に浸かる | 走行路線選択 |\n| **スキッディング** | 急旋回/急制動時 | タイヤが滑る（接触は保つ） | スムーズな操作 |\n\n### **最も重要な違い：**\n- **ハイドロプレーニング** = タイヤが **浮く**（接触喪失）→制御不可\n- **スキッド** = タイヤが **滑る**（接触維持）→抵抗あり\n\n---\n\n##",
+        "connections": "1. **着陸性能チャート（Landing Distance Graph/Table）**  \n   → 濡れた滑走路での必要着陸距離が増加するため、パフォーマンスチャートで修正された距離を確認する必要があります。\n\n2. **気象条件と飛行安全**  \n   → 高温や低気圧時の低密度高度と同様に、天候条件が航空機の性能に大きく影響する重要な安全要素です。",
+        "common_mistakes": "### ❌ 典型的な誤り\n\n**誤り① 計算式を間違える**\n```\n× 速度 = PSI × 9 = 35 × 9 = 315ノット（完全な誤り）\n○ 速度 = √(PSI × 9) = √315 ≈ 51ノット\n```\n→ **「√（ルート）を忘れるな！」**\n\n**誤り② PSI"
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-30T22:45:07.773582",
+          "result": "unsure"
+        }
+      ],
+      "created_at": "2026-03-30T22:45:07.773582",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 24,
+      "question_text": "From the cockpit, this marking confirms the aircraft to be",
+      "answer_text": "on a runway, about to clear.",
+      "choices": [
+        "A. on a taxiway, about to enter runway zone.",
+        "B. on a runway, about to clear.",
+        "C. near an instrument approach clearance zone."
+      ],
+      "correct_letter": "B",
+      "category": "G",
+      "category_name": "空港",
+      "unit": "空港マーキング・標識",
+      "oral_related": false,
+      "explanation": {
+        "why": "1. **滑走路終端の赤色マーキング**が見える = 滑走路上にいることを確認できる\n2. 赤色は滑走路終端（Runway End）を示すため、終端が見えるということは着陸直後でクリアしようとしている状態\n3. つまり、パイロットは視覚的に「滑走路上＆脱出準備段階」を確認できる\n\n---\n\n##",
+        "memory_tip": "### 🎯記憶法：「3つの危険信号」\n\n| マーキング | 図形 | 意味 | 覚え方 |\n|-----------|------|------|--------|\n| **Chevron** | V字 or ハッシュ | **進入禁止** | **「V」字は「ベツ（別）の滑走路」** |\n| **X-mark** | X字 | **滑走路閉鎖** | **「X」は「×」＝使用禁止** |\n| **Displaced threshold** | 矢印 | **着陸開始地点** | **「矢印」＝ここからOK** |\n\n### 💡語呂合わせ\n- **シェブロン＝「シェ、ブロ（ブロック）」** → 進入をブロック\n- **X-マーク＝「X is eXcluded（除外）」** → 使用禁止\n- **Displaced＝「ズレてる」** → 通常の開始地点からズレている\n\n---\n\n##",
+        "confusion_points": "### よく間違える3つの標識の違い\n\n```\n【Chevron（シェブロン）】\n❌ 着陸禁止・進入禁止\n❌ 通常は使用不可\n✅ 緊急時ONLY\n外観：V字または斜線ハッシュ\n\n【X-mark（X字マーキング）】\n❌ 滑走路/タクシーウェイが「閉鎖」状態\n❌ パイロットは完全に回避必須\n外観：黒いX字\n\n【Displaced Threshold（矢印標識）】\n✅ 滑走路は「使用可能」\n✅ ただし着陸開始地点が通常位置より後方\n✅ その手前は「離陸用」として使える\n外観：矢印ポイント\n```\n\n### 🚨最も重要な混同ポイント\n\n**Chevron ≠ Displaced Threshold**\n\n- 学生は「どちらも着陸に関係しているから同じだろう」と混同しがち\n- **Chevron**＝**絶対進入禁止**（緊急以外）\n- **Displaced Threshold**＝**ここから着陸OK**という目安\n\n---\n\n##",
+        "connections": "| 概念 | つながり |\n|------|---------|\n| **滑走路照明カラー** | 赤=滑走路終端、青=誘導路、白=滑走路本体。マーキングと照明は統一された視覚識別システム |\n| **Hold Bar** | 誘導路との交差点では実線で停止。マーキング認識能力が安全運航に直結 |",
+        "common_mistakes": ""
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-30T22:45:18.952027",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-30T22:45:18.952027",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 25,
+      "question_text": "**\nWhich technique should a pilot use to scan for traffic to the right and left during straight-and-level flight?\n\n**",
+      "answer_text": "Systematically focus on different segments of the sky for short intervals.",
+      "choices": [
+        "**",
+        "A. Systematically focus on different segments of the sky for short intervals.",
+        "B. Concentrate on relative movement detected in the peripheral vision area.",
+        "C. Continuous sweeping of the windshield from right to left.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n走査技術・目視確認\n\n**",
+      "oral_related": false,
+      "explanation": {
+        "why": "人間の目は周辺視野では動きを検出しにくいため、視線を意図的に移動させて異なる空域を短時間ずつ集中的に観察する必要があります。この方法により、固定視で見落とされやすい航空機を発見できます。この継続的なスキャン技術は、特に空域混雑エリアでの衝突回避に不可欠です。\n\n---\n\n##",
+        "memory_tip": "### 記憶用キーワード：「**段階的・短時間・広範囲**」\n\n**\"SCAN, SWEEP, SEGMENT\"（スキャン・スウィープ・セグメント）**\n- **SCAN** = 体系的にスキャンする（Systematically）\n- **SWEEP** = 左から右へ、または右から左へ扇状に掃く\n- **SEGMENT** = 空を複数のセグメントに分割して観察\n\n### 視力検査の喩え\n\n試験で視力を測定される時、目を左右に動かしながら検査されますよね？\n→ その動きと同じ原理です。**眼を動かす＝より多くを見える**\n\n### 記憶フレーズ\n\n**\"一点集中は危険！左右に目を走らせよう\"**\n→ 同じ場所ばかり見ていると、周辺の航空機を見落とします\n\n---\n\n## 【⚠️ 混同注意ポイント】\n\n### よく混同される概念の比較\n\n| スキャン方法 | 特徴 | 使用場面 | 評価 |\n|-----------|------|--------|------|\n| **段階的スキャン（正解）** | 異なるセグメントを短時間ずつ観察 | 通常の飛行・クルーズ | ✅ 効果的 |\n| **周辺視野のみ信頼** | 目を動かさず周辺視野に頼る | - | ❌ 危険（見落としが多い） |\n| **固定視点** | 1ヶ所を長時間見つめる | 着陸進入など限定的 | ⚠️ 状況依存 |\n| **ランダムスキャン** | 不規則に目を動かす | - | ❌ 非効率的 |\n\n### 混同例：「周辺視野で十分？」\n\n**間違い：**\n> 「人間は周辺視野で広い範囲が見えるから、わざわざ目を動かす必要はない」\n\n**正解：**\n> 「周辺視野は広いが解像度が低く、小さな航空機は見落とします。目を動かすことで、詳細な情",
+        "confusion_points": "",
+        "connections": "1. **Class B/C/D空域での運航** ー 混雑した管制空域での目視衝突回避（\"See and Avoid\"）はATC管制の補完として機能し、パイロットの視認スキャン技術が重要\n2. **VFR気象最低基準** ー 視程要件があるのは、このスキャン技術が有効に機能するための視程確保が必要だから",
+        "common_mistakes": ""
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-30T22:45:28.627937",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-30T22:45:28.627937",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 26,
+      "question_text": "What does the outbound destination sign identify?",
+      "answer_text": "Identifies direction to take-off runways.",
+      "choices": [
+        "A. Identifies entrance to the runway from a taxiway.",
+        "B. Identifies runway on which an aircraft is located.",
+        "C. Identifies direction to take-off runways."
+      ],
+      "correct_letter": "C",
+      "category": "G",
+      "category_name": "空港",
+      "unit": "空港標識・標示",
+      "oral_related": false,
+      "explanation": {
+        "why": "**Outbound Destination Sign（出発先案内標識）**は、空港内で**離陸滑走路への方向を示すための案内標識**です。\n\n### 仕組み：\n\n1. **「Outbound」= 出発する**という意味\n2. **「Destination Sign」= 目的地を示す標識**\n3. つまり、**「これから出発する飛行機がどの滑走路に向かうべきか」を示す**ための標識\n\nパイロットは空港内をタキシー（地上走行）する際に、この標識を見ることで：\n- どの滑走路で離陸するのか\n- その滑走路へはどちらの方向に進むべきか\n\nを判断できます。\n\n---\n\n##",
+        "memory_tip": "### 語呂合わせ：\"**O**ut-**B**ound = **OB離陸**\"\n\n- **Out** = 出発する方向\n- **Bound** = 向かう先\n\n> **「アウトバウンドは、飛行機が『出ていく』方向を教えてくれる標識」**\n\n### イメージ図：\n\n```\n空港内の地上\n    ↓\nOutbound Destination Sign\n    ↓\n「Runway 27へ進むんだ！」と指示\n    ↓\nパイロットが離陸滑走路へ向かう\n```\n\n**対比として覚える：**\n- **Outbound** = 出発（OUT）の行き先\n- **Inbound** = 到着（IN）する方向\n\n---\n\n##",
+        "confusion_points": "### よく混同する3つの空港標識を比較：\n\n| 標識の種類 | 機能 | 用途 | 対象者 |\n|-----------|------|------|--------|\n| **Outbound Destination Sign** | **離陸滑走路の方向を示す** | **タキシー中の出発飛行機** | **出発パイロット** |\n| **Location Sign** | 現在地を示す | 「あなたはここにいます」と確認 | 全パイロット |\n| **Direction Sign** | 一般的な方向指示 | タキシーウェイ・エリアの案内 | 全パイロット |\n\n### 具体例で区別：\n\n**Location Sign（位置標識）**を見た場合：\n```\n標識：「E5」\n→ 「私たちは現在、タキシーウェイE5にいる」\n```\n\n**Outbound Destination Sign（出発先標識）**を見た場合：\n```\n標識：「Runway 27 ⇒」\n→ 「離陸滑走路27へはこっちだ！」\n```\n\n**混同注意：** \n- **Location Signは「どこにいるか」（現在地）**\n- **Outbound Signは「どこへ向かうか」（目的地の滑走路）**\n\n---\n\n##",
+        "connections": "### 関連する空港システム全体の流れ：\n\n```\n1. Ground Control と交信\n   ↓\n2. Outbound Destination Sign で滑走路方向を確認\n   ↓\n3. Location Sign で現在地を確認しながらタキシー\n   ↓\n4. Hold Bar で停止・許可を待つ\n   ↓\n5. Runway へ進入\n   ↓\n6. Tower と交信\n   ↓\n7. 離陸 (TAKEOFF)\n```\n\n### 関連する教科書内容：\n\n- **Airport Signs全般**：5つのカテゴリー（必須・位置・方向・目的地・情報）のうち、**Outbound SignはDestination Sign（目的地標識）の一種**\n\n- **Standard Traffic Pattern**：左旋回（Left Traffic）で離陸滑走路に進入する際に、Outbound Signで正確な滑走路方向を確認\n\n- **Uncontrolled Airport との関係**：管制塔がない空港では、このOutbound Signの確認がより重要\n\n---\n\n##",
+        "common_mistakes": "### ❌ よくある間違い：\n\n#### 誤解①：「Inbound（到着）の反対がOutbound」と単純に考える\n```\n❌ 間違い：「Outbound = 飛行機が離陸する全ての方向」\n✅ 正解：「Outbound = 特定の離陸滑走路への方向指示」\n```\n\n#### 誤解②：「Direction Signと同じだ」と混同する\n```\n❌ 間違い：Direction Signと同じく一般的な方向を示す\n✅ 正解：Outbound Signは「離陸滑走路」という特定目標に限定\n```\n\n#### 誤解③：「Landing Runway（着陸滑走路）も表示する」と思う\n```\n❌ 間違い：着陸滑走路も案内する\n✅ 正解：あくまで「離陸（出発）」滑走路のみを案内\n```\n\n### 試験で引っかかりやすい問題パターン：\n\n**Q: \"What does the outbound destination sign"
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-30T23:22:19.210800",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-30T23:22:19.210800",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 27,
+      "question_text": "If you observe a dust devil crossing the runway while approaching to land, what action should you take?",
+      "answer_text": "Go around",
+      "choices": [
+        "A. Go around",
+        "B. Land past the dust devil",
+        "C. Continue landing as normal"
+      ],
+      "correct_letter": "A",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "気象現象への対応",
+      "oral_related": false,
+      "explanation": {
+        "why": "### ダストデビルの仕組み\nダストデビル（塵旋風）は、地表面での**不均等な熱交換（Unequal Heat Exchange）**によって発生します。\n\n**発生メカニズム：**\n1. 地面が不均等に加熱される（舗装路と草地など）\n2. 暖かい空気は上昇し、周囲の冷たい空気が流入する\n3. コリオリの力により**垂直軸の周りで回転**が生じる\n4. 小規模な竜巻状の渦が形成される\n\n### 着陸時に危険な理由\n\n**飛行中の影響：**\n- **突然の気流変化（Wind Shear）** → 機体に急激な上下動\n- **揚力の急激な変化** → 失速リスク\n- **横転のリスク** → 翼が水平を保てなくなる可能性\n- **高い下降率** → 着陸復行が困難\n\n教科書の「Wind shear = TURBULENCE」「Loss of lift = stall or high descent rate」に該当します。\n\n---\n\n##",
+        "memory_tip": "### 記憶テクニック\n\n**「デビル（悪魔）を見たら逃げろ！」**\n\n| 視覚 | 行動 | 理由 |\n|-----|------|------|\n| 🌪️ Dust Devil を見た | **Go around** | 塵が舞う＝乱気流確定 |\n| ✈️ 着陸中 | 着陸復行へ | 高度余裕があるうちに回避 |\n\n### ダストデビル識別ポイント\n- 地表で**渦巻く砂塵やゴミ**が見える\n- **晴天・高気圧下**の昼間に多発\n- **滑走路や駐車場**など舗装面付近\n\n**語呂：「デビルは仁王立ち」**\n→ 縦に回転している様子を覚える\n\n---\n\n##",
+        "confusion_points": "### よく混同される気象現象との比較\n\n| 気象現象 | 発生場所 | 規模 | 対処方法 |\n|---------|---------|------|---------|\n| **Dust Devil** | 地表～数百ft | 小型 | **Go around** |\n| **Microburst** | 雲底～地表 | 中～大型 | **Go around** |\n| **Wind Shear** | 各高度 | 様々 | 高度確保 → Go around |\n| **Thunderstorm** | 広範囲 | 大型 | 絶対に侵入禁止 |\n| **Tornado** | 地表～雲頂 | 大型 | 完全回避（飛行中止） |\n\n### Dust Devil ≠ Tornado\n- **Dust Devil**：熱による小規模な渦（危険度：中程度）\n- **Tornado**：雷雲由来の大規模渦（危険度：最高レベル）\n\n**着陸接近中なら、どちらでも Go around！**\n\n---\n\n##",
+        "connections": "### 関連する教科書の概念\n\n#### 1️⃣ **Unequal Heat Exchange（不均等な熱交換）**\n```\n教科書：「Every physical process of weather is caused by \n        UNEQUAL HEAT EXCHANGE」\n↓\nダストデビルも同じ原理で発生\n地面の温度差 → 空気の上昇気流 → 回転渦\n```\n\n#### 2️⃣ **Coriolis Force（コリオリの力）**\n```\n教科書：「deflects the wind to the right in the northern hemisphere」\n↓\nダストデビルの回転方向に影響\n北半球では時計回りに回転する傾向\n```\n\n#### 3️⃣ **Wind Shear（風のせん断）**\n```\n教科書：「It is sudden change in wind velocity or direction\n        horizontally or vertically」\n↓\n着陸時のダストデビル遭遇 = 風のせん断そのもの\n垂直方向の急激な気流変化で揚力低下\n```\n\n#### 4️⃣ **Turbulence（乱気流）**\n```\n教科書：「Substantial or Fatal structure damage, loss of control」\n↓\nダストデビルの風のせん断による乱気流\n着陸復行義務の根拠\n```\n\n#### 5️⃣ **Stability of Airmass（気塊の安定性）**\n```\nダストデビル発生条件 = Unstable Airmass\n強い日射 → 不安定な状態 → 上昇気流発生\n```\n\n---\n\n##",
+        "common_mistakes": "### ❌ 試験で引っかかりやすい誤答\n\n| 誤答 | なぜ間違いか | 正解 |\n|------|-----------|------|\n| **「気にせず着陸する」** | 着陸中の乱気流は制御不能。"
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-30T23:22:49.690904",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-30T23:22:49.690904",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 28,
+      "question_text": "In soft-field landing, power is used to",
+      "answer_text": "Cushion touchdown.",
+      "choices": [
+        "A. Cushion touchdown.",
+        "B. Increase speed.",
+        "C. Reduce descent."
+      ],
+      "correct_letter": "A",
+      "category": "I",
+      "category_name": "飛行",
+      "unit": "軟地着陸技術",
+      "oral_related": false,
+      "explanation": {
+        "why": "ソフトフィールド着陸（Soft-field Landing）とは、草地、未舗装路、または湿った地面など、**地表面が柔らかい場所への着陸**のことです。\n\n**パワーを使う理由：**\n\n1. **タッチダウンの衝撃を緩和する**\n   - ソフトフィールドは地面が沈みやすく、着陸の衝撃で主脚が埋まる危険があります\n   - エンジンパワーを維持することで、機体を浮かせた状態を保ちながら徐々に接地させます\n   - これにより「クッション効果」が生まれ、衝撃を吸収できます\n\n2. **前脚接地を遅らせる**\n   - 通常の着陸では前脚が沈むと機体が急に動きが悪くなります\n   - パワーを保つことで前脚接地を遅延させ、主脚だけで走行可能な速度まで減速させます\n\n3. **着地後の地面への貫入防止**\n   - 柔らかい地面に深く沈み込むと、タイヤが埋まり脱出困難になります\n   - パワーを維持して機体を持ち上げることで、沈み込みを最小限にします\n\n---\n\n##",
+        "memory_tip": "**「ソフト＝パワーでふわり」**\n\n- **Soft-field = Soft landing**\n  - 「やさしく着地」＝「パワーで浮かせながら接地」\n\n**記憶フレーズ：**\n```\n\"Cushion = Cloud on the Ground\"\n地面の上に「雲のように」着地する\n→ パワーで浮かせて、ふわりと着地\n```\n\n**3段階のイメージ：**\n1. **浮く** → パワーを保持\n2. **撫でる** → ゆっくり接地\n3. **支える** → 接地後もパワーで前脚着地を遅延\n\n---\n\n##",
+        "confusion_points": "### よく間違える比較表\n\n| 着陸方式 | パワーの使い方 | 目的 | 着地後 |\n|---------|---------------|------|--------|\n| **ソフトフィールド着陸** | **パワー維持** | **衝撃緩和（Cushion）** | **パワーで機体を持ち上げたまま走行** |\n| 標準着陸（Hard Surface） | パワーカット | 距離短縮 | すぐにブレーキを掛ける |\n| 短距離着陸（Short-field） | パワーカット＋フルフラップ | 距離短縮 | すぐにブレーキ・リバース |\n| 不時着陸（Emergency） | パワーカット | 衝撃最小化 | 生存が優先 |\n\n**重要な違い：**\n- **ソフトフィールド** = 接地時～着地後も**パワーを使い続ける**\n- **短距離着陸** = 最初から**パワーをカット**して距離を短縮\n\n---\n\n##",
+        "connections": "### 関連する単元\n\n1. **着陸性能（Landing Performance）**\n   - ソフトフィールドは標準舗装路より長い着陸距離が必要\n   - パワーを使うことで、停止距離を調整可能\n\n2. **飛行制御の基本**\n   - パワーと姿勢のバランス\n   - 降下率を制御するためのパワー調整\n\n3. **フレア（Flare）**\n   - ソフトフィールドではフレアを**浅め・長く**実施\n   - パワーを保つことでフレア中の降下率を低く保つ\n\n4. **タッチダウンポイント**\n   - 標準着陸：滑走路端付近\n   - ソフトフィールド：着地地点をやや先へ設定し、走行距離を確保\n\n5. **Go-Around（着陸復行）**\n   - 着地が悪い場合、パワーを上げてやり直し可能\n   - ソフトフィールドは特に着地直前での判断が重要\n\n---\n\n##",
+        "common_mistakes": "### ❌ よくある誤解\n\n**誤り1：「ソフトフィールド着陸 = パワーをカットする」**\n- ❌ 誤り：硬い地面での着陸と同じだと思う学生が多い\n- ✅ 正解：パワーを**維持・調整**して着地を制御する\n\n**誤り2：「Cushion = 衝撃を完全になくす」**\n- ❌ 誤り：パワーだけで完全に衝撃を吸収できると思う\n- ✅ 正解：衝撃を「緩和・軽減」することが目的\n\n**誤"
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-31T22:36:17.351045",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-31T22:36:17.351045",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 29,
+      "question_text": "(Refer to Figure 51.) How would you enter a cruising level of 5,500 feet in Block 15 of the ICAO flight plan form?",
+      "answer_text": "A055.",
+      "choices": [
+        "A. C5500.",
+        "B. A055.",
+        "C. 1550."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "飛行計画・航空法規",
+      "oral_related": true,
+      "explanation": {
+        "why": "ICAO飛行計画フォーム（Form 7498）の Block 15「CRUISING LEVEL」は、国際標準の高度表記方式を使用しています。\n\n**表記ルール：**\n- **先頭の「0」** = 高度（Altitude）であることを示す識別子\n- **次の3桁の数字** = 高度を100フィート単位で記載\n- 例：5,500フィート → 55（5,500 ÷ 100）→ **A055**\n\n**計算方法：**\n```\n5,500フィート ÷ 100 = 55\n→ 先頭に「A」（Altitudeの意）を付ける\n→ A055 と記入\n```\n\nこの形式は、高度の誤読を防ぐため、3桁の標準化フォーマットで、先頭に「A」を付けることで、他の情報（航路、速度など）と区別しています。\n\n---\n\n##",
+        "memory_tip": "**「A055 = Altitude（高度） + 055（5,500フィート）」**\n\n- **「A」で始まる** → Altitudeの頭文字\n- **3桁の数字** → 必ずゼロ埋め（A005、A055 など）\n- **100で割る** → 「フィートを100で割って、3桁にする」という一連の動作を習慣化\n\n**語呂合わせのコツ：**\n「**A（エー）ゼロゴーゴー → Altitude（高度）です！**」\n\n100フィート単位なので「00」がつきやすいパターンから覚えると効果的です。\n\n---\n\n##",
+        "confusion_points": "### ❌よくある間違い\n\n| 誤った表記 | 正しい表記 | 説明 |\n|-----------|---------|------|\n| **5500** | A055 | 単位が違う（フィートを100で割る必要あり） |\n| **055** | A055 | 識別子「A」が必須（Altitudeを明示する） |\n| **FL055** | A055 | Flight Level（FL）は高度計設定値で、高度そのものではない |\n| **A55** | A055 | 3桁にゼロ埋めする必要がある |\n| **5.5** | A055 | 小数点を使わない（整数表記） |\n\n### 🔍Flight Level（FL）との違い\n\n- **Flight Level（FL）** = 気圧高度計で「気圧設定値 29.92inHg」に設定した時の読み値\n- **真の高度（Altitude）** = 実際の海抜高度\n- Block 15では **真の高度** を記入するため、「A」を使う\n\n---\n\n##",
+        "connections": "### 1. **VFR巡航高度（Part 91.159）との関連**\n\n```\nVFR巡航高度の決定方法：\n- 1,000フィート以下：制限なし\n- 1,000～3,000フィート：高度計設定値にもよるが、\n  奇数フィート（3,500、5,500など）か偶数フィート か\n- 3,000フィート以上：Magnetic Heading に基づいて決定\n  - 0°～179°：奇数千フィート + 500（3,500、5,500、7,500...）\n  - 180°～359°：偶数千フィート + 500（4,500、6,500...）\n```\n\n**Block 15の高度表記は、このVFR巡航高度制限と直結しています。**\n\n### 2. **ATC Clearance（ATC指示）との関連**\n\n- ATC（管制官）は Block 15 で予定された高度を確認\n- 実際の飛行では指示された高度に従う（ATC Clearance優先）\n- 飛行計画の高度と異なる高度が指示されることもある\n\n### 3. **Altimeter Setting（高度計設定）との関連**\n\n```\nBlock 15「A055」 = True Altitude の記入\n↓\n実際の飛行では：\n- 地上での気圧設定値（ATIS等から取得）を高度計に設定\n- その読み値が「55」（5,500フィート）になるように飛行\n```\n\n### 4. **飛行計画提出（Flight Plan Filing）との関連**\n\n- Block 15 は **予定巡航高度** を示す\n- 飛行開始後、実際の高度はATC指示に従う\n- 高度変更が必要な場合は、ATCに要求し、新しいクリアランスを取得\n\n---\n\n##",
+        "common_mistakes": "### ⚡1. **100フィート単位への変換ミス**\n\n```\n問題：3,000フィートの場合は？\n❌ A3000 （間違い：4桁になっている）\n✅ A030  （正解：3,000 ÷ 100 = 30）\n\n問題：500フィートの場合は？\n❌ A5"
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-31T22:36:36.216979",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-31T22:36:36.216979",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 30,
+      "question_text": "When executing an emergency approach to land in a single-engine airplane, it is important to maintain a constant glide speed because variations in glide speed",
+      "answer_text": "nullify all attempts at accuracy in judgment of gliding distance and landing spot.",
+      "choices": [
+        "A. increase the chances of shock cooling the engine.",
+        "B. assure the proper descent angle is maintained until entering the flare.",
+        "C. nullify all attempts at accuracy in judgment of gliding distance and landing spot."
+      ],
+      "correct_letter": "C",
+      "category": "I",
+      "category_name": "飛行",
+      "unit": "緊急着陸と性能管理",
+      "oral_related": false,
+      "explanation": {
+        "why": "グライドスピードが変動すると、飛行機がどのくらいの距離を滑空できるかの計算が成り立たなくなります。エンジン故障時、パイロットは視覚的にグライドパス（滑空経路）から着陸可能地点を推測しますが、スピードが一定でないと、その予測計算がすべて狂ってしまうのです。\n\n##",
+        "memory_tip": "**「速度一定＝距離計算確実」**と覚えましょう。\n- 一定スピード → 予測可能な滑空距離\n- 速度変動 → 着陸地点の判断が不可能\n\nグライドスピードは滑空比（Glide Ratio）の基準となるため、これがブレると全ての判断が無効化されます。\n\n##",
+        "confusion_points": "❌ 「高度が重要」→ ◎ スピードが先\n❌ 「旋回角度を調整すれば大丈夫」→ ◎ スピードが基本\n❌ 「視覚だけで判断できる」→ ◎ スピード一定が前提\n\n##",
+        "connections": "教科書の**「WAKE TURBULENCE」セクション**では「飛行機が遅く、重く、クリーンなとき最も危険」と述べられていますが、これは着陸時にも適用されます。着陸時も速度低下段階にあるため、**安定したグライドスピード維持**が生存の鍵となるのです。\n\n##",
+        "common_mistakes": "学生は「高度の維持」や「視覚による判断」に頼りがちですが、本質は**数学的な滑空比**です。スピードが安定していれば、高度÷グライド比＝到達距離という計算が成立し、正確な着陸地点予測が可能になるということを理解することが重要です。",
+        "textbook_ref": {
+          "category": "I",
+          "category_name": "飛行",
+          "excerpt": "I. FLYING AN AIRPLANE\n\nYou have to do WALK AROUND INSPECTION before each flight.\nCheck Aircraft's condition (no damage, missing parts, nor blockages, etc)\nCheck Required Inspections\nCheck Required Documents and Certificate\nTaxi techniques\nPosition of Aileron and Elevator\nDifference in Tricycle type and Tailwheel Type\nWake Turbulence Avoidance\nWingtip Vortex is created when lift is created.\nVortex created around wingtip.\nIt is most dangerous when the airplane is HEAVY ,SLOW and CLEAN.\nIt tend to "
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-31T23:08:48.053107",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-31T23:08:48.053107",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 31,
+      "question_text": "A slightly high glide slope indication from a precision approach path indicator is",
+      "answer_text": "three white lights and one red light.",
+      "choices": [
+        "A. four white lights.",
+        "B. three white lights and one red light.",
+        "C. two white lights and two red lights."
+      ],
+      "correct_letter": "B",
+      "category": "G",
+      "category_name": "空港",
+      "unit": "精密進入指標装置(PAPI)",
+      "oral_related": false,
+      "explanation": {
+        "why": "精密進入路指示灯（Precision Approach Path Indicator: PAPI）は、4つのライトユニットで構成されており、各ライトが白色または赤色に点灯します。グライドスロープより「やや高い」進入は、理想的な進入より高すぎる状態であり、この危険性を警告するため、赤色ライトが増加する設計になっています。\n\n##",
+        "memory_tip": "**「赤は危険、多いほど危険」**という原則で覚えましょう。\n- グライドスロープ上（正常）= **白2つ + 赤2つ**\n- やや高い = **白3つ + 赤1つ**（赤が減って見える）\n- かなり高い = **白4つ**（赤が全て消える）\n- やや低い = **赤3つ + 白1つ**（赤が増える）\n\n##",
+        "confusion_points": "VASIやPAPIなど他の進入指示システムと混同しないこと。VASIは2ユニット×2列で「ピンク色」が見えるのに対し、PAPIは4ユニットで白と赤のみです。また、問題文の「slightly high」が「わずかに高い」という微妙な状態を指していることに注目してください。\n\n##",
+        "connections": "教科書の「Runway lighting」セクションで、ランウェイエンドは**赤色**であり、危険や注意を示す色として一貫しています。PAPIも同じ原則で赤色が警告の意味を持ち、グライドスロープからの逸脱の程度を色の組み合わせで視覚的に伝えています。\n\n##",
+        "common_mistakes": "「高い進入」と聞くと「赤が多く見える」と直感的に思い込む受験者が多いですが、実際は逆です。高い位置から着陸灯を見ると、赤色ライト（低い位置にある）が視界から外れ、白色（高い位置）が見えるようになります。相対的な位置関係を正確に理解することが重要です。",
+        "textbook_ref": {
+          "category": "G",
+          "category_name": "空港",
+          "excerpt": "G. AIRPORT Runway marking & lighting\n\nRunway marking\nRunway number = Magnetic course\nDisplaced threshold\nChevron: Never be used (nor enter) Emergency only.\nHold Bar\nneeds a instruction (permission) to cross from a controller (from Solid Line)\nAt uncontrolled airport,stop, check, then cross.\nX-mark: Runway closed (or tells it is a taxiway, but not landing runway)\nAiport Signs\nMandatory Instruction Signs\nLocation Signs\nDirection Signs\nDestination Signs\nInformation Signs\nRunway Distance Remaining S"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-31T23:08:57.545100",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-03-31T23:08:57.545100",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 32,
+      "question_text": "**\nA state of temporary confusion resulting from misleading information being sent to the brain by various sensory organs is defined as\n\n**",
+      "answer_text": "spatial disorientation.",
+      "choices": [
+        "**",
+        "A. spatial disorientation.",
+        "B. hyperventilation.",
+        "C. hypoxia.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n空間識失見当識（Spatial Disorientation）\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "飛行中、特にIFR飛行では視覚情報が限定されるため、内耳の三半規管、体性感覚、視覚などが矛盾した信号を脳に送ります。これにより脳が正確な判断ができず、パイロットが航空機の真の姿勢・速度・高度を誤認識する状態が発生します。\n\n##",
+        "memory_tip": "「**Spatial = 空間的、Disorientation = 方向感覚の喪失**」と分解すると理解しやすいです。飛行中に「今自分がどこにいるのか、どの方向を向いているのか分からなくなる」イメージで覚えましょう。\n\n##",
+        "confusion_points": "- **Vertigo（めまい）**：身体の回転感覚により起こる症状\n- **Illusion（錯覚）**：単一の感覚の誤認識\n- **Disorientation**は複数の感覚器官からの矛盾した情報が原因という点で異なります\n\n##",
+        "connections": "Spatial Disorientationは「IFR飛行における重大な危険要因」として、教科書のInstrument Flyingのセクションと直結しており、パイロットが頼るべきはATIとAirspeed Indicatorなどの計器です。\n\n##",
+        "common_mistakes": "試験では「misleading information（誤った情報）」というキーワードが重要です。これが複数の感覚器官からもたらされるという条件を見落とすと、単なる「illusion」や「vertigo」と誤答しやすいので注意が必要です。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-31T23:09:06.523081",
+          "result": "unsure"
+        }
+      ],
+      "created_at": "2026-03-31T23:09:06.523081",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 33,
+      "question_text": "The numbers 8 and 26 on the approach ends of the runway indicate that the runway is orientated approximately",
+      "answer_text": "080° and 260° magnetic.",
+      "choices": [
+        "A. 008° and 026° true.",
+        "B. 080° and 260° true.",
+        "C. 080° and 260° magnetic."
+      ],
+      "correct_letter": "C",
+      "category": "G",
+      "category_name": "空港",
+      "unit": "滑走路識別番号・方位",
+      "oral_related": false,
+      "explanation": {
+        "why": "滑走路番号は**磁方位の10°単位を切り上げた値**です。080°の磁方位は「08」と表記され、その反対側（180°異なる）は260°となり「26」と表記されます。つまり、表示されている数字に「0」をつけて10倍すると、その滑走路の磁方位が得られる仕組みです。\n\n##",
+        "memory_tip": "「**ランウェイナンバー × 10 = 磁方位**」と暗記しましょう。8 × 10 = 080°、26 × 10 = 260°。両端の数字は常に**180°差**になることも併せて覚えると確実です。\n\n##",
+        "confusion_points": "「真方位（True Heading）」と「磁方位（Magnetic Heading）」を混同しないこと。滑走路番号は**常に磁方位**をベースにしています。また、番号は「°記号」なしで表記されるため、10倍することを忘れずに。\n\n##",
+        "connections": "パイロットは飛行計画時に磁方位を使用します。滑走路番号から磁方位を正確に読み取ることで、着陸予定の滑走路の方向を即座に判断できます。この知識は着陸前ブリーフィングやアプローチ時に不可欠です。\n\n##",
+        "common_mistakes": "①数字をそのまま度数と考えてしまう（「8は8°」と誤解する）\n②180°差の関係を忘れて、反対側の数字計算をミスする\n③真方位との違いを曖昧にしたまま進む\n④「端数処理」を理解せず、081°が「08」と表記されることに気づかない",
+        "textbook_ref": {
+          "category": "G",
+          "category_name": "空港",
+          "excerpt": "G. AIRPORT Runway marking & lighting\n\nRunway marking\nRunway number = Magnetic course\nDisplaced threshold\nChevron: Never be used (nor enter) Emergency only.\nHold Bar\nneeds a instruction (permission) to cross from a controller (from Solid Line)\nAt uncontrolled airport,stop, check, then cross.\nX-mark: Runway closed (or tells it is a taxiway, but not landing runway)\nAiport Signs\nMandatory Instruction Signs\nLocation Signs\nDirection Signs\nDestination Signs\nInformation Signs\nRunway Distance Remaining S"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-31T23:30:39.137110",
+          "result": "unsure"
+        }
+      ],
+      "created_at": "2026-03-31T23:30:39.137110",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 34,
+      "question_text": "Detonation occurs in a reciprocating aircraft engine when",
+      "answer_text": "the unburned charge in the cylinders explodes instead of burning progressively",
+      "choices": [
+        "A. the spark plugs are fouled or shorted out or the wiring is defective.",
+        "B. hot spots in the combustion chamber ignite the fuel/air mixture in advance of normal ignition.",
+        "C. the unburned charge in the cylinders explodes instead of burning normally."
+      ],
+      "correct_letter": "B",
+      "category": "F",
+      "category_name": "エンジン",
+      "unit": "エンジン燃焼異常",
+      "oral_related": false,
+      "explanation": {
+        "why": "レシプロエンジンでは通常、スパークプラグから点火した火炎が円筒状に広がりながら燃料を段階的に燃焼させます。しかしデトネーションが発生すると、未燃焼ガスが圧縮熱で自動着火し、爆発的に一気に燃焼してしまうため、制御不能な圧力上昇が起こります。\n\n##",
+        "memory_tip": "\"**De**tonation = **De**structive explosion\"として、通常の「プログレッシブ燃焼（段階的）」に対する「エクスプロッシブ燃焼（爆発的）」と対比させて覚えましょう。デトネーションは「制御不能な爆発」と統一して理解することが重要です。\n\n##",
+        "confusion_points": "**プリイグニッション**との違いに注意してください。プリイグニッションは点火前に何か（カーボン堆積など）が未燃焼ガスを着火させてしまう現象で、デトネーションは圧縮により自動着火する現象です。原因は異なります。\n\n##",
+        "connections": "デトネーションは高オクタン価の燃料が必要になる理由と直結しています。また、高高度飛行時の過給エンジン管理、適切なリーン操作、冷却管理はすべてデトネーション防止を目的とした重要な操縦技術です。\n\n##",
+        "common_mistakes": "「燃焼が遅くなる」と「爆発的に燃焼する」を反対に理解しがちです。デトネーションは**速すぎる燃焼**（爆発）であり、遅い燃焼ではありません。エンジンの「ピンギング音」という具体的な音で判定される現象として覚えると区別しやすくなります。",
+        "textbook_ref": {
+          "category": "F",
+          "category_name": "エンジン",
+          "excerpt": "F. AIRPLANE ENGINE and SUBSYSTEM\n\nEngine\nproduce power to turn propellers\npulls airplane forward\nPrinciple of Operations\n4-strokes & 5-events\nStroke: Intake, compression, combustion, exhaust\nEvent: Intake, compression, Ignition, power, exhaust\nDual Ignition System\nbetter performance\nsafety\nMixture Control & Altitude\nneeds of mixture control:\nthinner air at high altitude = enriches\nneeds of precautions in descending flight: get too lean\nHeat -problems in any engine-\nsystem prevent over heating\nen"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-03-31T23:30:50.038065",
+          "result": "unsure"
+        }
+      ],
+      "created_at": "2026-03-31T23:30:50.038065",
+      "accuracy_rate": 0.0
+    }
+  ],
+  "oral_records": [
+    {
+      "quizlet_id": 42,
+      "history": [
+        {
+          "date": "2026-03-28T13:49:39.340817",
+          "result": "understood"
+        }
+      ]
+    },
+    {
+      "quizlet_id": 12,
+      "history": [
+        {
+          "date": "2026-03-28T23:48:30.057749",
+          "result": "understood"
+        }
+      ]
+    },
+    {
+      "quizlet_id": 44,
+      "term": "What is relative wind?",
+      "definition": "The direction of airflow with respect to an airfoil. Parallel and opposite the path of the airfoil's movement.",
+      "explanation": {
+        "keywords": "- Relative wind\n- Direction of airflow\n- Airfoil\n- Path of movement\n- Angle of attack\n- Perpendicular to the wing chord\n- Independent of wind conditions\n- Aircraft's movement through the air\n\n##",
+        "explanation": "相対風とは、翼が空気中を移動する際に、その移動方向と反対方向から吹いてくる見かけの風です。実際の風向きに関わらず、**航空機の移動方向と180度反対**の方向が相対風となります。迎え角（angle of attack）を測定する基準になる重要な概念です。\n\n##",
+        "advice": "- 主語を **\"Relative wind\"** で始める\n- **\"is defined as\"** や **\"refers to\"** で定義を述べる\n- **\"the direction of airflow\"** と **\"opposite to\"** の組み合わせを使う\n- 具体例があれば説得力UP（「aircraft moving forward なら wind comes from ahead」など）\n- 簡潔に2文でまとめるのがベスト\n\n##",
+        "example": "*Relative wind is the direction of airflow with respect to an airfoil, and it's parallel and opposite to the aircraft's flight path. It's independent of the actual wind conditions and is the reference we use to measure angle of attack.*\n\nまたは簡潔版：\n\n*Relative wind is the airflow direction relative to the wing. It always flows opposite to the aircraft's direction of movement, regardless of actual wind conditions.*"
+      },
+      "explained_at": "2026-03-28T23:59:04.499978",
+      "history": [
+        {
+          "date": "2026-03-28T23:59:26.513604",
+          "result": "understood"
+        }
+      ]
+    }
+  ]
+}

@@ -1075,35 +1075,86 @@ def accuracy_color_filter(rate):
         return '#f9e2af'
     return '#a6e3a1'
 
-def sync_from_github():
-    """GitHubから最新のデータファイルを取得する"""
+GITHUB_REPO   = "fightingfalcon1290-gif/PPL-study"
+GITHUB_BRANCH = "main"
+
+
+def _github_raw(path):
     import requests
-    REPO = "fightingfalcon1290-gif/PPL-study"
-    BRANCH = "main"
-    FILES = [
+    url = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}/{path}"
+    r = requests.get(url, timeout=10)
+    return r if r.status_code == 200 else None
+
+
+def _git_push():
+    """学習記録をGitHubにプッシュする"""
+    import subprocess
+    base = _dat()
+    try:
+        subprocess.run(['git', 'add', 'data/learning_records.json'], cwd=base, check=True, capture_output=True)
+        result = subprocess.run(['git', 'commit', '-m', 'sync: update learning records'],
+                                cwd=base, capture_output=True, text=True)
+        if 'nothing to commit' in result.stdout:
+            return  # 変更なし
+        subprocess.run(['git', 'push'], cwd=base, check=True, capture_output=True)
+        print("  [sync] 学習記録をGitHubにプッシュしました")
+    except Exception as e:
+        print(f"  [sync] プッシュ失敗: {e}")
+
+
+def sync_from_github():
+    """GitHubから最新データを取得、学習記録は問題数が多い方を採用"""
+    import requests
+
+    # quizlet.csv / oral_questions.tsv は常に上書き取得
+    for remote_path, local_path in [
         ("data/quizlet.csv",   _dat("data/quizlet.csv")),
         ("oral_questions.tsv", _dat("oral_questions.tsv")),
-    ]
-    base_url = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
-    updated = []
-    for remote_path, local_path in FILES:
+    ]:
         try:
-            r = requests.get(f"{base_url}/{remote_path}", timeout=10)
-            if r.status_code == 200:
+            r = _github_raw(remote_path)
+            if r:
                 os.makedirs(os.path.dirname(local_path), exist_ok=True)
                 with open(local_path, "wb") as f:
                     f.write(r.content)
-                updated.append(remote_path)
+                print(f"  [sync] 更新: {remote_path}")
         except Exception as e:
             print(f"  [sync] {remote_path} の取得失敗: {e}")
-    if updated:
-        print(f"  [sync] 更新: {', '.join(updated)}")
-    else:
-        print("  [sync] 更新なし（またはオフライン）")
+
+    # learning_records.json: 問題数が多い方を採用
+    local_path = _dat("data/learning_records.json")
+    local_count = 0
+    if os.path.exists(local_path):
+        try:
+            with open(local_path, encoding='utf-8') as f:
+                local_count = len(json.load(f).get('questions', []))
+        except Exception:
+            pass
+
+    try:
+        r = _github_raw("data/learning_records.json")
+        if r:
+            remote_data  = r.json()
+            remote_count = len(remote_data.get('questions', []))
+            if remote_count > local_count:
+                with open(local_path, 'w', encoding='utf-8') as f:
+                    json.dump(remote_data, f, ensure_ascii=False, indent=2)
+                print(f"  [sync] 学習記録を更新: リモート{remote_count}問 > ローカル{local_count}問")
+            elif local_count > remote_count:
+                print(f"  [sync] ローカルが最新: {local_count}問 > リモート{remote_count}問 → プッシュします")
+                _git_push()
+            else:
+                print(f"  [sync] 学習記録は同じ ({local_count}問)")
+        elif local_count > 0:
+            # リモートにまだ存在しない場合はプッシュ
+            print(f"  [sync] 学習記録をGitHubに初回プッシュします ({local_count}問)")
+            _git_push()
+    except Exception as e:
+        print(f"  [sync] 学習記録の同期失敗: {e}")
 
 
 if __name__ == '__main__':
-    import threading, webbrowser
+    import threading, webbrowser, atexit
 
     print("=" * 50)
     print("PPL学習ツール 起動中...")
@@ -1112,6 +1163,9 @@ if __name__ == '__main__':
     print("ブラウザで http://localhost:8080 を開いてください")
     print("終了するには このウィンドウを閉じてください")
     print("=" * 50)
+
+    # 終了時にも学習記録をプッシュ
+    atexit.register(_git_push)
 
     def _open_browser():
         time.sleep(1.5)

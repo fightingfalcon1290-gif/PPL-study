@@ -81,6 +81,9 @@ def load_records():
 def save_records(data):
     with open(RECORDS_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    # 保存のたびにバックグラウンドでGitHubへプッシュ
+    import threading
+    threading.Thread(target=_git_push, daemon=True).start()
 
 def load_quizlet():
     """QuizletのCSVを読み込む（複数フォーマット対応）"""

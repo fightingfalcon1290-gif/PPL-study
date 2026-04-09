@@ -1920,6 +1920,42 @@
       ],
       "created_at": "2026-04-09T21:01:40.650382",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 62,
+      "question_text": "Which weather conditions should be expected beneath a low-level temperature inversion layer when the relative humidity is high?",
+      "answer_text": "Smooth air, poor visibility, fog, haze, or low clouds.",
+      "choices": [
+        "A. Smooth air, poor visibility, fog, haze, or low clouds.",
+        "B. Light wind shear, poor visibility, haze, and light rain.",
+        "C. Turbulent air, poor visibility, fog, low stratus type clouds, and showery precipitation."
+      ],
+      "correct_letter": "A",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "気象現象・気団",
+      "oral_related": false,
+      "explanation": {
+        "why": "気温逆転層は上層の気温が下層より高いため、空気の上昇運動を阻止します。この「蓋」効果により、汚染物質や湿度が地表付近に閉じ込められます。相対湿度が高いと、露点に達しやすくなり、霧や靄が発生します。また、上昇気流がないため乱気流も生じず、空気は滑らかになります。\n\n##",
+        "memory_tip": "**「逆転層＝蓋をした箱、湿度が高い＝蒸し蒸し」**\n\n- **蓋効果** → 空気が動けない → **Smooth air（滑らか）**\n- **閉じ込められた湿気** → 露点到達 → **Fog/Haze/Low clouds（霧/靄/低雲）**\n- **汚染物質も閉じ込め** → **Poor visibility（視程不良）**\n\n##",
+        "confusion_points": "❌ **間違い：「気温逆転層＝乱気流が多い」**\n- 逆転層は気流を**抑制**します（乱気流は通常、対流が活発な時に発生）\n\n❌ **間違い：「気温逆転層下＝良好な視程」**\n- 相対湿度が高い場合、霧や靄が発生し視程は**悪化**します\n\n##",
+        "connections": "```\n不均等な熱交換の抑制（逆転層）\n    ↓\n空気の上昇運動が阻止される\n    ↓\n湿度の高い空気が地表に蓄積\n    ↓\n露点に達する\n    ↓\n霧/靄/低雲 + 視程不良 + 滑らかな空気\n```\n\n教科書の「不均等な熱交換がすべての気象を支配する」という原則の**逆**のケースです。\n\n##",
+        "common_mistakes": "1. **「逆転層＝常に悪い気象」と思い込む**\n   - 相対湿度が**低い**場合は、むしろ視程良好で晴天です\n\n2. **「Smooth air」を見落とす**\n   - 問題文に複数の正解が並ぶ場合、全て",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T21:07:30.767700",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-09T21:07:30.767700",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

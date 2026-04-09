@@ -2211,6 +2211,42 @@
       ],
       "created_at": "2026-04-09T23:27:52.481620",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 70,
+      "question_text": "Cumulonimbus Mamma clouds are associated with",
+      "answer_text": "violent thunderstorms and tornadoes.",
+      "choices": [
+        "A. the dissipating stage of a thunderstorm.",
+        "B. violent thunderstorms and tornadoes.",
+        "C. the cumulus state of a thunderstorm."
+      ],
+      "correct_letter": "B",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "積乱雲の特性",
+      "oral_related": false,
+      "explanation": {
+        "why": "Cumulonimbus（積乱雲）は不均等な熱交換により激しい上昇気流が発生する雲であり、Mamma（乳房状）の外観は内部で極めて強い対流が起きている証です。この激しい対流が暴風雨や竜巻を生成します。\n\n##",
+        "memory_tip": "「Cumulo=積み上がる」「Nimbus=雨」「Mamma=乳房状突起＝激しい動き」と分解して覚えると、最も危険な雲であることが直感的に理解できます。\n\n##",
+        "confusion_points": "Altocumulus Mamma（中層の乳房状雲）も存在しますが、積乱雲ほど危険ではありません。Cumulonimbus限定で最高レベルの危険性を持ちます。\n\n##",
+        "connections": "教科書の「Unequal Heat Exchange = Convection = 激しい気象現象」という原理の最終形態がCumulonimbus Mamma Cloudsです。\n\n##",
+        "common_mistakes": "高層雲（Cirro-）や中層雲（Alto-）と混同しやすいですが、Cumulonimbusは垂直発達が最大で必ず低層から始まります。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-09T23:59:19.059312",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-09T23:59:19.059312",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

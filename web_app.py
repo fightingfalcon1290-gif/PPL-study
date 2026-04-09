@@ -1181,11 +1181,27 @@ def sync_from_github():
         print(f"  [sync] 学習記録の同期失敗: {e}")
 
 
+def _git_pull():
+    """GitHubから最新コードを取得する"""
+    import subprocess
+    base = _dat()
+    try:
+        result = subprocess.run(['git', 'pull'], cwd=base, capture_output=True, text=True)
+        if 'Already up to date' in result.stdout:
+            print("  [sync] コードは最新です")
+        else:
+            print(f"  [sync] コードを更新しました:\n{result.stdout.strip()}")
+    except Exception as e:
+        print(f"  [sync] git pull 失敗: {e}")
+
+
 if __name__ == '__main__':
     import threading, webbrowser, atexit
 
     print("=" * 50)
     print("PPL学習ツール 起動中...")
+    print("GitHubから最新コードを取得中...")
+    _git_pull()
     print("GitHubから最新データを取得中...")
     sync_from_github()
     print("ブラウザで http://localhost:8080 を開いてください")

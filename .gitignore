@@ -1,0 +1,4 @@
+﻿config.json
+data/learning_records.json
+__pycache__/
+*.pyc

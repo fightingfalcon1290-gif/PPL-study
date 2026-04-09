@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+{% block title %}今日の10問 - PPL学習ツール{% endblock %}
+
+{% block content %}
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+  <h1 class="page-title" style="margin-bottom:0">📅 今日の10問</h1>
+  <div style="text-align:right">
+    <div style="font-size:2rem;font-weight:700;color:var(--peach)">🔥 {{ streak }}</div>
+    <div style="font-size:0.75rem;color:var(--subtext)">連続学習日</div>
+  </div>
+</div>
+
+<!-- プログレスバー -->
+<div style="margin-bottom:20px">
+  <div style="display:flex;justify-content:space-between;font-size:0.85rem;color:var(--subtext);margin-bottom:6px">
+    <span id="progressLabel">読み込み中...</span>
+    <span id="progressCount"></span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progressBar" style="width:0%;background:var(--green)"></div>
+  </div>
+</div>
+
+<!-- ローディング -->
+<div id="loadingArea" style="text-align:center;padding:60px 20px;color:var(--subtext)">
+  <span class="spinner"></span> 問題を準備中...
+</div>
+
+<!-- 完了画面 -->
+<div id="doneArea" style="display:none;text-align:center;padding:40px 20px">
+  <div style="font-size:3rem;margin-bottom:12px">🎉</div>
+  <div style="font-size:1.4rem;font-weight:700;color:var(--green);margin-bottom:8px">今日の10問 完了！</div>
+  <div id="doneStats" style="color:var(--subtext);margin-bottom:20px"></div>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <button class="btn btn-primary btn-lg" onclick="restart()">🔄 もう一周</button>
+    <a href="/" class="btn btn-ghost btn-lg">🏠 ホームへ</a>
+  </div>
+</div>
+
+<!-- 問題エリア -->
+<div id="questionArea" style="display:none">
+  <!-- ヘッダー -->
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+    <span id="qCatBadge" class="badge badge-blue"></span>
+    <span id="qUnitBadge" class="badge badge-mauve"></span>
+    <span id="qOverdueBadge" class="badge" style="display:none;background:#f38ba822;color:var(--red)"></span>
+    <span id="qAccBadge" style="margin-left:auto;font-size:0.85rem;color:var(--subtext)"></span>
+  </div>
+
+  <!-- 問題文 -->
+  <div class="q-card" style="margin-bottom:12px">
+    <div id="qText" class="q-text"></div>
+  </div>
+
+  <!-- 選択肢 -->
+  <div id="choicesArea" style="display:none;margin-bottom:12px">
+    <div id="choicesList" style="display:flex;flex-direction:column;gap:6px"></div>
+  </div>
+
+  <!-- 答えを見るボタン -->
+  <div id="showAnswerArea" style="text-align:center;margin:16px 0">
+    <button class="btn btn-primary btn-lg" onclick="showAnswer()">👁 答えを見る</button>
+  </div>
+
+  <!-- 答え・解説 -->
+  <div id="answerArea" style="display:none">
+    <div class="card" style="border-left:4px solid var(--green);margin-bottom:12px">
+      <div style="color:var(--green);font-size:0.8rem;font-weight:700;margin-bottom:6px">✅ 正解</div>
+      <div id="qAnswer" style="font-size:1rem;color:var(--text);font-weight:600"></div>
+    </div>
+
+    <!-- 解説 -->
+    <div class="card" id="expCard" style="display:none">
+      <div class="card-title">📝 解説</div>
+      <div id="expWhy" style="display:none;margin-bottom:10px">
+        <div class="exp-label">【なぜそうなるのか】</div>
+        <div class="exp-text" id="expWhyText"></div>
+      </div>
+      <div id="expMemory" style="display:none;margin-bottom:10px">
+        <div class="exp-label">【覚え方】</div>
+        <div class="exp-text" id="expMemoryText"></div>
+      </div>
+      <div id="expConfusion" style="display:none;margin-bottom:10px">
+        <div class="exp-label">【混同注意】</div>
+        <div class="exp-text" id="expConfusionText"></div>
+      </div>
+      <div id="expConnections" style="display:none;margin-bottom:10px">
+        <div class="exp-label">【つながり】</div>
+        <div class="exp-text" id="expConnectionsText"></div>
+      </div>
+      <div id="expMistakes" style="display:none;margin-bottom:10px">
+        <div class="exp-label">【間違えやすい点】</div>
+        <div class="exp-text" id="expMistakesText"></div>
+      </div>
+      <div id="expTbRef" style="display:none;margin-top:12px">
+        <details style="background:var(--mantle);border:1px solid var(--yellow);border-radius:8px;padding:10px 14px">
+          <summary style="cursor:pointer;font-size:0.85rem;font-weight:700;color:var(--yellow);list-style:none">
+            📖 教科書参照箇所: <span id="expTbLabel"></span>
+          </summary>
+          <pre id="expTbText" style="margin-top:10px;font-size:0.78rem;line-height:1.6;color:var(--subtext);white-space:pre-wrap;font-family:inherit;border-top:1px solid var(--surface1);padding-top:8px"></pre>
+        </details>
+      </div>
+    </div>
+
+    <!-- 結果ボタン -->
+    <div class="result-btns" style="margin-top:16px">
+      <button class="btn btn-success btn-lg" onclick="submitResult('correct')">✅ 正解</button>
+      <button class="btn btn-warning btn-lg" onclick="submitResult('unsure')">⚠️ 迷った</button>
+      <button class="btn btn-danger btn-lg"  onclick="submitResult('incorrect')">❌ 不正解</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let questions = [];
+let currentIdx = 0;
+let sesCorrect = 0, sesTotal = 0;
+
+async function init() {
+  const res  = await fetch('/api/today/questions');
+  const data = await res.json();
+  document.getElementById('loadingArea').style.display = 'none';
+  if (!data.ok || !data.questions.length) {
+    document.getElementById('questionArea').style.display = 'none';
+    document.getElementById('doneArea').style.display = 'block';
+    document.getElementById('doneStats').textContent = '問題がありません。記録モードで問題を追加してください。';
+    return;
+  }
+  questions = data.questions;
+  showQuestion(0);
+}
+
+function showQuestion(idx) {
+  if (idx >= questions.length) {
+    showDone();
+    return;
+  }
+  currentIdx = idx;
+  const q = questions[idx];
+
+  // プログレス
+  const pct = Math.round(idx / questions.length * 100);
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = `問題 ${idx + 1} / ${questions.length}`;
+  document.getElementById('progressCount').textContent = `✅ ${sesCorrect} 正解`;
+
+  // バッジ
+  document.getElementById('qCatBadge').textContent  = q.category + '. ' + q.category_name;
+  document.getElementById('qUnitBadge').textContent = q.unit || '';
+  document.getElementById('qAccBadge').textContent  = q.accuracy !== null ? fmtRate(q.accuracy) : '初回';
+  const ob = document.getElementById('qOverdueBadge');
+  if (q.overdue_days > 0) {
+    ob.textContent = `⏰ ${q.overdue_days}日遅れ`;
+    ob.style.display = 'inline-block';
+  } else {
+    ob.style.display = 'none';
+  }
+
+  // 問題文
+  document.getElementById('qText').textContent = q.question_text || '（問題文なし）';
+
+  // 選択肢
+  const ca = document.getElementById('choicesArea');
+  if (q.choices && q.choices.length) {
+    document.getElementById('choicesList').innerHTML = q.choices.map(c =>
+      `<div style="padding:10px 14px;border:1px solid var(--surface1);border-radius:8px;font-size:0.95rem">${c}</div>`
+    ).join('');
+    ca.style.display = 'block';
+  } else {
+    ca.style.display = 'none';
+  }
+
+  // リセット
+  document.getElementById('answerArea').style.display   = 'none';
+  document.getElementById('showAnswerArea').style.display = 'block';
+  document.getElementById('questionArea').style.display  = 'block';
+  document.getElementById('doneArea').style.display      = 'none';
+}
+
+function showAnswer() {
+  const q = questions[currentIdx];
+  document.getElementById('showAnswerArea').style.display = 'none';
+  document.getElementById('answerArea').style.display     = 'block';
+  document.getElementById('qAnswer').textContent = q.answer_text || '';
+
+  // 解説
+  const exp = q.explanation || {};
+  let hasExp = false;
+  function setExp(elId, textElId, val) {
+    const el = document.getElementById(elId);
+    const te = document.getElementById(textElId);
+    if (val && val.trim()) {
+      te.innerHTML = renderMd(val);
+      el.style.display = 'block';
+      hasExp = true;
+    } else {
+      el.style.display = 'none';
+    }
+  }
+  setExp('expWhy',       'expWhyText',      exp.why);
+  setExp('expMemory',    'expMemoryText',   exp.memory_tip);
+  setExp('expConfusion', 'expConfusionText',exp.confusion_points);
+  setExp('expConnections','expConnectionsText', exp.connections);
+  setExp('expMistakes',  'expMistakesText', exp.common_mistakes);
+  document.getElementById('expCard').style.display = hasExp ? 'block' : 'none';
+
+  const ref = exp.textbook_ref;
+  const refEl = document.getElementById('expTbRef');
+  if (ref && ref.excerpt) {
+    document.getElementById('expTbLabel').textContent = ref.category + '. ' + ref.category_name;
+    document.getElementById('expTbText').textContent  = ref.excerpt;
+    refEl.style.display = 'block';
+  } else {
+    refEl.style.display = 'none';
+  }
+}
+
+async function submitResult(result) {
+  const q = questions[currentIdx];
+  sesTotal++;
+  if (result === 'correct') sesCorrect++;
+
+  await fetch('/api/review/result', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({id: q.id, result}),
+  });
+
+  showQuestion(currentIdx + 1);
+}
+
+function showDone() {
+  document.getElementById('questionArea').style.display = 'none';
+  document.getElementById('progressBar').style.width    = '100%';
+  document.getElementById('progressLabel').textContent  = '完了！';
+  document.getElementById('progressCount').textContent  = `✅ ${sesCorrect} / ${sesTotal} 正解`;
+  document.getElementById('doneStats').textContent =
+    `${sesTotal}問中 ${sesCorrect}問正解（${sesTotal > 0 ? Math.round(sesCorrect/sesTotal*100) : 0}%）`;
+  document.getElementById('doneArea').style.display = 'block';
+}
+
+async function restart() {
+  sesCorrect = sesTotal = 0;
+  document.getElementById('loadingArea').style.display = 'block';
+  document.getElementById('doneArea').style.display    = 'none';
+  await init();
+}
+
+init();
+</script>
+{% endblock %}

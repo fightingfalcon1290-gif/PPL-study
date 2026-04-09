@@ -1,0 +1,1334 @@
+A. INTRODUCTION
+
+Parts of Airplane
+Know the major parts on an airplane, Fuselage, Wings, Empennage, Landing gears, and Powerplant.
+Understand major factions of major parts.
+Fuselage
+Seats for passengers and pilot (Cabin)
+Baggage Area
+Makes an airplane
+Instruments, flight controls, other parts are connected or installed, Body
+holds engines, wings, tails, landing gears, antennas, and other
+Wing (main wings)
+Creates Lift
+Aileron
+Flaps
+Has Main (or only) Fuel Tank
+Empennage (Tail)
+Vertical Stabilizer & Rudder
+Horizontal Stabilizer & Elevator
+Landing gear
+Tricycle (Main gear, Nose gear) vs. Conventional (Main gear, Tail wheel)
+Fixed (simple, affordable and easy) vs. Retractable (faster, fuel efficient, and longer range)
+Powerplant
+Engine (Reciprocating or Turbine Engines)
+Propeller (Fixed or Constant-Speed, Adjustable)
+Aircraft Classification (What is Aircraft? Airplane? What is different? Aircrafts are classified into small groups)
+Airman Certification (for pilots)
+Category (Airplane, Rotorcraft, Glider and Lighter-than-Air)
+Class (Airplane: Single or Multi Engine & Land or Sea, Rotorcraft: Helicopter or Gyroplane)
+Type (e.g. Cessna 152, Boeing 787, Airbus 380, F-15)
+Aircraft Certification (for machine)
+Category (Normal, Utility, Acrobatic, Commuter, Transport, Experiment......)
+Class (Airplane, Gyroplane, Lighter-than-Air, Glider)
+Type (e.g. Cessna 152, Boeing 787, Airbus 380, F-1
+B. AERODYNAMICS
+
+4 Aerodynamic Forces
+Lift
+Weight
+Thrust
+Drag
+4 forces in straight and level flight
+Lift=Weight
+Thrust=Drag
+Lift is usually 5 to 8 time more than Thrust (depends on design and engine)
+Drag
+Parasite Drag (increases as speed increases, as frictions)
+Induced Drag (increases as speed decreases, or pitch increases)
+Total Drag = Parasite Drag + Induced Drag
+Angle of attack (AOA)
+The angle between chord line and relative wind
+Lift and Drag is created proportional to this AOA, not attitude
+Stall and Spin
+As angle of attack increases, the lift increase until Critical Angle of Attack
+The air flow separates over the air foil beyond this angle
+STALL (loss of lift will happens)
+Airfoil stalls at critical angle of attack regardless of CG, Weight, Density, etc.
+Spin is a kind of continuous stall with when one wing stalls more than the others.
+break a stall, follow manufactures (POH) instruction.
+if none is available
+power off
+aileron neutral
+full opposite rudder to stop the rotation
+reduce back pressure move briskly to break the stall
+as rotation stops, neutralize, and smooth recovery from dive
+then recover as other stall, watch out for secondary stall
+each airplane spins differently
+Airplane does not spin if it is not stalled
+Flight control
+3 Major Control surface
+Rudder
+Elevator
+Aileron
+Three axes of airplane
+　　　 (1) Longitudinal axes
+　　　　　　 Moving around longitudinal axes is ROLL which is controlled by AILERON.
+　　　 (2) Lateral axes
+　　　　　　 Moving around lateral axis is PITCH which is controlled by ELEVATOR.
+　　　 (3) Vertical axes
+　　　　　　 Moving around vertical axes is YAW which is controlled by RUDDER.
+Center of Gravity (CG)
+CG is the point at which three axis cross.
+aircraft or objects moves around CG
+Flaps
+increase lift and drag by changing airfoil
+slower airspeed for takeoff and landing.
+slower stalling speed.
+increase performance on landing and takeoff period
+increases angle of descent without increasing airspeed.
+decreases weight on landing gear at the moment of touch down.
+helps to reduce landing and takeoff speed
+Higher Drag in Cruise, so it will be retracted normal cruise
+Trim
+relief pressure to help a pilot.
+help to fly better
+little tab on the edge of flight control surface.
+moves opposite but localized lift moves flight control to desired position
+some trim control only changes tension on control cable.
+Turning and Load Factor
+Turning
+To turn the airplane (or anything) it must have sideward force.
+You can create this sideward force by banking the airplane.
+The direction of lift is Inclined.
+One component of lift still acts vertically to oppose weight.
+The other component acts Horizontally to pull the airplane inside of the turn,
+'Horizontal component of lift causes airplane to turn.
+During the turn vertical component of lift is decreased.
+To make level turn
+increase power, or
+increase angle of attack
+Load Factor
+Load supported by wing
+Load Factor = (G) = Load / Actual Weight
+Load factor chart
+Bank angle increase, Load Factor increase.
+Load Factor and Stall.
+Load Factor increase, stall speed increase.
+banked = Less Vertical Component of Lift
+Wings need to create more Lift at same airspeed => increase Angle of Attack
+Reaches Critical Angle of Attack at faster airspeed than Vs
+Stability
+It is a characteristic of an airplane in flight that causes it to return to original condition after it is disturbed
+"Stable airplane requires less effort to control"
+Bank Stability
+Wing Dihedral
+Location of Wing and CG (Low Wing and High Wing Airplane)
+Directional Stability
+Vertical Stabilizer
+Pitch Stability and CG range
+If the CG is located forward of forward limit of CG
+The airplane is too stable　
+It is hard to pitch up at takeoff and landing.
+may not have enough control on landing.
+If the CG is located rearward of afｔ limit of CG
+The airplane became unstable.
+It's hard to recover from stall, or may be impossible to recover from a spin.
+(An airplane may fly faster)
+It must stay certain range to fly safely.
+Pitch and power
+Prop wash causes stronger tail down force.
+If you reduce Power
+Less Prop wash
+Less tail down force
+Nose comes down.
+Constant angle of attack
+usually results Constant airspeed (if no pitch control is touched)
+Left Turning Tendency
+High power & High angle of attack (Low airspeed)= Left turning tendency is the GREATEST
+Torque: Action (turning propeller to right) has reaction (banking airplane left).
+P-factor: Asymmetrical thrust (yaw to the left)
+Slip stream (Vertical Stabilizer to the right)
+Gyro precession (Tailwheel) The reaction to the force applied to gyro acts 90 degrees ahead of rotation.
+this is not for nosewheel airplane (tri-cycle, e.g. C-172)
+Ground Effect
+Increased Lift and Reduced Induced Drag near ground.
+Airflow is deflected down by wingtip vortex.
+near ground, vortex is blocked by ground and became weaker as plane get closer to the ground.
+less wind vortex, less induced drag created.
+a change in airflow by the ground.
+Local air flow became less bended down = less tiled lift
+Less tiled Lift = More lift and Less Induced Drag
+happens in less than half of the length of wing span above ground.
+increase as plane gets lower. More effect in a low wing airplane
+It causes the airplane to
+has more lift in ground effect and get stronger as it gets closer to the ground
+Float during landing.
+Become airborne before reaching recommended take off speed during takeoff.
+This is NOT a recommended way of explaining, but
+It is like cushioning effect of the air near ground
+C. PERFORMANCE
+
+Performance and density
+Airplanes' performance determined by air density.
+More Air Density = More Lift & More Power
+The density of air is decreased by following condition
+High altitude
+High temperature
+High humidity
+High Altitude or Low pressure
+Low density = Low performance
+Density altitude
+Aircraft performance in Standard Atmosphere expressed in altitude to have better idea.
+to know aircraft performance
+Standard atmospheric condition.
+At sea level = 15 degrees C, 29.92 in Hg.
+Temperature = -2 degrees C/ 1000 ft (about)
+Pressure = -1 in Hg/1000ft (about)
+Density altitude Increase = Less Air (density)
+Performance decrease.
+Less Lift
+Less Thrust
+Slow climb
+Longer takeoff and landing run
+More accident (High Altitude Airport during Hot Summer)
+pressure altitude corrected for nonstandard temperature. (other way to explain)
+Density Altitude Chart
+to determine density altitude with Pressure Altitude and Temperature
+to predict performance of an aircraft on given day.
+Pressure Altitude
+Indicated Altitude corrected for nonstandard pressure.
+to determine the density altitude (and other performance of an aircraft)
+Transponder Mode C and Flight Level use pressure altitude
+Performance Charts and Tables
+Take off distance chart
+Landing distance graph
+Landing distance table
+Cruise power setting
+Cross Wind Component Chart
+on Landing in Strong Wind
+D. WEIGHT AND BALANCE
+
+Why do we have to calculate weight and balance? （terms)
+Weight　
+Balance (CG Location)
+Weight
+Aircraft　
+Flight Crew and Passenger　
+Baggage and Cargo
+Fuel
+Operating Fluids
+Empty Weight
+Empty Weight is weight of an aircraft without people, fuel, and baggage
+Standard Empty Weight = same for same type of aircraft
+standard for each aircraft type
+unusable fuel
+full operating fluids (brake oil and others)
+full engine oil
+Basic Empty Weight
+Standard Empty Weight + Optional Equipment
+unique to each aircraft
+need to check Aircraft's Weight and Balance Data
+Gross Weight (as Loaded)
+Maximum Weight
+Maximum Takeoff Weight
+Maximum Landing Weight
+Maximum Ramp Weight
+Useful Load = Maximum Ramp Weight - Basic Empty Weight
+Weight and Balance Calculation
+Reference Point (Datum Line)　
+Weight
+Add up all items
+Total Weight must be less than Maximum Weight
+If there is enough payload available, each person may be assumed to be 170 lbs.
+Aviation Fuel = 6 lbs / Gallon
+Engine Oil = 7.5 lbs / Gallon (if required to calculate)
+Balance
+To find Location of CG for a safe operation
+stability
+recovery from stall and spin
+landing characteristic
+from Datum Line (each type is different)
+CG Range
+Total Moment / Total Weight = CG Location
+Moment
+effect of distance and weight are expressed in numbers
+distance x weight
+a step to find CG Location
+effect of each item
+WEIGHT (lb) X ARM (in)= MOMENT (lb-in)
+Add all Moments then divide it by total weight
+Calculation (to find CG location)
+Find weight and distance for all item below (for each location)
+Empty weight (from W+B Data)
+Pilot
+Passenger
+Fuel
+Oil (if required)
+Baggage and Cargo
+Add up weight of all items to find Total Weight
+For each item, Weight multiply by arm (distance) to find its moment.
+Add up all the moment to calculate total Moment
+Total Moment divide by Total Weight = CG Location
+Check the CG location if it is within the limit
+Use of Weight and Balance Table and Chart (Graph)
+
+E. INSTRUMENTS
+
+Pitot static system
+measures Atmosphere
+compare with international standard atmosphere
+29.92 in Hg and 15 degree in C (59 in F)
+-1 in Hg and -2 degrees per 1,000 feet
+Use Pitot Tube facing stragiht and Static Port loacated on side
+If a pitot tube clogged - Airspeed Indicator affected
+If a static port clogged - All Instruments affected
+Airspeed Indicator
+measures (impact pressure - static pressure) then convert to airspeed
+Arc on Airspeed Indicator
+White arc = Flap operating range
+Green arc = Normal operating range
+Yellow arc = Caution range
+Red line = Never exceed speed
+V-speed: Airspeed limitation, important airspeed of operation
+Vso = Stalling speed at landing configuration.
+Vs1 = Stalling speed at specific configuration.
+Vfe = Maximum flap extended speed
+Vno = Maximum structural cruising speed
+Vne = Never exceed speed
+Following V-speeds are not shown on the airspeed Indicator, but they are very Important.
+Va = Maneuvering speed
+Vlo = Maximum landing gear operation speed
+Vx = Best angle of climb
+Vy = Best rate of climb
+gives Indicated Airspeed (not true, but all aircraft knows indicated)
+Altimeter
+measures static pressure, then coverts to altitude
+Altimeter setting
+Prior for a takeoff
+Set the current altimeter setting, or
+Set the altimeter so that indicates the elevation of the airport
+Above 18000ft
+Set the altimeter 29.92, then it will be called all flight level (FL).
+Altimeter Indication varies 1000 ft/1 in Hg.
+Altimeter error
+Pressure
+Fly from high pressure area to low pressure area: Altimeter Indicates higher than true.
+Fly from low pressure area to high pressure area: Altimeter Indicates lower than true.
+Temperature
+Fly from hot area to cold area: Altimeter Indicates higher than true.
+Fly from cold area to hot area: Altimeter Indicates lower than true.
+"Low and cold, Watch out below!"
+True altitude & absolute altitude
+True altitude: The vertical distance of the aircraft above sea level.
+Absolute altitude: The vertical distance of the aircraft above the surface.
+Pressure Altitude: when set to 29.92 to find True Altitude and Density Altitude
+Vertical Speed Indicator
+measure difference in static pressure in time
+indicates rate of change in altitude
+slight delay
+Gyroscopic Instruments
+Uses gyroscopic effect of a ROTATING object.
+Attitude Indicator (engine driven)
+Rigidity in Space (the axis is vertical)
+Set the miniature airplane to the horizon bar before each flight.
+artificial horizon stays and miniature airplane moves around.
+Heading Indicator (engine driven)
+Rigidity in Space (the axis is horizontal)
+Set it on known heading before and during each flight.
+Turn coordinator (electric driven) Precession
+It Indicates yaw and roll. It shows rate of turn (380 degrees/2min = standard rate turn).
+some instrument on some aircraft uses different source for power
+Magnetic compass
+It is accurate only in straight-and-level unaccelerated flight. (and no disturbance)
+Deviation
+It is caused by the magnetic field within the aircraft disturbing the line of magnetic force.
+Variation
+Compass doesn't indicates true north, but magnetic north.
+Dip (magnetic dip)
+Turning error (NoSF)
+Turn from North = a compass indicates Opposite
+Turning through north indicated the biggest delay
+Turn from South = a compass indicates Faster
+Turning through South indicates ahead in the most amount.
+No turning error at East or West Heading
+Accelerating error (ANDS)
+on East or West Heading
+Acceleration = Compass Indicates North
+Deceleration = Compass Indicates Sooth
+No error on North/South
+F. AIRPLANE ENGINE and SUBSYSTEM
+
+Engine
+produce power to turn propellers
+pulls airplane forward
+Principle of Operations
+4-strokes & 5-events
+Stroke: Intake, compression, combustion, exhaust
+Event: Intake, compression, Ignition, power, exhaust
+Dual Ignition System
+better performance
+safety
+Mixture Control & Altitude
+needs of mixture control:
+thinner air at high altitude = enriches
+needs of precautions in descending flight: get too lean
+Heat -problems in any engine-
+system prevent over heating
+engine oil
+to lubricates
+to cool by circulations
+to seal
+to clean up (brings dirt to an oil filter)
+to prevent corrosion and rust
+fins (to dissipate heat into air)
+baffle (circulate air)
+curl flap (more air as needed)
+Overheating
+loss of power
+high oil consumption
+excessive wear on Internal parts
+Cause of Overheating
+climbing too steeply -too slow-
+too much power
+too lean mixture
+not enough oil
+wrong fuel (lower-than-specified)
+Corrective Action
+increase airspeed (decent or level-off)
+reduce power
+enrich mixture
+check oil level during a preflight
+fill with correct aviation gasoline (avgas). If not available, use higher AVGAS
+Abnormal Combustion
+mostly caused by overheating
+detonation
+mixture explodes instead of burning normally
+loss of power, vibration, internal damage
+pre ignition
+uncontrolled combustion of fuel/air mixture
+in advance of normal ignition
+hot spot (carbon deposits, cracks..)
+in other cases, they are usually caused by pilot mistakes.
+Check Oil and Fuel,
+use correct grade and type of fuel
+oil level
+engine room for any blockage,
+aware of high temperature
+Carburetor (float type)
+to mix fuel with air at proper amount
+principle of a float-type carburetor
+metering air pressure difference at Venturi throat near air-inlet.
+carburetor icing
+loss of power
+20 to 70 degrees in F with high humidity
+use of carb heat
+hot air from exhaust muffler (heated, but not mixed)
+melts carb ice and prevents carb icing
+enriches mixture -loss of slight power-
+used in many training fleet, but being replaced in newer airplanes
+Fuel Injection (instead of a carburetor)
+better distribution of fuel = better performance
+less nor no carb ice (induction icing, blocked air inlet by ice)
+Constant-Speed Propeller
+a pilot can choose most efficient blade angle of propeller
+not pitch angle, but angle of attack on prop
+propeller control - blade angle - RPM
+throttle control - engine output - manifold pressure
+power change
+to increase (mixture, prop, then throttle)
+to decrease (throttle, prop, then mixture)
+Good Operating Procedure
+Don't let tank dry before switching tank
+vapor lock
+air can clog fuel line (fluid)
+fill the tank after the flight
+prevent moisture
+After starting an engine,
+check engine oil pressure, adjust RPM
+Hand prop
+have a competent pilot in the cockpit
+you don't know what is going to happen
+Do walk around inspection for preflight
+MUST use a written checklist
+all items in logical sequence
+eliminates any omitting an important step.
+After long shortage
+check damage and obstructions by insects and animals
+G. AIRPORT Runway marking & lighting
+
+Runway marking
+Runway number = Magnetic course
+Displaced threshold
+Chevron: Never be used (nor enter) Emergency only.
+Hold Bar
+needs a instruction (permission) to cross from a controller (from Solid Line)
+At uncontrolled airport,stop, check, then cross.
+X-mark: Runway closed (or tells it is a taxiway, but not landing runway)
+Aiport Signs
+Mandatory Instruction Signs
+Location Signs
+Direction Signs
+Destination Signs
+Information Signs
+Runway Distance Remaining Signs
+Lighting
+Runway - White
+Taxi way - Blue
+Runway end - Red
+Threshold - Green
+A Pilot controlling light
+Pilot can control the Intensity of the runway light at certain airport by clicking the switch of the microphone.
+Click 7 times - High intensity
+5 times - Middle intensity
+3 times - Low Intensity
+Approach lights and other light
+Airport beacon
+White & Green - Civil airport
+White @ White & Green - Military airport
+It rotates ....
+from sunset to sunrise, or
+during below VFR weather minimum "ceiling - Less than 1000ft or visibility-Less than 3 mile."
+may not be accurate indication of weather or time
+Airport traffic pattern
+Standard pattern = Left traffic pattern
+Departure (Upwind Leg)
+Crosswind Leg
+Downwind Leg
+Entry (45 Leg)
+Base Leg
+Final (Final Approach)
+Segmented circle
+It Indicates direction of turn (pattern)
+Visual Glide slope Indicators
+By FAR, You have to stay AT or ABOVE glide slope.
+Glide slope = The best approach course for that runway. (maybe)
+Precision Approach Path Indicator (PAPI)
+on glide slope (two red and two white) or (one red and one white)
+red = too low
+white = too high
+Visual Approach Slope Indicator (VASI)
+Standard VASI
+2-Bar: Red and White = on Glide path
+3-Bar:
+Two Red and a White = on Glide Path for a small airplane
+One Red and Two White = On Glide Path for a larger airplane.
+All White = too high
+All Red = too low (= danger)
+Tri-color VASI
+Amber - High
+Green - At glide slope
+Red - Low
+There IS other kinds of indicator, but too rare.
+Land and Hold Short Operation (LAHSO)
+may be used at a busy airport with crossing runways.
+to effectively use multiple runways.
+a pilot can decline or accept (read back)
+student pilot should never accept LAHSO
+if you are not familiar with a plane or have any doubt, decline.
+H. AIRSPACE
+
+Controlled Airspace and Uncontrolled Airspace
+ATC service
+Instrument Flying
+VFR Weather Minimum Requirement
+they are only minimum by law, does not mean safe
+ABC of Airspace
+Class A Airspace
+from 18,000 ft to FL600
+Altimeter setting 29.92
+Only IFR flight is permitted
+Class B Airspace
+To enter Class-B you are required to
+establish Two-way radio communication with ATC
+have operating Transponder with mode-C
+ATC clearance ("cleared to enter ....." from ATC.)
+hold at least Private Pilot or endorsement from an instructor
+To fly within 30 NM from primary airport you are required.
+Transponder with mode-C
+check FAR for latest information (FAR 91.131)
+Class C Airspace
+To enter Class-C. you are required to
+establish Two-way radio communication with ATC
+Transponder with mode-C.
+ATC service s are provided for all aircraft.
+check FAR for the latest information (FAR 91.130)
+Class D Airspace
+at all tower airport
+established two-way radio communication
+Takeoff, Landing and Taxi Clearances are needed
+Class E Airspace
+makes most of US airspace under Controlled Airspace.
+to protect IFR AIRCRAFTs
+we operates most of times in this airspace.
+ATC service are available
+ALL IFR Traffics are under ATC control
+guaranteed separation from all other IFR traffic
+For VFR Aircraft
+higher VFR requirements (TO PROTECT IFR AIRCRAFT)
+may receive ATC service when workload permits (such as Traffic Followings)
+Area
+For all Area (mainland and Alaska)
+14500feet to Class A Airspace (18,000 feet)
+Federal airway ( = Victor airway )
+It is airway from one VOR to another VOR (Some are NDB, some)
+More and More GPS (or RNAV) defined Waypoint.
+1,200 feet AGL up to 18,000 feet
+Surface Area
+Dashed Lines (or Class D)
+Extension (added to Class B, C and D)
+Transition
+begins 700 AGL or 1,,200 feet AGL
+En Route Domestic Areas (other area for protecting IFR)
+No specific requirements for Pilot Certificate nor Equipment.
+Special VFR
+When the weather is below VFR minimum
+When reported Visibility is more than 1 mile (if no ground, then flight visibility)
+You can request SPECIAL VFR.
+Receive Special VFR Clearance from ATC
+at least 1 mile visibility AND clear of cloud
+To fly special VFR at night.,.
+The pilot - Instrument rated
+The airplane Instrument equipment and ready for IFR
+Only one aircraft may stay in area under special VFR,
+Uncontrolled Airspace
+Class G Airspace
+Less VFR Weather minimum (IFR aircraft is less protected)
+can receive ATC service if available
+no specific requirement
+Special Use Airspace
+Prohibited area (P-xxx)
+For reason of national security, the flight of aircraft is prohibited. (White House etc)
+Restricted area (R-xxx)
+A flight is restricted and required to have an authorization.
+It has invisible HAZARDs to aircraft. (artillery firing, aerial gunnery, guided missile, etc. )
+You may fly through it ONLY If permission Is granted by the controlling agency.
+Warning area (W-xxx)
+It contains hazards to nonparticipating aircraft over International or coastal waters,
+You may fly trough it, but it is similar to Restricted area. NOT safe
+Military Operating Area (MOA)
+You may fly trough it., but be careful.
+Alert area (A-xxx)
+It has unusual type of aerial activity or high concentration of student pilot training.
+You may fly through it, but be careful.
+You may fly those Special Use Airspace, but you should or must contact agency or get information
+Military training route
+Low level (below 10000ft.MSL) high speed (excess 250 knots) military flight.
+VR-xxx -VFR flight
+IR-xxx - IFR flight
+4 digit - Below 1500ft.AGL
+3 digit - Above 1500ft.AGL
+Other Airspace
+Airport Advisory Area =AAA (10 miles from Non-Tower airport with flight service station.)
+TRSA Terminal Radar Service Area (not required, but strongly recommended to contact ATC)
+Wild Life refuges (noise sensitive area)
+VFR weather minimum
+VFR in Controlled Airspace
+VFR in Uncontrolled Airspace
+VFR in Class A, B, C, D, E
+I. FLYING AN AIRPLANE
+
+You have to do WALK AROUND INSPECTION before each flight.
+Check Aircraft's condition (no damage, missing parts, nor blockages, etc)
+Check Required Inspections
+Check Required Documents and Certificate
+Taxi techniques
+Position of Aileron and Elevator
+Difference in Tricycle type and Tailwheel Type
+Wake Turbulence Avoidance
+Wingtip Vortex is created when lift is created.
+Vortex created around wingtip.
+It is most dangerous when the airplane is HEAVY ,SLOW and CLEAN.
+It tend to sink below the flight path
+Takeoff following other aircraft
+Landing following other aircraft
+Crossing flight path
+Jet Blast (especially from a large Jet Engine)
+Collision Avoidance from other aircraft
+Mid-Air Collision is mostly FATAL
+Use of Eyes for Avoiding Other Aircraft
+Day time: 10 degree sector mechanical scan
+Night time: Off center viewing
+Avoid white light for 30 minutes before a night flight
+Collusion course
+when it seems stationary
+near the level (height) of a horizon
+they are harder to see in collision course
+Clearing turn (make sure no planes in any blind spots)
+in a High Wing Airplane, before each turns
+before each maneuvers turn to Right and Left
+on the airway
+prior to maneuver,
+Use and Turn on
+Anti-collusion light any time.
+landing lights, at least near an airport
+Appearance in Hazy Day.
+Aircraft and terrain look further than actual.
+Closer than what you think.
+VFR, day, clear sky near an airport is the most dangerous
+Emergency
+Engine Failure
+Keep the best glide speed (before anything, altitude is only your friend)
+Look for the landing spot and turn to there.
+do NOT attempt to turn around on takeoff
+THEN, Trouble shoot
+Stop the engine.
+Fuel shut-off or selector valve = off, Mixture lean to idel cut-off, Ignition switch off,
+Transponder 7700
+Radio 121.5 (or on frequency your are on. if not, nearest airport, ATC or FSS frequency)
+Mayday mayday mayday,... (declare and state your problem, location, # of people etc)
+Radio failure
+Transponder 7600
+ATC light gun signal for Class-D Airports
+High jack (Transponder 7500)
+Radio phraseology (just for passing a written exam)
+Altitude: 10,500 feet= One zero thousand five hundred feet
+Call FSS: Oakland FSS = Oakland radio
+N-number: N123SF = November One Two Three Sierra Foxtrot
+Ground Control (ATC)
+Runway 13 = don't mean enter or cross the runway 13. Requires clear instruction.
+Crossing a runway = need a clearance or instruction from ATC
+You should contact ground control after landing WHEN ADVISED BY TOWER,
+Traffic advisory 'Traffic 2 o' clock." is based on your ground track, not heading.
+Emergency Locator Transmitter　=　ELT
+Emits signal when detect high impact, and rescue begins
+Frequency:
+121.5 (and 243.0) MHz for analog signal, and
+406 MHz for digital signal with more information included (and will replace analog ELT)
+The battery must be charged (or replaced)
+each 1 cumulative hour
+after 50% of their useful life is expired.
+ELT may tested only on the ground during the first 5 minutes after the hour.
+for analog ELTs.
+upto 3 sweeps.
+Airborne Test are NOT authorized
+for digital, follow manufacture's instructions
+Check ELT after each flight if it is not activated.
+VHF/DF=Direction finder
+Most FSS and some Tower
+DF helps the pilot to find the direction from the station.
+Two-way radio communication equipment is required to receive the support.
+Time Zones
+Convert to (or from) Zulu Time (UTC) from (or to) Local Time
+Uses of Time Zone Chart
+Notice to Airman = NOTAM
+To inform a time critical information which could affect any flight
+temporary nature
+not sufficiently known in advance to be published
+types of NOTAM
+NOTAM-D
+FDC NOTAM
+Pointer NOTAM
+Special Use Airspace NOTAM
+Military NOTAM
+NOTAM (L) does NOT exist
+Flight plan
+For VFR, it is recommended
+For IFR or DVFR, you have to
+Let people know you are flying, if you don't return, they will look for you
+For a VFR flight, FILE your flight plan by a phone, internet, DUAT, radio, or in person to FSS before takeoff,　
+OPEN your flight plan on the radio after takeoff,
+May report progress (position report) or amend as needed
+CLOSE your flight plan by the radio or phone with FSS (or ground control).
+Don't forget to close or police, rescue and military will be looking for you.
+When filing, foloow the format or use Form 7233-1
+Airport/Facility Directory (A/FD)
+A book contains airport, navaid, and other data
+issued every 56 day
+Check NOTAM before flight
+Advisory Circulars AC
+to provide aviation information and/or help to comply FARs, but not regulatory
+AC numbers are corresponds to FAR subchapter title: such as....
+60: Airman
+70 Airspace
+90 General Operation and ATC
+issued by FAA and printed by government printing office.
+Some are toll, some are free. (Now on the the FAA Web Site for free)
+Some AC's are changed to Handbook, such as Airplane Flying Handbook
+J. Charts
+
+Sectional Charts
+WAC and VFR Terminal Charts
+Effective Date
+NOTAM
+Legend and data on the stub
+Scale
+1:500,000
+Plotter and Distance
+1 cm (or inch) = ? KM = ? Mile
+Longitude and Latitude
+Units (Degree, minute, second)
+Chart as a map
+Elevation and Contour
+Water, Land, Mountain, Landmark, Town, Highway, Railroad, etc
+Obstructions with 2 heights
+Airport
+read airport data and color
+shapes
+Navigation Aid (NAVAID)
+Airspace (Review)
+Class B, C, D, E, G Airspace
+Class E and SVFR
+Special Use Airspace (Review)
+Communication Box (Review)
+K. NAVIGATION
+
+Dead Reckoning
+by a Calculation (Ground Speed, Course, Wind Triangle, E-6B)
+Course: The intended direction of flight in the horizontal plane measured in degrees from north.
+Heading: The angle between north and longitudinal axis of the airplane measured in degrees
+use of Plotter and find Course and Distance
+use of E-6B to find Time, Distance, Speed
+Variation
+Magnetic compass does not indicate north pole. It Indicates MAGNETIC NORTH.
+The difference between true north pole and magnetic north measured in degree is VARIATION.
+It varies from place to place.
+15°30' E
+East is Least (+) West is Best (-)
+True xxx = from North Pole, True North, (T)
+Magnetic xxx =from Magnetic North　(M)
+True course & Variation = MAGNETIC COURSE
+Magnetic course & Wind correction angle = MAGNETIC HEADING
+Compass Deviation
+It is produced by disturbance from magnetic fields produced by metal and electrical accessories inside.
+Magnetic heading + Deviation = COMPASS HEADING
+Predict Course and Time from POH Data and Winds Aloft Forecast, then Correct in the air
+VOR - VHF Omni Range
+VOR receiver indicates POSITION of you relative to the station.
+It only knows which radial you are on.
+Choose desire VOR station by setting the frequency.
+It can be identified with morse code
+must confirm the morse code (could be wrong station or VOR may be down)
+Choose desired radial by setting OBS
+The indicator show the relative location compare to selected radial.
+Does not matter what heading, but only on which radial you are on.
+VOR Test facility VOT
+Set the OBS 180 = TO or 380 = FROM
+(Cessna 182 => One Eighty Two => One Eighty and TO)
+Maximum = acceptable deviation is 4
+GPS
+satellites on the space
+measures distance from satellites
+find your position in a sphere from each satellite
+more you receive, the sphere intercepts and your location is identified.
+GPS determines position, by receiving
+2 satellites = it knows positron in a circle
+3 satellites = it knows 2 possible position, but don't know which
+4 satellites = it knows location of the aircraft (GPS receiver)
+5 or more = accuracy goes up
+computers relate position and database to tell us position, direction, speed, altitude and your plans
+Non-Directional radio Beacon NDB
+NDB station can be found by an Automatic directional finder = ADF
+They were primary navigation system before VORs, but fading out.
+Relative Bearing (RB): Degrees between nose and station. (Shown on an ADF)
+Magnetic Bearing to the station (MB): The heading-to fly directly to the station.
+MB (TO) = RB + MH
+MB (FROM) = MB(TO) +/- 180
+L. WEATHER THEORY
+
+Cause of weather
+Every physical process of weather is caused by UNEQUAL HEAT EXCHANGE.
+Unequal heat exchange = Convection = Pressure Difference
+air to flow, wind to blow
+moisture to added and moves to form a cloud and fogs
+to create rain or ice in the air
+thunderstorms
+Unequal heat exchange causes variation in altimeter setting
+CORIOLIS FORCE
+deflects the wind (flow of fluid) to the right in the northern hemisphere.
+makes wind to blow parallel, instead of perpendicular, to isobar
+Less Coriolis force bear surface due to friction with ground
+Humidity
+It determines general weather.
+Moisture is added to air.
+Relative humidity
+Amount of Moisture compare to Maximum Moisture that air can hold
+Amount of moisture can be held is affected by temperature.
+Dewpoint (temp that air became 100% saturated. visible moisture)
+CLOUD
+Families of cloud
+Low cloud Surface to 6,500 ft.
+Middle cloud 6,500ft. - 20,000ft. (Alto-)
+High cloud above 20,000ft. (Cirro-)
+Extensive vertical development cloud
+Rain Cloud (nimbo-)
+Towering cumulus cloud
+Cumulonimbus cloud
+Form of cloud
+Straus: Stable Airmass, Less wind ,fog, continuous precipitation
+Cumulus: Un-Stable Airmass, Gust, turbulence, showery precipitation
+Lenticular Cloud
+Thunderstorm
+Hazards
+Turbulence: Substantial or Fatal structure damage, loss of control.
+Lighting: Temporally loss of vision, electric failure,
+Hail: Structure damage,
+Lifecycle
+cumulus stage: Up draft
+Mature stage: Most dangerous
+Rain begins at Surface
+Lighting
+Severe and destructive Up and down draft
+Dissipating stage: Down draft, Weakening, but it energy may be transferring to next thunderstorm
+Squall line = Line of thunderstorm
+Embedded thunderstorm = hidden
+Wind shear (TURBULENCE)
+It is sudden change in wind velocity or direction
+horizontally or vertically.
+Where does it occur?
+Near thunderstorm,
+close to ground with strong wind.
+Strong Temperature Inversion
+Loss of control
+Loss of lift (because of airspeed change) = stall or high descent rate = may crash into ground
+Loss of altitude
+Temperature Inversion
+Temperature increases as altitude increase,
+Very Stable Airmass, such as Clear still night
+Warm airmass is moving over cold airmass.
+Mountain wave
+Near mountain top, wind blowing across a ridge
+Lenticular Cloud
+Very strong wind and turbulence, even it seems stationary or invisible.
+STABILITY of AIRMASS
+ 	Stable Airmass	
+Unstable Airmass
+
+Lapse Rate	Low	High
+Air	Smooth	Turbulent
+Cloud	Stratiform	Cumuliform
+Precipitation	Continuous	Showery
+Visibility	Low, Fog, Haze	Good clear (except rain)
+Icing
+Structural Icing
+Raining below freezing temperature
+Supercooled Water (Liquid State even below freezing)
+Type of Icing
+Clear
+Hard and Clear, Heavy,
+often Cumulus Type Cloud
+large water droplets, slow freezing
+Adheres and hard to remove
+changes shape of airfoil
+Rime
+Small water droplets with air trapped
+somewhat rough-looking appearance and a milky-white color.
+often stratus type cloud
+Mixed (Mixture of Clear and Rime)
+Supercooled Water will freeze at impact
+Carb Icing is likely to occur when
+temperature 20 to 70
+humidity more than 50%, more likely to happen above 80%
+review several accident reports if time is available
+Frost on wing
+It causes early separation of air.
+Difficult or Impossible to take off.
+Front
+Cold front
+Colder Air overtakes Warmer Air
+Steep slope and Narrower
+Cumulus Type Clouds, and chance of Thunderstorm with faster moving cold front
+Warm front
+Warmer air move over cold airmass
+Shallow Slope
+Stratus Type Cloud for wide area
+Occasional Cumulonimbus Clouds = Embedded thunderstorm
+Higher chances of Freezing Rain
+Stationary front
+no or very few move
+warm and cold air flows parallel but opposite direction
+same pressure
+weather lasts extended time
+Occluded front
+Cold front passes warm front
+complex
+Widespread, poor visibility, possible icing
+Cold Air = More Dense = Moves Faster
+Fog
+Condition
+High Humidity
+Few temperature dewpoint spread
+needs condensation nuclei (particles so that moisture can condense around it)
+Radiation fog
+Clear, calm night
+Land area
+Advection fog
+Warm, Moist Air flows over Cold Land (Area)
+large temperature difference
+Shore line to cold Land area
+Upslope fog
+Moist Air flow up a slope, and cooled
+Steam fog
+cold air moves over water
+turbulence
+Rain-Induced Fog
+Fog and Mist
+Fog = Visibility Less than 5/8 Statute Mile
+Mist = BR = Fog reduces visibility to between 5/8 SM to 6 SM. 　
+Haze, Smoke, Smog
+Haze
+fine dust or salt in the air
+restricted visibility
+stable air
+Smoke
+industrial area, or fire
+Smog
+Mixture of smoke and fog
+M. WEATHER DATA
+
+Weather Briefing
+Getting Weather Data by calling a Flight service station FSS
+Standard Briefing (all information, almost)
+Abbreviate Briefing (to update, supplement, and limited)
+Outlook briefing (for a flight 6 or more hours later)
+when requesting by a phone, tell
+yourself as a pilot (N-Number or Your name if no N-Number yet)
+type of aircraft
+type of flight (VFR or IFR)
+departing airport
+intended route (and altitude)
+destination
+time of proposed departure and en route
+In flight briefing (radio contact to FSS in the air)
+Flight Watch = En route Flight Advisory Service =　EFAS
+Design to exchange weather data
+Actual condition, turbulence and thunderstorm information of your en route.
+central collection and distribution point for pilot reported information
+many are based on Pilots Reports
+Not for briefing nor flight plan
+122.00 MHz below FL180
+anywhere in contiguous US, you can contact EFAS above 5,000 ft AGL
+Above FL 180, check A/FD
+generally 6 am to 10 pm local time
+a specialist covers several outlets, so you need to tell them where you are.
+to call FSS in the air
+"xxx Radio, Cessna 12345...."
+"yyy Flight Watch, Cessna 12345, Tomato VOR..." for EFAS, need to tell location
+Inflight Aviation Weather Advisory
+SIGMET : Weather hazard for ALL aircraft (non-convective)
+Severe Icing
+Severe or Extreme Turblence or Clear Air Turbulence (CAT)
+SIGMET does NOT include thunderstorm
+Sandstorms or Dust Storm lowering visibility below 3 miles
+Volcanic Ash
+CONVECTIVE SIGMET: Warning for all aircraft for Convective activity (Thunderstorm)
+Severe Thunderstorm due to
+50 kts or more surface wind
+Hail larger than 3/4 inches
+Tornadoes
+Embedded Thunderstorm
+Line of Thunderstorm
+Thunderstorm produces heavy precipitation more than 40% of area of least 3,000 sq. miles
+any convective situation that the forecaster feels is hazardous to all categories of aircraft.
+AIRMET : advisories of significant weather phenomena but lower than SIGMETs.
+for pilots in the preflight or en route to enhance safety.
+There are three AIRMETs
+AIRMET Sierra : IFR conditions and/or extensive mountain obscurations.
+AIRMET Tango : moderate turbulence, sustained surface winds of 30 knots or greater, and/or nonconvective low-level wind shear.
+AIRMET Zulu : moderate icing and provides freezing level heights.
+G-AIRMET (Graphical AIRMET) is available on AWC site for better understanding.
+Hawaii and Alaska Convective SIGMENT is included in SIGMET
+HIWAS　
+transmit to tell us that hazard information is available
+check appropriate weather products or contact a flight watch or FSS
+H in communication box
+Common Terms (General)
+Sky condition
+Clear or SKY Clear (CLR or SKC)
+CLR nothing below 12,000 feet AGL at an automated station
+SKC no layers are reported at a manual station.
+Few (FEW) 1/8 to 2/8 (Quarter) (includes less than 1/8)
+Scattered (SCT) 3/8 - 4/8 (Half)
+Broken (BKN) 5/8 -7/8 (some holes, or part of)
+Overcast (OVC) 8/8
+Obscured (VV): Vertical Visibility (When it is Low horizontal visibility) 8/8
+Ceiling: Height of the base of cloud from BKN to OVC, but not thin.
+Categorical Outlook
+(if used) Low IFR (LIFR)
+Ceiling to 500 feet and/or Visibility less than 1 mile
+IFR
+Ceiling 1,000 feet and/or Visibility less than 3 miles
+Marginal VFR (MVFR)
+Ceiling to 1,000 to 3,000 feet and/or Visibility 3 to 5 miles
+possible to fly VFR, but, but, but
+VFR
+Ceiling 5,000 feet or more and Visibility 5 miles or more
+WIND....More than 25 knots.
+Intensity
+Light....LGT
+Moderate.....MDT
+Severe.....SVR
+Extreme... EXTRM
+Cloud reports and Height are reported only visible from a point. It may be clear or clogged above
+METAR
+reported weather (now or past, but never future)
+automated or manually observed
+METAR
+Station Identifier (K+3 letters in mainland, P+3 in Northern Pacific Region, R+3 Japan)
+Date and Time
+Report Modifier (as Required) AUTO or SPECI
+Wind
+Gust (G) 10 kts or more in less than 10 min
+VRB: variable below 6 kts
+xxxVxxx: more than 6 kts with direction
+Calm Wind: 00000KT
+Visibility
+in SM (Statute Miles)
+in KM (Kilometers in many countries)
+Runway Visual Range (RVR in feet with Runway Number) is added
+(if equiped and Visibility less than 1 mile or RVR 6,000 or less for an Instrument Runway)
+Present Weather
+Intensity: - light, + heavy, none for Moderate
+Descriptor: SH (Shower), TS (Thunderstorm), FZ (Freezing), etc
+Precipitation: RA (Rain), DZ (Drizzle), SN (Snow), etc
+Obscuration (what lowers visibility): BR (Mist), FG, Smoke (FU), Haze (HZ)
+other:
+Sky Condition
+Ceiling
+Indifinite Ceiling
+Temperature and Dewpoint
+Altimeter (A)
+Remarks (RMK)
+Pilot weather report PIREP (/UA, route) or Urgent Report (/UUA)
+/OV: Position
+/TM: Time
+/FL: Flight level or altitude
+/TP: Type of aircraft
+/SK: Sky condition (heights are in MSL)
+/WX: Visibility and weather
+/TA: Temperature (C)
+/WV: Wind
+/TB: Turbulence
+/IC: Icing
+/RM: Remarks
+Terminal Aerodrome Forecast (TAF)
+provide forecast within 5 miles from the airport.
+Format:
+Type: Route or Amended (TAF or TAF AMD)
+Station identifier: ICAO, K + 3 letters
+Prepared Time: Date and Time
+Valid Time of the forecast
+Wind
+Visibility
+Significant Weather
+Sky Condition and Vertical Obscuration
+Low-Level Wind Shear (non convective)
+CHANGE GROUP
+FMxxxx: Significate Change will happens in a hour or less
+TEMPO xxxx: temp fluctuations,
+happens 50% or more
+last less than 1 hour
+PROB30: 30% of chance
+" to the end of Forecast"
+Terms and Codes are similar to METAR
+Aviation Area Forecast (FA)
+it is the forecast for wide area (each covers about 1/8 of the U.S.A.).
+way more than 3,000 square miles (only 55 miles x 55 miles)
+this 3,000 is for other purpose (e.g. AIRMET)
+covers several states
+can be used if TAF is not available at or near your destination.
+forecasts of VMC condition, clouds and general weather condition
+for complete information, you needs to check "Inflight Aviation Weather Advisories"
+issued 3 times are day
+each covers 12 hours
+plus 6 hours of Categorical Outlook
+Sections of FA
+Header (Communication and Product Header)
+Regions and insurance time
+statements of what is contained,
+synopsis valid time,
+forecast time for VMC
+States and areas contained in the FA
+Precautionary Statement
+alert pilots what is NOT contained in this products, such as
+IFR Condition
+Thunderstorms, severe turbulence, icing, low-level wind shear
+also, tells heights are MSL unless they are preceded by AGL or CIG
+Synopsis
+summary of weather in FA: location and movement of front, pressure system, and other
+VFR cloud and Weather (CLDS/WX)
+MVFR to VFR condition
+Widespread wind of 20 kts or more
+followed by categorical outlook
+Remember that IFR Condition is not in a FA (need to check AIRMET)
+Hazardous Weather which meets AIRMET or SIGMET criteria is NOT covered in FA
+Wind and Temperature Aloft Forecast
+Wind and Temperature forecast for above ground level
+6-digit:
+Wind direction in 10 (add 0)
+Wind speed
+Temperatures in C (no + or - above FL240)
+4-digit (to close to ground, less than 2,500 AGL, no temperature is forecasted)
+Wind more than 100 kts, 5 is added on the first digit and means wind is more than 100 kts
+less than 5 knots, 9900
+Winds are forecasted in TRUE and KTONS
+Weather depletion chart (reported, past)
+METAR or other reported information is mapped.
+sky coverage at stations are shown in little circles
+low visibility and significant weather are indicated
+MVFR and IFR areas are easily shown
+areas are covered by counter lines,
+tells pilot areas of MVFR and IFR quickly
+Front System are shown
+Radar Summary Chart (reported, past)
+Graphic Display of radar reports
+type, intensity, movement of precipitation, cells and squall lines
+This is for PRE-FLIGHT planning only and must cross-checked with other data.
+Severe Weather (enclosed by a heavy dashed line)
+intensity trend is NOT shown any more
+Significant weather prognostic chart (Forecast)
+4 Panel Format (Chart)
+UPPER panels are for surface to FL240 (Low Level Chart)
+IFR and MVFR Condition
+Turbulence
+Freezing levels
+BOTTOM panels (Surface)
+High andLow Pressure System, and Fronts
+Type, Intensity and Coverage of Precipitation
+LEFT are forecast of 12 hr and RIGHT are 24 hrs after insurance.
+There are Short-Range Surface, Low-, Mid-, High-Level Charts are available.
+Low Level : upto FL 240 or 400 millibars
+Mid-Level : from 10,000 ft MSL to FL 450
+High-Level : FL 250 to FL 630
+Those charts are avaialbe at AWC (ADDS) Web Site in a separate panel.
+other products
+Convective Outlook (AC)
+Severe Weather Watch Bulletins (WW)
+Observed Winds Aloft Charts
+Constant Pressure Chart
+TWEB (Alaska Only)
+N. FLIGHT PHYSIOLOGY
+
+Hypoxia
+It is a state of oxygen deficiency in the blood stream
+Symptom: Headache., Dizziness, Restless, Sleepiness Euphoria (a happy feeling), Lowers Vision
+Treatment: Use Aviation Oxygen and Descend ASAP
+Hyperventilation
+Chemical imbalance of blood.
+Excessive amount of air is breathed out too much Carbon Dioxide from blood, and
+Too much oxygen is in the body.
+caused by excessive breathing
+too much emotional stress, fear.
+Symptoms: Dizziness, hot or cold sensations, lips or nail become blue. (and Panic)
+Treatment:
+Slow the breathing rate.
+Talk or sing aloud.
+always relax
+Carbon Monoxide Poisoning
+CO is colorless, odorless and tasteless gas and
+very little CO significantly reduce one's ability to do anything and may cause death.
+Blocks Hemoglobin to exchanges of Oxygen and CO2
+There is a chance that the carbon monoxide comes into the cabin from hot air of a leaking heater,
+CO is in exhaust gas from engine
+if you smell exhaust gas, shut down the heater and land ASPS
+Never take a chances - colorless and odorless - you don't know
+Symptoms: Headache, nausea, dizziness ,loss of muscle power
+　　　　 usually, you lose muscle power or consciousness before taking any action
+Treatment: Stop the heater, open the window, and breath fresh air, decent and land.
+Spatial Disorientation (Vertigo)
+It is the state of temporary confusion of brain by misleading information is sent.
+You don't know airplanes attitude and lose control then crush.
+easily happens in cloud or clear night.
+It happens to anyone in nature, training can only help.
+If you suspect Spatial Disorientation, trust instrument, but never yourself.
+continuously scan all instruments but never stare only one instrument. (no more than 1 second each)
+Night Flying
+Off center viewing
+your eye needs at least 30 minutes to adjust dark
+Consider using Supplemental Aviation Oxygen above 5,000 feet
+Aeronautical Decision Making (ADM)
+Systematic Approach to the metal process for better decision Makings
+should be used by pilots to consistently make the best course of action
+Pilots and Human Errors is the biggest factor on accidents
+Risk Management
+How do you cope risk?
+decision making process to cope with risks, relies on
+situational awareness
+problem recognition
+good judgment
+P-P-P (other way to think)
+PERCEIVE hazards
+PROCESS to evaluate level of risk
+PERFORM risk management
+4 risk element (PAVE)
+Pilots, Aircraft, enViroment, External pressure
+There are all way some risks, but which and when take it or refuse it?
+Operational Pittholes
+dangerous tendency or behavior
+Peer Pressure
+Mind Set
+Scud Running
+VFR to IMC
+Neglect of checklist
+there are lot more of those
+Five HAZARDOUS ATTITUDE
+Antiauthority, Impulsivity, Invulnerability, Macho, Resignation
+recognize hazardous attitude or thought
+label it and correct by ANTIDOTE
+These are only few of ADMs, search and study for a safe flight
+O. Federal Aviation Regulations FAR
+Part 1 Definition and abbreviations
+Category (for aircraft or pilots)
+Class (for aircraft or pilots)
+Night Time
+ATC Clearance
+Abbreviations
+Part 21
+Airworthiness Certificate
+Part 39
+Airworthiness Directive
+Part 43
+Preventive Maintenance
+Maintenance Record
+Part 61: Certification for Pilots.
+Requirements for Pilot Certificates and Ratings
+Duration of Pilot Certificate
+Alcohol and Drug Offenses
+Medical Certificate
+Type Rating Requirements, Additional Training, and Authorization Requiments
+Flight Review
+Recent Flight Experience
+Change of Address
+Glider Towing
+Private Pilot Privilege and Limitations
+Part 91: General Operating and Flight Rules
+Responsibility and Authority of a PIC
+Airworthiness
+Operating Limitations (manual, marking, and placard)
+Dropping Objects
+Alcohol and Drugs
+Preflight Action
+Flight Crew at Station
+Use of Safety Belts
+Formation Flight
+Right-of-Way Rules
+Aircraft Speed Limit
+Minimum Safe Altitude
+Altimeter Settings
+ATC Clearance and Instructions
+Class C Airspace
+Class B Airspace
+Restricted and Prohibited Areas
+Class A Airspace
+Fuel Requirements
+Basic VFR Weather Minimum
+Special VFR Weather Minimum
+VFR cruising altitude
+Aircraft's required documents
+ELT
+Aircraft Light
+Supplemental Oxygen
+ATC Transponder and Mode-C
+Aerobatic
+Parachute
+Flight with Special Airworthiness Certificate for Restricted and Experimental
+Maintenance Requirement and Recording
+After Maintenance
+Inspection, annual and 100 hour
+ATC Transponder Inspection
+Passenger Briefing
+NTSB part 830 Accident Reporting
+This is not part of FAR, but still Federal Regulation (CFR)
+Immediate Notification
+Preservation
+Filing Reports to NTSB　（When?)

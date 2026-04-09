@@ -1,0 +1,386 @@
+{% extends "base.html" %}
+{% block title %}教科書 - PPL学習ツール{% endblock %}
+
+{% block content %}
+<h1 class="page-title">📖 自動生成教科書</h1>
+
+<!-- A〜O タブバー（ただのリンク、座標バグなし） -->
+<div style="display:flex;gap:4px;flex-wrap:nowrap;overflow-x:auto;margin-bottom:16px;
+            padding-bottom:4px;scrollbar-width:thin" id="catTabs">
+  {% for key, name in categories.items() %}
+  {% set s = cat_summaries[key] %}
+  {% set new_count = new_cat_counts.get(key, 0) %}
+  <a href="/textbook/{{ key }}" style="text-decoration:none;flex-shrink:0">
+    <div style="padding:6px 10px;border-radius:8px;font-size:0.82rem;white-space:nowrap;position:relative;
+      border: 1px solid {% if key == active_category %}var(--blue){% elif new_count %}var(--green){% else %}transparent{% endif %};
+      background:{% if key == active_category %}var(--blue){% elif new_count %}#a6e3a122{% else %}var(--surface0){% endif %};
+      color:{% if key == active_category %}var(--mantle){% elif new_count %}var(--green){% else %}var(--subtext){% endif %};
+      font-weight:{% if key == active_category or new_count %}700{% else %}400{% endif %}">
+      <span>{{ key }}</span>
+      {% if new_count %}
+      <span style="margin-left:4px;font-size:0.7rem;background:var(--green);color:var(--mantle);
+                   padding:1px 5px;border-radius:999px">+{{ new_count }}</span>
+      {% elif s.rate is not none %}
+      <span style="margin-left:3px;font-size:0.75rem">
+        {%- if s.rate <= 50 %}🔴{%- elif s.rate <= 79 %}🟡{%- else %}🟢{%- endif %}
+      </span>
+      {% endif %}
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<div style="display:flex;gap:20px;align-items:flex-start">
+
+  <!-- サイドバー -->
+  <div class="textbook-sidebar">
+    <div class="cat-list">
+      {% for key, name in categories.items() %}
+      {% set s = cat_summaries[key] %}
+      {% set rate = s.rate %}
+      {% set new_count = new_cat_counts.get(key, 0) %}
+      <a href="/textbook/{{ key }}" style="text-decoration:none">
+        <div class="cat-item {% if active_category == key %}active{% endif %}"
+             style="{% if new_count and active_category != key %}border-left:3px solid var(--green);background:var(--surface0){% endif %}">
+          <div>
+            <span style="color:var(--blue);font-weight:700">{{ key }}.</span>
+            <span style="font-size:0.85rem;margin-left:4px">{{ name }}</span>
+            <div style="margin-top:2px;display:flex;gap:4px;align-items:center">
+              {% if s.count %}<span style="font-size:0.75rem;color:var(--overlay0)">{{ s.count }}問</span>{% endif %}
+              {% if new_count %}<span style="font-size:0.7rem;background:var(--green);color:var(--mantle);padding:1px 5px;border-radius:999px;font-weight:700">+{{ new_count }} NEW</span>{% endif %}
+            </div>
+          </div>
+          {% if rate is not none %}
+          <div class="cat-acc" style="color:
+            {%- if rate <= 50 %}var(--red){%- elif rate <= 79 %}var(--yellow){%- else %}var(--green){%- endif %}">
+            {{ accuracy_label(rate) }} {{ rate }}%
+          </div>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- メイン -->
+  <div class="textbook-content">
+    {% set cat_name = categories.get(active_category, '') %}
+
+    <!-- ヘッダー -->
+    <div class="card" style="margin-bottom:16px">
+      <div style="display:flex;align-items:center;gap:16px">
+        <div style="width:52px;height:52px;border-radius:12px;background:var(--surface1);
+          display:flex;align-items:center;justify-content:center;
+          font-size:1.4rem;font-weight:700;color:var(--blue)">{{ active_category }}</div>
+        <div>
+          <div style="font-size:1.2rem;font-weight:700">{{ cat_name }}</div>
+          <div style="color:var(--subtext);font-size:0.85rem">
+            {{ sorted_qs|length }}問 記録済み
+            {% set s = cat_summaries[active_category] %}
+            {% if s.rate is not none %}
+              ・正答率
+              <span style="font-weight:700;color:
+                {%- if s.rate <= 50 %}var(--red){%- elif s.rate <= 79 %}var(--yellow){%- else %}var(--green){%- endif %}">
+                {{ accuracy_label(s.rate) }} {{ s.rate }}%
+              </span>
+            {% endif %}
+          </div>
+        </div>
+        <!-- カテゴリ名表示のみ（切替はサイドバー・上部タブで） -->
+        <div style="margin-left:auto;color:var(--overlay0);font-size:0.8rem">
+          {{ active_category }} / 15
+        </div>
+      </div>
+    </div>
+
+    {% if not sorted_qs %}
+    <div class="card" style="text-align:center;padding:40px 20px">
+      <div style="font-size:2rem;margin-bottom:10px">📝</div>
+      <div style="color:var(--subtext)">
+        このカテゴリにはまだ問題がありません。<br>
+        記録モードで問題を追加すると自動的に分類されます。
+      </div>
+      <a href="/record" class="btn btn-primary" style="margin-top:16px">📸 記録モードへ</a>
+    </div>
+    {% else %}
+
+    <!-- 要注意問題 -->
+    {% if weak_qs %}
+    <div class="card" style="border:1px solid var(--red);margin-bottom:16px">
+      <div class="card-title" style="color:var(--red)">🔴 要注意問題（正答率50%以下）</div>
+      {% for q in weak_qs %}
+      <details style="margin-bottom:8px">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+                        padding:10px 12px;border-radius:8px;background:var(--surface0)">
+          <div class="q-num">{{ loop.index }}</div>
+          <div style="flex:1">
+            <div class="q-title">{{ q.question_text[:80] }}{% if q.question_text|length > 80 %}…{% endif %}</div>
+            <div class="q-tags">
+              {% if q.unit %}<span class="badge badge-mauve">{{ q.unit }}</span>{% endif %}
+              {% if q.is_new %}<span class="badge" style="background:#a6e3a133;color:var(--green);border:1px solid var(--green)">🆕 NEW</span>{% endif %}
+              {% if q.oral_related %}<span class="badge badge-yellow">🎤 オーラル</span>{% endif %}
+              <span class="badge badge-red">{{ q.accuracy_rate }}%</span>
+            </div>
+          </div>
+          <span style="color:var(--overlay0);font-size:0.8rem">▼</span>
+        </summary>
+        <div style="padding:12px 16px;background:var(--mantle);border-radius:8px;margin-top:4px">
+          {{ _q_detail(q) }}
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- 全問題一覧 -->
+    <div class="card">
+      <div class="card-title">全問題一覧（正答率順）</div>
+      {% for q in sorted_qs %}
+      {% set rate = q.accuracy_rate %}
+      <details style="margin-bottom:8px">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+                        padding:10px 12px;border-radius:8px;background:var(--surface0)">
+          <div class="q-num">{{ loop.index }}</div>
+          <div style="flex:1">
+            <div class="q-title">{{ q.question_text[:100] }}{% if q.question_text|length > 100 %}…{% endif %}</div>
+            <div class="q-tags">
+              {% if q.unit %}<span class="badge badge-mauve">{{ q.unit }}</span>{% endif %}
+              {% if q.is_new %}<span class="badge" style="background:#a6e3a133;color:var(--green);border:1px solid var(--green)">🆕</span>{% endif %}
+              {% if q.oral_related %}<span class="badge badge-yellow">🎤</span>{% endif %}
+              {% if rate is not none %}
+              <span class="badge {% if rate <= 50 %}badge-red{% elif rate <= 79 %}badge-yellow{% else %}badge-green{% endif %}">
+                {{ accuracy_label(rate) }} {{ rate }}%
+              </span>
+              {% else %}
+              <span class="badge" style="background:var(--surface1);color:var(--overlay0)">未学習</span>
+              {% endif %}
+              <span style="font-size:0.75rem;color:var(--overlay0)">{{ q.result_history|length }}回</span>
+            </div>
+          </div>
+          <span style="color:var(--overlay0);font-size:0.8rem">▼</span>
+        </summary>
+        <div style="padding:12px 16px;background:var(--mantle);border-radius:8px;margin-top:4px">
+          {{ _q_detail(q) }}
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+
+    {% endif %}
+  </div>
+
+</div>
+
+<!-- 編集モーダル -->
+<div id="editModal" style="display:none;position:fixed;inset:0;background:#000000bb;
+  z-index:300;align-items:center;justify-content:center">
+  <div class="card" style="max-width:600px;width:95%;max-height:90vh;overflow-y:auto">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+      <div style="font-weight:700;font-size:1.1rem;color:var(--blue)">✏ 問題を編集</div>
+      <button onclick="closeEdit()" class="btn btn-ghost btn-sm">✕ 閉じる</button>
+    </div>
+    <input type="hidden" id="editId">
+    <div class="form-group">
+      <label>問題文・タイトル</label>
+      <textarea id="editQuestionText" rows="4" style="resize:vertical"></textarea>
+    </div>
+    <div class="form-group">
+      <label>正解</label>
+      <textarea id="editAnswerText" rows="2" style="resize:vertical"></textarea>
+    </div>
+    <div class="grid-2">
+      <div class="form-group">
+        <label>カテゴリ</label>
+        <select id="editCategory">
+          {% for key, name in categories.items() %}
+          <option value="{{ key }}">{{ key }}. {{ name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>単元名</label>
+        <input type="text" id="editUnit" placeholder="例：Class B空域">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>【なぜそうなるのか】</label>
+      <textarea id="editWhy" rows="3" style="resize:vertical"></textarea>
+    </div>
+    <div class="form-group">
+      <label>【覚え方・語呂合わせ】</label>
+      <textarea id="editMemoryTip" rows="2" style="resize:vertical"></textarea>
+    </div>
+    <div class="form-group">
+      <label>【⚠️ 混同注意ポイント】</label>
+      <textarea id="editConfusion" rows="3" style="resize:vertical"></textarea>
+    </div>
+    <div class="form-group">
+      <label>【他の概念とのつながり】</label>
+      <textarea id="editConnections" rows="2" style="resize:vertical"></textarea>
+    </div>
+    <div class="form-group">
+      <label>【よく間違えるポイント】</label>
+      <textarea id="editMistakes" rows="2" style="resize:vertical"></textarea>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:8px">
+      <button onclick="closeEdit()" class="btn btn-ghost">キャンセル</button>
+      <button onclick="saveEdit()" class="btn btn-primary">💾 保存</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{# ── 問題詳細マクロ ── #}
+{% macro _q_detail(q) %}
+<div style="margin-bottom:10px">
+  <div style="font-size:0.8rem;color:var(--subtext);margin-bottom:4px">問題</div>
+  <div style="font-size:0.9rem;line-height:1.6">{{ q.question_text }}</div>
+</div>
+{% if q.chart_filename %}
+<div style="margin-bottom:12px">
+  <div style="color:var(--teal);font-size:0.8rem;font-weight:700;margin-bottom:6px">📊 チャート</div>
+  <img src="/api/chart/{{ q.chart_filename }}" alt="chart"
+       style="max-width:100%;border-radius:8px;border:1px solid var(--surface1);cursor:pointer"
+       onclick="this.style.maxWidth=this.style.maxWidth==='none'?'100%':'none'">
+  <div style="color:var(--overlay0);font-size:0.75rem;margin-top:4px">クリックで拡大</div>
+</div>
+{% endif %}
+{% if q.answer_text %}
+<div style="margin-bottom:12px;padding:10px 14px;background:var(--surface0);
+     border-left:3px solid var(--green);border-radius:0 8px 8px 0">
+  <div style="color:var(--green);font-size:0.8rem;font-weight:700;margin-bottom:4px">✅ 正解</div>
+  <div style="font-size:0.9rem">{{ q.answer_text }}</div>
+</div>
+{% endif %}
+{% if q.explanation %}
+  {% if q.explanation.why %}
+  <div style="margin-bottom:10px">
+    <div class="exp-label">【なぜそうなるのか】</div>
+    <div class="exp-text">{{ q.explanation.why | md | safe }}</div>
+  </div>
+  {% endif %}
+  {% if q.explanation.memory_tip %}
+  <div style="margin-bottom:10px">
+    <div class="exp-label">【覚え方・語呂合わせ】</div>
+    <div class="exp-text">{{ q.explanation.memory_tip | md | safe }}</div>
+  </div>
+  {% endif %}
+  {% if q.explanation.confusion_points %}
+  <div style="margin-bottom:10px">
+    <div class="exp-label">【⚠️ 混同注意ポイント】</div>
+    <div class="exp-text">{{ q.explanation.confusion_points | md | safe }}</div>
+  </div>
+  {% endif %}
+  {% if q.explanation.connections %}
+  <div style="margin-bottom:10px">
+    <div class="exp-label">【他の概念とのつながり】</div>
+    <div class="exp-text">{{ q.explanation.connections | md | safe }}</div>
+  </div>
+  {% endif %}
+  {% if q.explanation.common_mistakes %}
+  <div style="margin-bottom:10px">
+    <div class="exp-label">【よく間違えるポイント】</div>
+    <div class="exp-text">{{ q.explanation.common_mistakes | md | safe }}</div>
+  </div>
+  {% endif %}
+  {% if q.explanation.textbook_ref and q.explanation.textbook_ref.excerpt %}
+  <details style="background:var(--mantle);border:1px solid var(--yellow);border-radius:8px;padding:10px 14px;margin-top:10px">
+    <summary style="cursor:pointer;font-size:0.85rem;font-weight:700;color:var(--yellow);list-style:none">
+      📖 教科書参照箇所: {{ q.explanation.textbook_ref.category }}. {{ q.explanation.textbook_ref.category_name }}
+    </summary>
+    <pre style="margin-top:10px;font-size:0.78rem;line-height:1.6;color:var(--subtext);
+                white-space:pre-wrap;font-family:inherit;border-top:1px solid var(--surface1);padding-top:8px">{{ q.explanation.textbook_ref.excerpt }}</pre>
+  </details>
+  {% endif %}
+{% endif %}
+<div style="display:flex;gap:8px;margin-top:10px">
+  {% if q.oral_related %}<a href="/oral" class="btn btn-warning btn-sm">🎤 オーラルで練習</a>{% endif %}
+  <a href="/review?mode=category&category={{ q.category }}" class="btn btn-ghost btn-sm">🔄 復習</a>
+  <button class="btn btn-ghost btn-sm" onclick="openEdit({{ q.id }}, event)">✏ 編集</button>
+  <button class="btn btn-sm" style="color:var(--red);border:1px solid var(--red)"
+          onclick="deleteQuestion({{ q.id }}, event)">🗑 削除</button>
+</div>
+{% endmacro %}
+
+{% block scripts %}
+<script>
+// アクティブタブを中央にスクロール
+(function() {
+  var tabs   = document.getElementById('catTabs');
+  var active = tabs && tabs.querySelector('a[href="/textbook/{{ active_category }}"] div');
+  if (active) active.scrollIntoView({inline: 'center', block: 'nearest'});
+})();
+
+// ── 編集モーダル ──────────────────────────────
+async function openEdit(id, e) {
+  e.stopPropagation();  // <details>の開閉を防ぐ
+  const res  = await fetch('/api/question/' + id);
+  const data = await res.json();
+  if (!data.ok) { toast('読み込みエラー', 'error'); return; }
+  const q = data.question;
+  document.getElementById('editId').value           = q.id;
+  document.getElementById('editQuestionText').value = q.question_text || '';
+  document.getElementById('editAnswerText').value   = q.answer_text   || '';
+  document.getElementById('editCategory').value     = q.category      || 'H';
+  document.getElementById('editUnit').value         = q.unit          || '';
+  document.getElementById('editWhy').value         = (q.explanation && q.explanation.why)              || '';
+  document.getElementById('editMemoryTip').value   = (q.explanation && q.explanation.memory_tip)       || '';
+  document.getElementById('editConfusion').value   = (q.explanation && q.explanation.confusion_points) || '';
+  document.getElementById('editConnections').value = (q.explanation && q.explanation.connections)      || '';
+  document.getElementById('editMistakes').value    = (q.explanation && q.explanation.common_mistakes)  || '';
+  document.getElementById('editModal').style.display = 'flex';
+}
+
+function closeEdit() {
+  document.getElementById('editModal').style.display = 'none';
+}
+
+async function saveEdit() {
+  const id = parseInt(document.getElementById('editId').value);
+  const payload = {
+    question_text: document.getElementById('editQuestionText').value,
+    answer_text:   document.getElementById('editAnswerText').value,
+    category:      document.getElementById('editCategory').value,
+    unit:          document.getElementById('editUnit').value,
+    explanation: {
+      why:              document.getElementById('editWhy').value,
+      memory_tip:       document.getElementById('editMemoryTip').value,
+      confusion_points: document.getElementById('editConfusion').value,
+      connections:      document.getElementById('editConnections').value,
+      common_mistakes:  document.getElementById('editMistakes').value,
+    },
+  };
+  const res  = await fetch('/api/question/' + id, {
+    method: 'PUT',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(payload),
+  });
+  const data = await res.json();
+  if (data.ok) {
+    toast('保存しました', 'success');
+    closeEdit();
+    setTimeout(() => location.reload(), 800);
+  } else {
+    toast('保存失敗: ' + data.error, 'error');
+  }
+}
+
+async function deleteQuestion(id, e) {
+  e.stopPropagation();
+  if (!confirm('この問題を削除しますか？')) return;
+  const res  = await fetch('/api/question/' + id, {method: 'DELETE'});
+  const data = await res.json();
+  if (data.ok) {
+    toast('削除しました', 'success');
+    setTimeout(() => location.reload(), 800);
+  } else {
+    toast('削除失敗: ' + data.error, 'error');
+  }
+}
+
+// モーダル外クリックで閉じる
+document.getElementById('editModal').addEventListener('click', function(e) {
+  if (e.target === this) closeEdit();
+});
+</script>
+{% endblock %}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  // テーマをできるだけ早く適用（チラつき防止）
+  (function() {
+    var t = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<title>{% block title %}PPL学習ツール{% endblock %}</title>
+<style>
+:root {
+  --bg:      #1e1e2e;
+  --mantle:  #181825;
+  --crust:   #11111b;
+  --surface0:#313244;
+  --surface1:#45475a;
+  --surface2:#585b70;
+  --overlay0:#6c7086;
+  --overlay1:#7f849c;
+  --text:    #cdd6f4;
+  --subtext: #a6adc8;
+  --blue:    #89b4fa;
+  --mauve:   #cba6f7;
+  --green:   #a6e3a1;
+  --red:     #f38ba8;
+  --yellow:  #f9e2af;
+  --peach:   #fab387;
+  --teal:    #94e2d5;
+  --sky:     #89dceb;
+  --sapphire:#74c7ec;
+  --lavender:#b4befe;
+}
+[data-theme="light"] {
+  --bg:      #eff1f5;
+  --mantle:  #e6e9ef;
+  --crust:   #dce0e8;
+  --surface0:#ccd0da;
+  --surface1:#bcc0cc;
+  --surface2:#acb0be;
+  --overlay0:#9ca0b0;
+  --overlay1:#8c8fa1;
+  --text:    #4c4f69;
+  --subtext: #5c5f77;
+  --blue:    #1e66f5;
+  --mauve:   #8839ef;
+  --green:   #40a02b;
+  --red:     #d20f39;
+  --yellow:  #df8e1d;
+  --peach:   #fe640b;
+  --teal:    #179299;
+  --sky:     #04a5e5;
+  --sapphire:#209fb5;
+  --lavender:#7287fd;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { color: var(--sapphire); }
+
+/* ── ナビゲーション ── */
+nav {
+  background: var(--mantle);
+  border-bottom: 1px solid var(--surface0);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 52px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-right: 32px;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+.nav-link {
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: var(--subtext);
+  font-size: 0.9rem;
+  transition: all 0.15s;
+}
+.nav-link:hover, .nav-link.active {
+  background: var(--surface0);
+  color: var(--text);
+}
+.nav-link.active { color: var(--blue); font-weight: 600; }
+.nav-right { margin-left: auto; display: flex; gap: 8px; }
+
+/* ── レイアウト ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 20px; }
+.page-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+/* ── カード ── */
+.card {
+  background: var(--surface0);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--lavender);
+  margin-bottom: 12px;
+}
+
+/* ── ボタン ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-primary   { background: var(--blue);   color: var(--mantle); }
+.btn-success   { background: var(--green);  color: var(--mantle); }
+.btn-danger    { background: var(--red);    color: var(--mantle); }
+.btn-warning   { background: var(--yellow); color: var(--mantle); }
+.btn-mauve     { background: var(--mauve);  color: var(--mantle); }
+.btn-teal      { background: var(--teal);   color: var(--mantle); }
+.btn-ghost     { background: var(--surface1); color: var(--text); }
+.btn-sm        { padding: 5px 12px; font-size: 0.8rem; border-radius: 6px; }
+.btn-lg        { padding: 12px 28px; font-size: 1rem; border-radius: 10px; }
+.btn:not(:disabled):hover { filter: brightness(1.1); transform: translateY(-1px); }
+.btn:not(:disabled):active { transform: translateY(0); }
+
+/* ── バッジ ── */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-red    { background: #f38ba822; color: var(--red); }
+.badge-yellow { background: #f9e2af22; color: var(--yellow); }
+.badge-green  { background: #a6e3a122; color: var(--green); }
+.badge-blue   { background: #89b4fa22; color: var(--blue); }
+.badge-mauve  { background: #cba6f722; color: var(--mauve); }
+
+/* ── フォーム ── */
+input, select, textarea {
+  background: var(--mantle);
+  border: 1px solid var(--surface1);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+label { display: block; color: var(--subtext); font-size: 0.85rem; margin-bottom: 4px; }
+.form-group { margin-bottom: 14px; }
+
+/* ── グリッド ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+/* ── 正誤ボタンペア ── */
+.result-btns {
+  display: flex;
+  gap: 12px;
+}
+.result-btns .btn { flex: 1; justify-content: center; font-size: 1rem; padding: 12px; }
+
+/* ── トースト通知 ── */
+#toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--surface0);
+  border: 1px solid var(--surface1);
+  color: var(--text);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s;
+  z-index: 9999;
+  max-width: 320px;
+}
+#toast.show { opacity: 1; transform: translateY(0); }
+#toast.success { border-color: var(--green); color: var(--green); }
+#toast.error   { border-color: var(--red);   color: var(--red); }
+
+/* ── ローディング ── */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--surface2);
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── プログレスバー ── */
+.progress-bar-wrap {
+  background: var(--surface1);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--blue);
+  border-radius: 999px;
+  transition: width 0.3s;
+}
+
+/* ── オーラル正答率バー ── */
+.acc-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+.acc-val { font-weight: 700; min-width: 36px; text-align: right; }
+
+/* ── タブ ── */
+.tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.tab-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--surface0);
+  color: var(--subtext);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+  transition: all 0.15s;
+}
+.tab-btn.active { background: var(--blue); color: var(--mantle); font-weight: 700; }
+.tab-btn:hover:not(.active) { background: var(--surface1); color: var(--text); }
+
+/* ── 問題カード ── */
+.q-card {
+  background: var(--mantle);
+  border: 1px solid var(--surface1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+.q-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  color: var(--text);
+}
+.answer-box {
+  background: var(--surface0);
+  border-left: 3px solid var(--green);
+  padding: 14px 16px;
+  border-radius: 0 8px 8px 0;
+  margin-top: 12px;
+  display: none;
+}
+.answer-box.show { display: block; }
+.exp-section { margin-top: 12px; }
+.exp-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--mauve);
+  margin-bottom: 4px;
+}
+.exp-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--subtext);
+}
+.exp-text strong { color: var(--text); }
+.exp-text ul, .exp-text ol { padding-left: 20px; margin: 6px 0; }
+.exp-text li { margin-bottom: 4px; }
+.exp-text p { margin-bottom: 8px; }
+
+/* ── 教科書ビュー ── */
+.textbook-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+.textbook-content { flex: 1; min-width: 0; }
+.cat-list { display: flex; flex-direction: column; gap: 4px; }
+.cat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  background: var(--surface0);
+  transition: all 0.15s;
+}
+.cat-item:hover, .cat-item.active { background: var(--surface1); }
+.cat-item.active { border-left: 3px solid var(--blue); }
+.cat-acc { font-size: 0.8rem; font-weight: 700; }
+
+/* ── 問題リスト ── */
+.q-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--mantle);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.q-list-item:hover { background: var(--surface0); }
+.q-num { color: var(--overlay0); font-size: 0.8rem; min-width: 24px; }
+.q-title { flex: 1; font-size: 0.9rem; line-height: 1.4; }
+.q-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+
+/* ── レスポンシブ ── */
+@media (max-width: 768px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .textbook-sidebar { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">✈ PPL学習ツール</div>
+  <div class="nav-links">
+    <a href="/" class="nav-link {% if request.endpoint=='index' %}active{% endif %}">🏠 ホーム</a>
+    <a href="/today" class="nav-link {% if request.endpoint=='today' %}active{% endif %}">📅 今日</a>
+    <a href="/record" class="nav-link {% if request.endpoint=='record' %}active{% endif %}">📸 記録</a>
+    <a href="/review" class="nav-link {% if request.endpoint=='review' %}active{% endif %}">🔄 復習</a>
+    <a href="/oral" class="nav-link {% if request.endpoint=='oral' %}active{% endif %}">🎤 オーラル</a>
+    <a href="/textbook" class="nav-link {% if request.endpoint=='textbook' %}active{% endif %}">📖 教科書</a>
+  </div>
+  <div class="nav-right">
+    <button id="themeToggle" onclick="toggleTheme()"
+            style="background:none;border:none;cursor:pointer;font-size:1.2rem;
+                   padding:6px 10px;border-radius:8px;color:var(--subtext);transition:all 0.15s"
+            title="ライト/ダークモード切替">🌙</button>
+    <a href="/settings" class="nav-link {% if request.endpoint=='settings' %}active{% endif %}">⚙</a>
+  </div>
+</nav>
+
+<div class="container">
+  {% block content %}{% endblock %}
+</div>
+
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+// Markdownテキストを安全にHTMLに変換
+function renderMd(text) {
+  if (!text) return '';
+  if (typeof marked === 'undefined') return text.replace(/\n/g, '<br>');
+  // marked設定
+  marked.setOptions({ breaks: true, gfm: true });
+  return marked.parse(text);
+}
+
+function toast(msg, type='') {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'show ' + type;
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.className = '', 3000);
+}
+
+function fmtRate(rate) {
+  if (rate === null || rate === undefined) return '未学習';
+  if (rate <= 50) return '🔴 ' + rate + '%';
+  if (rate <= 79) return '🟡 ' + rate + '%';
+  return '🟢 ' + rate + '%';
+}
+</script>
+
+{% block scripts %}{% endblock %}
+
+<script>
+(function() {
+  const saved = localStorage.getItem('theme') || 'dark';
+  applyTheme(saved);
+})();
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const btn = document.getElementById('themeToggle');
+  if (btn) btn.textContent = theme === 'light' ? '🌙' : '☀️';
+  localStorage.setItem('theme', theme);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+}
+</script>
+</body>
+</html>

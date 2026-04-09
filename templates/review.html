@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+{% block title %}復習モード - PPL学習ツール{% endblock %}
+
+{% block content %}
+<h1 class="page-title">🔄 復習モード</h1>
+
+<div style="display:flex;gap:20px;align-items:flex-start">
+
+  <!-- 左: 設定パネル -->
+  <div style="width:280px;flex-shrink:0">
+    <div class="card">
+      <div class="card-title">出題設定</div>
+
+      <div class="form-group">
+        <label>出題方法</label>
+        <select id="reviewMode">
+          <option value="new">🆕 NEW（直近追加分）</option>
+          <option value="weak">🔴 弱点順（正答率の低い順）</option>
+          <option value="random">🎲 ランダム</option>
+          <option value="category">📂 単元別</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="catGroup">
+        <label>カテゴリを選択</label>
+        <select id="reviewCategory">
+          <option value="">すべて</option>
+          {% for key, name in categories.items() %}
+          <option value="{{ key }}">{{ key }}. {{ name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:4px"
+              onclick="loadNext()">
+        ▶ 開始 / 次の問題
+      </button>
+    </div>
+
+    <!-- セッション統計 -->
+    <div class="card" id="sessionStats" style="display:none">
+      <div class="card-title">セッション成績</div>
+      <div style="display:flex;justify-content:space-around;text-align:center">
+        <div>
+          <div id="sesCorrect" style="font-size:1.5rem;font-weight:700;color:var(--green)">0</div>
+          <div style="font-size:0.8rem;color:var(--subtext)">正解</div>
+        </div>
+        <div>
+          <div id="sesTotal" style="font-size:1.5rem;font-weight:700;color:var(--blue)">0</div>
+          <div style="font-size:0.8rem;color:var(--subtext)">合計</div>
+        </div>
+        <div>
+          <div id="sesRate" style="font-size:1.5rem;font-weight:700;color:var(--yellow)">-</div>
+          <div style="font-size:0.8rem;color:var(--subtext)">正答率</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右: 問題エリア -->
+  <div style="flex:1">
+    <!-- 待機 -->
+    <div id="idleArea" class="card" style="text-align:center;padding:60px 20px">
+      <div style="font-size:3rem;margin-bottom:12px">🔄</div>
+      <div style="color:var(--subtext)">出題設定を選んで「開始」を押してください。</div>
+    </div>
+
+    <!-- 問題表示 -->
+    <div id="questionArea" style="display:none">
+      <!-- ヘッダー -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <div>
+          <span id="qCatBadge" class="badge badge-blue" style="margin-right:6px"></span>
+          <span id="qUnitBadge" class="badge badge-mauve"></span>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span id="qNewBadge" class="badge" style="display:none;background:#a6e3a133;color:var(--green);border:1px solid var(--green)">🆕 NEW</span>
+          <span id="qOralBadge" class="badge badge-yellow" style="display:none">🎤 オーラル関連</span>
+          <span id="qAccBadge" style="font-size:0.85rem;color:var(--subtext)"></span>
+        </div>
+      </div>
+
+      <!-- 問題文 -->
+      <div class="q-card">
+        <div style="color:var(--subtext);font-size:0.8rem;margin-bottom:8px">問題</div>
+        <div id="qText" class="q-text"></div>
+      </div>
+
+      <!-- クイズ選択肢（choices があるとき） -->
+      <div id="choicesArea" style="display:none;margin-top:12px">
+        <div id="choicesBtns" style="display:flex;flex-direction:column;gap:8px"></div>
+      </div>
+
+      <!-- 答えを見るボタン（choices がないとき） -->
+      <div id="showAnswerArea" style="text-align:center;margin:16px 0;display:none">
+        <button class="btn btn-primary btn-lg" onclick="showAnswer()">
+          👁 答えを見る
+        </button>
+      </div>
+
+      <!-- 答え・解説 -->
+      <div id="answerArea" style="display:none;margin-top:12px">
+        <!-- 正解 -->
+        <div class="card" id="correctCard" style="border-left:4px solid var(--green);margin-bottom:12px">
+          <div style="color:var(--green);font-size:0.8rem;font-weight:700;margin-bottom:6px">✅ 正解</div>
+          <div id="qAnswer" style="font-size:0.95rem;line-height:1.6"></div>
+        </div>
+
+        <!-- 解説 -->
+        <div class="card" id="explanationCard" style="display:none">
+          <div class="card-title">📝 解説</div>
+          <div id="expWhy" class="exp-section" style="display:none">
+            <div class="exp-label">【なぜそうなるのか】</div>
+            <div class="exp-text" id="expWhyText"></div>
+          </div>
+          <div id="expMemoryTip" class="exp-section" style="display:none;margin-top:12px">
+            <div class="exp-label">【覚え方】</div>
+            <div class="exp-text" id="expMemoryTipText"></div>
+          </div>
+          <div id="expConfusionPoints" class="exp-section" style="display:none;margin-top:12px">
+            <div class="exp-label">【混同注意】</div>
+            <div class="exp-text" id="expConfusionPointsText"></div>
+          </div>
+          <div id="expConnections" class="exp-section" style="display:none;margin-top:12px">
+            <div class="exp-label">【つながり】</div>
+            <div class="exp-text" id="expConnectionsText"></div>
+          </div>
+          <div id="expCommonMistakes" class="exp-section" style="display:none;margin-top:12px">
+            <div class="exp-label">【間違えやすい点】</div>
+            <div class="exp-text" id="expCommonMistakesText"></div>
+          </div>
+          <div id="expTextbookRef" style="display:none;margin-top:16px">
+            <details style="background:var(--mantle);border:1px solid var(--yellow);border-radius:8px;padding:10px 14px">
+              <summary style="cursor:pointer;font-size:0.85rem;font-weight:700;color:var(--yellow);list-style:none">
+                📖 教科書参照箇所: <span id="expTextbookRefLabel"></span>
+              </summary>
+              <pre id="expTextbookRefText"
+                   style="margin-top:10px;font-size:0.78rem;line-height:1.6;color:var(--subtext);
+                          white-space:pre-wrap;font-family:inherit;border-top:1px solid var(--surface1);padding-top:8px"></pre>
+            </details>
+          </div>
+        </div>
+
+        <!-- 結果ボタン -->
+        <div class="result-btns" style="margin-top:16px">
+          <button class="btn btn-success btn-lg" onclick="submitResult('correct')">✅ 正解</button>
+          <button class="btn btn-warning btn-lg" onclick="submitResult('unsure')">⚠️ 迷った</button>
+          <button class="btn btn-danger btn-lg"  onclick="submitResult('incorrect')">❌ 不正解</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- エラー -->
+    <div id="errorArea" style="display:none" class="card">
+      <div style="color:var(--red);font-weight:700;margin-bottom:8px">⚠ エラー</div>
+      <div id="errorText" style="color:var(--subtext)"></div>
+      <a href="/record" class="btn btn-primary" style="margin-top:12px">記録モードで問題を追加</a>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentQ = null;
+let sesCorrect = 0, sesTotal = 0;
+
+document.getElementById('reviewMode').addEventListener('change', function() {
+  document.getElementById('catGroup').style.display = this.value === 'category' ? 'block' : 'none';
+});
+
+async function loadNext() {
+  const mode = document.getElementById('reviewMode').value;
+  const cat  = document.getElementById('reviewCategory').value;
+
+  document.getElementById('idleArea').style.display       = 'none';
+  document.getElementById('questionArea').style.display   = 'none';
+  document.getElementById('errorArea').style.display      = 'none';
+  document.getElementById('answerArea').style.display     = 'none';
+  document.getElementById('choicesArea').style.display    = 'none';
+  document.getElementById('showAnswerArea').style.display = 'none';
+
+  let url = `/api/review/next?mode=${mode}`;
+  if (cat) url += `&category=${cat}`;
+
+  const res  = await fetch(url);
+  const data = await res.json();
+
+  if (!data.ok) {
+    document.getElementById('errorArea').style.display = 'block';
+    document.getElementById('errorText').textContent = data.error;
+    return;
+  }
+
+  currentQ = data;
+  renderQuestion(data);
+}
+
+function renderQuestion(q) {
+  document.getElementById('qCatBadge').textContent  = q.category + '. ' + q.category_name;
+  document.getElementById('qUnitBadge').textContent = q.unit || '';
+  document.getElementById('qText').textContent      = q.question_text || '（問題文が抽出できませんでした）';
+  document.getElementById('qAnswer').textContent    = q.answer_text || '';
+  document.getElementById('qOralBadge').style.display = q.oral_related ? 'inline-block' : 'none';
+  document.getElementById('qNewBadge').style.display  = q.is_new ? 'inline-block' : 'none';
+  document.getElementById('qAccBadge').textContent  = q.accuracy !== null ? fmtRate(q.accuracy) : '初回';
+
+  // 解説セット
+  document.getElementById('explanationCard').style.display = 'none';
+  setExp('Why',             q.explanation.why);
+  setExp('MemoryTip',       q.explanation.memory_tip);
+  setExp('ConfusionPoints', q.explanation.confusion_points);
+  setExp('Connections',     q.explanation.connections);
+  setExp('CommonMistakes',  q.explanation.common_mistakes);
+
+  // 教科書参照箇所
+  const ref = q.explanation.textbook_ref;
+  const refEl = document.getElementById('expTextbookRef');
+  if (ref && ref.excerpt) {
+    document.getElementById('expTextbookRefLabel').textContent =
+      ref.category + '. ' + ref.category_name;
+    document.getElementById('expTextbookRefText').textContent = ref.excerpt;
+    refEl.style.display = 'block';
+    document.getElementById('explanationCard').style.display = 'block';
+  } else {
+    refEl.style.display = 'none';
+  }
+
+  if (q.choices && q.choices.length > 0) {
+    renderChoices(q.choices);
+    document.getElementById('choicesArea').style.display = 'block';
+  }
+  document.getElementById('showAnswerArea').style.display = 'block';
+
+  document.getElementById('questionArea').style.display = 'block';
+}
+
+function renderChoices(choices) {
+  const container = document.getElementById('choicesBtns');
+  container.innerHTML = '';
+  choices.forEach(choice => {
+    const div = document.createElement('div');
+    div.style.cssText = 'padding:10px 14px;border:1px solid var(--surface1);border-radius:8px;font-size:0.95rem;line-height:1.5;margin-bottom:4px';
+    div.textContent = choice;
+    container.appendChild(div);
+  });
+}
+
+function setExp(key, text) {
+  const sec    = document.getElementById('exp' + key);
+  const textEl = document.getElementById('exp' + key + 'Text');
+  if (!sec) return;
+  if (text && text.trim()) {
+    textEl.innerHTML = renderMd(text);
+    sec.style.display = 'block';
+    document.getElementById('explanationCard').style.display = 'block';
+  } else {
+    sec.style.display = 'none';
+  }
+}
+
+function showAnswer() {
+  document.getElementById('showAnswerArea').style.display  = 'none';
+  document.getElementById('answerArea').style.display      = 'block';
+  document.getElementById('manualResultBtns').style.display = 'block';
+  document.getElementById('nextBtn').style.display         = 'none';
+}
+
+async function submitResult(result) {
+  if (!currentQ) return;
+
+  const res = await fetch('/api/review/result', {
+    method:  'POST',
+    headers: {'Content-Type': 'application/json'},
+    body:    JSON.stringify({id: currentQ.id, result}),
+  });
+  const data = await res.json();
+
+  sesTotal++;
+  if (result === 'correct') sesCorrect++;
+  updateSessionStats();
+
+  const label = result === 'correct' ? '✅ 正解' : result === 'unsure' ? '⚠️ 迷った' : '❌ 不正解';
+  const type  = result === 'correct' ? 'success' : result === 'unsure' ? 'warning' : '';
+  const rate  = data.accuracy !== null ? ` (累計: ${fmtRate(data.accuracy)})` : '';
+  toast(label + rate, type);
+
+  await loadNext();
+}
+
+function updateSessionStats() {
+  document.getElementById('sessionStats').style.display = 'block';
+  document.getElementById('sesCorrect').textContent = sesCorrect;
+  document.getElementById('sesTotal').textContent   = sesTotal;
+  const rate = sesTotal > 0 ? Math.round(sesCorrect / sesTotal * 100) + '%' : '-';
+  document.getElementById('sesRate').textContent = rate;
+}
+</script>
+{% endblock %}

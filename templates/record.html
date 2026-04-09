@@ -1,0 +1,425 @@
+{% extends "base.html" %}
+{% block title %}記録モード - PPL学習ツール{% endblock %}
+
+{% block content %}
+<h1 class="page-title">📸 記録モード</h1>
+
+<div style="display:flex;gap:20px;align-items:flex-start">
+
+  <!-- 左: 操作パネル -->
+  <div style="width:320px;flex-shrink:0">
+
+    <!-- スクショボタン -->
+    <div class="card">
+      <div class="card-title">問題を記録する</div>
+      <p style="color:var(--subtext);font-size:0.85rem;margin-bottom:12px">
+        ボタンを押してから<strong style="color:var(--yellow)">3秒以内</strong>に問題画面に切り替えてください。
+      </p>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-primary btn-lg" id="btnScreenshot" style="flex:1;justify-content:center"
+                onclick="takeScreenshot()">
+          📸 問題スクリーンショット
+        </button>
+        <button class="btn btn-ghost btn-lg" id="btnChart"
+                style="color:var(--teal);border:1px solid var(--teal);white-space:nowrap"
+                onclick="takeChartScreenshot(currentId)" disabled>
+          📊 チャート
+        </button>
+      </div>
+      <input type="file" id="chartFileInput" accept="image/*" style="display:none">
+      <div id="countdown" style="display:none;text-align:center;margin-top:10px;
+        font-size:1.5rem;font-weight:700;color:var(--yellow)">
+        <span id="countNum">3</span>
+      </div>
+    </div>
+
+    <!-- チャートプレビュー -->
+    <div class="card" id="chartPreviewCard" style="display:none">
+      <div class="card-title" style="color:var(--teal)">📊 チャートプレビュー</div>
+      <img id="chartPreviewImg" src="" alt="chart preview"
+           style="width:100%;border-radius:8px;border:1px solid var(--teal)">
+    </div>
+
+    <!-- 現在の問題 -->
+    <div class="card" id="currentCard" style="display:none">
+      <div class="card-title">📌 現在の問題</div>
+      <img id="currentImg" src="" alt="screenshot"
+           style="width:100%;border-radius:8px;margin-bottom:12px;border:1px solid var(--surface1)">
+      <p style="color:var(--subtext);font-size:0.85rem;margin-bottom:10px">
+        この問題の結果を記録してください：
+      </p>
+      <div class="result-btns">
+        <button class="btn btn-success" onclick="recordResult('correct')">✅ 正解</button>
+        <button class="btn btn-warning" onclick="recordResult('unsure')">⚠️ 迷った</button>
+        <button class="btn btn-danger"  onclick="recordResult('incorrect')">❌ 不正解</button>
+      </div>
+    </div>
+
+    <!-- 処理ボタン -->
+    <div class="card" id="processCard" style="display:none">
+      <div class="card-title">🚀 Claude で一括処理</div>
+      <p style="color:var(--subtext);font-size:0.85rem;margin-bottom:12px">
+        全問の結果を記録後、Claudeで一括解析します。<br>
+        ・問題文のOCR抽出<br>
+        ・カテゴリ自動判定<br>
+        ・不正解問題の日本語解説生成<br>
+        ・チャート画像も同時送信
+      </p>
+      <button class="btn btn-mauve btn-lg" id="btnProcess"
+              style="width:100%;justify-content:center" onclick="startProcess()">
+        ✨ 処理開始
+      </button>
+    </div>
+
+    <!-- 処理中ステータス -->
+    <div class="card" id="progressCard" style="display:none">
+      <div class="card-title">⏳ 処理中...</div>
+      <div class="progress-bar-wrap" style="margin-bottom:10px">
+        <div class="progress-bar-fill" id="progressBar" style="width:0%"></div>
+      </div>
+      <div id="progressText" style="color:var(--subtext);font-size:0.85rem">準備中...</div>
+      <div id="progressLog" style="margin-top:10px;max-height:150px;overflow-y:auto;
+        background:var(--mantle);border-radius:8px;padding:8px;font-size:0.8rem;
+        color:var(--overlay1);font-family:monospace"></div>
+    </div>
+
+  </div>
+
+  <!-- 右: ペンディングリスト -->
+  <div style="flex:1">
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+        <div class="card-title" style="margin:0">
+          ペンディング問題
+          <span id="pendingBadge" class="badge badge-blue" style="margin-left:8px">0 / 0 回答済み</span>
+        </div>
+        <button class="btn btn-ghost btn-sm" onclick="clearAll()">全クリア</button>
+      </div>
+      <div id="pendingList">
+        <div style="color:var(--overlay0);text-align:center;padding:40px 0;font-size:0.9rem">
+          問題がありません。スクリーンショットを撮って記録を始めましょう。
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- 処理完了モーダル -->
+<div id="doneModal" style="display:none;position:fixed;inset:0;background:#000000aa;
+  z-index:200;align-items:center;justify-content:center">
+  <div class="card" style="max-width:400px;width:90%;text-align:center">
+    <div style="font-size:3rem;margin-bottom:12px">✅</div>
+    <div style="font-size:1.2rem;font-weight:700;color:var(--green);margin-bottom:8px">処理完了！</div>
+    <div id="doneMsg" style="color:var(--subtext);font-size:0.9rem;margin-bottom:20px"></div>
+    <div style="display:flex;gap:10px;justify-content:center">
+      <a href="/textbook" class="btn btn-primary">📖 教科書を見る</a>
+      <button class="btn btn-ghost" onclick="document.getElementById('doneModal').style.display='none'">閉じる</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentId = null;
+let pendingData = [];
+
+// ─── 問題スクショ ────────────────────────────────────────────────
+async function takeScreenshot() {
+  const btn = document.getElementById('btnScreenshot');
+  const cd  = document.getElementById('countdown');
+  const num = document.getElementById('countNum');
+  btn.disabled = true;
+  cd.style.display = 'block';
+
+  for (let i = 3; i >= 1; i--) {
+    num.textContent = i;
+    await new Promise(r => setTimeout(r, 1000));
+  }
+  num.textContent = '📸';
+
+  try {
+    const res  = await fetch('/api/screenshot', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({delay: 0}),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      currentId = data.id;
+      showCurrentImage(data.image);
+      await refreshPending();
+      toast('スクリーンショットを取得しました', 'success');
+    } else {
+      toast('エラー: ' + data.error, 'error');
+    }
+  } catch(e) {
+    toast('通信エラー', 'error');
+  } finally {
+    btn.disabled = false;
+    cd.style.display = 'none';
+  }
+}
+
+function showCurrentImage(b64) {
+  document.getElementById('currentImg').src = 'data:image/png;base64,' + b64;
+  document.getElementById('currentCard').style.display = 'block';
+  document.getElementById('btnChart').disabled = false;
+}
+
+async function recordResult(result) {
+  if (!currentId) return;
+  const res = await fetch('/api/record-result', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({id: currentId, result}),
+  });
+  const data = await res.json();
+  if (data.ok) {
+    toast(result === 'correct' ? '✅ 正解を記録' : '❌ 不正解を記録', result === 'correct' ? 'success' : '');
+    document.getElementById('currentCard').style.display = 'none';
+    document.getElementById('chartPreviewCard').style.display = 'none';
+    document.getElementById('btnChart').disabled = true;
+    currentId = null;
+    await refreshPending();
+  }
+}
+
+// ─── チャートスクショ（問題スクショと同じ方式）───────────────────────
+async function takeChartScreenshot(pendingId) {
+  if (!pendingId) return;
+  const btn = document.getElementById('btnChart');
+  btn.disabled = true;
+
+  // クライアント側カウントダウン（この間にチャートタブへ切り替え）
+  for (let i = 3; i >= 1; i--) {
+    btn.textContent = i + '秒';
+    await new Promise(r => setTimeout(r, 1000));
+  }
+  btn.textContent = '📡...';
+
+  try {
+    const res  = await fetch('/api/screenshot-chart', {
+      method:  'POST',
+      headers: {'Content-Type': 'application/json'},
+      body:    JSON.stringify({id: pendingId}),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      toast('チャートを添付しました', 'success');
+      document.getElementById('chartPreviewImg').src = 'data:image/png;base64,' + data.image;
+      document.getElementById('chartPreviewCard').style.display = 'block';
+      await refreshPending();
+    } else {
+      toast('エラー: ' + data.error, 'error');
+    }
+  } catch(e) {
+    toast('通信エラー: ' + e.message, 'error');
+  } finally {
+    btn.textContent = '📊 チャート';
+    btn.disabled = false;
+  }
+}
+
+// ─── チャート：ファイル選択 or ペンディングリストから ──────────────
+let chartTargetId = null;
+function selectChartForItem(pendingId) {
+  chartTargetId = pendingId;
+  document.getElementById('chartFileInput').click();
+}
+
+async function attachChartImageTo(pendingId, base64) {
+  const res  = await fetch('/api/attach-chart', {
+    method:  'POST',
+    headers: {'Content-Type': 'application/json'},
+    body:    JSON.stringify({id: pendingId, image: base64}),
+  });
+  const data = await res.json();
+  if (data.ok) {
+    toast('チャートを添付しました', 'success');
+    if (pendingId === currentId) {
+      document.getElementById('chartPreviewImg').src = 'data:image/png;base64,' + base64;
+      document.getElementById('chartPreviewCard').style.display = 'block';
+    }
+    await refreshPending();
+  } else {
+    toast('添付エラー: ' + data.error, 'error');
+  }
+}
+
+document.getElementById('chartFileInput').addEventListener('change', function() {
+  const file = this.files[0];
+  const targetId = chartTargetId || currentId;
+  chartTargetId = null;
+  if (!file || !targetId) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const base64 = e.target.result.split(',')[1];
+    attachChartImageTo(targetId, base64);
+  };
+  reader.readAsDataURL(file);
+  this.value = '';
+});
+
+// Ctrl+V でクリップボードの画像を貼り付け
+document.addEventListener('paste', function(e) {
+  if (!currentId) return;
+  for (const item of e.clipboardData.items) {
+    if (item.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = ev => attachChartImageTo(currentId, ev.target.result.split(',')[1]);
+      reader.readAsDataURL(item.getAsFile());
+      break;
+    }
+  }
+});
+
+// ─── ペンディングリスト ───────────────────────────────────────────
+async function refreshPending() {
+  const res  = await fetch('/api/pending');
+  const data = await res.json();
+  pendingData = data.items;
+  renderPending(data);
+  updateBadge(data.answered, data.count);
+  updateProcessButton(data.answered, data.count);
+}
+
+function updateBadge(answered, count) {
+  document.getElementById('pendingBadge').textContent = `${answered} / ${count} 回答済み`;
+}
+
+function renderPending(data) {
+  const list = document.getElementById('pendingList');
+  if (data.items.length === 0) {
+    list.innerHTML = '<div style="color:var(--overlay0);text-align:center;padding:40px 0;font-size:0.9rem">問題がありません。スクリーンショットを撮って記録を始めましょう。</div>';
+    return;
+  }
+
+  list.innerHTML = data.items.map((q, i) => {
+    let statusBadge = '';
+    let borderColor = 'var(--surface1)';
+    if (q.result === 'correct') {
+      statusBadge = '<span class="badge badge-green">✅ 正解</span>';
+      borderColor = 'var(--green)';
+    } else if (q.result === 'unsure') {
+      statusBadge = '<span class="badge badge-yellow">⚠️ 迷った</span>';
+      borderColor = 'var(--yellow)';
+    } else if (q.result === 'incorrect') {
+      statusBadge = '<span class="badge badge-red">❌ 不正解</span>';
+      borderColor = 'var(--red)';
+    } else {
+      statusBadge = '<span class="badge" style="background:var(--surface1);color:var(--overlay0)">⏳ 未回答</span>';
+      borderColor = 'var(--overlay0)';
+    }
+
+    const chartBadge = q.has_chart
+      ? '<span class="badge" style="background:#94e2d522;color:var(--teal)">📊 チャートあり</span>'
+      : '';
+
+    const chartBtn = q.result
+      ? `<button class="btn btn-ghost btn-sm" style="color:var(--teal)"
+            onclick="selectChartForItem('${q.id}')">
+            📊 ${q.has_chart ? 'チャート更新' : 'チャートを追加'}
+          </button>`
+      : '';
+
+    return `
+      <div style="border-radius:8px;background:var(--mantle);margin-bottom:8px;
+        border-left:3px solid ${borderColor}">
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 12px">
+          <div style="color:var(--overlay0);font-size:0.8rem;min-width:20px">${i+1}</div>
+          <div style="flex:1">
+            <div style="font-size:0.85rem;color:var(--subtext)">
+              問題 #${q.id}
+              <span style="color:var(--overlay0);font-size:0.75rem;margin-left:6px">${q.created_at.substring(11,19)}</span>
+            </div>
+            <div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:4px">
+              ${statusBadge}
+              ${chartBadge}
+            </div>
+          </div>
+          ${chartBtn}
+          <button class="btn btn-ghost btn-sm" onclick="deletePending('${q.id}')" style="padding:4px 8px">✕</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function updateProcessButton(answered, count) {
+  const card = document.getElementById('processCard');
+  const btn  = document.getElementById('btnProcess');
+  if (count === 0) { card.style.display = 'none'; return; }
+  card.style.display = 'block';
+  if (answered === count) {
+    btn.disabled = false;
+    btn.textContent = `✨ 処理開始 (${count}問)`;
+  } else {
+    btn.disabled = true;
+    btn.textContent = `✨ 処理開始 (${answered}/${count}問 回答済み)`;
+  }
+}
+
+async function startProcess() {
+  const btn = document.getElementById('btnProcess');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> 処理中...';
+  document.getElementById('processCard').style.display = 'none';
+  document.getElementById('progressCard').style.display = 'block';
+
+  const res  = await fetch('/api/process', {method:'POST', headers:{'Content-Type':'application/json'}, body:'{}'});
+  const data = await res.json();
+  if (!data.ok) {
+    toast('エラー: ' + data.error, 'error');
+    document.getElementById('progressCard').style.display = 'none';
+    document.getElementById('processCard').style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = '✨ 処理開始';
+    return;
+  }
+
+  const interval = setInterval(async () => {
+    const r = await fetch('/api/process-status');
+    const s = await r.json();
+    const pct = s.total > 0 ? Math.round(s.progress / s.total * 100) : 0;
+    document.getElementById('progressBar').style.width = pct + '%';
+    document.getElementById('progressText').textContent = `${s.progress} / ${s.total} 処理済み`;
+    document.getElementById('progressLog').innerHTML = s.log.map(l => `<div>${l}</div>`).join('');
+
+    if (!s.running) {
+      clearInterval(interval);
+      document.getElementById('progressCard').style.display = 'none';
+      document.getElementById('doneMsg').textContent = s.log[s.log.length - 1] || '';
+      document.getElementById('doneModal').style.display = 'flex';
+      await refreshPending();
+    }
+  }, 1500);
+}
+
+async function deletePending(id) {
+  await fetch('/api/pending/' + id, {method: 'DELETE'});
+  if (currentId === id) {
+    currentId = null;
+    document.getElementById('currentCard').style.display = 'none';
+    document.getElementById('chartPreviewCard').style.display = 'none';
+    document.getElementById('btnChart').disabled = true;
+  }
+  await refreshPending();
+}
+
+async function clearAll() {
+  for (const q of [...pendingData]) {
+    await fetch('/api/pending/' + q.id, {method: 'DELETE'});
+  }
+  currentId = null;
+  document.getElementById('currentCard').style.display = 'none';
+  document.getElementById('chartPreviewCard').style.display = 'none';
+  document.getElementById('btnChart').disabled = true;
+  await refreshPending();
+}
+
+refreshPending();
+</script>
+{% endblock %}

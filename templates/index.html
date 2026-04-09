@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+{% block title %}ホーム - PPL学習ツール{% endblock %}
+
+{% block content %}
+<div style="margin-bottom:24px">
+  <h1 style="font-size:1.6rem;color:var(--blue);font-weight:700">
+    ✈ FAA PPL 学習ツール
+  </h1>
+  <p style="color:var(--subtext);margin-top:6px">
+    学科試験・オーラル試験を同時対策できる自分専用教科書を自動生成します。
+  </p>
+</div>
+
+<!-- 統計 -->
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:24px">
+  <div class="card" style="text-align:center">
+    <div style="font-size:2rem;font-weight:700;color:var(--blue)">{{ stats.total }}</div>
+    <div style="color:var(--subtext);font-size:0.85rem;margin-top:4px">記録済み問題数</div>
+  </div>
+  <div class="card" style="text-align:center">
+    <div style="font-size:2rem;font-weight:700;
+      color:{% if stats.accuracy >= 80 %}var(--green){% elif stats.accuracy >= 50 %}var(--yellow){% else %}var(--red){% endif %}">
+      {{ stats.accuracy }}%
+    </div>
+    <div style="color:var(--subtext);font-size:0.85rem;margin-top:4px">総合正答率</div>
+  </div>
+  <div class="card" style="text-align:center">
+    <div style="font-size:2rem;font-weight:700;color:var(--mauve)">{{ stats.oral_total }}</div>
+    <div style="color:var(--subtext);font-size:0.85rem;margin-top:4px">オーラル学習数</div>
+  </div>
+  <div class="card" style="text-align:center">
+    <div id="streakVal" style="font-size:2rem;font-weight:700;color:var(--peach)">—</div>
+    <div style="color:var(--subtext);font-size:0.85rem;margin-top:4px">🔥 連続学習日</div>
+  </div>
+</div>
+
+<!-- 今日の10問バナー -->
+<a href="/today" style="text-decoration:none">
+  <div class="card" style="border:2px solid var(--green);display:flex;align-items:center;
+       justify-content:space-between;margin-bottom:24px;cursor:pointer;transition:all 0.15s"
+       onmouseover="this.style.background='var(--surface1)'"
+       onmouseout="this.style.background=''">
+    <div>
+      <div style="font-size:1.1rem;font-weight:700;color:var(--green)">📅 今日の10問</div>
+      <div id="todayDueCount" style="color:var(--subtext);font-size:0.85rem;margin-top:4px">
+        エビングハウス忘却曲線に基づく復習セット
+      </div>
+    </div>
+    <div style="font-size:2rem">→</div>
+  </div>
+</a>
+
+<!-- ペンディング通知 -->
+{% if stats.pending > 0 %}
+<div class="card" style="border:1px solid var(--yellow);margin-bottom:24px">
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <div style="color:var(--yellow);font-weight:700">⏳ {{ stats.pending }}問 処理待ち</div>
+      <div style="color:var(--subtext);font-size:0.85rem;margin-top:4px">
+        記録モードでスクリーンショットを処理してください。
+      </div>
+    </div>
+    <a href="/record" class="btn btn-warning">記録モードへ</a>
+  </div>
+</div>
+{% endif %}
+
+<!-- 弱点カテゴリ -->
+{% if stats.weak_categories %}
+<div class="card" style="margin-bottom:24px">
+  <div class="card-title">📊 弱点カテゴリ TOP5</div>
+  {% for cat in stats.weak_categories %}
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+    <div style="width:36px;height:36px;border-radius:8px;background:var(--surface1);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:var(--blue)">{{ cat.category }}</div>
+    <div style="flex:1">
+      <div style="font-size:0.9rem">{{ cat.name }}</div>
+      <div class="progress-bar-wrap" style="margin-top:4px">
+        <div class="progress-bar-fill" style="width:{{ cat.rate }}%;
+          background:{% if cat.rate <= 50 %}var(--red){% elif cat.rate <= 79 %}var(--yellow){% else %}var(--green){% endif %}">
+        </div>
+      </div>
+    </div>
+    <div style="font-weight:700;font-size:0.9rem;
+      color:{% if cat.rate <= 50 %}var(--red){% elif cat.rate <= 79 %}var(--yellow){% else %}var(--green){% endif %}">
+      {{ cat.label }} {{ cat.rate }}%
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- クイックアクション -->
+<div class="card-title">クイックアクション</div>
+<div class="grid-3">
+  <a href="/record" style="text-decoration:none">
+    <div class="card" style="cursor:pointer;transition:all 0.15s;border:1px solid transparent"
+         onmouseover="this.style.borderColor='var(--blue)'"
+         onmouseout="this.style.borderColor='transparent'">
+      <div style="font-size:2rem;margin-bottom:8px">📸</div>
+      <div style="font-weight:700;color:var(--blue)">記録モード</div>
+      <div style="color:var(--subtext);font-size:0.85rem;margin-top:4px">
+        問題をスクリーンショットして記録。10問溜まったらClaudeが一括解析。
+      </div>
+    </div>
+  </a>
+  <a href="/review" style="text-decoration:none">
+    <div class="card" style="cursor:pointer;transition:all 0.15s;border:1px solid transparent"
+         onmouseover="this.style.borderColor='var(--green)'"
+         onmouseout="this.style.borderColor='transparent'">
+      <div style="font-size:2rem;margin-bottom:8px">🔄</div>
+      <div style="font-weight:700;color:var(--green)">復習モード</div>
+      <div style="color:var(--subtext);font-size:0.85rem;margin-top:4px">
+        弱点順・単元別・ランダムで復習。解説と覚え方を確認。
+      </div>
+    </div>
+  </a>
+  <a href="/oral" style="text-decoration:none">
+    <div class="card" style="cursor:pointer;transition:all 0.15s;border:1px solid transparent"
+         onmouseover="this.style.borderColor='var(--mauve)'"
+         onmouseout="this.style.borderColor='transparent'">
+      <div style="font-size:2rem;margin-bottom:8px">🎤</div>
+      <div style="font-weight:700;color:var(--mauve)">オーラルモード</div>
+      <div style="color:var(--subtext);font-size:0.85rem;margin-top:4px">
+        DPE形式の口述試験練習。英語回答のアドバイス付き。
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- 正答率推移グラフ -->
+<div class="card" style="margin-top:24px">
+  <div class="card-title">📈 単元別 正答率の推移（直近8週）</div>
+  <div id="chartWrap" style="position:relative;height:260px">
+    <canvas id="trendChart"></canvas>
+  </div>
+  <div id="chartEmpty" style="display:none;text-align:center;padding:40px;color:var(--subtext)">
+    データが少ないためグラフはまだ表示できません。
+  </div>
+</div>
+
+<!-- カテゴリ一覧 -->
+<div style="margin-top:24px">
+  <div class="card-title">📖 カテゴリ一覧 (A〜O)</div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px">
+    {% for key, name in categories.items() %}
+    <a href="/textbook/{{ key }}" style="text-decoration:none">
+      <div style="background:var(--surface0);border-radius:8px;padding:6px 12px;
+        font-size:0.85rem;transition:all 0.15s"
+           onmouseover="this.style.background='var(--surface1)'"
+           onmouseout="this.style.background='var(--surface0)'">
+        <span style="color:var(--blue);font-weight:700">{{ key }}.</span>
+        <span style="color:var(--text)">{{ name }}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<script>
+const PALETTE = [
+  '#89b4fa','#a6e3a1','#cba6f7','#f38ba8','#fab387',
+  '#f9e2af','#94e2d5','#89dceb','#74c7ec','#b4befe',
+  '#eba0ac','#a6adc8','#45475a','#313244','#cdd6f4',
+];
+
+async function loadStats() {
+  try {
+    const res  = await fetch('/api/stats/detail');
+    const data = await res.json();
+    if (!data.ok) return;
+
+    // 連続学習日
+    document.getElementById('streakVal').textContent = data.streak + '日';
+
+    // 今日の出題数
+    const tRes  = await fetch('/api/today/questions');
+    const tData = await tRes.json();
+    if (tData.ok) {
+      document.getElementById('todayDueCount').textContent =
+        `本日の復習候補: ${tData.total}問`;
+    }
+
+    // グラフ
+    const { labels, trends } = data.trends;
+    const cats = Object.keys(trends);
+    if (!cats.length) {
+      document.getElementById('chartWrap').style.display = 'none';
+      document.getElementById('chartEmpty').style.display = 'block';
+      return;
+    }
+
+    const datasets = cats.map((cat, i) => ({
+      label: cat + '. ' + trends[cat].name,
+      data:  trends[cat].data,
+      borderColor: PALETTE[i % PALETTE.length],
+      backgroundColor: PALETTE[i % PALETTE.length] + '22',
+      tension: 0.3,
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      spanGaps: true,
+    }));
+
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    const gridColor  = isDark ? '#45475a' : '#ccd0da';
+    const labelColor = isDark ? '#a6adc8' : '#5c5f77';
+
+    new Chart(document.getElementById('trendChart'), {
+      type: 'line',
+      data: { labels, datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: {
+            labels: { color: labelColor, font: { size: 11 }, boxWidth: 14 }
+          },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y !== null ? ctx.parsed.y + '%' : '—'}`
+            }
+          }
+        },
+        scales: {
+          x: { ticks: { color: labelColor }, grid: { color: gridColor } },
+          y: {
+            min: 0, max: 100,
+            ticks: { color: labelColor, callback: v => v + '%' },
+            grid:  { color: gridColor }
+          }
+        }
+      }
+    });
+  } catch(e) {
+    console.error('stats load error', e);
+  }
+}
+
+loadStats();
+</script>
+{% endblock %}

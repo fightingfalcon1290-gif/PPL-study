@@ -1,0 +1,321 @@
+{% extends "base.html" %}
+{% block title %}オーラルモード - PPL学習ツール{% endblock %}
+
+{% block content %}
+<h1 class="page-title">🎤 オーラルモード（DPE形式）</h1>
+
+<!-- タブ -->
+<div class="tabs">
+  <button class="tab-btn active" id="tab-practice" onclick="switchTab('practice')">🎤 練習</button>
+  <button class="tab-btn" id="tab-list" onclick="switchTab('list')">📋 解説一覧</button>
+</div>
+
+{% if not has_quizlet %}
+<div id="pane-practice">
+<div class="card" style="border:1px solid var(--yellow);text-align:center;padding:40px 20px">
+  <div style="font-size:2rem;margin-bottom:12px">📂</div>
+  <div style="font-weight:700;color:var(--yellow);font-size:1.1rem;margin-bottom:8px">
+    Quizlet CSVファイルが必要です
+  </div>
+  <p style="color:var(--subtext);margin-bottom:16px">
+    設定画面でQuizletのCSVファイルをアップロードしてください。<br>
+    Quizletからエクスポートしたフラッシュカード一覧（.csv）が必要です。
+  </p>
+  <a href="/settings" class="btn btn-warning">⚙ 設定画面へ</a>
+</div>
+</div>
+{% else %}
+<div id="pane-practice">
+
+<div style="display:flex;gap:20px;align-items:flex-start">
+
+  <!-- 左: 設定パネル -->
+  <div style="width:280px;flex-shrink:0">
+    <div class="card">
+      <div class="card-title">出題設定</div>
+      <p style="color:var(--overlay0);font-size:0.8rem;margin-bottom:10px">
+        Quizlet: {{ quizlet_count }}問 読み込み済み
+      </p>
+
+      <div class="form-group">
+        <label>出題方法</label>
+        <select id="oralMode">
+          <option value="weak">🔴 弱点単元から</option>
+          <option value="random">🎲 ランダム</option>
+        </select>
+      </div>
+
+      <button class="btn btn-mauve" style="width:100%;justify-content:center"
+              onclick="loadNext()">
+        ▶ 開始 / 次の問題
+      </button>
+    </div>
+
+    <!-- セッション統計 -->
+    <div class="card" id="sessionStats" style="display:none">
+      <div class="card-title">セッション成績</div>
+      <div style="display:flex;justify-content:space-around;text-align:center">
+        <div>
+          <div id="sesUnderstood" style="font-size:1.5rem;font-weight:700;color:var(--green)">0</div>
+          <div style="font-size:0.8rem;color:var(--subtext)">理解</div>
+        </div>
+        <div>
+          <div id="sesAgain" style="font-size:1.5rem;font-weight:700;color:var(--red)">0</div>
+          <div style="font-size:0.8rem;color:var(--subtext)">再学習</div>
+        </div>
+        <div>
+          <div id="sesTotal" style="font-size:1.5rem;font-weight:700;color:var(--blue)">0</div>
+          <div style="font-size:0.8rem;color:var(--subtext)">合計</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右: 問題エリア -->
+  <div style="flex:1">
+
+    <!-- 待機 -->
+    <div id="idleArea" class="card" style="text-align:center;padding:60px 20px">
+      <div style="font-size:3rem;margin-bottom:12px">🎤</div>
+      <div style="color:var(--subtext)">
+        DPE（指定試験官）形式で口述試験の練習ができます。<br>
+        「開始」を押して練習を始めましょう。
+      </div>
+    </div>
+
+    <!-- 問題表示 -->
+    <div id="questionArea" style="display:none">
+
+      <!-- DPE形式の質問 -->
+      <div class="card" style="border-left:4px solid var(--mauve);margin-bottom:12px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--mauve);
+            display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--mantle);font-weight:700">
+            DPE
+          </div>
+          <div style="color:var(--mauve);font-weight:700">Designated Pilot Examiner</div>
+          <div id="qAccBadge" style="margin-left:auto;font-size:0.85rem;color:var(--subtext)"></div>
+        </div>
+        <div id="qTerm" style="font-size:1.05rem;line-height:1.7;color:var(--text)">
+          "<span id="qTermText"></span>"
+        </div>
+      </div>
+
+      <!-- 答えを見るボタン -->
+      <div id="showAnswerArea" style="text-align:center;margin:16px 0">
+        <div style="color:var(--subtext);font-size:0.85rem;margin-bottom:10px">
+          頭の中で答えを組み立ててから「答えを見る」を押してください
+        </div>
+        <button class="btn btn-mauve btn-lg" onclick="showAnswer()">
+          👁 答えを見る
+        </button>
+      </div>
+
+      <!-- 答え・解説 -->
+      <div id="answerArea" style="display:none">
+
+        <!-- 基本の答え -->
+        <div class="card" style="border-left:4px solid var(--teal);margin-bottom:12px">
+          <div style="color:var(--teal);font-size:0.8rem;font-weight:700;margin-bottom:6px">📖 基本解答</div>
+          <div id="qDefinition" style="font-size:0.95rem;line-height:1.6;color:var(--text)"></div>
+        </div>
+
+        <!-- AI解説ロード -->
+        <div id="aiLoading" style="text-align:center;padding:20px;color:var(--subtext)">
+          <span class="spinner"></span> Claudeがオーラル回答のアドバイスを生成中...
+        </div>
+
+        <!-- AIアドバイス -->
+        <div id="aiAdvice" style="display:none">
+          <div class="grid-2" style="margin-bottom:12px">
+            <div class="card">
+              <div class="exp-label" style="margin-bottom:6px">🔑 オーラル用キーワード（英語）</div>
+              <div id="advKeywords" class="exp-text" style="color:var(--text)"></div>
+            </div>
+            <div class="card">
+              <div class="exp-label" style="margin-bottom:6px">🇯🇵 日本語解説</div>
+              <div id="advExplanation" class="exp-text"></div>
+            </div>
+          </div>
+          <div class="card" style="margin-bottom:12px">
+            <div class="exp-label" style="margin-bottom:6px">🏗 英語構文アドバイス</div>
+            <div id="advAdvice" class="exp-text"></div>
+          </div>
+          <div class="card" style="border-left:4px solid var(--blue)">
+            <div class="exp-label" style="margin-bottom:6px">💬 模範回答例文</div>
+            <div id="advExample" style="font-size:0.95rem;line-height:1.8;color:var(--sky);font-style:italic"></div>
+          </div>
+        </div>
+
+        <!-- 理解度ボタン -->
+        <div class="result-btns" style="margin-top:16px">
+          <button class="btn btn-success btn-lg" onclick="submitResult('understood')">
+            ✅ 理解した
+          </button>
+          <button class="btn btn-warning btn-lg" onclick="submitResult('again')">
+            🔁 もう一度
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- エラー -->
+    <div id="errorArea" style="display:none" class="card">
+      <div style="color:var(--red);font-weight:700;margin-bottom:8px">⚠ エラー</div>
+      <div id="errorText" style="color:var(--subtext)"></div>
+      <a href="/settings" class="btn btn-warning" style="margin-top:12px">⚙ 設定画面へ</a>
+    </div>
+
+  </div>
+</div>
+{% endif %}
+</div><!-- /pane-practice -->
+
+<!-- 解説一覧パネル -->
+<div id="pane-list" style="display:none">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+    <div style="color:var(--subtext);font-size:0.85rem">AI解説が生成済みのQを一覧表示します</div>
+    <button class="btn btn-ghost btn-sm" onclick="loadExplanations()">🔄 更新</button>
+  </div>
+  <div id="expListArea">
+    <div style="text-align:center;padding:40px;color:var(--subtext)">読み込み中...</div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentQ = null;
+let sesUnderstood = 0, sesAgain = 0, sesTotal = 0;
+
+async function loadNext() {
+  const mode = document.getElementById('oralMode')?.value || 'random';
+
+  document.getElementById('idleArea').style.display = 'none';
+  document.getElementById('questionArea').style.display = 'none';
+  document.getElementById('errorArea').style.display = 'none';
+  document.getElementById('answerArea').style.display = 'none';
+  document.getElementById('showAnswerArea').style.display = 'block';
+  document.getElementById('aiAdvice').style.display = 'none';
+  document.getElementById('aiLoading').style.display = 'block';
+
+  const res  = await fetch(`/api/oral/next?mode=${mode}`);
+  const data = await res.json();
+
+  if (!data.ok) {
+    document.getElementById('errorArea').style.display = 'block';
+    document.getElementById('errorText').textContent = data.error;
+    return;
+  }
+
+  currentQ = data;
+  document.getElementById('qTermText').textContent = data.term;
+  document.getElementById('qDefinition').textContent = data.definition;
+  document.getElementById('qAccBadge').textContent = data.accuracy !== null ? fmtRate(data.accuracy) : '初回';
+  document.getElementById('questionArea').style.display = 'block';
+}
+
+async function showAnswer() {
+  document.getElementById('showAnswerArea').style.display = 'none';
+  document.getElementById('answerArea').style.display = 'block';
+
+  // AIアドバイスを非同期ロード
+  try {
+    const res = await fetch('/api/oral/explain', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({term: currentQ.term, definition: currentQ.definition, id: currentQ.id}),
+    });
+    const data = await res.json();
+    document.getElementById('aiLoading').style.display = 'none';
+    if (data.ok) {
+      document.getElementById('advKeywords').textContent    = data.keywords;
+      document.getElementById('advExplanation').textContent = data.explanation;
+      document.getElementById('advAdvice').textContent      = data.advice;
+      document.getElementById('advExample').textContent     = data.example;
+      document.getElementById('aiAdvice').style.display     = 'block';
+    } else {
+      document.getElementById('aiAdvice').style.display = 'block';
+      document.getElementById('advKeywords').textContent = 'AI解説を生成できませんでした: ' + data.error;
+    }
+  } catch(e) {
+    document.getElementById('aiLoading').style.display = 'none';
+    document.getElementById('aiAdvice').style.display = 'block';
+    document.getElementById('advKeywords').textContent = '通信エラー: ' + e;
+  }
+}
+
+async function submitResult(result) {
+  if (!currentQ) return;
+
+  await fetch('/api/oral/result', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({id: currentQ.id, result}),
+  });
+
+  sesTotal++;
+  if (result === 'understood') sesUnderstood++;
+  else sesAgain++;
+  updateSessionStats();
+
+  const label = result === 'understood' ? '✅ 理解済み' : '🔁 再学習';
+  toast(label, result === 'understood' ? 'success' : '');
+
+  await loadNext();
+}
+
+function updateSessionStats() {
+  document.getElementById('sessionStats').style.display = 'block';
+  document.getElementById('sesUnderstood').textContent = sesUnderstood;
+  document.getElementById('sesAgain').textContent      = sesAgain;
+  document.getElementById('sesTotal').textContent      = sesTotal;
+}
+
+function switchTab(tab) {
+  document.getElementById('pane-practice').style.display = tab === 'practice' ? '' : 'none';
+  document.getElementById('pane-list').style.display     = tab === 'list'     ? '' : 'none';
+  document.getElementById('tab-practice').classList.toggle('active', tab === 'practice');
+  document.getElementById('tab-list').classList.toggle('active', tab === 'list');
+  if (tab === 'list') loadExplanations();
+}
+
+async function loadExplanations() {
+  const area = document.getElementById('expListArea');
+  area.innerHTML = '<div style="text-align:center;padding:40px;color:var(--subtext)"><span class="spinner"></span> 読み込み中...</div>';
+  try {
+    const res  = await fetch('/api/oral/explanations');
+    const data = await res.json();
+    if (!data.ok || !data.items.length) {
+      area.innerHTML = '<div style="text-align:center;padding:40px;color:var(--subtext)">解説がまだありません。練習タブでAI解説を生成すると表示されます。</div>';
+      return;
+    }
+    area.innerHTML = data.items.map(item => {
+      const exp = item.explanation || {};
+      const date = item.explained_at ? item.explained_at.slice(0,10) : '';
+      return `<details class="q-card" style="margin-bottom:10px">
+        <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-weight:600;font-size:0.95rem">${escHtml(item.term)}</span>
+          <span style="font-size:0.75rem;color:var(--overlay0)">${date}</span>
+        </summary>
+        <div style="margin-top:12px;border-top:1px solid var(--surface1);padding-top:12px">
+          <div style="color:var(--teal);font-size:0.8rem;font-weight:700;margin-bottom:4px">📖 基本解答</div>
+          <div style="font-size:0.9rem;color:var(--text);margin-bottom:12px">${escHtml(item.definition)}</div>
+          ${exp.keywords ? `<div style="color:var(--mauve);font-size:0.8rem;font-weight:700;margin-bottom:4px">🔑 キーワード</div><div style="font-size:0.85rem;color:var(--text);white-space:pre-wrap;margin-bottom:10px">${escHtml(exp.keywords)}</div>` : ''}
+          ${exp.explanation ? `<div style="color:var(--mauve);font-size:0.8rem;font-weight:700;margin-bottom:4px">🇯🇵 日本語解説</div><div style="font-size:0.85rem;color:var(--subtext);margin-bottom:10px">${escHtml(exp.explanation)}</div>` : ''}
+          ${exp.advice ? `<div style="color:var(--mauve);font-size:0.8rem;font-weight:700;margin-bottom:4px">🏗 英語構文アドバイス</div><div style="font-size:0.85rem;color:var(--subtext);margin-bottom:10px">${escHtml(exp.advice)}</div>` : ''}
+          ${exp.example ? `<div style="color:var(--mauve);font-size:0.8rem;font-weight:700;margin-bottom:4px">💬 模範回答例文</div><div style="font-size:0.9rem;color:var(--sky);font-style:italic">${escHtml(exp.example)}</div>` : ''}
+        </div>
+      </details>`;
+    }).join('');
+  } catch(e) {
+    area.innerHTML = `<div style="color:var(--red)">通信エラー: ${e}</div>`;
+  }
+}
+
+function escHtml(s) {
+  return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+</script>
+{% endblock %}

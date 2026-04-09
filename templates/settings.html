@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}設定 - PPL学習ツール{% endblock %}
+
+{% block content %}
+<h1 class="page-title">⚙ 設定</h1>
+
+{% if msg %}
+<div class="card" style="border:1px solid var(--green);margin-bottom:16px;color:var(--green)">
+  ✅ {{ msg }}
+</div>
+{% endif %}
+
+<!-- APIキー設定 -->
+<div class="card" style="margin-bottom:16px">
+  <div class="card-title">🔑 Claude APIキー</div>
+  <p style="color:var(--subtext);font-size:0.85rem;margin-bottom:12px">
+    スクリーンショットの解析・解説生成にClaudeを使用します。
+    Anthropic Consoleでキーを取得してください。
+  </p>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+    <span style="font-size:0.9rem">現在の状態：</span>
+    {% if has_key %}
+    <span class="badge badge-green">✅ 設定済み</span>
+    {% else %}
+    <span class="badge badge-red">❌ 未設定</span>
+    {% endif %}
+  </div>
+  <form method="post">
+    <div class="form-group">
+      <label>APIキー（sk-ant-...）</label>
+      <input type="password" name="api_key" placeholder="sk-ant-api03-..."
+             autocomplete="new-password">
+    </div>
+    <button type="submit" class="btn btn-primary">保存</button>
+  </form>
+</div>
+
+<!-- Quizlet CSVアップロード -->
+<div class="card" style="margin-bottom:16px">
+  <div class="card-title">📂 Quizlet CSV ファイル</div>
+  <p style="color:var(--subtext);font-size:0.85rem;margin-bottom:12px">
+    QuizletからエクスポートしたCSVファイルをアップロードしてください。<br>
+    ファイル形式：Term（英語質問）、Definition（回答）の2列
+  </p>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+    <span style="font-size:0.9rem">現在の状態：</span>
+    {% if has_quizlet %}
+    <span class="badge badge-green">✅ アップロード済み</span>
+    {% else %}
+    <span class="badge badge-red">❌ 未設定</span>
+    {% endif %}
+  </div>
+  <p style="color:var(--overlay0);font-size:0.8rem;margin-bottom:12px">
+    保存先: {{ quizlet_path }}
+  </p>
+  <div style="display:flex;gap:10px;align-items:center">
+    <input type="file" id="csvFile" accept=".csv" style="width:auto;flex:1">
+    <button class="btn btn-primary" onclick="uploadCsv()">アップロード</button>
+  </div>
+  <div id="uploadMsg" style="margin-top:8px;font-size:0.85rem;display:none"></div>
+</div>
+
+<!-- 手動配置の案内 -->
+<div class="card" style="border:1px solid var(--surface1)">
+  <div class="card-title">📋 Quizlet CSVの取得方法</div>
+  <ol style="color:var(--subtext);font-size:0.85rem;line-height:2;padding-left:20px">
+    <li>Quizlet.com でフラッシュカードセットを開く</li>
+    <li>右上の「…」メニュー →「エクスポート」を選択</li>
+    <li>「間にタブ、セット間に改行」形式でエクスポート</li>
+    <li>ダウンロードした .txt ファイルを .csv にリネームしてアップロード</li>
+  </ol>
+  <p style="color:var(--overlay0);font-size:0.8rem;margin-top:8px">
+    またはCSVファイルを直接 <code style="background:var(--surface0);padding:2px 6px;border-radius:4px">{{ quizlet_path }}</code> に配置してもOKです。
+  </p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function uploadCsv() {
+  const file = document.getElementById('csvFile').files[0];
+  if (!file) { toast('ファイルを選択してください', 'error'); return; }
+
+  const formData = new FormData();
+  formData.append('file', file);
+
+  const res  = await fetch('/api/quizlet-upload', {method: 'POST', body: formData});
+  const data = await res.json();
+
+  const msg = document.getElementById('uploadMsg');
+  msg.style.display = 'block';
+  if (data.ok) {
+    msg.style.color = 'var(--green)';
+    msg.textContent = `✅ ${data.count}問 読み込みました。`;
+    toast(`Quizlet: ${data.count}問 読み込み完了`, 'success');
+    setTimeout(() => location.reload(), 1500);
+  } else {
+    msg.style.color = 'var(--red)';
+    msg.textContent = '❌ ' + data.error;
+  }
+}
+</script>
+{% endblock %}

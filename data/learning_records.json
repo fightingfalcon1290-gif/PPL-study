@@ -2247,6 +2247,78 @@
       ],
       "created_at": "2026-04-09T23:59:19.059312",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 71,
+      "question_text": "The presence of ice pellets at the surface is evidence that there",
+      "answer_text": "is a temperature inversion with freezing rain at a higher altitude.",
+      "choices": [
+        "A. are thunderstorms in the area.",
+        "B. has been cold frontal passage.",
+        "C. is a temperature inversion with freezing rain at a higher altitude."
+      ],
+      "correct_letter": "C",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "氷晶と気象現象",
+      "oral_related": false,
+      "explanation": {
+        "why": "地表で氷粒が観測される場合、上空の気温逆転層で凍雨が降り、地表の冷たい層を通過する際に凍結するため、この現象は気温逆転の直接的な証拠となります。\n\n##",
+        "memory_tip": "「氷粒＝上空暖かい→凍雨→下層冷たい→凍結」のプロセスを連鎖的に理解すれば、気温逆転との関連が自動的に思い出せます。\n\n##",
+        "confusion_points": "霙（みぞれ）は雨と雪の混合で気温逆転とは無関係です。氷粒（pellets）は凍雨が凍ったもので、気温逆転がないと発生しません。\n\n##",
+        "connections": "気温逆転→上空が暖かい→凍雨が存在→下層冷気を通過→凍結→氷粒という因果関係で、「Unequal Heat Exchange」が気象現象を支配する原理と一貫しています。\n\n##",
+        "common_mistakes": "単なる「冷たい層での凍結」と勘違いしやすいですが、必ず「上空から降ってくる凍雨」という条件を含む必要があり、これが気温逆転層の存在証拠となります。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-10T00:03:20.194518",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-10T00:03:20.194518",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 72,
+      "question_text": "Thunderstorms which generally produce the most intense hazard to aircraft are",
+      "answer_text": "squall line thunderstorms.",
+      "choices": [
+        "A. squall line thunderstorms.",
+        "B. steady-state thunderstorms.",
+        "C. warm front thunderstorms."
+      ],
+      "correct_letter": "A",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "雷雨の種類と危険性",
+      "oral_related": false,
+      "explanation": {
+        "why": "スコールライン雷雨は、不等な熱交換により形成される複数の雷雲が組織化され、強力な上昇気流と強い風を伴うため、航空機にとって最も激しい危険をもたらします。\n\n##",
+        "memory_tip": "「Squall Line = 戦線」と記憶し、多くの雷雲が一列に組織化した戦線のような構造が最強だと覚えましょう。\n\n##",
+        "confusion_points": "単独の thunderstorm よりも squall line thunderstorm の方が危険です。複数化・組織化されたものほど強力になります。\n\n##",
+        "connections": "教科書の「不等な熱交換→気圧差→風」が、スコールライン形成時に最大化され、垂直発達が最も激しくなるためです。\n\n##",
+        "common_mistakes": "「雷雨全般」と答えないこと。「スコール線」という組織化された構造が、最も強い水平風せん断と上昇気流を生むため「最も激しい」となります。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-10T00:03:27.196545",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-10T00:03:27.196545",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

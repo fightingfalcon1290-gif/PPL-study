@@ -2319,6 +2319,370 @@
       ],
       "created_at": "2026-04-10T00:03:27.196545",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 73,
+      "question_text": "**\nAt approximately what altitude above the surface would the pilot expect the base of cumuliform clouds if the surface air temperature is 82 °F and the dew point is 38 °F?\n\n**",
+      "answer_text": "10,000 feet AGL.",
+      "choices": [
+        "**",
+        "A. 9,000 feet AGL.",
+        "B. 10,000 feet AGL.",
+        "C. 11,000 feet AGL.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n雲の形成高度計算\n\n**",
+      "oral_related": false,
+      "explanation": {
+        "why": "雲底高度は気温と露点の差から計算します。気温82°F、露点38°Fの差は44°Fで、1,000フィートごとに気温が約3.5°F低下するため、44÷3.5≈12.6で約12,000フィートが湿飽和高度となり、その付近に雲底が形成されます。\n\n##",
+        "memory_tip": "「気温と露点の差÷3.5 = 雲底の高さ（1,000ft単位）」という公式を暗記してください。計算を簡単にするため、差が40°F程度なら10,000～12,000フィート付近と即座に判断できます。\n\n##",
+        "confusion_points": "気温低下率は高度ごとに異なります。乾燥断熱率（約5.5°F/1,000ft）と飽和断熱率（約3.5°F/1,000ft）を混同しないでください。雲底計算では飽和断熱率を使用します。\n\n##",
+        "connections": "この知識はVFR飛行時の視程判断、雲高さの予測、安全な飛行高度選定に直結します。気象判断はATC指示やVFR最低気象条件（Class Cの規定など）と関連します。\n\n##",
+        "common_mistakes": "気温と露点の差を逆算したり、除数を4や3と誤記する受験生が多いです。3.5という正確な係数と計算プロセスを何度も練習して定着させることが重要です。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T22:59:20.594168",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T22:59:20.594168",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 74,
+      "question_text": "The destination airport has one runway, \"08-26\", and the wind is calm. The normal approach in calm wind is a left hand pattern to runway 08. There is no other traffic at the airport. A thunderstorm about 6 miles west is beginning its mature stage, and rain is starting to reach the ground. The pilot decides to",
+      "answer_text": "fly an approach to runway 26 since any unexpected wind due to the storm will be westerly.",
+      "choices": [
+        "A. fly the pattern to runway 08 since the storm is too far away to affect the wind at the airport.",
+        "B. fly the normal pattern to runway 08 since the storm is west and moving north and any unexpected wind will be from the east or southeast toward the storm.",
+        "C. fly an approach to runway 26 since any unexpected wind due to the storm will be westerly."
+      ],
+      "correct_letter": "C",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "雷雨と風の変化",
+      "oral_related": false,
+      "explanation": {
+        "why": "教科書の「不均等な熱交換が気圧差を生じ風を発生させる」原理から、雷雲（発達段階）は西側にあるため、その周辺気圧は低く、東からの風（westerly wind）が誘導されます。そのため滑走路26（東向き）へのアプローチを選択すれば、予期しない西向きの風に対応でき、安全性が確保されるのです。\n\n##",
+        "memory_tip": "「雷雲の西＝低気圧＝東からの風が吹く→東向き滑走路を選ぶ」と三段階で連鎖させて記憶します。コリオリ力により風は気圧勾配に対して平行に吹くため、低気圧中心からの流れが読みやすくなります。\n\n##",
+        "confusion_points": "「雷雲が西にあるから西向き滑走路08を選ぶ」という誤った直感に陥りやすいですが、これは危険です。雷雲周辺の気流を考慮する必要があります。\n\n##",
+        "connections": "気象理論全体では「不均等な熱交換→気圧差→風の発生（コリオリ力で等圧線平行に吹く）→雲形成→雷雲形成」という因果関係があり、パイロットはこの連鎖を理解して意思決定します。\n\n##",
+        "common_mistakes": "単に「雷雊は危険だから避ける滑走路を選ぶ」という発想ではなく、「雷雲がどのような風を誘導するのか」という気象メカニズムを理解することが正解への鍵です。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T22:59:31.180472",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T22:59:31.180472",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 75,
+      "question_text": "AIRMETs are advisories of significant weather phenomena but of lower intensities than SIGMETs and are intended for dissemination to",
+      "answer_text": "All pilots.",
+      "choices": [
+        "A. All pilots.",
+        "B. only IFR pilots.",
+        "C. only VFR pilots."
+      ],
+      "correct_letter": "A",
+      "category": "M",
+      "category_name": "気象データ",
+      "unit": "気象アドバイザリー",
+      "oral_related": true,
+      "explanation": {
+        "why": "AIRMETs(Airmen's Meteorological Information)は、SIGMETより低い強度の気象現象を扱うため、より広い範囲のパイロットに影響を与えます。そのため、すべてのパイロットに周知される必要があります。\n\n##",
+        "memory_tip": "**\"Air-MET = 全パイロット向け\"** と覚えます。SIGMETは危険度が高く特定層向けですが、AIRMETは一般的な気象情報なので「Airmen(パイロット全員)」向けなのです。\n\n##",
+        "confusion_points": "SIGMETは中・高高度の危険な現象で特定パイロット向け、AIRMETは低強度の現象で全パイロット向けという強度の違いを区別することが重要です。\n\n##",
+        "connections": "天気情報の通知体系では、最も危険度が高い情報から順に：SIGMET → AIRMET → 通常の天気データという階層があります。\n\n##",
+        "common_mistakes": "AIRMETが「すべてのパイロット」対象と聞くと、FSSブリーフィングでのみ提供されると誤解しやすいですが、実際はより広範囲に配信される情報です。",
+        "textbook_ref": {
+          "category": "M",
+          "category_name": "気象データ",
+          "excerpt": "M. WEATHER DATA\n\nWeather Briefing\nGetting Weather Data by calling a Flight service station FSS\nStandard Briefing (all information, almost)\nAbbreviate Briefing (to update, supplement, and limited)\nOutlook briefing (for a flight 6 or more hours later)\nwhen requesting by a phone, tell\nyourself as a pilot (N-Number or Your name if no N-Number yet)\ntype of aircraft\ntype of flight (VFR or IFR)\ndeparting airport\nintended route (and altitude)\ndestination\ntime of proposed departure and en route\nIn flight"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T22:59:39.181247",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T22:59:39.181247",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 76,
+      "question_text": "What are characteristics of unstable air?",
+      "answer_text": "Turbulence and good surface visibility.",
+      "choices": [
+        "A. Turbulence and good surface visibility.",
+        "B. Turbulence and poor surface visibility.",
+        "C. Nimbostratus clouds and good surface visibility."
+      ],
+      "correct_letter": "A",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "大気の安定性と気象現象",
+      "oral_related": false,
+      "explanation": {
+        "why": "不安定な空気は不均等な熱交換により上昇気流が発生し、対流活動が活発になります。この活発な対流により乱気流（タービュレンス）が生じ、同時に地表の水蒸気が上昇して除去されるため視程が良好になります。\n\n##",
+        "memory_tip": "「不安定＝対流が活発＝乱気流と視程良好」と一連で覚えましょう。不安定な空気は天候が悪化し荒れた状態になるため、乱気流が伴うと記憶します。\n\n##",
+        "confusion_points": "安定した空気では対流が弱いため乱気流が少なく視程も悪い（湿度が高く霧が発生）という逆の特性があります。安定性と気象条件の関係を混同しやすいので注意してください。\n\n##",
+        "connections": "教科書の「不均等な熱交換→対流→気圧差→気流」という因果関係が、乱気流発生と湿度低下（視程向上）に直結しています。\n\n##",
+        "common_mistakes": "「不安定＝悪天候＝視程悪い」と誤解しやすいですが、視程は乱気流とは別であり、対流で水蒸気が除去されるため**視程は良好**になります。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T22:59:47.152846",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T22:59:47.152846",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 77,
+      "question_text": "(Refer to Figure 12.) The remarks section for XMDW has RAB35 listed. This entry means",
+      "answer_text": "rain began at 1035Z.",
+      "choices": [
+        "A. blowing mist has reduced the visibility to 1-1/2 SM.",
+        "B. rain began at 1035Z.",
+        "C. the barometer has risen .35 inches Hg."
+      ],
+      "correct_letter": "B",
+      "category": "M",
+      "category_name": "気象データ",
+      "unit": "METAR/気象データ解読",
+      "oral_related": false,
+      "explanation": {
+        "why": "METARレポートの備考欄（remarks section）では、気象現象の発生時刻を記号で記録します。RAB（Rain Began）は降雨開始を意味し、35は1035Z（協定世界時10時35分）を表しています。\n\n##",
+        "memory_tip": "**RAB = Rain Began**で「雨が降り始めた」という意味です。数字の前2桁が時間、後2桁が分を示す「35 = 35分」で、時間は時系列から判断して10時と読みます。\n\n##",
+        "confusion_points": "RAB（降雨開始）と混同しやすい用語：**RMB（Rain Moving）= 雨が移動中**、**E（Ending）= 終了**があります。どの現象がいつ起きたかを正確に読み分けることが重要です。\n\n##",
+        "connections": "METARは現在気象、TAFは予報天気を示します。パイロットはブリーフィング時にこれらレポートを確認し、飛行中もFlight Watch（122.0MHz）で最新情報を取得します。\n\n##",
+        "common_mistakes": "「35」だけで「35分」と読まず、前後の文脈から時間を推測する必要があります。同じZuluタイムでも異なる時刻として記録されることに注意してください。",
+        "textbook_ref": {
+          "category": "M",
+          "category_name": "気象データ",
+          "excerpt": "M. WEATHER DATA\n\nWeather Briefing\nGetting Weather Data by calling a Flight service station FSS\nStandard Briefing (all information, almost)\nAbbreviate Briefing (to update, supplement, and limited)\nOutlook briefing (for a flight 6 or more hours later)\nwhen requesting by a phone, tell\nyourself as a pilot (N-Number or Your name if no N-Number yet)\ntype of aircraft\ntype of flight (VFR or IFR)\ndeparting airport\nintended route (and altitude)\ndestination\ntime of proposed departure and en route\nIn flight"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T22:59:56.660133",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T22:59:56.660133",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 78,
+      "question_text": "Which conditions result in the formation of frost?",
+      "answer_text": "The temperature of the collecting surface is at or below the dewpoint of the adjacent air and the dewpoint is below freezing.",
+      "choices": [
+        "A. The temperature of the collecting surface is at or below freezing when small droplets of moisture fall on the surface.",
+        "B. The temperature of the collecting surface is at or below the dewpoint of the adjacent air and the dewpoint is below freezing.",
+        "C. The temperature of the surrounding air is at or below freezing when small drops of moisture fall on the collecting surface."
+      ],
+      "correct_letter": "B",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "霜の形成条件",
+      "oral_related": false,
+      "explanation": {
+        "why": "霜は露点以下で水蒸気が直接氷結する現象です。表面温度が露点以下かつ露点が氷点下という二つの条件が揃うことで、空気中の水蒸気が液体を経由せず直接固体（氷）に変わり、霜として付着します。\n\n##",
+        "memory_tip": "「露点＆氷点下」と覚えましょう。表面が露点温度まで冷え込み、かつその露点が0℃以下であれば霜ができます。\n\n##",
+        "confusion_points": "結露は露点で液体の水が付着する現象で、霜とは異なります。露点が0℃以上なら結露、0℃以下なら霜です。\n\n##",
+        "connections": "相対湿度と露点の関係から理解できます。教科書の「相対湿度＝空気が保有できる最大水蒸気量に対する実際の水蒸気量」という概念が基礎となります。\n\n##",
+        "common_mistakes": "「単に気温が0℃以下」という条件だけでは不足です。表面温度が「その時点の露点」以下であることが必須条件です。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T23:00:04.295605",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T23:00:04.295605",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 79,
+      "question_text": "**\nWhat values are used for Winds Aloft Forecasts?\n\n**",
+      "answer_text": "True direction and knots.",
+      "choices": [
+        "**",
+        "A. Magnetic direction and knots.",
+        "B. Magnetic direction and miles per hour.",
+        "C. True direction and knots.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n上層風予報\n\n**",
+      "oral_related": false,
+      "explanation": {
+        "why": "航空機の航行計画には、進路と速度の正確な計算が不可欠です。そのため、Winds Aloft Forecasts（上空風予報）は国際標準に統一された真方位と速度単位（ノット）で提供されています。\n\n##",
+        "memory_tip": "「真北・ノット」が航空の国際標準です。磁方位や時速ではなく、常に**True direction（真方位）とknots（ノット）**の組み合わせと覚えましょう。\n\n##",
+        "confusion_points": "地上風や管制官の指示では磁方位が使われることもありますが、Winds Aloft Forecastsは必ず真方位です。また速度単位はノットであり、時速（mph）ではありません。\n\n##",
+        "connections": "Winds Aloft Forecastsはフライトプランニング時に風の修正値として使用され、対地速度（Ground Speed）と到着予定時間（ETA）の計算に直結します。\n\n##",
+        "common_mistakes": "磁方位やマイル単位との混同が多いですが、上空風予報は「国際標準の真方位＋ノット」の組み合わせのみです。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T23:00:11.543909",
+          "result": "unsure"
+        }
+      ],
+      "created_at": "2026-04-13T23:00:11.543909",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 80,
+      "question_text": "The Low-Level Significant Weather Prognostic Chart depicts weather conditions",
+      "answer_text": "that are forecast to exist at a valid time shown on the chart.",
+      "choices": [
+        "A. that are forecast to exist at a valid time shown on the chart.",
+        "B. as they existed at the time the chart was prepared.",
+        "C. that existed at the time shown on the chart which is about 3 hours before the chart is received."
+      ],
+      "correct_letter": "A",
+      "category": "M",
+      "category_name": "気象データ",
+      "unit": "気象チャート・図表",
+      "oral_related": false,
+      "explanation": {
+        "why": "Prognostic（予報）Chartは、現在ではなく**将来の天気を予測するための図表**です。チャートに記載された有効時刻における予想気象条件を示しており、パイロットが飛行計画立案時に参考にします。\n\n##",
+        "memory_tip": "**「Prognostic = 予報」**と覚えます。航空気象では「現在」を示すチャートと「予報」を示すチャートを区別することが重要です。このチャートは常に「~時間後の天気はこうなる」という情報を提供します。\n\n##",
+        "confusion_points": "Surface Analysis Chart（地上解析図）は**現在の実況天気**を示しますが、Prognostic Chartは**将来予測**です。両者を混同するとフライトプランが危険になります。\n\n##",
+        "connections": "Weather Briefing時にFSSから提供されるデータの中で、Prognostic Chartは予報情報として活用されます。IFR/VFRフライトの安全性判断に直結する重要な資料です。\n\n##",
+        "common_mistakes": "「チャートに描かれている」=「現在その通りになっている」と誤解しやすいですが、実際には「有効時刻に予想される」条件です。発行時刻と有効時刻の違いに注意しましょう。",
+        "textbook_ref": {
+          "category": "M",
+          "category_name": "気象データ",
+          "excerpt": "M. WEATHER DATA\n\nWeather Briefing\nGetting Weather Data by calling a Flight service station FSS\nStandard Briefing (all information, almost)\nAbbreviate Briefing (to update, supplement, and limited)\nOutlook briefing (for a flight 6 or more hours later)\nwhen requesting by a phone, tell\nyourself as a pilot (N-Number or Your name if no N-Number yet)\ntype of aircraft\ntype of flight (VFR or IFR)\ndeparting airport\nintended route (and altitude)\ndestination\ntime of proposed departure and en route\nIn flight"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T23:00:19.488183",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T23:00:19.488183",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 81,
+      "question_text": "Steady precipitation preceding a front is an indication of",
+      "answer_text": "stratum clouds with little or no turbulence.",
+      "choices": [
+        "A. stratum clouds with moderate turbulence.",
+        "B. cumuliform clouds with little or no turbulence.",
+        "C. stratum clouds with little or no turbulence."
+      ],
+      "correct_letter": "C",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "気象現象・前線",
+      "oral_related": false,
+      "explanation": {
+        "why": "前線通過前は気団がゆっくり上昇するため、広い地域で層状の雲が形成されます。この緩やかな上昇気流は定常的で弱い降水をもたらし、激しい乱気流を発生させません。\n\n##",
+        "memory_tip": "「前線前=層雲+弱い雨」と覚えます。対比として「前線内=積乱雲+豪雨＋乱気流」です。Steady=穏やかな上昇気流と結びつけてください。\n\n##",
+        "confusion_points": "冷たい前線（Cold front）では前線後方で激しい乱気流が発生しますが、これは「前線の前」ではなく「前線通過時」の現象です。前線前方は安定しています。\n\n##",
+        "connections": "相対湿度が上昇して露点に達し、広範囲で層雲が形成→定常的な降水という教科書の「湿度→雲→降水」の流れと一致します。\n\n##",
+        "common_mistakes": "「前線=乱気流が強い」というイメージで「乱気流あり」を選ぶ学生が多いですが、それは前線通過時です。前線の「前方」では気流が穏やかです。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T23:00:27.745927",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T23:00:27.745927",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 82,
+      "question_text": "Which type of weather briefing should a pilot request to supplement mass disseminated data?",
+      "answer_text": "An abbreviated briefing.",
+      "choices": [
+        "A. An outlook briefing.",
+        "B. A supplemental briefing.",
+        "C. An abbreviated briefing."
+      ],
+      "correct_letter": "C",
+      "category": "M",
+      "category_name": "気象データ",
+      "unit": "気象ブリーフィング",
+      "oral_related": false,
+      "explanation": {
+        "why": "Abbreviated Briefing（省略型ブリーフィング）は、すでに気象情報を持っている場合に、その情報を更新・補足するために設計されています。一方、Standard Briefing はほぼ全ての情報を提供するため、新たな情報を求める場合に適しています。\n\n##",
+        "memory_tip": "\"Abbreviated\" = 短い・簡潔という意味です。既に持っている情報（mass disseminated data）に対して、追加や変更部分だけを**補足する**ために使う＝「補足型」と覚えましょう。\n\n##",
+        "confusion_points": "Standard Briefing は「すべての情報をゼロから」提供します。Outlook Briefing は「6時間以上後の出発」に対応するもので、補足目的ではありません。In-flight Briefing（Flight Watch）は空中からの問い合わせです。\n\n##",
+        "connections": "パイロットが事前にインターネットやMETAR/TAFで基本情報を得た場合、FSSへの電話でAbbreviated Briefing を要求し、変化や追加情報だけを確認するという流れです。\n\n##",
+        "common_mistakes": "「briefing = ゼロから全て」と思い込むと、Standard Briefing を選んでしまいます。「既に何か持っている」「更新したい」というキーワードが出たら、Abbreviated を選んでください。",
+        "textbook_ref": {
+          "category": "M",
+          "category_name": "気象データ",
+          "excerpt": "M. WEATHER DATA\n\nWeather Briefing\nGetting Weather Data by calling a Flight service station FSS\nStandard Briefing (all information, almost)\nAbbreviate Briefing (to update, supplement, and limited)\nOutlook briefing (for a flight 6 or more hours later)\nwhen requesting by a phone, tell\nyourself as a pilot (N-Number or Your name if no N-Number yet)\ntype of aircraft\ntype of flight (VFR or IFR)\ndeparting airport\nintended route (and altitude)\ndestination\ntime of proposed departure and en route\nIn flight"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T23:00:36.950281",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T23:00:36.950281",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

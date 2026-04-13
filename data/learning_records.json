@@ -2337,11 +2337,11 @@
       "unit": "**\n雲の形成高度計算\n\n**",
       "oral_related": false,
       "explanation": {
-        "why": "雲底高度は気温と露点の差から計算します。気温82°F、露点38°Fの差は44°Fで、1,000フィートごとに気温が約3.5°F低下するため、44÷3.5≈12.6で約12,000フィートが湿飽和高度となり、その付近に雲底が形成されます。\n\n##",
-        "memory_tip": "「気温と露点の差÷3.5 = 雲底の高さ（1,000ft単位）」という公式を暗記してください。計算を簡単にするため、差が40°F程度なら10,000～12,000フィート付近と即座に判断できます。\n\n##",
-        "confusion_points": "気温低下率は高度ごとに異なります。乾燥断熱率（約5.5°F/1,000ft）と飽和断熱率（約3.5°F/1,000ft）を混同しないでください。雲底計算では飽和断熱率を使用します。\n\n##",
-        "connections": "この知識はVFR飛行時の視程判断、雲高さの予測、安全な飛行高度選定に直結します。気象判断はATC指示やVFR最低気象条件（Class Cの規定など）と関連します。\n\n##",
-        "common_mistakes": "気温と露点の差を逆算したり、除数を4や3と誤記する受験生が多いです。3.5という正確な係数と計算プロセスを何度も練習して定着させることが重要です。",
+        "why": "### 物理的背景\n空気が上昇すると気温は一定率で低下します。この低下率を**不飽和断熱率（Dry Adiabatic Lapse Rate）**といい、約**1,000フィート上昇するごとに3.5°F低下**します。\n\n一方、露点（空気が飽和する温度）は上昇に伴い、約**1,000フィートごとに1°F低下**します。\n\n### 雲が形成される仕組み\n- **地表**：気温82°F、露点38°F（温度と露点に44°Fの差がある）\n- **上昇するにつれて**：気温が低下していく\n- **気温が露点まで低下した高度**：空気が飽和して雲が形成される\n\nこの「気温が露点に達するまでの高さ」が雲底高度です。\n\n### 計算プロセス\n\n```\n温度と露点の差（スプレッド）= 82°F - 38°F = 44°F\n\nこの差が0になるまでの高度を求める：\n・気温の低下速度：1,000 ft当たり3.5°F\n・露点の低下速度：1,000 ft当たり1°F\n・相対的な接近速度：3.5 - 1 = 2.5°F per 1,000 ft\n\nしたがって：\n雲底高度 = 温度露点差 ÷ 2.5 × 1,000 ft\n         = 44 ÷ 2.5 × 1,000\n         = 17.6 × 1,000\n         = 17,600 ft\n\n※ただし、FAA試験では簡略化されており：\n雲底高度 = 温度露点差 ÷ 4.4 × 1,000 ft\n         = 44 ÷ 4.4 × 1,000\n         = 10 × 1,000\n         = 10,000 feet AGL\n```\n\n**※註：FAA公式では÷4.4を使用（簡略版）**\n\n---\n\n##",
+        "memory_tip": "### 簡単な暗記法\n**「4と4で割って1000倍」**\n\n```\n雲底高度（feet）= (気温 - 露点) ÷ 4.4 × 1,000\n```\n\n### メモリ技法（Mnemonic）\n**\"Four-four for feet\"**\n- 数値4.",
+        "confusion_points": "",
+        "connections": "",
+        "common_mistakes": "",
         "textbook_ref": {
           "category": "H",
           "category_name": "空域",
@@ -2682,6 +2682,114 @@
         }
       ],
       "created_at": "2026-04-13T23:00:36.950281",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 83,
+      "question_text": "(Refer to Figure 19.) How are Significant Weather Prognostic Charts best used by a pilot?",
+      "answer_text": "For determining areas to avoid (freezing levels and turbulence).",
+      "choices": [
+        "A. For overall planning at all altitudes.",
+        "B. For determining areas to avoid (freezing levels and turbulence).",
+        "C. For analysing current frontal activity and cloud coverage."
+      ],
+      "correct_letter": "B",
+      "category": "M",
+      "category_name": "気象データ",
+      "unit": "気象図表の利用方法",
+      "oral_related": true,
+      "explanation": {
+        "why": "Significant Weather Prognostic Chartsは、将来の天気パターン、積乱雲、結氷高度などを予測した図で、パイロットが飛行経路上の危険エリア（特に積乱雲や結氷層）を事前に特定し、それらを回避するための計画立案に最適だからです。\n\n##",
+        "memory_tip": "「シグニフィカント＝重要」⇒「重要な危険情報」＝「避けるべきエリア」。天気予報図なので「未来の危険」を見て「あらかじめ避ける」というイメージで覚えましょう。\n\n##",
+        "confusion_points": "天気速報（SIGMET）は現在の危険情報で即時対応が必要ですが、Prognostic Chartsは予測図のため、飛行前の計画段階で使う点が異なります。\n\n##",
+        "connections": "Flight Service Stationでの「Standard Briefing」において、このチャートで予測されるフリージング層や乱気流を確認してから飛行計画を立てることが重要です。\n\n##",
+        "common_mistakes": "このチャートは「天気を詳しく説明する」のではなく、「危険エリア特定→回避」が目的なので、細部の情報読み取りより、全体的なハザード位置確認に焦点を当てることが正解選択のカギです。",
+        "textbook_ref": {
+          "category": "M",
+          "category_name": "気象データ",
+          "excerpt": "M. WEATHER DATA\n\nWeather Briefing\nGetting Weather Data by calling a Flight service station FSS\nStandard Briefing (all information, almost)\nAbbreviate Briefing (to update, supplement, and limited)\nOutlook briefing (for a flight 6 or more hours later)\nwhen requesting by a phone, tell\nyourself as a pilot (N-Number or Your name if no N-Number yet)\ntype of aircraft\ntype of flight (VFR or IFR)\ndeparting airport\nintended route (and altitude)\ndestination\ntime of proposed departure and en route\nIn flight"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T23:25:28.300097",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T23:25:28.300097",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 84,
+      "question_text": "The suffix \"nimbus,\" used in naming clouds, means",
+      "answer_text": "rain cloud.",
+      "choices": [
+        "A. a cloud with extensive vertical development.",
+        "B. a rain cloud.",
+        "C. a middle cloud containing ice pellets."
+      ],
+      "correct_letter": "B",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "雲の分類と命名法",
+      "oral_related": false,
+      "explanation": {
+        "why": "雲の命名は雲の特性を表す言葉で構成され、「nimbus」はラテン語で「雨」を意味し、降水現象を伴う雲を示します。\n\n##",
+        "memory_tip": "「Nimbus = Rain」と直結させ、Cumulonimbus（積乱雲）やNimbostratus（雨層雲）など、降水を伴う雲には必ず「nimbus」が含まれることで記憶します。\n\n##",
+        "confusion_points": "「Stratus」は層状の雲、「Cumulus」は積雲を示し、これらは降水を保証しません。Nimbusのみが降水能力を示す重要な接尾辞です。\n\n##",
+        "connections": "教科書の「unequal heat exchange」により上昇気流が生じ、露点に達した空気が凝結してcloud formationが起こり、さらに発達してnimbus雲となり降水に至ります。\n\n##",
+        "common_mistakes": "同じ低層雲でもStratocumulus（層積雲）は降水しませんが、Nimbostratus（雨層雲）は降水します。「nimbus」の有無が降水判定の鍵です。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T23:25:35.108145",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T23:25:35.108145",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 85,
+      "question_text": "Thunderstorms reach their greatest intensity during the",
+      "answer_text": "mature stage.",
+      "choices": [
+        "A. mature stage.",
+        "B. downdraft stage.",
+        "C. cumulus stage."
+      ],
+      "correct_letter": "A",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "積乱雲と雷雨の発達段階",
+      "oral_related": false,
+      "explanation": {
+        "why": "雷雨は発達段階（成熟段階）で、上昇気流と下降気流が最も激しく活動するため、最大の強度に達します。この段階では不均等な熱交換によって生じた気圧差が最大となり、対流活動が頂点に達するのです。\n\n##",
+        "memory_tip": "雷雨の3段階「発達段階→成熟段階→衰弱段階」を時間軸で考えると、成熟段階は「真ん中＝ピーク」と覚えるとシンプルです。人間も成熟期が最も活動的なのと同じです。\n\n##",
+        "confusion_points": "発達段階（developing stage）では雷雨が形成途中、衰弱段階（dissipating stage）では減衰するため、どちらも「最大強度」ではありません。成熟段階のみが最高峰です。\n\n##",
+        "connections": "教科書の「不均等な熱交換＝対流＝気圧差＝風」という因果関係が、成熟段階で最大化することで説明できます。これは雷雨の物理的本質に直結しています。\n\n##",
+        "common_mistakes": "「Mature」を「消える」と誤解する学生がいますが、実際には「最も発達した＝最も強い」という意味です。英語の語義を正確に理解することが重要です。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-13T23:25:43.033620",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-13T23:25:43.033620",
       "accuracy_rate": 0.0
     }
   ],

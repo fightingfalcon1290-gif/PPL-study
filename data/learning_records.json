@@ -2337,11 +2337,11 @@
       "unit": "**\n雲の形成高度計算\n\n**",
       "oral_related": false,
       "explanation": {
-        "why": "### 物理的背景\n空気が上昇すると気温は一定率で低下します。この低下率を**不飽和断熱率（Dry Adiabatic Lapse Rate）**といい、約**1,000フィート上昇するごとに3.5°F低下**します。\n\n一方、露点（空気が飽和する温度）は上昇に伴い、約**1,000フィートごとに1°F低下**します。\n\n### 雲が形成される仕組み\n- **地表**：気温82°F、露点38°F（温度と露点に44°Fの差がある）\n- **上昇するにつれて**：気温が低下していく\n- **気温が露点まで低下した高度**：空気が飽和して雲が形成される\n\nこの「気温が露点に達するまでの高さ」が雲底高度です。\n\n### 計算プロセス\n\n```\n温度と露点の差（スプレッド）= 82°F - 38°F = 44°F\n\nこの差が0になるまでの高度を求める：\n・気温の低下速度：1,000 ft当たり3.5°F\n・露点の低下速度：1,000 ft当たり1°F\n・相対的な接近速度：3.5 - 1 = 2.5°F per 1,000 ft\n\nしたがって：\n雲底高度 = 温度露点差 ÷ 2.5 × 1,000 ft\n         = 44 ÷ 2.5 × 1,000\n         = 17.6 × 1,000\n         = 17,600 ft\n\n※ただし、FAA試験では簡略化されており：\n雲底高度 = 温度露点差 ÷ 4.4 × 1,000 ft\n         = 44 ÷ 4.4 × 1,000\n         = 10 × 1,000\n         = 10,000 feet AGL\n```\n\n**※註：FAA公式では÷4.4を使用（簡略版）**\n\n---\n\n##",
-        "memory_tip": "### 簡単な暗記法\n**「4と4で割って1000倍」**\n\n```\n雲底高度（feet）= (気温 - 露点) ÷ 4.4 × 1,000\n```\n\n### メモリ技法（Mnemonic）\n**\"Four-four for feet\"**\n- 数値4.",
-        "confusion_points": "",
-        "connections": "",
-        "common_mistakes": "",
+        "why": "上昇する空気塊は1,000ftごとに気温が5.4°F下がり、露点は1.0°F下がる。スプレッド（気温−露点）は5.4−1.0=4.4°F/1,000ftずつ縮まり、ゼロになった高度が雲底。今回：スプレッド=82−38=44°F → 44÷4.4×1,000=10,000ft AGL。",
+        "memory_tip": "【公式3つ】°Fなら÷4.4×1,000ft／°Cなら÷2.5×1,000ft／メートルなら÷8×1,000m。今回は44÷4.4=10なので10,000ft。「スプレッドが大きい＝雲底が高い」。",
+        "confusion_points": "「0.6°C/100m下がる」は標準大気減率（ELR）の話で別物。雲底計算に使うのは乾燥断熱減率（DALR：1°C/100m）。また足し算ではなく引き算：気温低下率5.4−露点低下率1.0=4.4。",
+        "connections": "同じスプレッドの概念は霧の発生予測・LCL（持ち上げ凝結高度）にも使われる。VFRの雲底規定（クラスBは雲底なし、クラスEは1,000ft等）の判断に直結するため、フライト前ブリーフィングで気温・露点を必ず確認する。",
+        "common_mistakes": "4.4ではなく4や5で割るミスが頻出。答えはAGL（地上からの高度）でありMSLではない。露点と気温を逆に引かないこと。°Cのスプレッドを使う場合は÷2.5（フィート）か÷8（メートル）を使い分けること。",
         "textbook_ref": {
           "category": "H",
           "category_name": "空域",
@@ -2790,6 +2790,226 @@
         }
       ],
       "created_at": "2026-04-13T23:25:43.033620",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 86,
+      "question_text": "What is indicated when a current CONVECTIVE SIGMET forecasts thunderstorms?\n\n##",
+      "answer_text": "Thunderstorms obscured by massive cloud layers.\n\n##",
+      "choices": [
+        "A. Moderate thunderstorms covering 30 percent of the area.",
+        "B. Moderate or severe turbulence.",
+        "C. Thunderstorms obscured by massive cloud layers.",
+        "##"
+      ],
+      "correct_letter": "C",
+      "category": "M",
+      "category_name": "気象データ",
+      "unit": "SIGMET・気象情報\n\n##",
+      "oral_related": false,
+      "explanation": {
+        "why": "CONVECTIVE SIGMET（対流性シグメット）は、激しい雷雨や巨大な雲塊による危険な気象現象を示します。「obscured by massive cloud layers（巨大な雲層に隠蔽された）」という表現は、視認性が極度に低下し、雷雨の正確な位置特定が困難な状態を意味しています。\n\n##",
+        "memory_tip": "「CONVECTIVE＝対流性＝激しい上昇気流＝巨大な雲」と連想してください。Obscured（隠蔽）という言葉が出たら、視認困難な悪天候を示すシグメット情報と覚えましょう。\n\n##",
+        "confusion_points": "通常のTICA（雷雨情報）と異なり、CONVECTIVEシグメットは特に「隠蔽された」悪条件を指します。単なる雷雨警告ではなく、雲層に覆い隠された危険な状態が焦点です。\n\n##",
+        "connections": "パイロットは天気情報取得時にFSSから標準ブリーフィング（Standard Briefing）でシグメット情報を得ます。飛行中はEFAS（122.00 MHz）で更新情報を入手し、CONVECTIVE SIGMETが出ていれば迂回判断が必要です。\n\n##",
+        "common_mistakes": "「Convective＝単なる対流」と軽く考える受験者が多いですが、実際には「大規模で視認困難な雷雨群」という深刻な意味です。",
+        "textbook_ref": {
+          "category": "M",
+          "category_name": "気象データ",
+          "excerpt": "M. WEATHER DATA\n\nWeather Briefing\nGetting Weather Data by calling a Flight service station FSS\nStandard Briefing (all information, almost)\nAbbreviate Briefing (to update, supplement, and limited)\nOutlook briefing (for a flight 6 or more hours later)\nwhen requesting by a phone, tell\nyourself as a pilot (N-Number or Your name if no N-Number yet)\ntype of aircraft\ntype of flight (VFR or IFR)\ndeparting airport\nintended route (and altitude)\ndestination\ntime of proposed departure and en route\nIn flight"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-14T22:19:05.847170",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-14T22:19:05.847170",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 87,
+      "question_text": "**\nThe most frequent type of ground or surface-based temperature inversion is that which is produced by\n\n**",
+      "answer_text": "terrestrial radiation on a clear, relatively still night.",
+      "choices": [
+        "**",
+        "A. terrestrial radiation on a clear, relatively still night.",
+        "B. warm air being lifted rapidly aloft in the vicinity of mountainous terrain.",
+        "C. the movement of colder air under warm air, or the movement of warm air over cold air.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n気象現象・気温逆転層\n\n**",
+      "oral_related": false,
+      "explanation": {
+        "why": "晴天で風が弱い夜間に、地表が放射冷却で急速に冷え、上空の暖かい空気より地表近くが冷たくなり、気温逆転層が形成されます。\n\n##",
+        "memory_tip": "「晴れた静かな夜→地表が冷える→逆転現象」と連鎖的に覚えましょう。**terrestrial radiation（地表放射）**がキーワードです。\n\n##",
+        "confusion_points": "subsidence inversion（沈降逆転）や frontal inversion（前線逆転）と混同しやすいですが、本問は「最も頻繁な地表型」なので放射冷却が正解です。\n\n##",
+        "connections": "気温逆転は飛行安全に直結し、雲の形成、視程低下、乱気流発生を招くため、気象セクションで重要な概念です。\n\n##",
+        "common_mistakes": "「逆転現象」という言葉は複数種類あります。問題文の「ground or surface-based」「clear, relatively still night」という条件限定に注目することが正解への鍵です。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-14T22:19:13.632764",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-14T22:19:13.632764",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 88,
+      "question_text": "You plan to phone a weather briefing facility for preflight weather information. You should",
+      "answer_text": "Identify yourself as a pilot.",
+      "choices": [
+        "A. Identify yourself as a pilot.",
+        "B. provide the number of occupants on board.",
+        "C. Begin with your route of flight."
+      ],
+      "correct_letter": "A",
+      "category": "M",
+      "category_name": "気象データ",
+      "unit": "気象情報入手手順",
+      "oral_related": false,
+      "explanation": {
+        "why": "Flight Service Station (FSS)への電話では、気象情報を正確かつ効率的に提供するため、通信相手が実際のパイロットであることを明確にする必要があります。自分自身をパイロットとして名乗ることで、FSSスタッフは適切な情報を提供できます。\n\n##",
+        "memory_tip": "電話をかけるとき、まずは「自分が誰か」を名乗るのが基本です。パイロットとして「I'm a pilot」と言うだけで十分。名前やN番号も必要ですが、重要なのは「pilot」というキーワードです。\n\n##",
+        "confusion_points": "「航空機の種類を伝えること」や「フライトプランを提出すること」と混同しないでください。これらは後から伝える情報で、最初の自己紹介ではありません。\n\n##",
+        "connections": "FSSへの電話時は、自分を名乗る→航空機型式→フライトタイプ(VFR/IFR)→出発地→目的地の順で情報を提供します。この流れの最初のステップが重要です。\n\n##",
+        "common_mistakes": "「気象情報を要求すること」が目的ですが、試験では「電話時に最初にすべきこと」を問われています。情報要求は自己紹介の後なので注意が必要です。",
+        "textbook_ref": {
+          "category": "M",
+          "category_name": "気象データ",
+          "excerpt": "M. WEATHER DATA\n\nWeather Briefing\nGetting Weather Data by calling a Flight service station FSS\nStandard Briefing (all information, almost)\nAbbreviate Briefing (to update, supplement, and limited)\nOutlook briefing (for a flight 6 or more hours later)\nwhen requesting by a phone, tell\nyourself as a pilot (N-Number or Your name if no N-Number yet)\ntype of aircraft\ntype of flight (VFR or IFR)\ndeparting airport\nintended route (and altitude)\ndestination\ntime of proposed departure and en route\nIn flight"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-14T22:19:21.741603",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-14T22:19:21.741603",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 89,
+      "question_text": "What would decrease the stability of an air mass?",
+      "answer_text": "Warming from below.",
+      "choices": [
+        "A. Warming from below.",
+        "B. Cooling from below.",
+        "C. Decrease in water vapor."
+      ],
+      "correct_letter": "A",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "大気の安定性と不安定性",
+      "oral_related": false,
+      "explanation": {
+        "why": "下層から加熱されると、暖かい空気は軽くなって上昇し、気団内に対流が発生します。これが鉛直方向の混合を促進し、気団全体が不安定になるのです。\n\n##",
+        "memory_tip": "「下から温める＝対流＝不安定」と覚えましょう。暖房器具が下に置かれているのと同じ原理で、下からの加熱は大気を混ぜやすくします。\n\n##",
+        "confusion_points": "上層から冷却される場合も不安定になりますが、問題は「下層からの加熱」に限定しています。加熱位置の違いに注意してください。\n\n##",
+        "connections": "不等な熱交換→対流→気団の混合→安定性低下という因果関係が、この章全体の基本概念です。\n\n##",
+        "common_mistakes": "「加湿」や「気圧低下」を選ぶ受験生がいますが、直接的に安定性を低下させるのは「下層加熱」です。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-14T22:19:28.071764",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-14T22:19:28.071764",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 90,
+      "question_text": "If the terrain elevation is 1,295 feet MSL, what is the height above ground level of the base of the ceiling?\n\n##",
+      "answer_text": "505 feet AGL.\n\n##",
+      "choices": [
+        "A. 505 feet AGL.",
+        "B. 1,295 feet AGL.",
+        "C. 6,586 feet AGL.",
+        "##"
+      ],
+      "correct_letter": "A",
+      "category": "M",
+      "category_name": "気象データ",
+      "unit": "気象データ・天井高度\n\n##",
+      "oral_related": false,
+      "explanation": {
+        "why": "MSL(平均海面基準)で示された高度をAGL(地上高基準)に変換するには、地形高度を引きます。1,800フィート(MSL) - 1,295フィート(地形高度) = 505フィート(AGL)です。\n\n##",
+        "memory_tip": "「MSLからAGLへは地形を引く」と覚えましょう。海面基準の高さから地面の高さを差し引くと、地面からの相対的な高さが得られます。\n\n##",
+        "confusion_points": "MSLとAGLを逆にしないこと。MSLは絶対高度、AGLは相対高度で全く異なります。足し算と引き算も間違えやすいです。\n\n##",
+        "connections": "天気図や気象データではMSLで高度が表示されますが、実際の飛行操作ではAGLの高度が重要になります。この変換は安全な飛行に必須です。\n\n##",
+        "common_mistakes": "単純に足す計算をしてしまったり、どちらの高度から引くかを混同しやすいです。常に「海面から地面を引く」と意識することが大切です。",
+        "textbook_ref": {
+          "category": "M",
+          "category_name": "気象データ",
+          "excerpt": "M. WEATHER DATA\n\nWeather Briefing\nGetting Weather Data by calling a Flight service station FSS\nStandard Briefing (all information, almost)\nAbbreviate Briefing (to update, supplement, and limited)\nOutlook briefing (for a flight 6 or more hours later)\nwhen requesting by a phone, tell\nyourself as a pilot (N-Number or Your name if no N-Number yet)\ntype of aircraft\ntype of flight (VFR or IFR)\ndeparting airport\nintended route (and altitude)\ndestination\ntime of proposed departure and en route\nIn flight"
+        }
+      },
+      "chart_filename": "90.png",
+      "result_history": [
+        {
+          "date": "2026-04-14T22:19:36.605562",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-14T22:19:36.605562",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 91,
+      "question_text": "When may hazardous wind shear be expected?",
+      "answer_text": "In areas of low-level temperature inversion, frontal zones, and clear air turbulence.",
+      "choices": [
+        "A. When stable air crosses a mountain barrier where it tends to flow in layers forming lenticular clouds.",
+        "B. In areas of low-level temperature inversion, frontal zones, and clear air turbulence.",
+        "C. Following frontal passage when stratocumulus clouds form indicating mechanical mixing."
+      ],
+      "correct_letter": "B",
+      "category": "L",
+      "category_name": "気象理論",
+      "unit": "Wind Shear（ウインドシア）",
+      "oral_related": false,
+      "explanation": {
+        "why": "気象理論の基本である「不均等な熱交換」により、高度による気温差や気圧差が生じます。低層逆転層では温度勾配が急峻となり、前線帯では異なる気団が衝突して速度差が発生するため、危険なウインドシアが形成されます。\n\n##",
+        "memory_tip": "「**温逆・前線・乱気流**」の3つのキーワードで記憶します。特に低層の温度逆転は地面との摩擦によるコリオリ力の減少と組み合わさり、劇的な風速差を生み出します。\n\n##",
+        "confusion_points": "「乱気流」は一般的な上昇気流ではなく「**晴天乱気流（CAT）**」を指します。また、高層逆転層ではなく**低層逆転層**に限定される点に注意が必要です。\n\n##",
+        "connections": "教科書の「コリオリ力」「気圧差」「湿度」の三要素が相互作用します。低層では摩擦の影響で気流が乱れやすく、前線帯では気団の衝突で不均等な熱交換が極大化するのです。\n\n##",
+        "common_mistakes": "「雲が多い=危険」と誤解しやすいですが、実際には視程不良よりも**気流の速度差**が危険の本質です。晴天時のCAT発生も想定する必要があります。",
+        "textbook_ref": {
+          "category": "L",
+          "category_name": "気象理論",
+          "excerpt": "L. WEATHER THEORY\n\nCause of weather\nEvery physical process of weather is caused by UNEQUAL HEAT EXCHANGE.\nUnequal heat exchange = Convection = Pressure Difference\nair to flow, wind to blow\nmoisture to added and moves to form a cloud and fogs\nto create rain or ice in the air\nthunderstorms\nUnequal heat exchange causes variation in altimeter setting\nCORIOLIS FORCE\ndeflects the wind (flow of fluid) to the right in the northern hemisphere.\nmakes wind to blow parallel, instead of perpendicular, to iso"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-14T22:19:45.782779",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-14T22:19:45.782779",
       "accuracy_rate": 0.0
     }
   ],

@@ -355,6 +355,10 @@
         {
           "date": "2026-03-27T00:50:21.911223",
           "result": "correct"
+        },
+        {
+          "date": "2026-04-15T22:01:25.214645",
+          "result": "correct"
         }
       ],
       "created_at": "2026-03-27T00:50:21.911223",
@@ -2955,11 +2959,11 @@
       "unit": "気象データ・天井高度\n\n##",
       "oral_related": false,
       "explanation": {
-        "why": "MSL(平均海面基準)で示された高度をAGL(地上高基準)に変換するには、地形高度を引きます。1,800フィート(MSL) - 1,295フィート(地形高度) = 505フィート(AGL)です。\n\n##",
-        "memory_tip": "「MSLからAGLへは地形を引く」と覚えましょう。海面基準の高さから地面の高さを差し引くと、地面からの相対的な高さが得られます。\n\n##",
-        "confusion_points": "MSLとAGLを逆にしないこと。MSLは絶対高度、AGLは相対高度で全く異なります。足し算と引き算も間違えやすいです。\n\n##",
-        "connections": "天気図や気象データではMSLで高度が表示されますが、実際の飛行操作ではAGLの高度が重要になります。この変換は安全な飛行に必須です。\n\n##",
-        "common_mistakes": "単純に足す計算をしてしまったり、どちらの高度から引くかを混同しやすいです。常に「海面から地面を引く」と意識することが大切です。",
+        "why": "PIREPのSKセクション「BKN018-TOP055/OVC072-TOP089」のうち、最初の雲層BKN018がCeiling（天井）を意味する。018=1,800ft MSL。地形高度1,295ft MSLとの差：1,800−1,295=505ft AGL。OVC072（7,200ft）やTOP055（トップ5,500ft）は雲の上端や上層の雲であり、天井の高さではない。",
+        "memory_tip": "PIREPのSK読み方：「雲底の数字×100=MSL高度」。天井（Ceiling）はBKNまたはOVCで最初に出てくる層。AGL=MSL−地形標高。018→1,800ft MSL、1,800−1,295=505ft AGL。",
+        "confusion_points": "OVC072（7,200ft）を天井と間違えやすいが、BKN018が先に出てくるためこちらが天井。TOPは雲の上端でありCeilingではない。PIREPの高度は全てMSL表記なので必ず地形標高を引いてAGLに変換する。",
+        "connections": "PIREPの完全な読み方：UA=通常PIREP / OV=地点(KOKC-KTUL) / TM=時刻(1800Z) / FL=高度(FL120) / TP=機種(BE90) / SK=雲(BKN018-TOP055/OVC072-TOP089/CLR ABV) / TA=気温(M7°C) / WV=風(080°/21kt) / TB=乱気流(LGT 055-072) / IC=着氷(LGT-MOD RIME 072-089)。SKの後にCLR ABV（以高は晴れ）が続く。",
+        "common_mistakes": "「018」を18ftと読むミス→正しくは×100で1,800ft。地形標高を引き忘れてMSLのまま答えるミス。TOP（雲の上端）とCeiling（雲底）を混同するミス。BKNとOVCどちらがCeilingか迷ったら「先に出てくる低い方の雲底」が天井。",
         "textbook_ref": {
           "category": "M",
           "category_name": "気象データ",

@@ -3051,6 +3051,335 @@
       ],
       "created_at": "2026-04-14T22:19:45.782779",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 92,
+      "question_text": "Each person operating an aircraft at a VFR cruising altitude shall maintain an odd-thousand plus 500-foot altitude while on a\n\n##",
+      "answer_text": "magnetic course of 0° through 179°.\n\n##",
+      "choices": [
+        "A. magnetic heading of 0° through 179°.",
+        "B. magnetic course of 0° through 179°.",
+        "C. true course of 0° through 179°.",
+        "##"
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "VFR巡航高度規則\n\n##",
+      "oral_related": true,
+      "explanation": {
+        "why": "航空機同士の衝突を防ぐため、磁針路により高度を分け、対向する航空機が異なる高度を飛行するようにFARで定められています。\n\n##",
+        "memory_tip": "「0～179°は奇数千+500フィート」「180～359°は偶数千フィート」と磁針路の範囲で分けて覚えます。\n\n##",
+        "confusion_points": "磁針路（Magnetic Course）と真針路（True Course）を混同しないこと。FAR Part 91では必ず磁針路で規定されています。\n\n##",
+        "connections": "Part 91の最小安全高度・対迎角の権利規則（Right-of-Way Rules）とセットで、飛行安全の基本ルールを構成しています。\n\n##",
+        "common_mistakes": "180～359°の場合は「偶数千フィート」（例：2,000ft、4,000ft）であり、500フィートは加算しない点を注意します。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-15T22:58:13.918529",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-15T22:58:13.918529",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 93,
+      "question_text": "Flight crewmembers are required to keep their safety belts and shoulder harnesses fastened during",
+      "answer_text": "takeoffs and landings.",
+      "choices": [
+        "A. takeoffs and landings.",
+        "B. all flight conditions.",
+        "C. flight in turbulent air."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "乗員の安全装備",
+      "oral_related": true,
+      "explanation": {
+        "why": "テイクオフとランディング時は乱気流や予期しない動きが最も発生しやすく、乗員の安全確保が最重要となるため、FARパート91で装着を義務付けています。\n\n##",
+        "memory_tip": "「飛行機が上がる時・下りる時が最も危ない」と覚え、この両局面での装着を必須と認識します。\n\n##",
+        "confusion_points": "巡航中の装着義務と混同しやすいですが、テイクオフ・ランディングほど厳しくはありません。\n\n##",
+        "connections": "FARパート91の「Use of Safety Belts」セクションで定められており、医療証明書や操縦士資格と並ぶ基本的安全規則です。\n\n##",
+        "common_mistakes": "「降下時のみ」や「機長の指示で」といった条件付き回答が引っかけとして出現しますが、テイクオフ・ランディングは無条件に必須です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-15T22:58:20.625034",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-15T22:58:20.625034",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 94,
+      "question_text": "The responsibility for ensuring that an aircraft is maintained in an airworthy condition is primarily that of the",
+      "answer_text": "owner or operator.",
+      "choices": [
+        "A. pilot in command.",
+        "B. owner or operator.",
+        "C. mechanic who performs the work."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空法規・整備責任",
+      "oral_related": true,
+      "explanation": {
+        "why": "FAR Part 91.403により、航空機の所有者または運用者が耐空性維持の法的責任を負うと定められています。これは航空機の安全運航を確保するための基本原則です。\n\n##",
+        "memory_tip": "「オーナー・オペレーター責任」と覚えましょう。航空機を所有・使用する者が最終的な保守管理責任を持つというシンプルな考え方です。\n\n##",
+        "confusion_points": "整備士（Mechanic）や整備会社（Maintenance Shop）は実作業を行いますが、責任は負いません。責任者と作業者の違いを区別することが重要です。\n\n##",
+        "connections": "Part 43（整備基準）はどのように整備するかを定め、Part 91.403はだれが責任を持つかを定めます。両方が揃って航空機の安全が守られます。\n\n##",
+        "common_mistakes": "「整備士」や「FBO」を選んでしまう受験者が多いです。責任と義務の所在を明確に分けることで解答できます。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-15T22:58:28.812987",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-15T22:58:28.812987",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 95,
+      "question_text": "A certificated private pilot may not act as pilot in command of an aircraft towing a glider unless there is entered in the pilot's logbook a minimum of",
+      "answer_text": "100 hours of pilot-in-command time in the aircraft category, class, and type, if required, that the pilot is using to tow a glider.",
+      "choices": [
+        "A. 100 hours of pilot-in-command time in the aircraft category, class, and type, if required, that the pilot is using to tow a glider.",
+        "B. 200 hours of pilot-in-command time in the aircraft category, class, and type, if required, that the pilot is using to tow a glider.",
+        "C. 100 hours of pilot flight time in any aircraft, that the pilot is using to tow a glider."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "グライダー曳航資格要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "グライダー牽引は通常の飛行より複雑で危険性が高いため、FAR Part 61で厳しい要件が定められています。最低100時間のパイロットインコマンド経験を要求することで、十分な操縦技術と判断力を確保します。\n\n##",
+        "memory_tip": "「グライダー牽引は**100時間**必須」と覚えましょう。これは他の資格要件（例：商用免許250時間）より少ないですが、**その航空機カテゴリー・クラス・型式**での経験が条件です。\n\n##",
+        "confusion_points": "総操縦時間が100時間あれば良いわけではなく、「**牽引に使用する同じ航空機で**の100時間」が必須です。他の航空機での時間は要件を満たしません。\n\n##",
+        "connections": "Part 61の「Glider Towing」セクションと「Recent Flight Experience」が関連しており、資格取得後も継続的な訓練が求められます。また「Type Rating Requirements」とも連動します。\n\n##",
+        "common_mistakes": "「100時間の総操縦時間」と「100時間の当該航空機での操縦時間」の区別を誤りやすいです。後者が正解であり、より限定的な要件です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-15T22:58:37.491009",
+          "result": "unsure"
+        }
+      ],
+      "created_at": "2026-04-15T22:58:37.491009",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 96,
+      "question_text": "**\nA pilot operating under BasicMed gets a comprehensive medical examination (CME) on May 14th of this year. When is the next CME due?\n\n**",
+      "answer_text": "By May 14th, 4 years later.",
+      "choices": [
+        "**",
+        "A. By May 14th, 4 years later.",
+        "B. By May 31st, 2 years later.",
+        "C. It depends on the age of the pilot when they got the exam.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\nBasicMed制度と医学証明\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "BasicMedは定期的な医学検査により安全性を確保する制度で、FAR 61.23で4年ごとの包括的医学検査が義務付けられています。\n\n##",
+        "memory_tip": "「BasicMed = 4年周期」と暗記。5月14日に検査を受けたら、4年後の同じ日（5月14日）が期限です。\n\n##",
+        "confusion_points": "商用操縦士（Commercial）の有効期間は2年ですが、BasicMedは4年なので混同しないこと。\n\n##",
+        "connections": "BasicMedは自動操縦士資格の医学証明書よりも有効期間が長く、要件も簡易化されており、一般操縦の利便性を高めています。\n\n##",
+        "common_mistakes": "検査を受けた月の翌年ではなく、「4年後の同じ日」が期限です。計算時に+4年を厳密に計算する必要があります。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-15T22:58:44.960980",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-15T22:58:44.960980",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 97,
+      "question_text": "A pilot operating under BasicMed gets a comprehensive medical examination (CME) on May 14th of this year. When is the next CME due?",
+      "answer_text": "By May 14th, 4 years later.",
+      "choices": [
+        "A. By May 14th, 4 years later.",
+        "B. By May 31st, 2 years later.",
+        "C. It depends on the age of the pilot when they got the exam."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "BasicMedの有効期限",
+      "oral_related": true,
+      "explanation": {
+        "why": "BasicMedは軽飛行機パイロット向けの簡易医学証明制度であり、従来の医学証明書よ新よりも有効期間が長く設定されています。包括的医学検査（CME）の有効期限は4年間で、この期間内であれば医学的資格を満たします。\n\n##",
+        "memory_tip": "「BasicMed = 4年ルール」と覚えましょう。最初の検査日から4年後の同じ月日が次回検査期限となります（例：5月14日なら4年後の5月14日まで有効）。\n\n##",
+        "confusion_points": "従来の医学証明書（1st/2nd/3rd Class）は1～3年の有効期限ですが、BasicMedは4年です。また、BasicMed該当外の飛行（商業便など）では従来の医学証明が必要な点に注意が必要です。\n\n##",
+        "connections": "BasicMedはFAR Part 61で規定される医学証明の代替手段で、定期的な健康診断によって資格を維持する仕組みです。4年の有効期間設定により、パイロットの負担軽減と安全性の両立を実現しています。\n\n##",
+        "common_mistakes": "「4年以内」ではなく「4年後の同じ月日」という具体的な期限です。例えば5月15日検査の場合、5月14日は期限内ですが5月15日以降は失効となります。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-15T22:58:53.342523",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-15T22:58:53.342523",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 98,
+      "question_text": "If an alteration or repair substantially affects an aircraft's operation in flight, that aircraft must be test flown by an appropriately-rated pilot and approved for return to service prior to being operated",
+      "answer_text": "with passengers aboard.",
+      "choices": [
+        "A. by any private pilot.",
+        "B. with passengers aboard.",
+        "C. for compensation or hire."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空法規（耐空性）",
+      "oral_related": true,
+      "explanation": {
+        "why": "FAR Part 43で、大規模な修理・改造後は試験飛行が必須です。この試験飛行は乗客なしで実施され、合格後に初めて乗客を乗せての運用が許可されます。安全性確保のための段階的なプロセスです。\n\n##",
+        "memory_tip": "「修理→テスト（無人）→乗客搭乗」の3段階と覚えます。乗客搭乗は最終段階で、絶対に修理直後には乗せてはいけません。\n\n##",
+        "confusion_points": "「テストフライト後なら乗客搭乗OK」と勘違いしやすいですが、テストフライト自体が乗客なしで実施される規定です。正式な許可が必要です。\n\n##",
+        "connections": "Part 61（パイロット認定）の「Recent Flight Experience」や「Flight Review」と同じく、安全性確保のための経験・検査規定の体系の一部です。\n\n##",
+        "common_mistakes": "「テストフライト実施後」と「テストフライト実施前」の区別、また「乗客なし」の条件を見落としやすいので、問題文の細部に注意が必要です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-15T22:59:02.844483",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-15T22:59:02.844483",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 99,
+      "question_text": "Except when necessary for takeoff or landing, an aircraft may not be operated closer than what distance from any person, vessel, vehicle, or structure?",
+      "answer_text": "500 feet.",
+      "choices": [
+        "A. 500 feet.",
+        "B. 700 feet.",
+        "C. 1,000 feet."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "飛行操作の安全規則",
+      "oral_related": true,
+      "explanation": {
+        "why": "**\nFAR Part 91.119で規定されており、航空機の安全運航と地上の人命・財産保護のため、飛行中は常に500フィート以上の距離を保つことが義務付けられています。\n\n**",
+        "memory_tip": "**\n「500フィート＝安全マージン」と記憶し、離着陸時のみ例外となることをセットで覚えましょう。\n\n**",
+        "confusion_points": "**\n1,000フィート（他の高度制限）や地上400フィート（特定条件下）と混同しないよう注意が必要です。\n\n**",
+        "connections": "**\nPart 91の「Minimum Safe Altitude」規定と関連し、すべての飛行高度制限はパイロットの安全運航責務（PIC Authority）に基づいています。\n\n**",
+        "common_mistakes": "**\n「離着陸時は500フィート制限が免除される」と誤解しやすいため、「必要な場合のみ例外」という条件限定を正確に理解することが重要です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-15T22:59:10.348469",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-15T22:59:10.348469",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 100,
+      "question_text": "**\nWhich incident requires an immediate notification to the nearest NTSB field office?\n\n**",
+      "answer_text": "Flight control system malfunction or failure.",
+      "choices": [
+        "**",
+        "A. A forced landing due to engine failure.",
+        "B. Landing gear damage, due to a hard landing.",
+        "C. Flight control system malfunction or failure.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\nNTSB報告義務\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "飛行制御システムの故障は航空機の安全性を直接脅かす重大事象であり、事故防止のため即座の報告が法的に義務付けられています。\n\n##",
+        "memory_tip": "「飛行制御が失われたら即報告」＝機体の動きが制御できなくなるほどの問題は、最優先で報告すべき重大インシデントです。\n\n##",
+        "confusion_points": "エンジンの不調や電気系統の故障は報告対象外の場合もあります。報告義務は「飛行継続能力に直結する」制御系統に限定されることに注意してください。\n\n##",
+        "connections": "Class AからClass D各空域での飛行安全確保と同様に、NTSB報告制度も航空安全を支える重要な制度です。\n\n##",
+        "common_mistakes": "「重大事故」と「報告が必要なインシデント」を混同しやすいですが、制御系統の異常は事故前の段階でも即座報告が求められます。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-04-15T22:59:18.718455",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-04-15T22:59:18.718455",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

@@ -589,10 +589,14 @@
         {
           "date": "2026-03-30T22:45:07.773582",
           "result": "unsure"
+        },
+        {
+          "date": "2026-04-15T22:15:58.508516",
+          "result": "correct"
         }
       ],
       "created_at": "2026-03-30T22:45:07.773582",
-      "accuracy_rate": 0.0
+      "accuracy_rate": 50.0
     },
     {
       "id": 24,

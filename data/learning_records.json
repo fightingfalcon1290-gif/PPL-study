@@ -411,10 +411,14 @@
         {
           "date": "2026-03-27T00:50:55.092872",
           "result": "correct"
+        },
+        {
+          "date": "2026-04-15T22:04:52.659128",
+          "result": "incorrect"
         }
       ],
       "created_at": "2026-03-27T00:50:55.092872",
-      "accuracy_rate": 100.0
+      "accuracy_rate": 50.0
     },
     {
       "id": 19,

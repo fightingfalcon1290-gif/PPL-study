@@ -383,10 +383,14 @@
         {
           "date": "2026-03-27T00:50:49.218909",
           "result": "incorrect"
+        },
+        {
+          "date": "2026-04-15T22:03:28.128582",
+          "result": "correct"
         }
       ],
       "created_at": "2026-03-27T00:50:49.218909",
-      "accuracy_rate": 0.0
+      "accuracy_rate": 50.0
     },
     {
       "id": 18,

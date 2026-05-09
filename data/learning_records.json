@@ -3597,6 +3597,78 @@
       ],
       "created_at": "2026-05-09T19:37:30.321807",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 107,
+      "question_text": "Which VFR cruising altitude is appropriate when flying above 3,000 feet AGL on a magnetic course of 185°?",
+      "answer_text": "4,500 feet.",
+      "choices": [
+        "A. 4,000 feet.",
+        "B. 4,500 feet.",
+        "C. 5,000 feet."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "VFR巡航高度規則",
+      "oral_related": false,
+      "explanation": {
+        "why": "FAR Part 91で定められたVFR巡航高度ルールにより、磁気方位180°～359°で飛行する場合は奇数千フィート+500フィート(3,500、5,500フィートなど)の高度を保つ必要があります。185°は180°以上359°以下に該当するため、4,500フィートが正解です。\n\n##",
+        "memory_tip": "「東向き(180°～359°)=奇数+500」と覚えましょう。西向き(0°～179°)は偶数+500フィートです。185°は「東向き」なので必ず奇数高度を選びます。\n\n##",
+        "confusion_points": "180°～359°なのか181°～360°なのか、正確な範囲を間違える受験者が多いです。FAR Part 91では「180°以上359°以下」と定められています。\n\n##",
+        "connections": "この規則は対向する航空機同士の垂直分離を確保し、中層の領空での衝突事故を防止する目的で設定されています。\n\n##",
+        "common_mistakes": "3,500フィートや5,500フィートと迷うケースが多いですが、「3,000フィート以上」の条件で最初の適用高度は4,500フィートです。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-09T19:46:24.749511",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-09T19:46:24.749532",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 108,
+      "question_text": "The airworthiness of an aircraft can be determined by a preflight inspection and a",
+      "answer_text": "review of the maintenance records.",
+      "choices": [
+        "A. statement from the owner or operator that the aircraft is airworthy.",
+        "B. log book endorsement from a flight instructor.",
+        "C. review of the maintenance records."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "機体適航性",
+      "oral_related": true,
+      "explanation": {
+        "why": "航空機の耐空性（airworthiness）は、視覚的な飛行前点検だけでは不十分です。過去の整備記録を確認することで、定期整備、修理履歴、ADs（耐空性改善指令）への対応状況など、航空機の真の安全性を総合的に判定できます。\n\n##",
+        "memory_tip": "「目で見る（preflight）＋過去を知る（maintenance records）＝安心飛行」。整備記録はその航空機の健康診断票です。\n\n##",
+        "confusion_points": "飛行前点検のみで耐空性が判定できると誤解しないこと。記録確認なしでは隠れた不具合や未対応の改善指令を見落とします。\n\n##",
+        "connections": "FAR Part 91（一般運用規則）で「耐空性の維持」が規定され、Part 43（整備基準）で整備記録の保持が義務化されています。両者は一体です。\n\n##",
+        "common_mistakes": "「preflight inspectionだけで足りる」と考えやすいですが、正答は「preflight AND maintenance records」の両者必須となります。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-09T19:46:32.225009",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-09T19:46:32.225045",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

@@ -3380,6 +3380,223 @@
       ],
       "created_at": "2026-04-15T22:59:18.718455",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 101,
+      "question_text": "ADS-B Out equipment is required",
+      "answer_text": "In Class E airspace at and above 10,000 feet MSL, excluding airspace at and below 2,500 feet AGL.",
+      "choices": [
+        "A. below the shelf of Class C airspace.",
+        "B. At an airport with a control tower.",
+        "C. In Class E airspace at and above 10,000 feet MSL, excluding airspace at and below 2,500 feet AGL."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "ADS-B Out装備要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "ADS-B(Automatic Dependent Surveillance-Broadcast)は航空機の位置情報をリアルタイムで発信するシステムで、ATC（航空交通管制）の安全性向上と効率化のため、一定の条件下での装備を義務付けています。\n\n##",
+        "memory_tip": "「クラスE・1万フィート以上・ただし地上2500フィート以下は除く」と順番に覚えましょう。10,000フィートという高度が最初の区切りになります。\n\n##",
+        "confusion_points": "クラスA～Dでも必要な場合があります。また「MSL（平均海面高度）」と「AGL（地上高度）」の違いに注意し、AGL2,500フィート以下の低高度は除外される点を見落とさないようにしましょう。\n\n##",
+        "connections": "FAR Part 91の一般的な運航規則の中で、特に高高度での航行安全性確保の観点から定められています。医療証明書同様、運航の安全要件として重要です。\n\n##",
+        "common_mistakes": "「10,000フィート以上」と「AGL2,500フィート以下の除外」の両方の条件を同時に満たす必要があることを忘れやすいため、常に2つの条件を確認する習慣をつけましょう。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-09T19:36:48.133800",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-09T19:36:48.133834",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 102,
+      "question_text": "Which aircraft has the right-of-way over the other aircraft listed?",
+      "answer_text": "Glider.",
+      "choices": [
+        "A. Glider.",
+        "B. Airship.",
+        "C. Aircraft refueling other aircraft."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "右側通行ルール（衝突回避）",
+      "oral_related": false,
+      "explanation": {
+        "why": "FAR Part 91の右側通行規則では、動力がない、または動力が制限されている航空機ほど優先権が高いとされています。グライダーは動力を持たない航空機であり、操縦が最も困難なため、最高の優先権を与えられています。\n\n##",
+        "memory_tip": "優先権の階級順は「グライダー＞熱気球＞飛行船＞動力航空機」です。「動力がないほど優先」と覚えると簡単です。グライダーは動力なしで最難関だからトップです。\n\n##",
+        "confusion_points": "ヘリコプターは動力航空機なので、グライダーより優先権が低いです。また、ジェット機と小型機の比較では、機体サイズではなく動力の有無が判定基準になります。\n\n##",
+        "connections": "この規則はFAR Part 91の「Right-of-Way Rules」に記載されており、安全な飛行運用の基礎です。操縦難度が高い航空機に配慮する設計思想が反映されています。\n\n##",
+        "common_mistakes": "大型航空機が優先権を持つと勘違いしやすいですが、実は正反対です。優先権は「動力の有無」と「操縦難度」で決まり、グライダーのような小型で動力なし航空機が最優先となります。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-09T19:36:56.228300",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-09T19:36:56.228323",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 103,
+      "question_text": "A pilot convicted of operating an aircraft as a crewmember under the influence of alcohol, or using drugs that affect the person's faculties, is grounds for\n\n##",
+      "answer_text": "denial of an application for an FAA certificate, rating, or authorization issued under 14 CFR Part 61.\n\n##",
+      "choices": [
+        "A. denial of an application for an FAA certificate, rating, or authorization issued under 14 CFR Part 61.",
+        "B. written notification to the FAA Civil Aeromedical Institute (CAMI) within 60 days after conviction.",
+        "C. written report to be filed with the FAA Civil Aviation Security Division (AMC-700) not later than 60 days after conviction.",
+        "##"
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "飲酒・薬物使用と証明書\n\n##",
+      "oral_related": true,
+      "explanation": {
+        "why": "FARパート61は操縦士証明書の資格要件を規定しており、アルコール・薬物の影響下での操縦は航空安全を著しく脅かす重大な違反です。そのため、このような犯罪は証明書申請の拒否理由となります。\n\n##",
+        "memory_tip": "「Part 61の証明書要件＝安全基準」と考えてください。アルコール・薬物使用は判断力低下→安全性喪失→資格剥奪という因果関係を記憶しましょう。\n\n##",
+        "confusion_points": "Part 91は運航規則で「違反時の罰則」を定めていますが、本問はPart 61の「証明書申請拒否」という行政処分を問うています。両者は異なる規制枠組みです。\n\n##",
+        "connections": "Medical Certificate（医学証明）同様、FARパート61では操縦士の適格性を厳格に審査します。薬物使用履歴は最も重要な不適格事由の一つです。\n\n##",
+        "common_mistakes": "「罰金刑を受ける」と混同しないこと。本問は民間航空当局による行政的な証明書拒否であり、刑事処罰とは別です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-09T19:37:05.184419",
+          "result": "unsure"
+        }
+      ],
+      "created_at": "2026-05-09T19:37:05.184439",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 104,
+      "question_text": "What document(s) is/are required to be displayed in the cockpit or cabin entrance of the plane, legible to passengers or crew?",
+      "answer_text": "Airworthiness certificate.",
+      "choices": [
+        "A. Registration certificate and placards.",
+        "B. Airworthiness and registration certificates.",
+        "C. Airworthiness certificate."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空法規・証明書要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "FAR Part 91では、航空機の耐空性を乗客や乗員に証明する必要があり、耐空証明書（Airworthiness Certificate）がコックピットまたは客室入口に見やすく表示されることで、その航空機が飛行に適切な状態であることを公式に示すためです。\n\n##",
+        "memory_tip": "「飛ぶ前に証明書を見せる」と覚えましょう。乗客が安心して搭乗するために、機体が合法的に飛べることを証明する公式文書が必要です。\n\n##",
+        "confusion_points": "登録証（Registration Certificate）や保険証もコックピットに必要ですが、「乗客・乗員に見える場所」という条件は耐空証明書に限定されます。\n\n##",
+        "connections": "FAR Part 21で耐空証明書の発行基準が定められ、Part 91でその表示が義務付けられ、Part 43で継続的な維持管理が要求されます。\n\n##",
+        "common_mistakes": "登録証（N番号）は尾翼に表示されるもので、コックピット内表示ではありません。また、有効期限のある医療証明書とは異なり、耐空証明書は継続的に有効です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-09T19:37:14.039678",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-09T19:37:14.039698",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 105,
+      "question_text": "Which situation is reportable to the NTSB if your aircraft is equipped with ACAS Airborne Collision and Avoidance System?",
+      "answer_text": "Operating on an instrument flight plan while needing to comply with a resolution advisory to avert a substantial risk between aircraft.",
+      "choices": [
+        "A. Operating on an instrument flight plan while needing to comply with a resolution advisory to avert a substantial risk between aircraft.",
+        "B. When operating VFR in Class B airspace near the primary airport.",
+        "C. When operating VFR in uncontrolled airspace."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "NTSB報告義務",
+      "oral_related": true,
+      "explanation": {
+        "why": "NTSB（国家運輸安全委員会）は航空安全の重大インシデントを把握する必要があります。ACAS解決勧告に従う必要が生じた状況は、航空機間の実質的な衝突リスクを示す重大な事象であり、報告対象となります。\n\n##",
+        "memory_tip": "「ACAS解決勧告＝衝突危機」と結びつけてください。解決勧告が作動した＝深刻な接近事象＝報告義務です。\n\n##",
+        "confusion_points": "TCAS警告（警告段階）だけでは報告義務がない場合がありますが、ACAS「解決勧告」（より高い警報レベル）は必ず報告対象です。\n\n##",
+        "connections": "FAR Part 61・91で安全義務が定められ、Part 830でNTSB報告基準が規定されます。ACAS作動は「事故に該当しないが報告すべき重大事象」の典型例です。\n\n##",
+        "common_mistakes": "「解決勧告に従った＝適切に対応した」と考えると報告不要と誤解しやすいですが、適切な対応の有無に関わらず、解決勧告そのものが報告義務を生じさせます。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-09T19:37:22.948057",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-09T19:37:22.948078",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 106,
+      "question_text": "How long does the Airworthiness Certificate of an aircraft remain valid?",
+      "answer_text": "As long as the aircraft is maintained and operated as required by Federal Aviation Regulations.",
+      "choices": [
+        "A. As long as the aircraft has a current Registration Certificate.",
+        "B. Indefinitely, unless the aircraft suffers major damage.",
+        "C. As long as the aircraft is maintained and operated as required by Federal Aviation Regulations."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空機証明書・有効期限",
+      "oral_related": true,
+      "explanation": {
+        "why": "航空機の耐空性証明書(Airworthiness Certificate)は、購入時に一度発行されたら永遠に有効です。ただし、適切なメンテナンスと連邦航空規則(FAR)の遵守が条件であり、この条件を満たさなければ無効になります。\n\n##",
+        "memory_tip": "「永遠の有効期限、ただしメンテナンス次第」と覚えましょう。つまり、有効期間は無制限ですが、継続的な維持管理が必須です。\n\n##",
+        "confusion_points": "パイロット証明書(Part 61)は有効期限があります。耐空性証明書は有効期限がないことと混同しないように注意してください。\n\n##",
+        "connections": "Part 21(耐空性に関する規定)で発行され、Part 43(定期検査)とPart 91(運用規則)によって維持される必要があります。\n\n##",
+        "common_mistakes": "「有効期間なし=永遠に飛べる」と誤解しやすいですが、実際には毎年のAnnual Inspection(年間検査)と100時間検査が必要です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-09T19:37:30.321789",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-09T19:37:30.321807",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

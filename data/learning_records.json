@@ -3970,44 +3970,6 @@
       ],
       "created_at": "2026-05-10T16:21:24.229083",
       "accuracy_rate": 0.0
-    },
-    {
-      "id": 115,
-      "question_text": "Which is normally prohibited when operating a restricted category civil aircraft?",
-      "answer_text": "Flight over a densely populated area.",
-      "choices": [
-        "A. Flight under instrument flight rules.",
-        "B. Flight over a densely populated area.",
-        "C. Flight within Class D airspace."
-      ],
-      "correct_letter": "B",
-      "category": "O",
-      "category_name": "航空法規",
-      "unit": "航空法規・運航制限",
-      "oral_related": true,
-      "explanation": {
-        "question": "Which is normally prohibited when operating a restricted category civil aircraft?",
-        "correct_answer": "Flight over a densely populated area",
-        "why": "Restricted category aircraft have limitations on where they can operate due to their experimental or special purpose nature and potentially lower safety standards. Flying over densely populated areas poses an unacceptable risk to people on the ground if an emergency occurs, so this is strictly prohibited by aviation regulations.",
-        "memory_tip": "Remember RCA = Restricted Category Aircraft = Restricted operations. Think of the acronym RCA and associate it with restricted airspace and restricted population areas. Densely populated areas are always off-limits for these aircraft because the risk-to-benefit ratio is unfavorable.",
-        "connections": "This rule relates to other operational limitations of restricted category aircraft such as prohibitions on carrying passengers for compensation, restrictions on flight into known icing conditions, and requirements for special flight permits. Understanding these limitations helps you grasp the overall regulatory framework for special category aircraft.",
-        "common_mistakes": "Candidates often confuse restricted category aircraft with other categories and think normal commercial flight rules apply. Some may think the prohibition only applies to nighttime operations or certain weather conditions, when in fact the densely populated area restriction is absolute regardless of conditions.",
-        "confusion_points": "The term restricted category itself can be confusing. It does not mean the aircraft cannot fly anywhere, but rather that its operations are restricted to specific purposes and areas. Some may incorrectly think restricted category aircraft cannot fly over any populated area at all, when the key word is densely populated.",
-        "textbook_ref": {
-          "category": "O",
-          "category_name": "航空法規",
-          "excerpt": ""
-        }
-      },
-      "chart_filename": null,
-      "result_history": [
-        {
-          "date": "2026-05-10T19:50:48.848440",
-          "result": "incorrect"
-        }
-      ],
-      "created_at": "2026-05-10T19:50:48.848461",
-      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

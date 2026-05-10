@@ -3970,42 +3970,6 @@
       ],
       "created_at": "2026-05-10T16:21:24.229083",
       "accuracy_rate": 0.0
-    },
-    {
-      "id": 115,
-      "question_text": "Which is normally prohibited when operating a restricted category civil aircraft?",
-      "answer_text": "Flight over a densely populated area.",
-      "choices": [
-        "A. Flight under instrument flight rules.",
-        "B. Flight over a densely populated area.",
-        "C. Flight within Class D airspace."
-      ],
-      "correct_letter": "B",
-      "category": "O",
-      "category_name": "航空法規",
-      "unit": "制限カテゴリ航空機の運用",
-      "oral_related": true,
-      "explanation": {
-        "why": "制限カテゴリー航空機は安全性が通常カテゴリーより低いため、人口密集地での飛行は事故時の被害を最小限にするために禁止されています。\n\n##",
-        "memory_tip": "「制限カテゴリー＝制限が多い」と覚え、特に「人口密集地は絶対NG」という基本ルールを押さえましょう。\n\n##",
-        "confusion_points": "通常カテゴリー航空機は人口密集地の飛行が許可されていますが、制限カテゴリーはこの特権がありません。\n\n##",
-        "connections": "制限カテゴリーは試験飛行後の旧式機や改造機が該当し、安全性基準の厳しさが運用範囲の制限につながります。\n\n##",
-        "common_mistakes": "「特定高度以上なら許可」「特定ルートなら許可」など条件付きの選択肢に惑わされやすいですが、人口密集地は**無条件で禁止**です。",
-        "textbook_ref": {
-          "category": "O",
-          "category_name": "航空法規",
-          "excerpt": "TP-P-05\n\t\t- \n\t\n\t\n\t\t\n\t\t\t# 5: Regulations\n\n\t\t\tIntroduction\n\n\t\t\tPilot Certificate Privileges and Limitations\n\n\t\t\tPilot Ratings\n\n\t\t\tMedical Certificates and BasicMed\n\n\t\t\tRequired Certificates\n\n\t\t\tRecent Flight Experience\n\n\t\t\tHigh-Performance Airplanes\n\n\t\t\tGlider Towing\n\n\t\t\tChange of Address\n\n\t\t\tPilot-in-Command Responsibility\n\n\t\t\tPreflight Action\n\n\t\t\tSeatbelts\n\n\t\t\tAlcohol and Drugs\n\n\t\t\tRight-of-Way Rules\n\n\t\t\tParachutes\n\n\t\t\tDeviation from Air Traffic Control Instructions\n\n\t\t\tMinimum Safe Altitudes\n\n\t"
-        }
-      },
-      "chart_filename": null,
-      "result_history": [
-        {
-          "date": "2026-05-10T19:46:28.953503",
-          "result": "incorrect"
-        }
-      ],
-      "created_at": "2026-05-10T19:46:28.953524",
-      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

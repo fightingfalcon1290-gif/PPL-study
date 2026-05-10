@@ -3669,6 +3669,227 @@
       ],
       "created_at": "2026-05-09T19:46:32.225045",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 109,
+      "question_text": "**\nExcept in Alaska, during what time period should lighted position lights be displayed on an aircraft?\n\n**",
+      "answer_text": "Sunset to sunrise.",
+      "choices": [
+        "**",
+        "A. End of evening civil twilight to the beginning of morning civil twilight.",
+        "B. 1 hour after sunset to 1 hour before sunrise.",
+        "C. Sunset to sunrise.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n航空機の位置灯点灯要件\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "航空機の位置灯（ポジションライト）は視認性確保が目的であり、日中は太陽光で十分視認できるため、日没から日出までの暗い時間帯のみ点灯が法令で義務付けられています。\n\n##",
+        "memory_tip": "**「Sunset to Sunrise = 夜間飛行時」**と暗記します。つまり、太陽が見えない時間帯全てです。\n\n##",
+        "confusion_points": "「Civil Twilight（市民薄暮時間帯）」との区別が重要です。薄暮時間帯は日没・日出前後ですが、位置灯点灯は厳密には日没直後から日出直前までです。\n\n##",
+        "connections": "飛行時間の記録（ログブック）でも「Night time」の定義は同じく日没から日出までのため、この概念は一貫しています。\n\n##",
+        "common_mistakes": "「Twilight（薄暮）」「Civil Twilight」という用語が出現すると、「日没前後も含まれるのか」と迷いやすいですが、位置灯はシンプルに日没から日出までです。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-10T16:20:27.277766",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-10T16:20:27.277790",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 110,
+      "question_text": "**\nWhich best describes the flight conditions under which flight crewmembers are specifically required to keep their safety belts and shoulder harnesses fastened?\n\n**",
+      "answer_text": "Safety belts during takeoff and landing and while en route; shoulder harnesses during takeoff and landing.",
+      "choices": [
+        "**",
+        "A. Safety belts during takeoff and landing; shoulder harnesses during takeoff and landing.",
+        "B. Safety belts during takeoff and landing; shoulder harnesses during takeoff and landing and while en route.",
+        "C. Safety belts during takeoff and landing and while en route; shoulder harnesses during takeoff and landing.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n安全装置の装着要件\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "飛行中は乱気流や急な機動で乗員が座席から浮き上がるリスクがあります。特に離着陸時は重力変化が大きいため、肩ハーネスで上半身をしっかり固定する必要があります。\n\n##",
+        "memory_tip": "「**離着陸時は両方（ベルト＋肩ハーネス）、巡航時はベルトのみ**」と覚えましょう。肩ハーネスは上半身の急激な動きを防ぐため、最も危険な離着陸時に必須です。\n\n##",
+        "confusion_points": "「巡航中も肩ハーネスを着用すべき」と考えがちですが、FAR 91.105は離着陸時のみ肩ハーネス着用を要求しています。巡航中は安全ベルトだけで十分です。\n\n##",
+        "connections": "Class Bなど複雑な空域での操作や、ATC指示への対応時こそ、しっかり固定された状態で対応する必要があり、安全ベルト要件と繋がります。\n\n##",
+        "common_mistakes": "「肩ハーネスは常に着用」と誤解する受験者が多いです。正確には「takeoff and landing時のみ」という限定条件を見落とさないこと。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": "H. AIRSPACE\n\nControlled Airspace and Uncontrolled Airspace\nATC service\nInstrument Flying\nVFR Weather Minimum Requirement\nthey are only minimum by law, does not mean safe\nABC of Airspace\nClass A Airspace\nfrom 18,000 ft to FL600\nAltimeter setting 29.92\nOnly IFR flight is permitted\nClass B Airspace\nTo enter Class-B you are required to\nestablish Two-way radio communication with ATC\nhave operating Transponder with mode-C\nATC clearance (\"cleared to enter .....\" from ATC.)\nhold at least Private Pilot o"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-10T16:20:40.272945",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-10T16:20:40.272975",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 111,
+      "question_text": "Which light signal from the control tower clears a pilot to taxi?",
+      "answer_text": "Flashing green.",
+      "choices": [
+        "A. Flashing green.",
+        "B. Steady green.",
+        "C. Flashing white."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "管制塔信号・地上操作",
+      "oral_related": false,
+      "explanation": {
+        "why": "管制塔の視認信号は、無線が故障した場合の重要な通信手段です。**点滅する緑色（Flashing Green）** は「タキシ許可」を意味し、パイロットが地上で航空機を移動させることを明確に許可します。\n\n##",
+        "memory_tip": "「緑 = GO（進め）」という基本原則を適用。点滅（Flashing）は点灯（Steady）より強い指示なので、「点滅緑 = 地上での移動OK」と記憶します。他の信号も色で区別：赤は禁止、白は着陸許可です。\n\n##",
+        "confusion_points": "**Steady Green（点灯緑）** は「離陸許可」であり、タキシではなく滑走路での指示です。点滅と点灯の違いを混同しやすいため、「点滅=地上、点灯=空」と区別してください。\n\n##",
+        "connections": "FAR Part 91の「ATC Clearance」に関連し、無線通信が不可能な状況での管制塔との通信規則を定めています。安全運航の基本的な手順です。\n\n##",
+        "common_mistakes": "点灯赤（Steady Red）は「着陸禁止・待機」、点滅赤は「離陸禁止」など、複数の信号パターンがあるため、各信号の正確な意味を区別する必要があります。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-10T16:20:50.205480",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-10T16:20:50.205503",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 112,
+      "question_text": "To use an MEL a pilot\n\n##",
+      "answer_text": "must receive written approval from the FAA.\n\n##",
+      "choices": [
+        "A. may download it from the manufacturer's website.",
+        "B. must receive written approval from the FAA.",
+        "C. may refer to it in the AFM, no further action is needed",
+        "##"
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "MEL（最小装備品リスト）規定\n\n##",
+      "oral_related": true,
+      "explanation": {
+        "why": "MELは特定の航空機が一部の装備を欠いた状態で飛行することを許可する文書です。航空安全を維持しながら運用効率を高めるため、FAA（連邦航空局）の明示的な書面承認が必須要件とされています。\n\n##",
+        "memory_tip": "「MEL＝FAA書面承認」と強く結びつけて記憶します。個人判断では絶対に使用できず、常に「Written Approval from the FAA」という表現がキーワードです。\n\n##",
+        "confusion_points": "MELと混同しやすいのは、整備基準を定めるAD（Airworthiness Directive）や、パイロット自身が実行可能なPart 43の予防整備です。これらとは異なり、MELは必ずFAAの書面許可が前提です。\n\n##",
+        "connections": "FAR Part 91の「Airworthiness」（耐空性）規定と直結しており、航空機の安全性確保の最後の防線として機能します。整備記録（Part 43）と並び、航空機の継続的な運用適性を管理する仕組みの一部です。\n\n##",
+        "common_mistakes": "「整備士の判断でいい」「航空会社の承認でいい」という誤解が多いですが、あくまでFAAの「書面による」明示的承認のみが有効です。口頭許可は認められません。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-10T16:21:02.492394",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-10T16:21:02.492415",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 113,
+      "question_text": "To fly under BasicMed, a pilot must carry onboard the aircraft",
+      "answer_text": "their current and valid U.S. driver's license.",
+      "choices": [
+        "A. their current and valid U.S. driver's license.",
+        "B. a copy of the signed CME checklist and a copy of the medical education course completion certificate.",
+        "C. both A and B."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "BasicMed要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "BasicMedは第3級医療証明書の代替制度で、FAR Part 61で定められた簡素化された要件です。従来の医療証明書の代わりに、米国運転免許証で医学的適性要件を満たすことが認められています。\n\n##",
+        "memory_tip": "**「BasicMed = 運転免許証で十分」**と覚えましょう。Basicの名の通り、基本的な医療要件は運転免許証の取得時審査でカバーされるという考え方です。\n\n##",
+        "confusion_points": "医療証明書（Medical Certificate）とBasicMedは異なります。BasicMedはあくまで医療証明書の代替であり、運転免許証がその役割を果たすということです。\n\n##",
+        "connections": "FAR Part 61の医療証明書要件と密接に関連しており、パイロット認定資格の条件を簡素化するための制度です。\n\n##",
+        "common_mistakes": "「パスポート」や「特別な医療カード」が必要と誤認しやすいですが、正解は「現有効な米国運転免許証」のみです。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-10T16:21:11.710653",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-10T16:21:11.710673",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 114,
+      "question_text": "Which of the following is true about the comprehensive medical exam (CME)?",
+      "answer_text": "pilot operating under BasicMed must keep a copy of the signed CME checklist in their logbook.",
+      "choices": [
+        "A. It must be done by an Aviation Medical Examiner (AME).",
+        "B. The list of things to evaluate is at the discretion of the doctor giving the CME.",
+        "C. A pilot operating under BasicMed must keep a copy of the signed CME checklist in their logbook."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "医学検査・BasicMed要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "BasicMedプログラムでは、従来の医学証明書（Medical Certificate）に代わる簡便な制度として、包括的医学検査（CME）チェックリストの保有を求めています。これにより、パイロットが医学的要件を満たしていることを証明する記録が必要になるため、操縦士は署名済みのチェックリストをログブックに保管しなければなりません。\n\n##",
+        "memory_tip": "「BasicMed＝医学証明書の代替＝記録保管必須」と記憶しましょう。BasicMedを選択したパイロットは、**署名されたCMEチェックリストをログブックに保持**することが必須条件です。\n\n##",
+        "confusion_points": "BasicMedと従来の医学証明書は異なります。従来の証明書は**FAA発行の身分証的カード**ですが、BasicMedは**チェックリスト記録の自己管理**です。混同しないよう注意してください。\n\n##",
+        "connections": "Part 61（パイロット認定）とPart 91（運航規則）の医学要件に直結します。BasicMedの記録管理はパイロットの自己責任であり、FAAの検査時に提示が求められます。\n\n##",
+        "common_mistakes": "「CMEは医師が保管する」「FAA提出が必要」などと誤解しやすいですが、**パイロット本人がログブックに保管管理する**ことが正解です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": "O. Federal Aviation Regulations FAR\nPart 1 Definition and abbreviations\nCategory (for aircraft or pilots)\nClass (for aircraft or pilots)\nNight Time\nATC Clearance\nAbbreviations\nPart 21\nAirworthiness Certificate\nPart 39\nAirworthiness Directive\nPart 43\nPreventive Maintenance\nMaintenance Record\nPart 61: Certification for Pilots.\nRequirements for Pilot Certificates and Ratings\nDuration of Pilot Certificate\nAlcohol and Drug Offenses\nMedical Certificate\nType Rating Requirements, Additional Training, an"
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-10T16:21:24.229063",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-10T16:21:24.229083",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

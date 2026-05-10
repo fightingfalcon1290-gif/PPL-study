@@ -3970,6 +3970,42 @@
       ],
       "created_at": "2026-05-10T16:21:24.229083",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 115,
+      "question_text": "Which is normally prohibited when operating a restricted category civil aircraft?",
+      "answer_text": "Flight over a densely populated area.",
+      "choices": [
+        "A. Flight under instrument flight rules.",
+        "B. Flight over a densely populated area.",
+        "C. Flight within Class D airspace."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空法規・運用制限",
+      "oral_related": true,
+      "explanation": {
+        "why": "制限カテゴリー航空機は、特定の目的（例：農薬散布、試験飛行）に限定された運用が許可されており、安全性や信頼性が通常カテゴリーより低い可能性があります。したがって、人口密集地上空での飛行は禁止されており、これは乗客や地上の人命を保護するための規則です。",
+        "memory_tip": "制限カテゴリー航空機は『限定的な用途のみ』と覚えることが重要です。人口密集地は最も制限が厳しい空域であり、制限カテゴリー機はここでは絶対に飛行できません。一般的に、制限カテゴリー機は農村部や過疎地での運用に限定されています。",
+        "connections": "これはFAA規制Part 21およびPart 91と直結しており、航空機カテゴリーの定義（標準、輸送、制限、実験など）と関連しています。また、空域の使用制限（Class A、B、C等の空域での運用制限）とも関連します。",
+        "common_mistakes": "受験者は『制限カテゴリーでも日中なら飛行可能』と誤解したり、『夜間飛行のみ禁止』と考えたりする傾向があります。実際には、制限カテゴリー航空機は人口密集地上空での昼間飛行も厳格に禁止されています。",
+        "confusion_points": "実験カテゴリーと制限カテゴリーを混同しないことが重要です。実験カテゴリーはさらに制限が厳しく、制限カテゴリーは特定の商業目的（農薬散布など）が許可されています。どちらも人口密集地上空飛行は禁止です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-10T19:54:38.070622",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-10T19:54:38.070645",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

@@ -4229,6 +4229,299 @@
       ],
       "created_at": "2026-05-11T21:02:44.113325",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 122,
+      "question_text": "A pilot can operate under BasicMed even if the aircraft she or he is flying",
+      "answer_text": "is a multi-engine aircraft.",
+      "choices": [
+        "A. weighs more than 6,000 pounds.",
+        "B. carries more than 6 people.",
+        "C. is a multi-engine aircraft."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "BasicMed特権と制限",
+      "oral_related": true,
+      "explanation": {
+        "question": "パイロットは以下の場合でもベーシックメッドの下で運航できます",
+        "correct_answer": "複数エンジンの航空機である場合",
+        "explanation": "ベーシックメッド制度では、シングルエンジン機だけでなく複数エンジン機の運航も認められています。ただし他の制限事項（最大総重量6,000ポンド以下など）を満たす必要があります。",
+        "why": "ベーシックメッド資格は、一般的な小型航空機の運航を簡素化するために設計されており、エンジン数よりも航空機の大きさや用途に基づく制限が重要です。複数エンジン機であっても小型で軽量な機体であれば制度の対象となります。",
+        "memory_tip": "ベーシックメッドの制限は主に航空機の総重量（6,000ポンド以下）、乗客数（5人以下）、速度（250ノット以下）で判断されることを覚えてください。エンジン数そのものは主要な制限要因ではありません。",
+        "connections": "この知識は通常のパイロット免許要件、航空機分類、ベーシックメッドの適格基準全体と関連しており、パイロットが自分の資格でどの航空機を操縦できるかを判断する際に重要です。",
+        "common_mistakes": "多くのパイロットはベーシックメッドがシングルエンジン機のみに限定されていると誤解しています。実際には複数エンジン機でも他の適格条件を満たせば運航可能です。",
+        "confusion_points": "ベーシックメッドの制限と定期的な医学検査要件の廃止の違いに注意が必要です。ベーシックメッドでは標準的な医学証明書は不要ですが、航空機の仕様に関する運航制限はまだ適用されます。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T22:21:01.163884",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T22:21:01.163905",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 123,
+      "question_text": "Where may an aircraft's operating limitations be found if the aircraft has an Experimental or Special light-sport airworthiness certificate?",
+      "answer_text": "Attached to the Airworthiness Certificate.",
+      "choices": [
+        "A. Attached to the Airworthiness Certificate.",
+        "B. In the current, FAA-approved flight manual.",
+        "C. In the aircraft airframe and engine logbooks."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空機の耐空性証明書",
+      "oral_related": true,
+      "explanation": {
+        "why": "実験機またはスポーツ軽航空機の運用制限は、航空性証明書に直接添付される必要があります。これらの航空機は特殊な制限下で運用されるため、パイロットが常に確認できるように航空性証明書と一緒に保管される必要があるからです。",
+        "memory_tip": "実験機とスポーツ軽航空機の運用制限は航空性証明書にくっついている（添付されている）と覚えてください。通常の航空機とは異なり、特殊な制限があるため、常に目に見える場所に置く必要があります。",
+        "connections": "通常の航空機の運用制限は飛行手帳（POH）やAFM（飛行機械指針）に記載されますが、実験機やスポーツ軽航空機は航空性証明書そのものに制限が添付される点で異なります。これは特殊な運用形態を示す重要な区別です。",
+        "common_mistakes": "受験者は通常の航空機と同じく飛行手帳やAFMに運用制限があると考えてしまいがちです。しかし実験機とスポーツ軽航空機は航空性証明書に直接添付される点を見落とさないようにしてください。",
+        "confusion_points": "航空性証明書、飛行手帳、運用制限などの用語が混同されやすいです。実験機とスポーツ軽航空機の場合、運用制限は常に航空性証明書と共に存在することが重要なポイントです。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T22:21:11.296919",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T22:21:11.296938",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 124,
+      "question_text": "May aircraft wreckage be moved prior to the time the NTSB takes custody?",
+      "answer_text": "Yes, but only to protect the wreckage from further damage.",
+      "choices": [
+        "A. Yes, but only if moved by a federal, state, or local law enforcement officer.",
+        "B. Yes, but only to protect the wreckage from further damage.",
+        "C. No, it may not be moved under any circumstances."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "事故報告とNTSB手続き",
+      "oral_related": true,
+      "explanation": {
+        "why": "航空機の残骸は調査対象の重要な証拠ですが、さらなる損傷から保護することは安全性と調査の質を維持するために必要です。NTSB（米国運輸安全委員会）が管轄権を取得する前であっても、残骸の保全を目的とした限定的な移動は認められています。",
+        "memory_tip": "キーワードは『保護目的のみ』です。残骸を動かしたい場合は、さらなる損傷を防ぐ理由があるかを常に自問してください。好奇心や利便性のための移動は絶対に禁止されており、この制限を覚えることが合格への鍵となります。",
+        "connections": "これはFARパート830の事故報告規則と関連し、パイロットの責務である事故現場の保全義務に直結しています。また、連邦法における証拠保全の原則と、NTSB調査権の尊重という航空法の基本概念を理解する上で重要です。",
+        "common_mistakes": "受験者は『移動してはいけない』と誤解することが多いですが、正確には『保護目的での限定的な移動は認められている』が正解です。移動禁止と保護目的での移動許可の違いを区別することが非常に重要です。",
+        "confusion_points": "『いかなる移動も禁止』という厳格な解釈と『保護目的での移動は許可』という実務的解釈の違いに注意が必要です。さらに損傷を引き起こす危険性がある場合の判断基準も曖昧になりやすいため、安全と保全を最優先する原則を常に適用する姿勢が求められます。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T22:21:21.538625",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T22:21:21.538643",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 125,
+      "question_text": "When flying in the airspace underlying Class B airspace, the maximum speed authorized is",
+      "answer_text": "200 knots.",
+      "choices": [
+        "A. 200 knots.",
+        "B. 230 knots.",
+        "C. 250 knots."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "空域別速度制限",
+      "oral_related": true,
+      "explanation": {
+        "why": "クラスB空域の下層空域では、航空交通の安全性と秩序を維持するため、速度制限が設けられています。クラスB空域自体の混雑した状況に対応するため、その下層空域でも200ノットの速度制限により、機体の管制間隔を確保し、衝突回避能力を向上させています。",
+        "memory_tip": "クラスB下層は200ノットと覚えましょう。これはクラスC下層の200ノットと同じですが、クラスDやE空域では250ノットまで許可されることとの違いを意識することが重要です。",
+        "connections": "クラスB空域全体でも速度制限がありますが、空域の周辺部では250ノット以下が認められています。下層空域での200ノット制限はより厳格であり、クラスA空域近くの安全マージンを保つための措置です。",
+        "common_mistakes": "クラスB下層を250ノットで飛行してしまう受験者がいますが、これは違反です。また、単にクラスB空域と言われた場合、場所によって異なる速度制限（空域周辺部は250ノット以下、下層は200ノット）があることを混同しやすいです。",
+        "confusion_points": "クラスB空域内でも場所によって速度制限が異なることが最大の混同ポイントです。空域の核心部では特定の速度、周辺部では250ノット以下、そして下層は200ノットと、複数の制限が存在することを正確に理解する必要があります。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T22:21:30.038587",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T22:21:30.038608",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 126,
+      "question_text": "IF an aircraft is involved in an accident which results in substantial damage to the aircraft, the nearest NTSB field office should be notified",
+      "answer_text": "immediately.",
+      "choices": [
+        "A. immediately.",
+        "B. within 48 hours.",
+        "C. within 7 days."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "事故報告要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "航空機事故で実質的な損傷が生じた場合、NTSBは直ちに調査を開始する必要があります。迅速な通知により、証拠の保全や目撃者の情報収集が可能になり、事故原因の究明に不可欠です。",
+        "memory_tip": "実質的な損傷の事故は『直ちに』通知する必要があります。重大事故ほど速度が重要という点を覚えてください。遅延すると証拠が失われる可能性があるという緊急性を意識することが記憶につながります。",
+        "connections": "FARパート830で航空機事故報告の義務が定められており、実質的な損傷は特に重大な報告対象です。また、緊急事態での無線通信や地上との連絡体制とも関連しており、パイロットは事故発生時にはいかなる状況でも報告責任があります。",
+        "common_mistakes": "学生は『できるだけ早く』や『できるだけ速く』といった曖昧な選択肢と『直ちに』を区別できず間違えることがあります。NTSBへの報告は最優先事項であり、その他の対応よりも通知が先行することが重要です。",
+        "confusion_points": "実質的損傷の判定基準が曖昧に思える可能性があります。実質的損傷とは修理に400ドル以上の費用がかかるか、構造の完全性や飛行特性に悪影響がある損傷を指します。この定義を明確にすることで正確な判断ができるようになります。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T22:21:38.639193",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T22:21:38.639213",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 127,
+      "question_text": "A pilot is operating under BasicMed rules and completes the required medical education course on April 10th of this year. How long is this course completion good for?",
+      "answer_text": "Until April 30th, 2 years later.",
+      "choices": [
+        "A. Forever; this is a one-time requirement and does not expire.",
+        "B. Until April 10th, 2 years later.",
+        "C. Until April 30th, 2 years later."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "BasicMed要件と有効期限",
+      "oral_related": true,
+      "explanation": {
+        "why": "BasicMed規則では、パイロットが完了した医学教育コースは24ヶ月間有効です。4月10日に完了した場合、その有効期限は2年後の4月30日までとなります。これはFAA規則Part68で定められた要件であり、定期的な医学教育の更新を義務付けています。",
+        "memory_tip": "BasicMedの医学教育コース有効期限は完了日から2年間で、月末日の4月30日までと覚えましょう。4月10日完了なら2年後の4月30日というように、完了月の同じ月の末日が有効期限の終了日になることを記憶します。",
+        "connections": "BasicMedは第三種医学証明書の代替として機能し、医学教育コースと自己認定フォーム（MED-CERTS）の両方を組み合わせて使用されます。この医学教育コースの24ヶ月有効期限と、MED-CERTSの24ヶ月有効期限が連携して、BasicMedの継続的な有効性を保証しています。",
+        "common_mistakes": "4月10日から正確に24ヶ月後の4月10日と誤解するパイロットがいますが、実際には完了月の末日（4月30日）が有効期限になります。また、3年間有効だと勘違いするパイロットもいますが、BasicMedの医学教育は厳密に24ヶ月間です。",
+        "confusion_points": "BasicMedの医学教育コース有効期限（24ヶ月）と、運用制限条件の確認プロセスの24ヶ月周期を混同しやすい点があります。また、通常の医学証明書と異なる有効期限システムであるため、従来のパイロットは特に注意が必要です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T22:21:48.775900",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T22:21:48.775921",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 128,
+      "question_text": "Who is responsible for ensuring Airworthiness Directives (AD's) are complied with?",
+      "answer_text": "Owner or operator.",
+      "choices": [
+        "A. Owner or operator.",
+        "B. Repair station.",
+        "C. Mechanic with inspection authorization (IA)."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空法規・耐空性指令",
+      "oral_related": true,
+      "explanation": {
+        "question": "耐空性指令（AD）の遵守を確保する責任は誰にあるか",
+        "answer": "所有者または運用者",
+        "why": "耐空性指令は航空機の安全性を確保するためにFAAが発行する強制的な指令です。航空機の所有者または運用者は、発行されたすべての適用可能なADを確認し、指定された期限内に実施することが法的に義務付けられています。",
+        "memory_tip": "ADは強制的な指令であり、パイロットや整備士の判断で無視することはできません。所有者や運用者がADの実施状況を管理・追跡する責任があることを覚えておくことが重要です。",
+        "connections": "この責任は14 CFR Part 39に規定されており、FAAの定期的な検査（例：100時間検査）でもADの遵守状況が確認されます。また、航空機の耐空証明書（Certificate of Airworthiness）を維持するためにもADの遵守が必要です。",
+        "common_mistakes": "パイロットだけが責任を持つと考える受験者がいますが、これは誤りです。また、ADは単なる推奨事項ではなく強制的な指令であるという点を見落とす受験者もいます。",
+        "confusion_points": "一部のADは時間制限があり、指定された飛行時間内に実施する必要があります。緊急性の高いADと低いADが存在することを理解することが重要です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T22:21:57.396280",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T22:21:57.396297",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 129,
+      "question_text": "A pilot convicted of operating a motor vehicle while either intoxicated by, impaired by, or under the influence of alcohol or a drug is required to provide a",
+      "answer_text": "written report to the FAA Civil Aviation Security Division (AMC-700) not later than 60 days after the conviction.",
+      "choices": [
+        "A. written report to the FAA Civil Aeromedical Institute (CAMI) within 60 days after the motor vehicle action.",
+        "B. written report to the FAA Civil Aviation Security Division (AMC-700) not later than 60 days after the conviction.",
+        "C. notification of the conviction to a FAA Aviation Medical Examiner (AME) not later than 60 days after the motor vehicle action."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空身体検査・医学要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "飲酒運転または薬物影響下での自動車運転で有罪判決を受けたパイロットは、その判決が航空安全に直結する重大な判断力低下を示すため、FAA に報告義務が課せられています。この報告により FAA は安全脅威となるパイロットを特定し、必要に応じて操縦士資格の審査や取消を実施できます。",
+        "memory_tip": "60日以内という期限が重要です。有罪判決を受けたら、その日から数えて60日以内に書面で AMC-700 部門に報告する必要があります。覚え方としては『60日で報告、FAA に届け出』と記憶すると良いでしょう。",
+        "connections": "このルールは FAA Part 61.15 に規定されており、他の報告義務（医学的状態、DUI 逮捕など）と関連しています。また操縦士の医学証明書（Medical Certificate）の取得・更新時にもアルコール・薬物使用歴が問われるため、一貫した安全管理体系の一部です。",
+        "common_mistakes": "多くの受験者は『30日以内』と誤解したり、報告先を間違えてしまいます。また『逮捕時点で報告』と勘違いしている者もいますが、正確には『有罪判決後』が基準です。さらに口頭報告では不十分で『書面報告』が必須という点を見落とす人が多いです。",
+        "confusion_points": "DUI 逮捕と有罪判決の区別が曖昧なままだと問題を誤解しやすいです。また報告期限の『60日後』という表現が『判決から60日以内』ではなく『判決から60日以降』と誤読される場合があります。正確には『判決日から60日以内に報告』が正しい解釈です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T22:22:08.338927",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T22:22:08.338945",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

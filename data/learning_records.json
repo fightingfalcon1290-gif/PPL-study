@@ -4006,6 +4006,229 @@
       ],
       "created_at": "2026-05-10T19:54:38.070645",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 116,
+      "question_text": "Who may perform an update of a GPS database?",
+      "answer_text": "All of the above.",
+      "choices": [
+        "A. A certificated mechanic or avionics technician.",
+        "B. A pilot.",
+        "C. All of the above."
+      ],
+      "correct_letter": "C",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "GPS装置の保守・更新",
+      "oral_related": true,
+      "explanation": {
+        "why": "GPS データベースの更新は、航空機の運用と安全に直接関わるため、複数の適格者が実施できるよう規制されています。パイロット、メカニック、製造業者、そして認定されたサービスセンターなど、特定の訓練と認定を受けた者であれば誰でも更新作業を行うことが許可されており、これにより運用の柔軟性と安全性が両立されます。",
+        "memory_tip": "GPS データベース更新の権限者を覚える際は、航空機の整備と運用に関わる複数の専門家グループが関与できることを理解してください。パイロット自身でも、整備士でも、認定サービス施設でも実施可能という包括的なアプローチが重要です。",
+        "connections": "この問題は航空機の機器認定、メンテナンス基準、パイロットの責任に関連しており、GPS が現代航空のナビゲーションシステムとして重要であることを反映しています。データベースの新鮮性は飛行安全に不可欠であるため、更新権限が広く配分されています。",
+        "common_mistakes": "受験者は GPS データベース更新を高度に制限された作業と考え、認定メカニックのみが実施可能だと誤解することがあります。実際には、適切な訓練と認定を受けた複数の人員カテゴリーが更新を実施でき、この柔軟性が業界標準です。",
+        "confusion_points": "GPS データベース更新と航空機の構造的整備を混同しないでください。データベース更新はソフトウェアレベルの作業であり、認定メカニックのような高度な資格がなくても適切な訓練があれば実施可能です。また、製造業者のサービスセンターと独立した整備施設の違いも理解することが重要です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T21:01:59.267683",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T21:01:59.267711",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 117,
+      "question_text": "If the control tower uses a light signal to direct a pilot to give way to other aircraft and continue circling, the light will be",
+      "answer_text": "steady red.",
+      "choices": [
+        "A. flashing red.",
+        "B. steady red.",
+        "C. alternating red and green."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "管制信号・光信号",
+      "oral_related": true,
+      "explanation": {
+        "why": "FAA規則では、管制塔が灯火信号を使用して航空機に他の航空機に道を譲って旋回を続けるよう指示する場合、定常赤色灯を発光します。定常赤色灯は着陸を中止し、旋回を続けるという指示を意味します。",
+        "memory_tip": "赤色は停止や注意を意味し、定常赤色は着陸禁止で旋回継続を示します。点滅赤色は着陸を中止して最優先で着陸地点を離れることを意味するため、定常赤色との区別が重要です。",
+        "connections": "灯火信号はVHF無線が使用できない場合の非常用通信手段です。緑色定常灯は着陸許可、赤色定常灯は旋回継続、白色定常灯は飛行場外で待機を意味し、これらを総合的に理解する必要があります。",
+        "common_mistakes": "点滅赤色灯と定常赤色灯を混同することが多く、点滅赤色は緊急事態で着陸地点を離れる指示ですが、定常赤色は単に旋回を続けるという異なる意味です。",
+        "confusion_points": "灯火信号の種類は定常と点滅の区別が重要であり、同じ赤色でも点灯パターンで全く異なる意味を持つため、慎重に識別する必要があります。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T21:02:07.350717",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T21:02:07.350736",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 118,
+      "question_text": "What action is required when two aircraft of the same category converge, but not head-on?\n\n##",
+      "answer_text": "The aircraft on the left shall give way.\n\n##",
+      "choices": [
+        "A. The faster aircraft shall give way.",
+        "B. The aircraft on the left shall give way.",
+        "C. Each aircraft shall give way to the right.",
+        "##"
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "右側通行ルール（Right-of-way rules）\n\n##",
+      "oral_related": true,
+      "explanation": {
+        "question_jp": "同じカテゴリーの2機の航空機が収束していますが、正面衝突ではない場合、どのような行動が必要ですか？",
+        "answer_jp": "左側の航空機が進路を譲らなければならない。",
+        "why": "航空法では、2機の航空機が同じカテゴリーで正面衝突以外の方向から接近する場合、自分の左側に他の航空機がいる場合はその航空機に進路を譲る義務があります。これは海上衝突予防法と同じ原則で、互いに相手を認識しやすくするためのルールです。",
+        "memory_tip": "左側の航空機が進路を譲る、つまり右側に曲がる必要があります。覚え方は「左は譲れ、右は進め」というシンプルなルールで、左側にいる機体は常に進路を譲る立場になります。",
+        "connections": "このルールは右側通行の原則に基づいており、同時に頭上通行ルール（頭上を通過する航空機が進路を譲る）や迎え角ルールと組み合わされています。VFR飛行時の衝突回避マニューバと密接に関連しています。",
+        "common_mistakes": "多くのパイロットは相対的な位置を誤解し、自分が左側にいることに気付かず進路を変えないというエラーを犯します。また、航空機のカテゴリーが異なる場合のルールと混同することもあります。",
+        "confusion_points": "頭上通行ルール、迎え角ルール、および正面衝突時のルール（互いに右に回避）との違いを理解することが重要です。特に相対位置を正確に判断することが実務では困難な場合があります。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T21:02:16.463981",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T21:02:16.464001",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 119,
+      "question_text": "**\nWhat action should the pilots of a glider and an airplane take if on a head-on collision course?\n\n**",
+      "answer_text": "Both pilots should give way to the right.",
+      "choices": [
+        "**",
+        "A. The airplane pilot should give way to the left.",
+        "B. The glider pilot should give way to the right.",
+        "C. Both pilots should give way to the right.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\n衝突回避・右側通行ルール\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "正面衝突のコース上にある場合、両機が右に回避することで、お互いの動きが予測可能になり、より安全です。これは国際航空法（14 CFR Part 91）で定められた衝突回避ルールで、両機が同じ方向に回避することで二次的な衝突を防ぎます。",
+        "memory_tip": "正面衝突時は「両方とも右へ」と覚えましょう。これにより両機の回避方向が一致し、相手を避けたつもりが衝突するという最悪の事態を防げます。",
+        "connections": "このルールは航空法の基本的な衝突回避ルール（Right-of-Way Rules）の一部です。他にも同高度での接近時や追い越し時のルールがあり、全て予測可能な回避行動を原則としています。",
+        "common_mistakes": "パイロットが相手機の動きに応じて回避方向を変えたり、左右どちらかを選択してしまうことです。ルールに従わず自分勝手な判断をすると、相手も同じ方向に回避して衝突する危険があります。",
+        "confusion_points": "グライダーと飛行機という機種の違いは関係なく、正面衝突では両者とも同じルール（右への回避）が適用されます。グライダーの優先権は同高度で接近する場合の別のシナリオで適用されるものです。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T21:02:25.271010",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T21:02:25.271028",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 120,
+      "question_text": "ADS-B Out equipment is not required within a Terminal Radar Service Area.",
+      "answer_text": "within a Terminal Radar Service Area.",
+      "choices": [
+        "A. within a Terminal Radar Service Area.",
+        "B. in Class A airspace.",
+        "C. at 9,500 MSL within the lateral confines of Class C airspace."
+      ],
+      "correct_letter": "A",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "ADS-B装備要件",
+      "oral_related": true,
+      "explanation": {
+        "why": "ターミナルレーダーサービスエリア（TRSA）内ではADS-B Out機器の装備は必須ではありません。ADS-B Outが必須となるのは特定の空域（クラスB、C、Eの一部など）に限定されており、TRSAはレーダーサービスを提供する空域ですがADS-B装備を強制する空域ではないためです。",
+        "memory_tip": "TRSAはターミナルレーダーサービスを提供する空域ですが、ADS-B装備を強制する空域ではないという点を覚えてください。ADS-B Out装備が必須となるのはクラスB、クラスCおよびクラスEの高度1,200フィート以上という限定的な空域です。",
+        "connections": "この問題はADS-B出装備の要件、空域分類（クラスA～G）、およびターミナルレーダーサービスエリアの定義に関連しています。FAA規制の空域要件を全体的に理解することが重要です。",
+        "common_mistakes": "多くの受験生はTRSAで自動的にADS-B装備が必須だと誤解しています。実際にはTRSAはレーダーサービスを提供するだけで、ADS-B装備の義務化とは別の概念です。",
+        "confusion_points": "TRSAはターミナルレーダーサービスエリアとして定義されていますが、これはADS-B出装備要件の対象空域ではありません。クラス空域とTRSAは異なる概念であり、混同しないことが重要です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T21:02:33.975981",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T21:02:33.975998",
+      "accuracy_rate": 0.0
+    },
+    {
+      "id": 121,
+      "question_text": "**\nSelect the true statement about BasicMed medical certificate requirements:\n\n**",
+      "answer_text": "If a pilot has never had a medical certificate, she or he must get one before they qualify to operate under BasicMed.",
+      "choices": [
+        "**",
+        "A. A pilot whose medical certificate expired in 2002 does not need to get a current medical to qualify for BasicMed.",
+        "B. If a pilot has never had a medical certificate, she or he must get one before they qualify to operate under BasicMed.",
+        "C. A pilot whose medical certificate has been revoked can operate under BasicMed instead of getting his or her medical reinstated.",
+        "**"
+      ],
+      "correct_letter": "*",
+      "category": "H",
+      "category_name": "空域",
+      "unit": "**\nBasicMed資格要件\n\n**",
+      "oral_related": true,
+      "explanation": {
+        "why": "BasicMedは既存の医療証明書保有者向けの代替制度であり、医療証明書を一度も取得したことがないパイロットは、BasicMedの対象となる前に少なくとも一度は正式な医療証明書（第3等級以上）を取得する必要があります。これはFAAがパイロットの基本的な健康状態を確認するためです。",
+        "memory_tip": "BasicMedは既存保有者向けの簡易版と覚えましょう。初めての申請者は必ず正式な医療証明書を最初に取得する必要があり、その後にBasicMedへの移行が可能になります。新規パイロットは直接BasicMedでスタートすることはできません。",
+        "connections": "BasicMedは第3等級医療証明書の有効期限が切れた後、または更新しない選択をしたパイロットが活用できる制度です。一度正式な医療証明書を取得していれば、その後はBasicMed要件を満たすことで飛行継続が可能になります。",
+        "common_mistakes": "多くの受験者がBasicMedなら医療証明書なしで始められると誤解していますが、実際には最初の一度は正式な医療証明書取得が必須です。また、BasicMedでも定期的な自己評価と要件確認は必要であり、完全に医療チェックが不要になるわけではありません。",
+        "confusion_points": "BasicMedと第3等級医療証明書の違いを明確にしておく必要があります。BasicMedは更新プロセスが簡素化されているだけであり、初期要件ではなく継続要件です。パイロット経歴や保有資格によって適用可能な制度が異なることを認識することが重要です。",
+        "textbook_ref": {
+          "category": "H",
+          "category_name": "空域",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T21:02:44.113304",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T21:02:44.113325",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

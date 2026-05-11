@@ -4522,6 +4522,44 @@
       ],
       "created_at": "2026-05-11T22:22:08.338945",
       "accuracy_rate": 0.0
+    },
+    {
+      "id": 130,
+      "question_text": "What regulation allows a private pilot to perform preventive maintenance?",
+      "answer_text": "14 CFR Part 43.7.",
+      "choices": [
+        "A. 14 CFR Part 91.403.",
+        "B. 14 CFR Part 43.7.",
+        "C. 14 CFR Part 61.113."
+      ],
+      "correct_letter": "B",
+      "category": "O",
+      "category_name": "航空法規",
+      "unit": "航空法規・整備許可",
+      "oral_related": true,
+      "explanation": {
+        "question": "私有操縦士が予防整備を実行することを認める規制は何か",
+        "correct_answer": "14 CFR Part 43.7",
+        "why": "14 CFR Part 43.7は、私有操縦士が航空機所有者として予防整備を自分で行うことを明確に認めている規制です。この規制は予防整備に含まれる具体的な作業内容をリストアップしており、例えばオイル交換、フィルター交換、点検作業などが該当します。",
+        "memory_tip": "43.7という数字を覚える際は、私有操縦士（Private Pilot）の権限範囲を定める重要な規制として、パート43の第7項目という位置付けで記憶するとよいでしょう。予防整備はメンテナンスの最も基本的なレベルであることも合わせて理解することで記憶が定着します。",
+        "connections": "この規制は14 CFR Part 61の私有操縦士の定義や権利と密接に関連しており、また14 CFR Part 91の航空機の一般運用規則とも連携しています。さらに14 CFR Part 43の他の項目である改造や修理との違いを理解することが重要です。",
+        "common_mistakes": "多くの受験者は予防整備と修理の違いを混同し、より複雑な修理作業も私有操縦士が行えると誤解しています。また、点検整備と予防整備の区別が不明確なまま答えることも一般的な誤りです。",
+        "confusion_points": "14 CFR Part 43には複数の重要な項目があり、特に43.3から43.15までの範囲で様々な整備カテゴリーが定義されているため、43.7が予防整備専門であることを明確に識別することが必要です。航空機所有者と操縦士の権限の線引きも複雑なため、この規制の適用範囲を正確に理解することが重要です。",
+        "textbook_ref": {
+          "category": "O",
+          "category_name": "航空法規",
+          "excerpt": ""
+        }
+      },
+      "chart_filename": null,
+      "result_history": [
+        {
+          "date": "2026-05-11T22:59:18.451565",
+          "result": "incorrect"
+        }
+      ],
+      "created_at": "2026-05-11T22:59:18.451588",
+      "accuracy_rate": 0.0
     }
   ],
   "oral_records": [

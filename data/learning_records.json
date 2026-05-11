@@ -4158,7 +4158,7 @@
     },
     {
       "id": 120,
-      "question_text": "ADS-B Out equipment is not required within a Terminal Radar Service Area.",
+      "question_text": "ADS-B Out equipment is not required",
       "answer_text": "within a Terminal Radar Service Area.",
       "choices": [
         "A. within a Terminal Radar Service Area.",
